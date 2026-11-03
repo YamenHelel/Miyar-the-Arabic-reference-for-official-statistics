@@ -1,0 +1,8 @@
+reports/
+__pycache__/
+*.pyc
+.DS_Store
+# never commit directory exports or downloaded PDFs
+directory/exports/
+*.pdf
+*.csv

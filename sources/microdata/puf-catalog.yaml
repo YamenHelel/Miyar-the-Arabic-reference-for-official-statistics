@@ -1,0 +1,79 @@
+file_meta:
+  scope: microdata
+  title: Catalogue of public-use and licensed microdata for LFS and surveys with labour indicators
+  updated: 2026-11-03
+  notes: >
+    access_level values: public (free download, no registration) | registration (free, account needed) |
+    licensed (application / data access agreement) | secure (on-site or remote secure lab) | none-found | unknown.
+    Built from search results on 2026-11-03; every row to be verified.
+
+catalog:
+  - country: tun
+    survey: Enquête Nationale sur la Population et l'Emploi (ENPE)
+    routes:
+      - {provider: INS NADA catalogue, url: "http://nada.ins.tn", access_level: unknown, years: "to check", source_id: src-tun-ins-nada}
+      - {provider: ERF OAMDI (raw + harmonised HLFS), url: "https://www.erfdataportal.com/index.php/catalog/Harmonized_Data", access_level: licensed, years: "2009–2013 harmonised (TUN_ENPE_2013_HD_V1 etc.)", source_id: src-erf-harmonized-catalog}
+      - {provider: ILO Survey Library (metadata), url: "https://webapps.ilo.org/surveyLib/index.php/catalog/8572", access_level: unknown, years: "2022"}
+    other_surveys_with_labour: [Household budget, consumption and living standards survey, Census 2014]
+
+  - country: sau
+    survey: Labour Force Survey (GASTAT)
+    routes:
+      - {provider: GASTAT microdata page, url: "https://stats.gov.sa/en/microdata", access_level: unknown, years: "to check", source_id: src-sau-gastat-microdata}
+    other_surveys_with_labour: [Household income and expenditure survey, Census 2022]
+
+  - country: mar
+    survey: Enquête Nationale sur l'Emploi (ENE) / redesigned survey 2026
+    routes:
+      - {provider: HCP micro-data dissemination, url: "https://www.hcp.ma/tags/Micro-donn%C3%A9es/", access_level: unknown, years: "ENE availability to check (HCP published time-use, consumption 2014, census 2014 microdata)", source_id: src-mar-hcp-microdata}
+      - {provider: IHSN catalogue (metadata only), url: "https://catalog.ihsn.org/catalog/3911", access_level: none-found}
+    other_surveys_with_labour: [National Time Use Survey 2011/12 (microdata public), Census 2014 (anonymised sample), Household consumption survey 2014]
+
+  - country: jor
+    survey: Employment and Unemployment Survey (EUS)
+    routes:
+      - {provider: ERF OAMDI (raw + harmonised), url: "https://www.erfdataportal.com/index.php/catalog/Harmonized_Data", access_level: licensed, years: "2005–2018+ (EUS) ; HLFS 2007, 2012, 2016", source_id: src-jor-erf-eus}
+      - {provider: DoS own microdata portal, url: TO-LOCATE, access_level: unknown}
+    other_surveys_with_labour: [Jordan Labour Market Panel Survey (JLMPS, ERF), Household expenditure and income survey]
+
+  - country: are
+    survey: Labour Force Survey (FCSC)
+    routes:
+      - {provider: UAE Stat portal (raw datasets 2019+ per GLMM), url: "https://uaestat.fcsc.gov.ae", access_level: unknown, years: "2019–latest", source_id: src-are-uaestat-portal}
+    other_surveys_with_labour: [Emirate-level LFS (Abu Dhabi, Dubai) — to add]
+
+  - country: pse
+    survey: Labour Force Survey (PCBS)
+    routes:
+      - {provider: PCBS microdata catalogue (NADA), url: "https://microdata.pcbs.gov.ps/PCBS-Metadata-en-v5.2/index.php/catalog/740/related-materials", access_level: unknown, years: "to check", source_id: src-pse-pcbs-microdata-portal}
+      - {provider: ERF OAMDI, url: "https://www.erfdataportal.com/index.php/catalog/Harmonized_Data", access_level: licensed, years: "incl. LFS 2021", source_id: src-pse-erf-lfs}
+
+  - country: usa
+    survey: Current Population Survey (CPS) basic monthly
+    routes:
+      - {provider: Census Bureau (via BLS pointer page), url: "https://www.bls.gov/cps/data/public-use-file.htm", access_level: public, years: "1994–present (monthly)", source_id: src-usa-bls-cps-puf, note: "ASCII files + data dictionary; from Jan 2023 disclosure methods mean PUF estimates differ slightly from BLS"}
+      - {provider: IPUMS-CPS (harmonised extracts, 1962–present), url: "https://cps.ipums.org", access_level: registration, years: "1962–present"}
+
+  - country: gbr
+    survey: Quarterly Labour Force Survey (QLFS)
+    routes:
+      - {provider: UK Data Service, url: "https://ukdataservice.ac.uk", access_level: licensed, years: "long series", source_id: src-gbr-ukds-qlfs, note: "End User Licence version + Secure Access version; open-access teaching datasets (e.g. Jan–Mar 2023)"}
+
+  - country: aus
+    survey: Labour Force Survey
+    routes:
+      - {provider: ABS TableBuilder (LFS), url: "https://www.abs.gov.au/statistics/microdata-tablebuilder/available-microdata-tablebuilder/labour-force-survey", access_level: registration, years: "Aug 2006–Jan 2026; paused during LFS modernisation", source_id: src-aus-abs-lfs-tablebuilder}
+      - {provider: ABS DataLab (Longitudinal Labour Force microdata), url: TO-LOCATE, access_level: secure, years: "to check"}
+
+  - country: fra
+    survey: Enquête Emploi en continu (EEC)
+    routes:
+      - {provider: Insee detail files, url: "https://www.insee.fr/fr/statistiques/8632441", access_level: public, years: "2019–2025 annual detail files (CSV/Parquet)", source_id: src-fra-insee-eec-puf-2024}
+      - {provider: Quetelet-Progedo / ADISP (research file), url: "https://insee.fr/en/metadonnees/source/operation/s1449/acces-micro-donnees", access_level: licensed, years: "to check", source_id: src-fra-insee-eec-research-access}
+
+  - country: int
+    survey: Cross-country
+    routes:
+      - {provider: Eurostat EU-LFS public microdata (not for inference — training use), url: "https://ec.europa.eu/eurostat/web/microdata/public-microdata/labour-force-survey", access_level: public}
+      - {provider: World Bank Microdata Library, url: "https://microdata.worldbank.org", access_level: unknown}
+      - {provider: IPUMS International (mostly census), url: "https://international.ipums.org", access_level: registration}

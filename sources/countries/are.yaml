@@ -1,0 +1,74 @@
+file_meta:
+  scope: country
+  country: are
+  title: United Arab Emirates — labour statistics sources
+  updated: 2026-11-03
+
+profile:
+  nso: {name_ar: المركز الاتحادي للتنافسية والإحصاء, name_en: Federal Competitiveness and Statistics Centre (FCSC), url: "https://fcsc.gov.ae"}
+  lfs:
+    name_en: Labour Force Survey
+    name_ar: مسح القوى العاملة
+    history: resumed 2016 (previous 2009); results 2008, 2009, 2016–2023 published in Excel (per GLMM)
+    employed_definition_note: "15+ who worked at least one paid hour in reference week (per GLMM notes)"
+    classifications: [ISCO-08]
+    icls_standard: unknown
+    age: "15+"
+  notes: >
+    Since 2020, published LFS tables no longer split by nationality (per GLMM). GLMM reports limited public methodological metadata.
+    Emirate-level statistics centres (e.g. Abu Dhabi, Dubai) also publish labour data — add in a later pass.
+  to_verify: [nso.name (FCSC vs FCSA), lfs.icls_standard, latest LFS year]
+
+sources:
+  - id: src-are-fcsc-home
+    title_en: FCSC — official website
+    publisher: Federal Competitiveness and Statistics Centre
+    country: are
+    type: organisation
+    languages: [ar, en]
+    url: https://fcsc.gov.ae
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-are-uaestat-portal
+    title_en: UAE Stat portal (raw LFS datasets from 2019)
+    publisher: Federal Competitiveness and Statistics Centre
+    country: are
+    type: portal
+    languages: [ar, en]
+    url: https://uaestat.fcsc.gov.ae
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Address inferred from portal name in GLMM notes — confirm.
+  - id: src-are-lfs-methodology
+    title_en: UAE LFS methodology / metadata
+    publisher: Federal Competitiveness and Statistics Centre
+    country: are
+    type: methodology
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P1
+    status: to-locate
+    notes: GLMM (2024) says no methodological metadata available publicly — check FCSC and ILO national sources catalogue.
+  - id: src-are-glmm-lfs-notes
+    title_en: GLMM — UAE LFS tables with methodological notes
+    publisher: Gulf Research Center (GLMM programme)
+    country: are
+    type: database
+    languages: [en]
+    url: https://gulfmigration.grc.net/?p=10504
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+  - id: src-are-ilo-country-profile
+    title_en: ILO profile of UAE labour statistics system
+    publisher: ILO
+    country: are
+    type: publication
+    languages: [en]
+    url: https://www.ilo.org/media/569656/download
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+    notes: Title assumed from search snippet context — verify.

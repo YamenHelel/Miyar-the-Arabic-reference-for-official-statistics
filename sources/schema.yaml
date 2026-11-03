@@ -1,0 +1,34 @@
+# Source record schema, used by tools/validate.py
+# Each sources/**/*.yaml file has the form:
+#   file_meta: {scope, title, updated, notes}
+#   sources: [ <source record>, ... ]
+
+required: [id, title_en, publisher, type, url, status, priority, date_accessed]
+
+fields:
+  id:            {type: str, pattern: "^src-[a-z0-9-]+$", unique: true}
+  title_en:      {type: str}
+  title_ar:      {type: str, optional: true}
+  title_orig:    {type: str, optional: true, note: "Original-language title if not EN/AR (e.g. French)"}
+  publisher:     {type: str}
+  country:       {type: str, optional: true, enum: [tun, sau, mar, jor, are, pse, usa, gbr, aus, fra, int]}
+  type:
+    type: str
+    enum: [standard, manual, methodology, questionnaire, metadata, sdg-metadata, database,
+           publication, glossary, microdata, portal, classification, organisation, news]
+  domain:        {type: str, optional: true, default: labour}
+  languages:     {type: list, optional: true, items: [ar, en, fr]}
+  url:           {type: str, pattern: "^https?://|^TO-LOCATE$"}
+  archived_url:  {type: str, optional: true}
+  date_published: {type: datelike, optional: true, note: "YYYY, YYYY-MM or YYYY-MM-DD"}
+  date_accessed: {type: date}
+  version:       {type: str, optional: true}
+  licence_terms: {type: str, optional: true}
+  icls_standard: {type: str, optional: true, enum: ["13th", "19th", "mixed", "unknown", "n/a"]}
+  sdg_indicators: {type: list, optional: true}
+  priority:      {type: str, enum: [P1, P2, P3]}
+  status:        {type: str, enum: [to-locate, collected, link-ok, broken, verified, superseded]}
+  verified_by:   {type: str, optional: true}
+  verified_date: {type: date, optional: true}
+  superseded_by: {type: str, optional: true}
+  notes:         {type: str, optional: true}

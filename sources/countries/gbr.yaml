@@ -1,0 +1,60 @@
+file_meta:
+  scope: country
+  country: gbr
+  title: United Kingdom — labour statistics sources (reference country)
+  updated: 2026-11-03
+
+profile:
+  nso: {name_en: Office for National Statistics (ONS), url: "https://www.ons.gov.uk"}
+  lfs:
+    name_en: Labour Force Survey (LFS); Transformed LFS (TLFS) in development
+    frequency: quarterly (rolling)
+    status_note: QMI (rev. Nov 2025) lists LFS as "official statistics in development" — quality issues (response rates) are a teaching case
+    icls_standard: "ILO-based"
+    age: "16+"
+  to_verify: [lfs.age, TLFS transition date]
+
+sources:
+  - id: src-gbr-ons-lfs-user-guidance
+    title_en: Labour Force Survey — user guidance (volumes 1–11)
+    publisher: Office for National Statistics
+    country: gbr
+    type: methodology
+    languages: [en]
+    url: https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/methodologies/labourforcesurveyuserguidance
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: URL derived from the "/pdf" link in search results (removed the /pdf suffix).
+  - id: src-gbr-ons-lfs-qmi
+    title_en: Labour Force Survey — Quality and Methodology Information (QMI)
+    publisher: Office for National Statistics
+    country: gbr
+    type: methodology
+    languages: [en]
+    url: https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/methodologies/labourforcesurveylfsqmi
+    date_published: 2025-11-17
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-gbr-ons-lm-methodology-list
+    title_en: "ONS — People in work: topic-specific methodology (list)"
+    publisher: Office for National Statistics
+    country: gbr
+    type: methodology
+    languages: [en]
+    url: https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/topicspecificmethodology
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+  - id: src-gbr-ukds-qlfs
+    title_en: "UK Data Service — Quarterly Labour Force Survey (EUL and Secure Access versions; open teaching datasets)"
+    publisher: UK Data Service
+    country: gbr
+    type: microdata
+    languages: [en]
+    url: https://ukdataservice.ac.uk
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Exact QLFS series page TO-LOCATE (series GN 33246 per older records). Teaching dataset e.g. SN 9097-derived.

@@ -1,0 +1,72 @@
+file_meta:
+  scope: country
+  country: fra
+  title: France — labour statistics sources (reference country)
+  updated: 2026-11-03
+
+profile:
+  nso: {name_fr: "Institut national de la statistique et des études économiques (Insee)", url: "https://www.insee.fr"}
+  lfs:
+    name_fr: Enquête Emploi en continu (EEC)
+    frequency: continuous, quarterly results
+    framework: EU-LFS (IESS Regulation since 2021)
+    unemployed_fr: "15+ sans emploi la semaine de référence, disponible sous 2 semaines, recherche active dans les 4 dernières semaines ou emploi trouvé commençant dans les 3 mois"
+    icls_standard: "ILO-based (EU-LFS)"
+    age: "15+"
+  notes: Concept of «halo autour du chômage» (inactive close to the labour market) is a useful parallel to ILO potential labour force.
+
+sources:
+  - id: src-fra-insee-eec-methodo
+    title_en: Enquête Emploi en continu — methodology
+    title_orig: Méthodologie de l'enquête Emploi en continu
+    publisher: Insee
+    country: fra
+    type: methodology
+    languages: [fr]
+    url: https://insee.fr/fr/metadonnees/source/fichier/methodologie_emploi_continu.pdf
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-fra-insee-eec-source-doc
+    title_en: Enquête Emploi en continu — methodological documentation (source page)
+    publisher: Insee
+    country: fra
+    type: methodology
+    languages: [fr]
+    url: https://www.insee.fr/fr/metadonnees/source/operation/s1415/documentation-methodologique
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+  - id: src-fra-insee-eec-puf-2024
+    title_en: Activité, emploi et chômage en 2024 — EEC detail file (public, CSV/Parquet)
+    title_orig: Activité, emploi et chômage en 2024 — Enquête emploi en continu — Fichier détail
+    publisher: Insee
+    country: fra
+    type: microdata
+    languages: [fr]
+    url: https://www.insee.fr/fr/statistiques/8632441
+    date_published: 2025-09-22
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: 83 variables, 353,420 observations; free download. 2025 file also listed (insee.fr/fr/statistiques/9034119).
+  - id: src-fra-insee-eec-puf-2025
+    title_en: Activité, emploi et chômage en 2025 — EEC detail file
+    publisher: Insee
+    country: fra
+    type: microdata
+    languages: [fr]
+    url: https://www.insee.fr/fr/statistiques/9034119
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+  - id: src-fra-insee-eec-research-access
+    title_en: Enquête Emploi — micro-data access for researchers (via Quetelet-Progedo / ADISP)
+    publisher: Insee
+    country: fra
+    type: microdata
+    languages: [fr, en]
+    url: https://insee.fr/en/metadonnees/source/operation/s1449/acces-micro-donnees
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected

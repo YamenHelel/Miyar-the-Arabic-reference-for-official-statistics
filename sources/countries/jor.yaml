@@ -1,0 +1,73 @@
+file_meta:
+  scope: country
+  country: jor
+  title: Jordan — labour statistics sources
+  updated: 2026-11-03
+
+profile:
+  nso: {name_ar: دائرة الإحصاءات العامة, name_en: Department of Statistics (DoS), url: "https://dosweb.dos.gov.jo"}
+  lfs:
+    name_en: Employment and Unemployment Survey (EUS) / Labour Force Survey
+    name_ar: مسح العمالة والبطالة
+    frequency: quarterly (4 rounds/year)
+    sample: "~16,500 households per round (per ERF description)"
+    mode: tablet-based (CAPI) in recent rounds
+    coverage_note: historically excludes non-Jordanians not living in conventional dwellings
+    icls_standard: unknown
+    age: "15+"
+  headline_note: >
+    DoS publishes rates for Jordanians and overall (e.g. Q2 2026 per press: overall 16.1%, Jordanians 21.0%, non-Jordanians 8.2%).
+    Always state which population a rate refers to.
+  to_verify: [lfs.icls_standard, lfs.sample, dosweb URL]
+
+sources:
+  - id: src-jor-dos-home
+    title_en: Department of Statistics Jordan — official website
+    publisher: Department of Statistics
+    country: jor
+    type: organisation
+    languages: [ar, en]
+    url: https://dosweb.dos.gov.jo
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-jor-dos-quarterly-report
+    title_en: DoS quarterly employment and unemployment report (latest)
+    publisher: Department of Statistics
+    country: jor
+    type: publication
+    languages: [ar, en]
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P1
+    status: to-locate
+    notes: Press (Jordan Times, Petra) cite DoS quarterly releases; locate the release page on dosweb.
+  - id: src-jor-dos-methodology
+    title_en: EUS methodology and concepts (DoS)
+    publisher: Department of Statistics
+    country: jor
+    type: methodology
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P1
+    status: to-locate
+  - id: src-jor-ihsn-eus
+    title_en: Jordan EUS — IHSN catalogue metadata (sampling design, coverage)
+    publisher: IHSN / DoS
+    country: jor
+    type: metadata
+    languages: [en]
+    url: https://datacatalog.ihsn.org/catalog/6942
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+  - id: src-jor-erf-eus
+    title_en: Jordan EUS / HLFS on ERF data portal (raw and harmonised)
+    publisher: ERF / DoS
+    country: jor
+    type: microdata
+    languages: [en]
+    url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected

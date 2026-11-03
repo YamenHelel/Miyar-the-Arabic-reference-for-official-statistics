@@ -1,0 +1,147 @@
+file_meta:
+  scope: international (global, non-ILO)
+  title: UN SDG metadata, OECD, Eurostat, IPUMS, IHSN / World Bank microdata, ISI glossary
+  updated: 2026-11-03
+  notes: Collected from web search results on 2026-11-03.
+
+sources:
+  - id: src-un-sdg-metadata-repo
+    title_en: UN SDG Indicators Metadata Repository
+    publisher: UN Statistics Division (UNSD) / IAEG-SDGs
+    country: int
+    type: sdg-metadata
+    languages: [en]
+    url: https://unstats.un.org/sdgs/metadata/
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Per-goal pages, e.g. ?Goal=8. Some indicators have pre/post 2025 Comprehensive Review versions. Check whether Arabic metadata files exist.
+
+  - id: src-un-sdg-metadata-goal8
+    title_en: UN SDG metadata — Goal 8 indicators list
+    publisher: UNSD
+    country: int
+    type: sdg-metadata
+    languages: [en]
+    url: https://unstats.un.org/sdgs/metadata/?Goal=8
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+
+  - id: src-oecd-unemployment-indicator
+    title_en: OECD — Unemployment rate indicator (definition)
+    publisher: OECD
+    country: int
+    type: metadata
+    languages: [en]
+    url: https://data.oecd.org/unemp/unemployment-rate.htm
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+    notes: Old data.oecd.org URL — may redirect to OECD Data Explorer.
+
+  - id: src-oecd-glossary
+    title_en: OECD Glossary of Statistical Terms
+    publisher: OECD
+    country: int
+    type: glossary
+    languages: [en]
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P2
+    status: to-locate
+    notes: Historical URL stats.oecd.org/glossary — current location not confirmed by search.
+
+  - id: src-eurostat-eulfs-main
+    title_en: EU labour force survey — Statistics Explained (overview)
+    publisher: Eurostat
+    country: int
+    type: methodology
+    languages: [en]
+    url: https://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Reference for France (INSEE applies EU-LFS regulation, IESS framework since 2021).
+
+  - id: src-eurostat-eulfs-methodology
+    title_en: EU labour force survey — methodology (2021 onwards)
+    publisher: Eurostat
+    country: int
+    type: methodology
+    languages: [en]
+    url: https://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey_-_methodology
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+
+  - id: src-eurostat-glossary-unemployed
+    title_en: Eurostat glossary — Unemployed
+    publisher: Eurostat
+    country: int
+    type: glossary
+    languages: [en]
+    url: https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Unemployed
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+    notes: ILO-based, age 15–74.
+
+  - id: src-eurostat-lfs-public-microdata
+    title_en: Eurostat — EU-LFS public microdata
+    publisher: Eurostat
+    country: int
+    type: microdata
+    languages: [en]
+    url: https://ec.europa.eu/eurostat/web/microdata/public-microdata/labour-force-survey
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+    notes: Public files not for statistical inference — good for training.
+
+  - id: src-ipums-international
+    title_en: IPUMS International (harmonised census and survey microdata)
+    publisher: IPUMS, University of Minnesota
+    country: int
+    type: microdata
+    languages: [en]
+    url: https://international.ipums.org
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+    notes: Mostly census samples (Morocco 3, Jordan 1 per an IPUMS overview); no LFS samples found for Arab phase-1 countries.
+
+  - id: src-wb-microdata-library
+    title_en: World Bank Microdata Library
+    publisher: World Bank
+    country: int
+    type: microdata
+    languages: [en]
+    url: https://microdata.worldbank.org
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+
+  - id: src-ihsn-catalog
+    title_en: IHSN Survey Catalog (metadata of national surveys incl. LFS)
+    publisher: International Household Survey Network
+    country: int
+    type: metadata
+    languages: [en, fr]
+    url: https://catalog.ihsn.org
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+    notes: Holds metadata for Morocco ENE quarterly rounds, Tunisia ENPE, Jordan EUS.
+
+  - id: src-isi-glossary
+    title_en: ISI Multilingual Glossary of Statistical Terms
+    publisher: International Statistical Institute (ISI)
+    country: int
+    type: glossary
+    languages: [en, fr, ar]
+    url: https://www.isi-web.org/glossary
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Arabic coverage uncertain (sources disagree) — verify. Key input for the statistical concepts glossary (F-02).

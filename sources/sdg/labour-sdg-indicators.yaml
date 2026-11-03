@@ -1,0 +1,92 @@
+file_meta:
+  scope: international
+  title: Labour-related SDG indicators — custodians and metadata entry points
+  updated: 2026-11-03
+  notes: >
+    ILOSTAT states the ILO is custodian (or co-custodian) of 14 labour-related SDG indicators.
+    The list and custodians below were written from ILOSTAT search snippets plus general knowledge,
+    and MUST be checked against the UN metadata repository (field `custodian_check: to-verify`).
+    Indicator wording is abbreviated; quote the official text from the UN metadata when building pages.
+    Metadata file naming pattern on UNSD: Metadata-GG-TT-II (e.g. Metadata-08-05-02) — a .docx version was seen at
+    https://mdgs.un.org/sdgs/metadata/files/Metadata-08-05-02.docx.
+
+sources:
+  - id: src-sdg-goal1-metadata
+    title_en: UN SDG metadata — Goal 1 (1.1.1 working poverty; 1.3.1 social protection coverage)
+    publisher: UNSD / IAEG-SDGs
+    country: int
+    type: sdg-metadata
+    url: https://unstats.un.org/sdgs/metadata/?Goal=1
+    date_accessed: 2026-11-03
+    sdg_indicators: ["1.1.1", "1.3.1"]
+    priority: P1
+    status: collected
+  - id: src-sdg-goal5-metadata
+    title_en: UN SDG metadata — Goal 5 (5.4.1 unpaid care work; 5.5.2 women in managerial positions)
+    publisher: UNSD / IAEG-SDGs
+    country: int
+    type: sdg-metadata
+    url: https://unstats.un.org/sdgs/metadata/?Goal=5
+    date_accessed: 2026-11-03
+    sdg_indicators: ["5.4.1", "5.5.2"]
+    priority: P1
+    status: collected
+  - id: src-sdg-goal8-metadata
+    title_en: UN SDG metadata — Goal 8 (decent work and economic growth)
+    publisher: UNSD / IAEG-SDGs
+    country: int
+    type: sdg-metadata
+    url: https://unstats.un.org/sdgs/metadata/?Goal=8
+    date_accessed: 2026-11-03
+    sdg_indicators: ["8.2.1", "8.3.1", "8.5.1", "8.5.2", "8.6.1", "8.7.1", "8.8.1", "8.8.2", "8.b.1"]
+    priority: P1
+    status: collected
+  - id: src-sdg-goal9-metadata
+    title_en: UN SDG metadata — Goal 9 (9.2.2 manufacturing employment share)
+    publisher: UNSD / IAEG-SDGs
+    country: int
+    type: sdg-metadata
+    url: https://unstats.un.org/sdgs/metadata/?Goal=9
+    date_accessed: 2026-11-03
+    sdg_indicators: ["9.2.2"]
+    priority: P2
+    status: collected
+  - id: src-sdg-goal10-metadata
+    title_en: UN SDG metadata — Goal 10 (10.4.1 labour share of GDP; 10.7.1 recruitment cost)
+    publisher: UNSD / IAEG-SDGs
+    country: int
+    type: sdg-metadata
+    url: https://unstats.un.org/sdgs/metadata/?Goal=10
+    date_accessed: 2026-11-03
+    sdg_indicators: ["10.4.1", "10.7.1"]
+    priority: P1
+    status: collected
+  - id: src-sdg-metadata-8-5-2-docx
+    title_en: SDG metadata file 8.5.2 (unemployment rate) — docx
+    publisher: UNSD / ILO
+    country: int
+    type: sdg-metadata
+    url: https://mdgs.un.org/sdgs/metadata/files/Metadata-08-05-02.docx
+    date_accessed: 2026-11-03
+    sdg_indicators: ["8.5.2"]
+    priority: P2
+    status: collected
+
+# Indicator list (not source records — reference table for page building)
+indicators:
+  - {code: "1.1.1", short_en: "Proportion of population below international poverty line (incl. employed population — working poverty)", short_ar: "نسبة السكان تحت خط الفقر الدولي (بما في ذلك العاملون الفقراء)", custodian: "World Bank; ILO (working poverty)", custodian_check: to-verify, labour_relevance: high}
+  - {code: "1.3.1", short_en: "Population covered by social protection floors/systems", short_ar: "نسبة السكان المشمولين بنظم الحماية الاجتماعية", custodian: ILO, custodian_check: to-verify, labour_relevance: medium}
+  - {code: "5.4.1", short_en: "Time spent on unpaid domestic and care work", short_ar: "نسبة الوقت المخصص للعمل المنزلي وأعمال الرعاية غير مدفوعة الأجر", custodian: "UN Women / UNSD", custodian_check: to-verify, labour_relevance: medium, note: "Linked to 19th ICLS own-use production work"}
+  - {code: "5.5.2", short_en: "Proportion of women in managerial positions", short_ar: "نسبة النساء في المناصب الإدارية", custodian: ILO, custodian_check: to-verify, labour_relevance: high}
+  - {code: "8.2.1", short_en: "Annual growth rate of real GDP per employed person", short_ar: "معدل النمو السنوي للناتج المحلي الإجمالي الحقيقي لكل عامل", custodian: ILO, custodian_check: to-verify, labour_relevance: high}
+  - {code: "8.3.1", short_en: "Proportion of informal employment in total employment", short_ar: "نسبة العمالة غير المنظمة من إجمالي العمالة", custodian: ILO, custodian_check: confirmed-by-search, labour_relevance: high, note: "Now defined under 21st ICLS (2023) informality resolution — check metadata version"}
+  - {code: "8.5.1", short_en: "Average hourly earnings of employees", short_ar: "متوسط الأجر في الساعة للمستخدَمين", custodian: ILO, custodian_check: to-verify, labour_relevance: high}
+  - {code: "8.5.2", short_en: "Unemployment rate (by sex, age, persons with disabilities)", short_ar: "معدل البطالة حسب الجنس والعمر والأشخاص ذوي الإعاقة", custodian: ILO, custodian_check: confirmed-by-search, labour_relevance: high}
+  - {code: "8.6.1", short_en: "Proportion of youth (15–24) not in education, employment or training (NEET)", short_ar: "نسبة الشباب (15-24) خارج التعليم والعمل والتدريب", custodian: ILO, custodian_check: confirmed-by-search, labour_relevance: high}
+  - {code: "8.7.1", short_en: "Proportion and number of children aged 5–17 engaged in child labour", short_ar: "نسبة وعدد الأطفال (5-17) المنخرطين في عمل الأطفال", custodian: "ILO; UNICEF", custodian_check: to-verify, labour_relevance: high}
+  - {code: "8.8.1", short_en: "Fatal and non-fatal occupational injuries per 100,000 workers", short_ar: "معدل إصابات العمل المميتة وغير المميتة لكل 100 ألف عامل", custodian: ILO, custodian_check: to-verify, labour_relevance: high}
+  - {code: "8.8.2", short_en: "Level of national compliance with labour rights (freedom of association, collective bargaining)", short_ar: "مستوى الامتثال الوطني لحقوق العمل (حرية تكوين الجمعيات والمفاوضة الجماعية)", custodian: ILO, custodian_check: confirmed-by-search, labour_relevance: medium, note: "Based on ILO supervisory texts, not surveys"}
+  - {code: "8.b.1", short_en: "Existence of a national strategy for youth employment", short_ar: "وجود استراتيجية وطنية لتشغيل الشباب", custodian: ILO, custodian_check: to-verify, labour_relevance: low}
+  - {code: "9.2.2", short_en: "Manufacturing employment as a proportion of total employment", short_ar: "العمالة في الصناعة التحويلية كنسبة من إجمالي العمالة", custodian: UNIDO, custodian_check: to-verify, labour_relevance: medium}
+  - {code: "10.4.1", short_en: "Labour share of GDP", short_ar: "حصة دخل العمل من الناتج المحلي الإجمالي", custodian: ILO, custodian_check: confirmed-by-search, labour_relevance: high}
+  - {code: "10.7.1", short_en: "Recruitment cost borne by employee as a proportion of monthly income", short_ar: "تكلفة التوظيف التي يتحملها العامل كنسبة من دخله الشهري", custodian: "ILO; World Bank", custodian_check: to-verify, labour_relevance: medium}

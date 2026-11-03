@@ -1,0 +1,254 @@
+file_meta:
+  scope: international (Arab regional bodies)
+  title: ESCWA, AITRS, GCC-Stat, Arab Labour Organization, ERF, Arab Monetary Fund
+  updated: 2026-11-03
+  notes: Collected from web search results on 2026-11-03. All status=collected unless stated.
+
+sources:
+  # ---------- ESCWA ----------
+  - id: src-escwa-state-lfs-arab-states-2024
+    title_en: State of labour force statistics in Arab States (ESCWA, 2024) — E/ESCWA/CL4.SIT/2024/TP.3
+    publisher: UN ESCWA
+    country: int
+    type: publication
+    languages: [en, ar]
+    url: https://www.unescwa.org/publications/labour-force-statistics-arab-states
+    date_published: 2024-05
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Based on a Jan 2023 survey of 18 NSOs; all 18 have LFS-based databases. Essential baseline on which ICLS standard each Arab country applies.
+
+  - id: src-escwa-lm-data-structures
+    title_en: Labour market data structures and challenges in the ESCWA region
+    publisher: UN ESCWA
+    country: int
+    type: publication
+    languages: [en]
+    url: https://www.unescwa.org/publications/labour-market-data-structures-and-challenges-escwa-region
+    date_published: 2013
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+    notes: Also in UN Digital Library https://digitallibrary.un.org/record/1292610 (E/ESCWA/SD/2013/2).
+
+  - id: src-escwa-data-portal
+    title_en: ESCWA Arab Region Data Portal (bilingual AR/EN)
+    title_ar: بوابة البيانات العربية - الإسكوا
+    publisher: UN ESCWA
+    country: int
+    type: portal
+    languages: [ar, en]
+    url: http://data.unescwa.org/
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: URL taken from 2019 launch notice — current address must be confirmed on unescwa.org.
+
+  - id: src-escwa-skills-monitor
+    title_en: ESCWA Skills Monitor
+    publisher: UN ESCWA
+    country: int
+    type: portal
+    languages: [en, ar]
+    url: https://unescwa.org/portal/escwa-skills-monitor
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+
+  - id: src-escwa-statistical-abstract
+    title_en: Statistical Abstract of the Arab Region (Arabic version, UN iLibrary)
+    title_ar: المجموعة الإحصائية للمنطقة العربية
+    publisher: UN ESCWA
+    country: int
+    type: publication
+    languages: [ar, en]
+    url: https://www.un-ilibrary.org/content/periodicals/24121029?mlang=ar
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+
+  - id: src-escwa-icls19-preparatory-meeting
+    title_en: Preparatory regional meeting of labour statisticians in support of the 19th ICLS (ESCWA archive)
+    title_ar: الاجتماع الإقليمي التحضيري لخبراء إحصاءات العمل دعماً للمؤتمر الدولي التاسع عشر
+    publisher: UN ESCWA
+    country: int
+    type: publication
+    languages: [ar, en]
+    url: https://archive.unescwa.org/node/5320
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+    notes: Useful for official Arabic terminology (e.g. المؤتمر الدولي لخبراء الإحصاءات العمالية).
+
+  # ---------- AITRS ----------
+  - id: src-aitrs-home
+    title_en: Arab Institute for Training and Research in Statistics (AITRS) — official website
+    title_ar: المعهد العربي للتدريب والبحوث الإحصائية
+    publisher: AITRS (Amman, Jordan)
+    country: int
+    type: organisation
+    languages: [ar, en]
+    url: https://www.aitrs.org
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: >
+      Address taken from UN profile (https://unstats.un.org/gist/data/Profile_AITRS.pdf), not opened directly.
+      Intergovernmental, members = Arab NSOs. Check for: training catalogue, Arabic statistical glossary, labour statistics courses.
+
+  - id: src-aitrs-un-profile
+    title_en: AITRS institutional profile (UN Global Institutions for Statistical Training)
+    publisher: UN Statistics Division
+    country: int
+    type: organisation
+    languages: [en]
+    url: https://unstats.un.org/gist/data/Profile_AITRS.pdf
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+
+  - id: src-aitrs-glossary
+    title_en: AITRS Arabic statistical glossary / dictionary (if published)
+    publisher: AITRS
+    country: int
+    type: glossary
+    languages: [ar, en]
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P1
+    status: to-locate
+    notes: Ask AITRS directly; very relevant to the terminology concordance (I-002).
+
+  # ---------- GCC-Stat ----------
+  - id: src-gccstat-labour-publications
+    title_en: Labour statistics in the GCC countries (publication series)
+    title_ar: إحصاءات العمل في دول مجلس التعاون
+    publisher: GCC-Stat
+    country: int
+    type: publication
+    languages: [ar, en]
+    url: https://gccstat.org/en/statistic/publications/labor-statistics
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+
+  - id: src-gccstat-labour-survey-page
+    title_en: GCC-Stat — Labour statistics survey page
+    publisher: GCC-Stat
+    country: int
+    type: methodology
+    languages: [en]
+    url: https://gccstat.org/en/statistic/surveys/2017/labour_statstics
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+    notes: GCC-Stat runs a quarterly harmonised LFS covering citizens and non-citizens (per search snippet) — verify.
+
+  - id: src-gccstat-marsa-labour
+    title_en: GCC-Stat Marsa data portal — Labour dataset (beta)
+    publisher: GCC-Stat
+    country: int
+    type: database
+    languages: [ar, en]
+    url: https://dp.marsa.gccstat.org/dataset/labour
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+
+  - id: src-gccstat-ilo-lfs-workshop
+    title_en: Regional workshop on labour force statistics organised by GCC-Stat & ILO
+    publisher: GCC-Stat
+    country: int
+    type: news
+    languages: [en]
+    url: https://gccstat.org/en/center/news/regional-ilo-workshop
+    date_accessed: 2026-11-03
+    icls_standard: 19th
+    priority: P3
+    status: collected
+
+  # ---------- Arab Labour Organization ----------
+  - id: src-alo-home
+    title_en: Arab Labour Organization — official website
+    title_ar: منظمة العمل العربية
+    publisher: Arab Labour Organization (Cairo)
+    country: int
+    type: organisation
+    languages: [ar, en]
+    url: https://alolabor.org
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+    notes: Check publications/library for current statistical yearbook and employment reports.
+
+  - id: src-alo-employment-report-1-summary
+    title_en: First ALO report on employment and unemployment in Arab States — English summary
+    publisher: Arab Labour Organization
+    country: int
+    type: publication
+    languages: [en]
+    url: https://alolabor.org/wp-content/uploads/2011/12/Report_Operation_And_Unemployment_Nu_01_Summary_En.pdf
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+
+  - id: src-alo-employment-report-2-summary
+    title_en: Second ALO report on employment and unemployment in Arab States — English summary
+    publisher: Arab Labour Organization
+    country: int
+    type: publication
+    languages: [en]
+    url: https://alolabor.org/wp-content/uploads/2010/07/Report_Employment-n-Unemployment_n02_En_Summary.pdf
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+
+  - id: src-alo-statistical-yearbook
+    title_en: ALO Arab labour statistical yearbook (latest edition)
+    publisher: Arab Labour Organization
+    country: int
+    type: publication
+    languages: [ar]
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P2
+    status: to-locate
+    notes: A 2010 edition is cited by researchers; latest edition not found.
+
+  # ---------- ERF ----------
+  - id: src-erf-oamdi-portal
+    title_en: ERF Open Access Micro Data Initiative (OAMDI) data portal
+    publisher: Economic Research Forum (ERF)
+    country: int
+    type: microdata
+    languages: [en, ar, fr]
+    url: https://www.erfdataportal.com
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Licensed access (registration + data access agreement). Holds raw and harmonised LFS for Tunisia, Jordan, Palestine, Egypt and others.
+
+  - id: src-erf-harmonized-catalog
+    title_en: ERF data portal — Harmonized Data collection
+    publisher: Economic Research Forum (ERF)
+    country: int
+    type: microdata
+    languages: [en]
+    url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+
+  # ---------- Arab Monetary Fund ----------
+  - id: src-amf-arab-statistics
+    title_en: Arab Monetary Fund — Arab statistics database / Joint Arab Economic Report (labour chapter)
+    publisher: Arab Monetary Fund
+    country: int
+    type: database
+    languages: [ar, en]
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P3
+    status: to-locate
+    notes: Not searched in session 1. Secondary relevance (macro data, labour chapter of the Joint Arab Economic Report).

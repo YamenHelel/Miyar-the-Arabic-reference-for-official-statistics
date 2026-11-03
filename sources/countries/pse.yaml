@@ -1,0 +1,61 @@
+file_meta:
+  scope: country
+  country: pse
+  title: Palestine — labour statistics sources
+  updated: 2026-11-03
+
+profile:
+  nso: {name_ar: الجهاز المركزي للإحصاء الفلسطيني, name_en: Palestinian Central Bureau of Statistics (PCBS), url: "https://www.pcbs.gov.ps"}
+  lfs:
+    name_en: Labour Force Survey
+    name_ar: مسح القوى العاملة
+    frequency: quarterly + annual report
+    standards_note: ILO definitions adopted, adjusted for Palestinian social context (per PCBS/UN documents)
+    icls_standard: unknown
+    age: "15+ published (10–14 covered but excluded from results per older ILO profile)"
+  notes: Coverage of Gaza and East Jerusalem varies by period and conditions — record per survey round.
+  to_verify: [lfs.icls_standard, coverage of Gaza 2023–2026 rounds]
+
+sources:
+  - id: src-pse-pcbs-home
+    title_en: PCBS — official website
+    publisher: Palestinian Central Bureau of Statistics
+    country: pse
+    type: organisation
+    languages: [ar, en]
+    url: https://www.pcbs.gov.ps
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-pse-pcbs-lfs-annual-2024
+    title_en: Labour Force Survey annual report 2024 (concepts and definitions, methodology, quality)
+    publisher: Palestinian Central Bureau of Statistics
+    country: pse
+    type: publication
+    languages: [ar, en]
+    url: https://www.pcbs.gov.ps/Downloads/book2717.pdf
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Contains full "Concepts and Definitions" and "Methodology" chapters — prime source for the indicator pages.
+  - id: src-pse-pcbs-microdata-portal
+    title_en: PCBS microdata / metadata catalogue (NADA)
+    publisher: Palestinian Central Bureau of Statistics
+    country: pse
+    type: microdata
+    languages: [ar, en]
+    url: https://microdata.pcbs.gov.ps/PCBS-Metadata-en-v5.2/index.php/catalog/740/related-materials
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Catalogue entry with LFS related materials (questionnaire, reports). Access policy for LFS microdata — verify.
+  - id: src-pse-erf-lfs
+    title_en: Palestine LFS on ERF data portal (e.g. LFS 2021)
+    publisher: ERF / PCBS
+    country: pse
+    type: microdata
+    languages: [en]
+    url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected

@@ -1,0 +1,30 @@
+# Practitioner record — private store only. NEVER commit real records to this repo.
+# visibility_default: what is pre-selected in the form (the person can change it)
+
+fields:
+  - {name: full_name_ar,     label_ar: الاسم الكامل بالعربية,    type: text,  required: true,  visibility_default: public}
+  - {name: full_name_latin,  label_ar: الاسم بالحروف اللاتينية,  type: text,  required: false, visibility_default: public}
+  - {name: position,         label_ar: المسمى الوظيفي,           type: text,  required: true,  visibility_default: public}
+  - {name: organisation,     label_ar: المؤسسة,                  type: text,  required: true,  visibility_default: public}
+  - {name: organisation_type, label_ar: نوع المؤسسة, type: choice, required: true, visibility_default: public,
+     options: [NSO, ministry, central_bank, regional_org, international_org, university, private, independent, other]}
+  - {name: country_work,     label_ar: بلد العمل,                type: choice_iso3, required: true, visibility_default: public}
+  - {name: nationality,      label_ar: الجنسية,                  type: choice_iso3, required: false, visibility_default: project_only}
+  - {name: specialisations,  label_ar: مجالات التخصص, type: multi, required: true, visibility_default: public,
+     options: [lfs, household_surveys, sampling, methodology, informality, labour_migration, child_labour, gender, wages_earnings,
+               administrative_data, classifications_isco_isic, sdg_reporting, dissemination_communication, data_engineering, ai_data_science, training]}
+  - {name: years_experience, label_ar: سنوات الخبرة, type: choice, required: false, visibility_default: project_only, options: ["0-2", "3-5", "6-10", "11-20", "20+"]}
+  - {name: languages,        label_ar: اللغات, type: multi, required: false, visibility_default: public, options: [ar, fr, en, other]}
+  - {name: linkedin_url,     label_ar: رابط لينكدإن, type: url, required: false, visibility_default: public}
+  - {name: email,            label_ar: البريد الإلكتروني, type: email, required: true, visibility_default: project_only}
+  - {name: willing_to_review, label_ar: مستعد لمراجعة المحتوى الخاص ببلدي, type: bool, required: false, visibility_default: project_only}
+  - {name: willing_to_contribute, label_ar: مستعد للمساهمة في كتابة المحتوى, type: bool, required: false, visibility_default: project_only}
+  - {name: interested_training, label_ar: مهتم بالتدريب (مدفوع/مجاني), type: bool, required: false, visibility_default: project_only}
+  - {name: needs_free_text,  label_ar: ما الأداة أو المعلومة التي تحتاجها أكثر في عملك؟, type: longtext, required: false, visibility_default: project_only}
+  - {name: consent_processing, label_ar: موافقة على معالجة البيانات, type: bool, required: true}
+  - {name: consent_public_listing, label_ar: موافقة على النشر العلني للحقول المختارة, type: bool, required: true}
+  - {name: consent_contact,  label_ar: موافقة على التواصل بشأن المشروع, type: bool, required: false}
+  - {name: submitted_at,     type: datetime, system: true}
+  - {name: last_confirmed_at, type: datetime, system: true, note: "Re-confirmation request every 24 months; delete if no reply"}
+
+# The needs_free_text field doubles as the demand survey (backlog I-036).

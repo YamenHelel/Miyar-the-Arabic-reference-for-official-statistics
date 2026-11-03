@@ -1,0 +1,50 @@
+file_meta:
+  scope: country
+  country: aus
+  title: Australia — labour statistics sources (reference country)
+  updated: 2026-11-03
+
+profile:
+  nso: {name_en: Australian Bureau of Statistics (ABS), url: "https://www.abs.gov.au"}
+  lfs:
+    name_en: Labour Force Survey (LFS), monthly since 1978 (survey since 1960)
+    frequency: monthly; one-eighth of sample rotated each month
+    scope: usual residents 15+ excluding defence forces
+    icls_standard: "ILO-based"
+    age: "15+"
+  notes: >
+    Reference publication "Labour Statistics: Concepts, Sources and Methods" (cat. 6102.0.55.001). LFS modernisation
+    programme under way; LFS TableBuilder paused until it completes (data Aug 2006–Jan 2026).
+
+sources:
+  - id: src-aus-abs-lscsm-2018
+    title_en: Labour Statistics — Concepts, Sources and Methods (6102.0.55.001), Feb 2018
+    publisher: Australian Bureau of Statistics
+    country: aus
+    type: methodology
+    languages: [en]
+    url: https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/6102.0.55.001Main+Features1Feb%202018
+    date_published: 2018-02
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Check for a newer edition on the current abs.gov.au site.
+  - id: src-aus-abs-lfs-tablebuilder
+    title_en: TableBuilder — Labour Force Survey
+    publisher: Australian Bureau of Statistics
+    country: aus
+    type: microdata
+    languages: [en]
+    url: https://www.abs.gov.au/statistics/microdata-tablebuilder/available-microdata-tablebuilder/labour-force-survey
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-aus-abs-lfs-methodology
+    title_en: ABS Labour Force, Australia — methodology (latest release)
+    publisher: Australian Bureau of Statistics
+    country: aus
+    type: methodology
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P1
+    status: to-locate

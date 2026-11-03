@@ -1,0 +1,68 @@
+file_meta:
+  scope: country
+  country: usa
+  title: United States — labour statistics sources (reference country)
+  updated: 2026-11-03
+
+profile:
+  nso: {name_en: "Bureau of Labor Statistics (BLS); survey conducted by the U.S. Census Bureau", url: "https://www.bls.gov"}
+  lfs:
+    name_en: Current Population Survey (CPS)
+    frequency: monthly
+    universe: civilian noninstitutional population 16+
+    unemployed: "no work in reference week, available, active search in prior 4 weeks (passive search excluded); temporary layoff counted"
+    icls_standard: "national (close to ILO; age 16+, active-search rule)"
+    age: "16+"
+  notes: Key comparability differences vs ILO — lower age 16, active vs passive search distinction, LU measures U-1…U-6.
+
+sources:
+  - id: src-usa-bls-cps-definitions
+    title_en: CPS — Concepts and definitions
+    publisher: U.S. Bureau of Labor Statistics
+    country: usa
+    type: metadata
+    languages: [en]
+    url: https://www.bls.gov/cps/definitions.htm
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-usa-bls-hom-cps
+    title_en: BLS Handbook of Methods — Current Population Survey
+    publisher: U.S. Bureau of Labor Statistics
+    country: usa
+    type: methodology
+    languages: [en]
+    url: https://www.bls.gov/opub/hom/cps/
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-usa-bls-hom-cps-concepts
+    title_en: BLS Handbook of Methods — CPS concepts
+    publisher: U.S. Bureau of Labor Statistics
+    country: usa
+    type: methodology
+    languages: [en]
+    url: https://www.bls.gov/opub/hom/cps/concepts.htm
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-usa-bls-cps-documentation
+    title_en: CPS technical documentation (incl. "How the Government Measures Unemployment")
+    publisher: U.S. Bureau of Labor Statistics
+    country: usa
+    type: methodology
+    languages: [en]
+    url: https://www.bls.gov/cps/documentation.htm
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+  - id: src-usa-bls-cps-puf
+    title_en: CPS public use microdata — BLS page pointing to Census Bureau files
+    publisher: U.S. Bureau of Labor Statistics
+    country: usa
+    type: microdata
+    languages: [en]
+    url: https://www.bls.gov/cps/data/public-use-file.htm
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected

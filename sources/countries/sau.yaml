@@ -1,0 +1,79 @@
+file_meta:
+  scope: country
+  country: sau
+  title: Saudi Arabia — labour statistics sources
+  updated: 2026-11-03
+
+profile:
+  nso: {name_ar: الهيئة العامة للإحصاء, name_en: General Authority for Statistics (GASTAT), url: "https://www.stats.gov.sa"}
+  lfs:
+    name_en: Labour Force Survey (LFS)
+    name_ar: مسح القوى العاملة
+    frequency: quarterly (since 2016; first LFS 2001, bi-annual after 2006 — per GLMM)
+    mode: household telephone survey (per GASTAT methodology)
+    coverage: all persons 15+ habitually resident, Saudis and non-Saudis
+    sample: "53,360 households (2021 Q3, per GLMM)"
+    icls_standard: unknown
+    age: "15+"
+    classifications: [Saudi Classification of Occupations (ISCO-08 based)]
+  second_source: administrative records (released separately from LFS indicators)
+  to_verify: [lfs.icls_standard, lfs.sample]
+
+sources:
+  - id: src-sau-gastat-lfs-page
+    title_en: GASTAT — Labor Force Survey page
+    title_ar: مسح القوى العاملة
+    publisher: General Authority for Statistics
+    country: sau
+    type: methodology
+    languages: [ar, en]
+    url: https://stats.gov.sa/en/w/lfs-1
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-sau-gastat-lms-methodology-2025q1
+    title_en: Methodology of Labor Market Statistics — Q1 2025 (EN)
+    publisher: General Authority for Statistics
+    country: sau
+    type: methodology
+    languages: [en]
+    url: https://www.stats.gov.sa/documents/d/guest/methodology-of-labor-market-statistics-q1-2025-en
+    date_published: 2025
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Most recent methodology found; check for Q2 2026 edition and Arabic version.
+  - id: src-sau-gastat-lms-methodology-2020q4
+    title_en: Methodology of Labor Market Statistics — Q4 2020 (EN)
+    publisher: General Authority for Statistics
+    country: sau
+    type: methodology
+    languages: [en]
+    url: "https://www.stats.gov.sa/sites/default/files/uploads/Methodology%20of%20Labor%20Market%20Statistics%20-%20Q4.%202020%20%20-%20En.pdf"
+    date_published: 2021
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+    superseded_by: src-sau-gastat-lms-methodology-2025q1
+  - id: src-sau-gastat-microdata
+    title_en: GASTAT microdata page
+    publisher: General Authority for Statistics
+    country: sau
+    type: microdata
+    languages: [ar, en]
+    url: https://stats.gov.sa/en/microdata
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Unclear whether LFS microdata are offered and on what terms — verify.
+  - id: src-sau-glmm-lfs-tables
+    title_en: Gulf Labour Markets, Migration and Population (GLMM) — Saudi LFS tables and notes
+    publisher: Gulf Research Center (GLMM programme)
+    country: sau
+    type: database
+    languages: [en]
+    url: https://gulfmigration.grc.net/?p=10336
+    date_accessed: 2026-11-03
+    priority: P3
+    status: collected
+    notes: Secondary source; useful for history of the survey and nationality breakdowns.

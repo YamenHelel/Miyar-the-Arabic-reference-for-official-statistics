@@ -1,0 +1,93 @@
+file_meta:
+  scope: country
+  country: tun
+  title: Tunisia — labour statistics sources
+  updated: 2026-11-03
+
+profile:   # facts from search snippets — every item to be verified against cited sources
+  nso: {name_ar: المعهد الوطني للإحصاء, name_fr: Institut National de la Statistique (INS), url: "https://www.ins.tn"}
+  lfs:
+    name_fr: Enquête Nationale sur la Population et l'Emploi (ENPE)
+    name_ar: المسح الوطني حول السكان والتشغيل
+    frequency: quarterly (annual ENPE in ILO catalogue for 2022)
+    icls_standard: unknown        # ILO (BIT) unemployment criteria adopted around 2010 per press; ICLS-19 status to verify
+    age: "15+"
+  other_surveys: [Recensement Général de la Population et de l'Habitat, Enquête budget consommation niveau de vie des ménages]
+  notes: >
+    Aug 2026 press column (businessnews.com.tn) questioned Q2 2026 ENPE figures — opinion piece, record only as context.
+  to_verify: [lfs.frequency, lfs.icls_standard, lfs.sample_size, lfs.mode]
+
+sources:
+  - id: src-tun-ins-home
+    title_en: INS Tunisia — official website
+    publisher: Institut National de la Statistique
+    country: tun
+    type: organisation
+    languages: [ar, fr, en]
+    url: https://www.ins.tn
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-tun-ins-enpe-methodo
+    title_en: Methodological note — Employment survey Tunisia
+    title_orig: Note méthodologique — Enquête emploi Tunisie
+    publisher: Institut National de la Statistique
+    country: tun
+    type: methodology
+    languages: [fr]
+    url: "https://ins.tn/sites/default/files-ftp3/files/publication/pdf/Note%20M%C3%A9thodologique%20Enquete%20emploi%20Tunisie.pdf"
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Covers concepts, definitions and history of the employment survey methods.
+  - id: src-tun-ins-serie-methodes
+    title_en: INS statistical methods series
+    title_orig: Série méthodes statistiques
+    publisher: Institut National de la Statistique
+    country: tun
+    type: methodology
+    languages: [fr]
+    url: https://www.ins.tn/sites/default/files-ftp3/files/publication/pdf/serie_methodes_statistiques.pdf
+    date_accessed: 2026-11-03
+    priority: P2
+    status: collected
+  - id: src-tun-ilo-surveylib-enpe2022
+    title_en: ENPE 2022 — ILO Survey Library catalogue entry (metadata, related materials)
+    publisher: ILO / INS
+    country: tun
+    type: metadata
+    languages: [fr, en]
+    url: https://webapps.ilo.org/surveyLib/index.php/catalog/8572
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+  - id: src-tun-ins-nada
+    title_en: INS national survey catalogue (NADA) — microdata
+    publisher: Institut National de la Statistique
+    country: tun
+    type: microdata
+    languages: [fr, ar]
+    url: http://nada.ins.tn
+    date_accessed: 2026-11-03
+    priority: P1
+    status: collected
+    notes: Address from IHSN ADP table (adp.ihsn.org/node/1334); access conditions to verify.
+  - id: src-tun-ins-questionnaire
+    title_en: ENPE questionnaire (latest)
+    publisher: Institut National de la Statistique
+    country: tun
+    type: questionnaire
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P1
+    status: to-locate
+    notes: Check ILO Survey Library related materials for ENPE 2022 and the INS NADA catalogue.
+  - id: src-tun-ins-quarterly-release
+    title_en: Quarterly employment and unemployment indicators release
+    publisher: Institut National de la Statistique
+    country: tun
+    type: publication
+    url: TO-LOCATE
+    date_accessed: 2026-11-03
+    priority: P1
+    status: to-locate
