@@ -404,3 +404,21 @@ sources:
     status: link-ok
     link_check: "2026-11-04 200"
     notes: How ILO derives harmonised indicators from national LFS microdata (95% of ILOSTAT values). Relevant to the code library idea (I-018).
+
+  - id: src-ilo-icls19-res1-pdf
+    title_en: Resolution concerning statistics of work, employment and labour underutilization (19th ICLS, 2013) — PDF, as amended by the 21st ICLS (2023)
+    title_ar: القرار المتعلق بإحصاءات العمل والعمالة ونقص استخدام العمالة (المؤتمر 19، 2013) — النص المعدَّل بقرار المؤتمر 21 (2023)
+    publisher: ILO
+    country: int
+    type: standard
+    languages: [en]
+    url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
+    date_published: 2023-10
+    date_accessed: 2026-11-04
+    icls_standard: 19th
+    sdg_indicators: ["8.5.2", "8.6.1"]
+    priority: P1
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
+    notes: "Full text of the resolution (wcms_230304.pdf), with Resolution II of the 21st ICLS amendments. verified via quote paste (lead opened the document and copied the text)."

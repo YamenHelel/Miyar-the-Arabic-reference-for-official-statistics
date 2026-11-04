@@ -46,14 +46,17 @@ sources:
     status: to-locate
     notes: "Not found on dosweb by search (2026-11-04). DoS releases the quarterly labour market report (Q1 2026 released 2026-05-31 per Petra: overall 16.1%, Jordanians 21.1%, non-Jordanians 8.7%). Lead to locate the release page on dosweb."
   - id: src-jor-dos-methodology
-    title_en: EUS methodology and concepts (DoS)
     publisher: Department of Statistics
     country: jor
-    type: methodology
-    url: TO-LOCATE
-    date_accessed: 2026-11-03
     priority: P1
-    status: to-locate
+    status: verified
+    title_en: "DoS — Employment and unemployment: labour force concepts page"
+    notes: "verified via quote paste (lead opened the document and copied the text)."
+    date_accessed: 2026-11-04
+    type: methodology
+    verified_date: 2026-11-04
+    verified_by: YH
+    url: https://dosweb.dos.gov.jo/labourforce/employment-and-unemployment/
   - id: src-jor-ihsn-eus
     title_en: Jordan EUS — IHSN catalogue metadata (sampling design, coverage)
     publisher: IHSN / DoS

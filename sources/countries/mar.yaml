@@ -101,3 +101,17 @@ sources:
     priority: P3
     status: link-ok
     link_check: "2026-11-04 200"
+
+  - id: src-mar-hcp-chomage-strict
+    title_en: HCP document defining 'chômage strict' (attachment 2927551) — exact title to record
+    publisher: Haut-Commissariat au Plan
+    country: mar
+    type: methodology
+    languages: [fr]
+    url: https://www.hcp.ma/attachment/2927551/
+    date_accessed: 2026-11-04
+    priority: P1
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
+    notes: "verified via quote paste (lead opened the document and copied the text). Defines 'personnes au chômage strict' (15+, sans emploi la semaine précédente, recherche 4 semaines, disponibilité 2 semaines). Likely EMO2026 — confirm and record the document title."

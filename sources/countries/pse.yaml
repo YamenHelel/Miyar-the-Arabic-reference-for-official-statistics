@@ -94,3 +94,17 @@ sources:
     status: link-ok
     link_check: "2026-11-04 200"
     notes: Yearly 2025 file with quarterly files Q1–Q4 (63,446 cases per search snippet). Includes LU3 variable.
+
+  - id: src-pse-pcbs-book2740
+    title_en: PCBS publication book2740.pdf (labour force definitions) — exact title to record
+    publisher: Palestinian Central Bureau of Statistics
+    country: pse
+    type: publication
+    languages: [ar]
+    url: https://www.pcbs.gov.ps/media/qznfsoov/book2740.pdf
+    date_accessed: 2026-11-04
+    priority: P1
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
+    notes: "verified via quote paste (lead opened the document and copied the text). Copying from this PDF produced broken Arabic characters; the definition must be retyped or copied from another format."

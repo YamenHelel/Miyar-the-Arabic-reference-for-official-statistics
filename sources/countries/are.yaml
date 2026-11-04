@@ -48,15 +48,17 @@ sources:
     verified_date: 2026-11-04
     notes: Address inferred from portal name in GLMM notes — confirm.
   - id: src-are-lfs-methodology
-    title_en: UAE LFS methodology / metadata
     publisher: Federal Competitiveness and Statistics Centre
     country: are
-    type: methodology
-    url: TO-LOCATE
-    date_accessed: 2026-11-03
     priority: P1
-    status: to-locate
-    notes: "Still not found (2026-11-04). Press coverage of 2024 LFS (labour force 9.4m, unemployment 1.9%) cites FCSC; a methodology page may exist on fcsc.gov.ae — lead to locate."
+    url: https://fcsc.gov.ae/wp-content/uploads/2025/06/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9-%D8%A8%D9%82%D9%88%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84-ar.xlsx
+    status: verified
+    title_en: "FCSC — labour force data file with Arabic definitions (xlsx, 2025)"
+    notes: "verified via quote paste (lead opened the document and copied the text)."
+    date_accessed: 2026-11-04
+    type: metadata
+    verified_date: 2026-11-04
+    verified_by: YH
   - id: src-are-glmm-lfs-notes
     title_en: GLMM — UAE LFS tables with methodological notes
     publisher: Gulf Research Center (GLMM programme)

@@ -33,5 +33,8 @@ fields:
       translation_status: {type: str, enum: [official, unofficial], optional: true}
       status:   {type: str, enum: [to-paste, pasted, verified, source-missing]}
       pasted_on: {type: date, optional: true}
+      verified_by: {type: str, optional: true}
+      quoted_from_url: {type: str, optional: true, note: "exact document the text was copied from"}
+      document_note: {type: str, optional: true, note: "context about the document, e.g. amended version, reproduced wording"}
   status:        {type: str, enum: [draft, reviewed, verified]}
   last_updated:  {type: date}

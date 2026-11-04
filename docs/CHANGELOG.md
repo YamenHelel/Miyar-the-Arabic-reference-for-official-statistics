@@ -2,6 +2,24 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-04: Lead's quotes applied, unemployment rate 13/14 official texts (session 5)
+**Done**
+- Applied 13 of the lead's 14 pasted texts to `ind-unemployment-rate` as `verified` (the lead's own verbatim paste is the human check).
+  - Pasted link and document-header lines were moved into `quoted_from_url` / `document_note`.
+  - A script confirmed every stored text is an unchanged excerpt of the paste.
+- **Palestine:** the pasted text came out garbled (PDF extraction broke the Arabic), so the slot is back to `to-paste` with new instructions.
+- Registry:
+  - New records, verified via the lead's paste: `src-ilo-icls19-res1-pdf` (resolution text amended by the 21st ICLS 2023), `src-mar-hcp-chomage-strict`, `src-pse-pcbs-book2740`.
+  - Filled `src-jor-dos-methodology` (dosweb concepts page) and `src-are-lfs-methodology` (FCSC xlsx).
+- Country facts now based on the quotes for AUS, SAU, MAR, JOR, ARE (age, search period, availability) and partly for USA.
+- New comparability notes:
+  - **Availability windows differ:** reference week (AUS, USA); +2 weeks (SAU, MAR); 15 days (JOR); 4 weeks after the interview (ARE), which is wider than the 19th ICLS maximum of two weeks (§47-d).
+  - **UK and France:** the quoted texts are the 1982 (13th ICLS) wording that ONS and Insee reproduce.
+- `apply_quotes.py`: `--status verified`, source/lang overrides, `quoted_from_url`, `document_note`. Preview adds an availability column and document notes.
+- Desk quotes cleared; the desk now shows 1 quote card (Palestine) and 51 sources.
+
+**Open questions:** exact titles of the HCP attachment 2927551 and PCBS book2740; whether the HCP «chômage strict» definition is EMO2026.
+
 ## 2026-11-04: Verification applied, repairs, first pilot indicator (session 4)
 **Done**
 - Applied the lead's 55 P1 verdicts: **51 verified, 4 broken**. Cleared the desk's verdicts. Phase 0a exit criterion met.

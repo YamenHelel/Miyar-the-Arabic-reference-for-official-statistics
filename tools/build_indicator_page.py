@@ -36,7 +36,9 @@ def quote_block(q, src):
         badge = "نص رسمي — مُتحقَّق منه" if q["status"] == "verified" else "نص رسمي — منسوخ، بانتظار المراجعة"
         return (f'<figure class="quote"><span class="qbadge">{badge}</span>'
                 f'<blockquote dir="{d}" lang="{e(q.get("lang", "en"))}">{e(q["text"])}</blockquote>'
-                f'<figcaption>{cite} · {e(q.get("locator", ""))}</figcaption></figure>')
+                f'<figcaption>{cite} · {e(q.get("locator", ""))}'
+                + (f'<br><span dir="auto">{e(q["document_note"])}</span>' if q.get("document_note") else "")
+                + '</figcaption></figure>')
     return (f'<figure class="quote pending"><span class="qbadge">بانتظار النص الرسمي</span>'
             f'<p>سيُنسخ هنا النص الحرفي من <a href="{e(src.get("url", ""))}" target="_blank" rel="noopener">المصدر ↗</a></p>'
             f'<figcaption dir="auto">{e(q.get("locator", ""))}</figcaption></figure>')
@@ -65,13 +67,13 @@ def main():
         if not c:
             continue
         used.add(c["source"])
-        flag = ' <span class="tc" title="من مقتطف بحث — بانتظار التأكيد من النص">؟</span>' if c.get("facts_basis") == "search-snippet" else ""
+        flag = ' <span class="tc" title="من مقتطف بحث — بانتظار التأكيد من النص">؟</span>' if not str(c.get("facts_basis", "")).startswith("quote") else ""
         q = quotes.get(c.get("definition_quote"), {})
         qstate = "✓ منسوخ" if q.get("status") in ("pasted", "verified") else "بانتظار النص"
         rows.append(
             f'<tr><th scope="row">{COUNTRIES[iso]}</th><td dir="auto">{e(c.get("survey", ""))}</td>'
             f'<td>{e(c.get("age", "—"))}{flag}</td><td dir="auto">{e(c.get("job_search_period", "—"))}</td>'
-            f'<td dir="auto">{e(c.get("frequency", "—"))}</td><td dir="auto">{e(c.get("population_note", ""))}</td>'
+            f'<td dir="auto">{e(c.get("availability", "—"))}</td><td dir="auto">{e(c.get("frequency", "—"))}</td><td dir="auto">{e(c.get("population_note", ""))}</td>'
             f'<td><span class="qs">{qstate}</span></td></tr>')
 
     notes = "".join(f'<li>{e(n["text"])}</li>' for n in ind.get("comparability_notes_ar", []))
