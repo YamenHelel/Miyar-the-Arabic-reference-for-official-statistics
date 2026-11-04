@@ -26,7 +26,9 @@ sources:
     url: https://insee.fr/fr/metadonnees/source/fichier/methodologie_emploi_continu.pdf
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
   - id: src-fra-insee-eec-source-doc
     title_en: Enquête Emploi en continu — methodological documentation (source page)
@@ -50,7 +52,9 @@ sources:
     date_published: 2025-09-22
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: 83 variables, 353,420 observations; free download. 2025 file also listed (insee.fr/fr/statistiques/9034119).
   - id: src-fra-insee-eec-puf-2025

@@ -28,7 +28,9 @@ sources:
     url: https://www.hcp.ma
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
   - id: src-mar-hcp-ene-methodo
     title_en: ENE methodological note (conceptual framework and history)
@@ -41,7 +43,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 13th
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: ICLS standard of old ENE to verify (13th assumed — must be confirmed).
   - id: src-mar-hcp-ene-to-emo-2026-note
@@ -80,7 +84,9 @@ sources:
     url: https://www.hcp.ma/tags/Micro-donn%C3%A9es/
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: HCP disseminates anonymised microdata since 2019 (time use, consumption, census 2014). Whether ENE microdata are public — verify.
   - id: src-mar-ihsn-ene

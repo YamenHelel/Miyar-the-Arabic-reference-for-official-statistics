@@ -25,7 +25,9 @@ sources:
     url: https://www.bls.gov/cps/definitions.htm
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
   - id: src-usa-bls-hom-cps
     title_en: BLS Handbook of Methods — Current Population Survey
@@ -36,7 +38,9 @@ sources:
     url: https://www.bls.gov/opub/hom/cps/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
   - id: src-usa-bls-hom-cps-concepts
     title_en: BLS Handbook of Methods — CPS concepts
@@ -47,7 +51,9 @@ sources:
     url: https://www.bls.gov/opub/hom/cps/concepts.htm
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
   - id: src-usa-bls-cps-documentation
     title_en: CPS technical documentation (incl. "How the Government Measures Unemployment")
@@ -69,5 +75,7 @@ sources:
     url: https://www.bls.gov/cps/data/public-use-file.htm
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"

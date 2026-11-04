@@ -29,7 +29,9 @@ sources:
     url: https://fcsc.gov.ae
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
   - id: src-are-uaestat-portal
     title_en: UAE Stat portal (raw LFS datasets from 2019)
@@ -40,7 +42,9 @@ sources:
     url: https://uaestat.fcsc.gov.ae
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: Address inferred from portal name in GLMM notes — confirm.
   - id: src-are-lfs-methodology

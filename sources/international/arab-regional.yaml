@@ -16,7 +16,9 @@ sources:
     date_published: 2024-05
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: Based on a Jan 2023 survey of 18 NSOs; all 18 have LFS-based databases. Essential baseline on which ICLS standard each Arab country applies.
 
@@ -44,7 +46,9 @@ sources:
     url: http://data.unescwa.org/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: URL taken from 2019 launch notice — current address must be confirmed on unescwa.org.
 
@@ -98,7 +102,9 @@ sources:
     url: https://www.aitrs.org
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: >
       Address taken from UN profile (https://unstats.un.org/gist/data/Profile_AITRS.pdf), not opened directly.
@@ -241,7 +247,9 @@ sources:
     url: https://www.erfdataportal.com
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: Licensed access (registration + data access agreement). Holds raw and harmonised LFS for Tunisia, Jordan, Palestine, Egypt and others.
 
@@ -254,7 +262,9 @@ sources:
     url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
 
   # ---------- Arab Monetary Fund ----------

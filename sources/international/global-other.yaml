@@ -14,7 +14,9 @@ sources:
     url: https://unstats.un.org/sdgs/metadata/
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: Per-goal pages, e.g. ?Goal=8. Some indicators have pre/post 2025 Comprehensive Review versions. Check whether Arabic metadata files exist.
 
@@ -27,7 +29,9 @@ sources:
     url: https://unstats.un.org/sdgs/metadata/?Goal=8
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
 
   - id: src-oecd-unemployment-indicator
@@ -64,7 +68,9 @@ sources:
     url: https://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: Reference for France (INSEE applies EU-LFS regulation, IESS framework since 2021).
 
@@ -77,7 +83,9 @@ sources:
     url: https://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey_-_methodology
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
 
   - id: src-eurostat-glossary-unemployed
@@ -153,6 +161,8 @@ sources:
     url: https://www.isi-web.org/glossary
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: Arabic coverage uncertain (sources disagree) — verify. Key input for the statistical concepts glossary (F-02).

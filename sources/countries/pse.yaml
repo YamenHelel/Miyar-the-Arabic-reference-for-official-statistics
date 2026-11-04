@@ -26,7 +26,9 @@ sources:
     url: https://www.pcbs.gov.ps
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 SSLError"
   - id: src-pse-pcbs-lfs-annual-2024
     title_en: Labour Force Survey annual report 2024 (concepts and definitions, methodology, quality)
@@ -37,7 +39,8 @@ sources:
     url: https://www.pcbs.gov.ps/Downloads/book2717.pdf
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: broken
+    review_note: "This www.pcbs.gov.ps page can’t be found (2026-11-04)"
     link_check: "2026-11-04 SSLError"
     notes: Contains full "Concepts and Definitions" and "Methodology" chapters — prime source for the indicator pages.
   - id: src-pse-pcbs-microdata-portal
@@ -49,7 +52,9 @@ sources:
     url: https://microdata.pcbs.gov.ps/PCBS-Metadata-en-v5.2/index.php/catalog/740/related-materials
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: Catalogue entry with LFS related materials (questionnaire, reports). Access policy for LFS microdata — verify.
   - id: src-pse-erf-lfs

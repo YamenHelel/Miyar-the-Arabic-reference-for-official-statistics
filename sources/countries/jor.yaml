@@ -30,7 +30,9 @@ sources:
     url: https://dosweb.dos.gov.jo
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
   - id: src-jor-dos-quarterly-report
     title_en: DoS quarterly employment and unemployment report (latest)
@@ -72,5 +74,7 @@ sources:
     url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"

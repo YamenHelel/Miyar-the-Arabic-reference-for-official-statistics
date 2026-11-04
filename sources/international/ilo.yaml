@@ -17,7 +17,9 @@ sources:
     url: https://ilostat.ilo.org/about/standards/icls/icls-documents/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: Entry point to all ICLS resolutions. Use this to find official PDFs and any Arabic versions.
 
@@ -34,7 +36,9 @@ sources:
     icls_standard: 19th
     sdg_indicators: ["8.5.2", "8.6.1"]
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: >
       Core standard. Replaces 13th ICLS (1982) for employment/unemployment and narrows "employment" to work for pay or profit.
@@ -51,7 +55,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: ILOSTAT WORK database follows 19th ICLS. French version exists under /fr/.
 
@@ -67,7 +73,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 13th
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     superseded_by: src-ilo-icls19-res1
     notes: Superseded internationally by 19th ICLS but still the basis of many national LFS and of ILOSTAT LFS database. Old ilo.org URL pattern — may redirect.
@@ -82,7 +90,9 @@ sources:
     date_published: 2023-08
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: Resolution concerning statistics on work relationships (20th ICLS, Oct 2018) replaced ICSE-93. Manual last updated Aug 2023 (per search snippet).
 
@@ -124,7 +134,9 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["8.3.1"]
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: ICLS/21/2023/RES.I. Replaces the 1993 (15th ICLS) informal sector resolution and the 2003 (17th ICLS) informal employment guidelines.
 
@@ -151,7 +163,9 @@ sources:
     url: https://ilostat.ilo.org/methods/concepts-and-definitions/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: Indicator descriptions, database descriptions, guidelines. Check whether an Arabic interface exists.
 
@@ -165,7 +179,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 13th
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: LFS database indicators based on 13th ICLS; WORK database on 19th ICLS — key comparability point.
 
@@ -179,7 +195,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
 
   - id: src-ilo-forms-of-work
@@ -204,7 +222,9 @@ sources:
     url: https://ilostat.ilo.org/methods/concepts-and-definitions/description-sustainable-development-labour-market-indicators/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: ILO is custodian of 14 labour SDG indicators across 5 goals (per ILOSTAT). Database description also at /databases/ilosdg/description/.
 
@@ -229,7 +249,9 @@ sources:
     url: https://ilostat.ilo.org/data/national-sources-catalogue/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: For each of the 10 countries, extract the ILO record of the national LFS (standard, age, reference period).
 
@@ -267,7 +289,9 @@ sources:
     url: https://webapps.ilo.org/surveyLib/
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: broken
+    review_note: "410
+Survey Catalog Retired (2026-11-04)"
     link_check: "2026-11-04 200"
     notes: >
       Base URL inferred from catalogue entry URLs in search results (e.g. /surveyLib/index.php/catalog/8572 = Tunisia ENPE 2022).
@@ -284,7 +308,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P1
-    status: collected
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: CAPI model is current; PAPI resources no longer updated (per ILOSTAT).
 
@@ -334,7 +360,8 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P1
-    status: collected
+    status: broken
+    review_note: "Page non trouvée (2026-11-04)"
     link_check: "2026-11-04 403"
     notes: Key resource for the 13th→19th ICLS migration guide (backlog I-001).
 

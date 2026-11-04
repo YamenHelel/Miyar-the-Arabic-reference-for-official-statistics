@@ -27,7 +27,9 @@ sources:
     date_published: 2018-02
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
     notes: Check for a newer edition on the current abs.gov.au site.
   - id: src-aus-abs-lfs-tablebuilder
@@ -39,7 +41,9 @@ sources:
     url: https://www.abs.gov.au/statistics/microdata-tablebuilder/available-microdata-tablebuilder/labour-force-survey
     date_accessed: 2026-11-03
     priority: P1
-    status: link-ok
+    status: verified
+    verified_by: YH
+    verified_date: 2026-11-04
     link_check: "2026-11-04 200"
   - id: src-aus-abs-lfs-methodology
     title_en: ABS Labour Force, Australia — methodology (latest release)
