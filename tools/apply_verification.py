@@ -75,7 +75,7 @@ def main():
                     out.append(f"{indent}status: broken")
                 else:
                     out.append(line)
-                note = (v.get("note") or "").strip()
+                note = " ".join((v.get("note") or "").split())
                 if note:
                     out.append(f"{indent}review_note: {q(note + ' (' + str(v.get('date')) + ')')}")
                 done[kind].append(cur)

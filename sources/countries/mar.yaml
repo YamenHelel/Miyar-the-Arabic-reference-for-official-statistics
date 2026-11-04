@@ -7,7 +7,7 @@ file_meta:
 profile:
   nso: {name_ar: المندوبية السامية للتخطيط, name_fr: Haut-Commissariat au Plan (HCP), url: "https://www.hcp.ma"}
   lfs:
-    name_fr: Enquête Nationale sur l'Emploi (ENE) → replaced by a redesigned survey (EMO) in 2026
+    name_fr: "Enquête Nationale sur l'Emploi (ENE, 1976–2025) → Enquête sur la Main-d'Œuvre (EMO2026), from January 2026"
     name_ar: البحث الوطني حول التشغيل
     frequency: quarterly, continuous (since 1976)
     sample: "~90,000 households/year (ENE) → 135,000 (new survey, per May 2026 technical note)"
@@ -16,7 +16,8 @@ profile:
   notes: >
     Major methodology change in 2026 — every indicator page must state which survey/series a figure comes from.
     HCP clarified (Dec 2024) that the RGPH 2024 census unemployment rate (21.3%) is not comparable with ENE.
-  to_verify: [lfs.name of new survey (EMO), lfs.icls_standard, start date of new series]
+  emo2026: {first_results: "Q2 2026, published 2026-08-04 (per press, to verify on hcp.ma)", frame: 2024 census, rotation: "2-2-2", sample: "135,000 households/year"}
+  to_verify: [emo2026.first_results, lfs.icls_standard, back-casting of the series to 2017 (press, ledesk.ma)]
 
 sources:
   - id: src-mar-hcp-home
@@ -59,9 +60,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P1
-    status: broken
     link_check: "2026-11-04 404"
-    notes: Sample 90k→135k households; conceptual framework aligned with ICLS resolutions (per search snippet).
+    status: collected
+    notes: "CI returned 404 on 2026-11-04, but the page is indexed by search engines with this content (sample 90k→135k households, 2-2-2 rotation, frame from the 2024 census). Check by hand."
   - id: src-mar-hcp-refonte-announcement
     title_en: HCP launches the redesign of the national employment survey (announcement)
     title_orig: Le HCP lance la refonte de l'enquête nationale sur l'emploi

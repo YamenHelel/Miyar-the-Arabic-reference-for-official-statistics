@@ -166,3 +166,17 @@ sources:
     verified_date: 2026-11-04
     link_check: "2026-11-04 403"
     notes: Arabic coverage uncertain (sources disagree) — verify. Key input for the statistical concepts glossary (F-02).
+
+  - id: src-unsc-2013-employment-stats-ar
+    title_en: UN Statistical Commission 44th session (2013) — Employment statistics, ILO report (Arabic version)
+    title_ar: اللجنة الإحصائية للأمم المتحدة، الدورة 44 (2013) — إحصاءات العمالة، تقرير منظمة العمل الدولية
+    publisher: UN Statistical Commission / ILO
+    country: int
+    type: publication
+    languages: [ar]
+    url: https://mdgs.un.org/unsd/statcom/44th-session/documents/doc13/2013-17-EmploymentStats-A.pdf
+    date_published: 2013
+    date_accessed: 2026-11-04
+    priority: P2
+    status: collected
+    notes: Official UN Arabic text on employment statistics from the year of the 19th ICLS — source for official Arabic terminology.

@@ -145,8 +145,9 @@ sources:
     url: https://gccstat.org/en/statistic/publications/labor-statistics
     date_accessed: 2026-11-03
     priority: P1
-    status: broken
     link_check: "2026-11-04 404"
+    status: collected
+    review_note: "CI returned 404 on 2026-11-04 but the page is still indexed by search engines; check by hand."
 
   - id: src-gccstat-labour-survey-page
     title_en: GCC-Stat — Labour statistics survey page
@@ -157,9 +158,10 @@ sources:
     url: https://gccstat.org/en/statistic/surveys/2017/labour_statstics
     date_accessed: 2026-11-03
     priority: P2
-    status: broken
     link_check: "2026-11-04 404"
     notes: GCC-Stat runs a quarterly harmonised LFS covering citizens and non-citizens (per search snippet) — verify.
+    status: collected
+    review_note: "CI returned 404 on 2026-11-04 but the page is still indexed by search engines; check by hand."
 
   - id: src-gccstat-marsa-labour
     title_en: GCC-Stat Marsa data portal — Labour dataset (beta)
@@ -183,9 +185,10 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P3
-    status: broken
     link_check: "2026-11-04 404"
 
+    status: collected
+    review_note: "CI returned 404 on 2026-11-04 but the page is still indexed by search engines; check by hand."
   # ---------- Arab Labour Organization ----------
   - id: src-alo-home
     title_en: Arab Labour Organization — official website

@@ -67,9 +67,9 @@ sources:
     url: https://webapps.ilo.org/surveyLib/index.php/catalog/8572
     date_accessed: 2026-11-03
     priority: P1
-    status: broken
-    review_note: "410
-Survey Catalog Retired (2026-11-04)"
+    status: superseded
+    superseded_by: src-ilo-national-sources-catalogue
+    review_note: "410 Survey Catalog Retired (2026-11-04)"
     link_check: "2026-11-04 200"
   - id: src-tun-ins-nada
     title_en: INS national survey catalogue (NADA) — microdata
@@ -80,8 +80,9 @@ Survey Catalog Retired (2026-11-04)"
     url: http://nada.ins.tn
     date_accessed: 2026-11-03
     priority: P1
-    status: broken
     link_check: "2026-11-04 ConnectionError"
+    status: superseded
+    superseded_by: src-tun-ins-nada-catalog
     notes: Address from IHSN ADP table (adp.ihsn.org/node/1334); access conditions to verify.
   - id: src-tun-ins-questionnaire
     title_en: ENPE questionnaire (latest)
@@ -94,11 +95,24 @@ Survey Catalog Retired (2026-11-04)"
     status: to-locate
     notes: Check ILO Survey Library related materials for ENPE 2022 and the INS NADA catalogue.
   - id: src-tun-ins-quarterly-release
-    title_en: Quarterly employment and unemployment indicators release
     publisher: Institut National de la Statistique
     country: tun
     type: publication
-    url: TO-LOCATE
     date_accessed: 2026-11-03
     priority: P1
-    status: to-locate
+    url: https://www.ins.tn/publication/indicateurs-de-lemploi-et-du-chomage-premier-trimestre-2026
+    status: collected
+    notes: "Q1 2026 page found by search. Q2 2026 indicators were published 2026-08-15 (press: 14.9%); its INS page not yet located."
+    title_en: "Employment and unemployment indicators — Q1 2026 (INS publication page)"
+
+  - id: src-tun-ins-nada-catalog
+    title_en: INS NADA microdata catalogue (ENPE and other surveys)
+    publisher: Institut National de la Statistique
+    country: tun
+    type: microdata
+    languages: [fr, ar]
+    url: http://www.ins.tn/modules/nada/index.php/catalog/7
+    date_accessed: 2026-11-04
+    priority: P1
+    status: collected
+    notes: Address taken from IHSN catalogue links (2026-11-04). Replaces nada.ins.tn, which did not resolve. Contact for access questions is ins@ins.tn (per IHSN record).

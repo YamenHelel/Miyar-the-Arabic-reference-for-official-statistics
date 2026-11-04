@@ -290,8 +290,8 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: broken
-    review_note: "410
-Survey Catalog Retired (2026-11-04)"
+    notes: "ILO Survey Catalog retired (HTTP 410, seen by lead 2026-11-04). No successor catalogue found by search on 2026-11-04; national survey metadata is in the ILOSTAT national sources catalogue (src-ilo-national-sources-catalogue)."
+    review_note: "410 Survey Catalog Retired (2026-11-04)"
     link_check: "2026-11-04 200"
     notes: >
       Base URL inferred from catalogue entry URLs in search results (e.g. /surveyLib/index.php/catalog/8572 = Tunisia ENPE 2022).
@@ -360,10 +360,11 @@ Survey Catalog Retired (2026-11-04)"
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P1
-    status: broken
     review_note: "Page non trouvée (2026-11-04)"
     link_check: "2026-11-04 403"
     notes: Key resource for the 13th→19th ICLS migration guide (backlog I-001).
+    status: superseded
+    superseded_by: src-ilo-aligning-lfs-icls-en
 
   - id: src-ilo-icls-arabic-translations
     title_en: Arabic versions of ICLS resolutions and ILO statistical manuals
@@ -375,7 +376,29 @@ Survey Catalog Retired (2026-11-04)"
     date_accessed: 2026-11-03
     priority: P1
     status: to-locate
-    notes: >
-      Not found by search on 2026-11-03. A 2019 ILO Beirut workshop introduced an Arabic translation of the
-      "Guidebook on SDGs Labour Market Indicators" (https://www.ilo.org/resource/news/reporting-labour-statistics-ilo-better-sdg-monitoring-arab-states).
-      Ask ILO ROAS directly — high value for the project.
+    notes: "Still not found (searches 2026-11-03 and 2026-11-04, EN and AR). Ask ILO ROAS (Beirut) directly. Arabic UN Statistical Commission documents on employment statistics exist (see src-unsc-2013-employment-stats-ar) and help with terminology."
+
+  - id: src-ilo-aligning-lfs-icls-en
+    title_en: ILO guidelines and tools for aligning national LFS with latest ICLS standards and best practices (English page)
+    publisher: ILO Department of Statistics
+    country: int
+    type: manual
+    languages: [en]
+    url: https://ilostat.ilo.org/resources/ilo-guidelines-and-tools-for-aligning-national-labour-force-surveys-with-latest-icls-standards-and-best-practices/
+    date_accessed: 2026-11-04
+    icls_standard: 19th
+    priority: P1
+    status: collected
+    notes: Replaces the French URL the lead found broken. Hub organised by survey phase (19th ICLS checklist, ISCO guidance, Stata code for standard tables, quick guide on interpreting the unemployment rate).
+
+  - id: src-ilo-microdata-quick-guide
+    title_en: ILOSTAT Microdata Processing Quick Guide — principles and methods for processing anonymized household survey microdata
+    publisher: ILO Department of Statistics
+    country: int
+    type: manual
+    languages: [en]
+    url: https://www.ilo.org/publications/ilostat-microdata-processing-quick-guide-principles-and-methods-underlying
+    date_accessed: 2026-11-04
+    priority: P2
+    status: collected
+    notes: How ILO derives harmonised indicators from national LFS microdata (95% of ILOSTAT values). Relevant to the code library idea (I-018).

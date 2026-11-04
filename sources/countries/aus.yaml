@@ -54,3 +54,16 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: to-locate
+    notes: "The ABS \"Labour Force Survey Methodology\" page is referenced from the Detailed releases but its URL was not returned by search (2026-11-04). See src-aus-abs-lfs-detailed for a current release."
+
+  - id: src-aus-abs-lfs-detailed
+    title_en: Labour Force, Australia, Detailed — August 2025 release
+    publisher: Australian Bureau of Statistics
+    country: aus
+    type: publication
+    languages: [en]
+    url: https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia-detailed/aug-2025
+    date_accessed: 2026-11-04
+    priority: P2
+    status: collected
+    notes: Links to the LFS methodology page (survey output and collection method sections).

@@ -40,9 +40,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: broken
+    notes: "Direct PDF link broken (lead, 2026-11-04). The 2024 annual report is still listed under \"related materials\" in the PCBS metadata catalogue (src-pse-pcbs-microdata-portal, catalogue 740) — download from there."
     review_note: "This www.pcbs.gov.ps page can’t be found (2026-11-04)"
     link_check: "2026-11-04 SSLError"
-    notes: Contains full "Concepts and Definitions" and "Methodology" chapters — prime source for the indicator pages.
   - id: src-pse-pcbs-microdata-portal
     title_en: PCBS microdata / metadata catalogue (NADA)
     publisher: Palestinian Central Bureau of Statistics
@@ -68,3 +68,27 @@ sources:
     priority: P2
     status: link-ok
     link_check: "2026-11-04 200"
+
+  - id: src-pse-pcbs-lfs-q3-2025-release
+    title_en: Results of the Labour Force Survey, West Bank, Q3 (July–September) 2025 — PCBS release page
+    publisher: Palestinian Central Bureau of Statistics
+    country: pse
+    type: publication
+    languages: [en, ar]
+    url: https://www.pcbs.gov.ps/site/lang__en/1051/default.aspx?lang=en
+    date_accessed: 2026-11-04
+    priority: P1
+    status: collected
+    notes: Latest quarterly release found. Coverage is the West Bank for this round.
+
+  - id: src-pse-pcbs-lfs-2025-metadata
+    title_en: Labour Force Survey 2025 (yearly file) — PCBS microdata catalogue entry and data dictionary
+    publisher: Palestinian Central Bureau of Statistics
+    country: pse
+    type: microdata
+    languages: [en]
+    url: https://microdata.pcbs.gov.ps/PCBS-Metadata-en-v5.2/index.php/catalog/746/data-dictionary
+    date_accessed: 2026-11-04
+    priority: P2
+    status: collected
+    notes: Yearly 2025 file with quarterly files Q1–Q4 (63,446 cases per search snippet). Includes LU3 variable.

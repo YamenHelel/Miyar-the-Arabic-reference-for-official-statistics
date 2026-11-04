@@ -56,7 +56,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: to-locate
-    notes: GLMM (2024) says no methodological metadata available publicly — check FCSC and ILO national sources catalogue.
+    notes: "Still not found (2026-11-04). Press coverage of 2024 LFS (labour force 9.4m, unemployment 1.9%) cites FCSC; a methodology page may exist on fcsc.gov.ae — lead to locate."
   - id: src-are-glmm-lfs-notes
     title_en: GLMM — UAE LFS tables with methodological notes
     publisher: Gulf Research Center (GLMM programme)
@@ -80,3 +80,16 @@ sources:
     status: link-ok
     link_check: "2026-11-04 200"
     notes: Title assumed from search snippet context — verify.
+
+  - id: src-are-raksc-lfs-2025
+    title_en: Ras Al Khaimah Labour Force Survey Report 2025 (part of the national survey coordinated with FCSC)
+    publisher: Ras Al Khaimah Statistics Centre
+    country: are
+    type: publication
+    languages: [en]
+    url: https://css.rak.ae/wp-content/uploads/2026/06/RAKSC_Labour_Force_Survey_Report_2025-EN.pdf
+    date_published: 2026-06
+    date_accessed: 2026-11-04
+    priority: P3
+    status: collected
+    notes: Emirate-level report; may describe the national LFS methodology.
