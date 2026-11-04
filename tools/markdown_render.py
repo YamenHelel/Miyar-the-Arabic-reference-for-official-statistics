@@ -16,7 +16,12 @@ def quote_md(q, reg):
         if q.get("document_note"):
             head += f"**Note:** {q['document_note']}  \n"
         body = "\n".join("> " + l if l.strip() else ">" for l in q["text"].split("\n"))
-        return head + f"**Language:** {q.get('lang')}\n\n{body}\n"
+        out = head + f"**Language:** {q.get('lang')}\n\n{body}\n"
+        for k, name in (("translation_ar", "Arabic"), ("translation_en", "English")):
+            if q.get(k):
+                kind = "OFFICIAL" if q.get("translation_status") == "official" else "UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»"
+                out += f"\n**{name} translation — {kind}:**\n\n" + "\n".join("> " + l if l.strip() else ">" for l in q[k].split("\n")) + "\n"
+        return out
     return head + "**Status:** NOT YET AVAILABLE — do not quote; say the official text is pending in Miʿyar.\n"
 
 

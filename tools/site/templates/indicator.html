@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import sheet, ai %}
+{% from "macros.html" import sheet, ai, view %}
 {% block main %}
 <div class="wrap">
   <header class="page-head" data-in>
@@ -50,12 +50,16 @@
       </section>
       <section data-in class="block" id="national" aria-labelledby="h4">
         <h2 id="h4">التعاريف الوطنية كما وردت</h2>
-        <div class="nat">
+        <p class="legend">النص الرسمي يبقى بلغته الأصلية. زر اللغة أعلى كل بطاقة يعرض ترجمة غير رسمية أعدّها مِعيار حين تختلف لغة النص، مع رابط إلى الأصل.</p>
+        <div class="nat" data-view="ar">
           {% for n in national %}
           <details id="nat-{{ n.iso }}"{% if n.pending %} class="pending"{% endif %}{% if loop.index <= 2 and not n.pending %} open{% endif %}>
             <summary>{{ n.name }} <span>{{ n.state }}</span></summary>
             <div class="in">
-              {% if n.text %}<blockquote class="text" dir="{{ 'rtl' if n.lang == 'ar' else 'ltr' }}" lang="{{ n.lang }}" style="margin:0">{{ n.text }}</blockquote>{% endif %}
+              {% if n.text %}
+              <div class="lang-switch" role="group" aria-label="لغة العرض"><button type="button" data-view="ar" aria-pressed="true">عربي</button><button type="button" data-view="en" aria-pressed="false" lang="en">English</button></div>
+              {{ view(n, 'ar') }}{{ view(n, 'en') }}
+              {% endif %}
               <p class="src"><a href="{{ n.url }}" dir="auto">{{ n.src_title }}</a>{% if n.note %} · <span dir="auto">{{ n.note }}</span>{% endif %}</p>
             </div>
           </details>

@@ -39,6 +39,8 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
 ## Content (content/)
 - Official wording ONLY in `content/quotes.yml` (ADR-0007), pasted verbatim by a human from a verified source; indicators
   (`content/indicators/`), concepts (`content/concepts/`) and data sources (`content/data-sources/`, ADR-0011; ILO first) reference slots by id. Schemas: `content/schema-*.yaml`.
+- Translations of quotes go in `translation_ar` / `translation_en` with `translation_status` (`unofficial` unless the publisher issued it)
+  and `translation_by` (ADR-0012). They never replace the original.
 - Numbers used by the site's ruler (`measures:`) must be read from verified/pasted quotes only.
 - After any content change: `python tools/build_site.py` (website), `python tools/build_skill.py` (Claude skill, commit the output),
   and refresh the private previews (`tools/prepare_site_preview.py`, URLs in STATUS.md).

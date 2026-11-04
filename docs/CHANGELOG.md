@@ -2,6 +2,26 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-05: Language switcher on national definitions (session 10b)
+**Done**
+- Lead's request: every national-definition card on indicator pages has a عربي / English switcher at its top (ADR-0012).
+  - One choice applies to all cards and is remembered.
+  - Original texts are untouched. A non-matching language shows a labelled **unofficial** translation, with the original one click away.
+- 10 translations added in `content/quotes.yml` (AI-assisted, unreviewed):
+  - Arabic for USA, UK, France, Australia, Saudi Arabia, Tunisia, Morocco, Jordan
+  - English for France, Tunisia, Morocco, UAE, Palestine
+  - Saudi Arabia and Jordan carry a note that the publisher's own Arabic text will replace the translation once pasted.
+- **Tooling:**
+  - quote schema gains `translation_en`, `translation_by`, `translation_note_ar`
+  - the validator checks translation fields
+  - `save_quotes` keeps translations as block text
+  - Markdown twins and the skill include translations labelled UNOFFICIAL
+  - VALIDATION.md gains queue 7b
+  - list items such as "a." now keep their line breaks on display
+- Backlog I-063 (switcher on country cards and ILO sheets), I-064 (desk review of translations).
+
+**Open questions:** should the country cards get the same switcher next (I-063)?
+
 ## 2026-11-05: Data sources section, validation queue, implementation tracker (session 10)
 **Done**
 - **Data sources (ADR-0011):** `content/data-sources/` with schema `content/schema-datasource.yaml`. Scope chosen by the lead: the core 4 types, a full LFS guide, and LFS-only country inventory.

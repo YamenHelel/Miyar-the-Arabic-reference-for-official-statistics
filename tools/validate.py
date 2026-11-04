@@ -93,6 +93,14 @@ def main():
                 errors.append(f"{where}: text comes from a source that is not verified ({src.get('id')})")
         elif st in ("pasted", "verified"):
             errors.append(f"{where}: is {st} but has no text")
+        for tk, tl in (("translation_ar", "ar"), ("translation_en", "en")):
+            if qd.get(tk):
+                if qd.get("translation_status") not in ("official", "unofficial"):
+                    errors.append(f"{where}: {tk} needs translation_status official | unofficial")
+                if qd.get("lang") == tl:
+                    errors.append(f"{where}: {tk} given but the original is already {tl}")
+                if not (qd.get("text") or "").strip():
+                    errors.append(f"{where}: translation without an original text")
     used = set()
 
     def check_ref(where, ref):

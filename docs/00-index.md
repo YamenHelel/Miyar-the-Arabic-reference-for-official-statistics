@@ -42,6 +42,7 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 - [ADR-0008](decisions/ADR-0008-site-generator-and-design.md): website generator (jinja2) and the Miʿyar design system
 - [ADR-0010](decisions/ADR-0010-code-library.md): code library (Python tested, R checked in CI, Stata not executed; presets only from quotes)
 - [ADR-0009](decisions/ADR-0009-canonical-url-and-crawlers.md): canonical address (GitHub Pages for now) and allowing AI crawlers
+- [ADR-0012](decisions/ADR-0012-definition-language-switcher.md): عربي / English switcher on national definitions; unofficial translations labelled, original one click away
 - [ADR-0011](decisions/ADR-0011-data-sources-section.md): data sources section (4 source types, 6-part LFS guide, ILO first) and the registry renamed «المراجع»
 
 ## Data

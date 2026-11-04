@@ -178,6 +178,22 @@
     });
   });
 
+  /* ---- national definitions: Arabic / English view (one choice for all cards, remembered) ---- */
+  var nat = document.querySelector(".nat[data-view]");
+  if (nat) {
+    var setView = function (v) {
+      nat.setAttribute("data-view", v);
+      nat.querySelectorAll(".lang-switch button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.view === v)); });
+      try { localStorage.setItem("miyar-def-view", v); } catch (e) {}
+    };
+    var saved = null;
+    try { saved = localStorage.getItem("miyar-def-view"); } catch (e) {}
+    if (saved === "en" || saved === "ar") setView(saved);
+    nat.querySelectorAll(".lang-switch button").forEach(function (b) {
+      b.addEventListener("click", function () { setView(b.dataset.view); });
+    });
+  }
+
   /* ---- copy citation ---- */
   document.querySelectorAll("[data-copy]").forEach(function (b) {
     b.addEventListener("click", function () {

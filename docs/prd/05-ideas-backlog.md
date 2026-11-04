@@ -70,6 +70,8 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 | I-060 | Data sources: per-country LFS fact sheet (design, rotation, weighting, release calendar) built from each NSO's methodology text | P2 | 1 | idea |
 | I-061 | Data sources batch 2: household income/expenditure surveys, informal-sector and mixed surveys (21st ICLS), time-use surveys | P2 | 2 | idea |
 | I-062 | Show the validation queue (docs/VALIDATION.md summary) on the Verification Desk's first screen | P2 | 1 | idea |
+| I-063 | Same عربي / English switcher on country cards (profile facts are partly English) and on the international ILO text sheets | P2 | 1 | idea |
+| I-064 | Desk: review unofficial translations side by side with the original (approve / correct) | P2 | 1 | idea |
 | I-038 | Link rot protection: auto-archive every new URL on the Wayback Machine | P1 | 0a | planned |
 
 ## D. Business

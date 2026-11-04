@@ -9,7 +9,7 @@ Legend: ✅ done · 🟡 built, awaiting validation · 🔨 in progress · ⬜ p
 
 | # | Module (PRD) | Built | Validated | Notes |
 |---|---|---|---|---|
-| M1 | Repo, PRD, progress system, ADRs (03) | ✅ | ✅ | ADR-0001…0011 |
+| M1 | Repo, PRD, progress system, ADRs (03) | ✅ | ✅ | ADR-0001…0012 |
 | M2 | Source registry (F-05) | ✅ 133 records | 🟡 56 verified | 60 to check, 14 missing or broken |
 | M3 | Shared quotes store (ADR-0007) | ✅ 85 slots | 🟡 13 verified, 1 pasted | 71 to paste |
 | M4 | Indicator pages (F-01) | ✅ 4 pilots | 🟡 drafts | Phase 0b target: 10 indicators |
@@ -22,7 +22,8 @@ Legend: ✅ done · 🟡 built, awaiting validation · 🔨 in progress · ⬜ p
 | M11 | Claude skill (F-09) | ✅ v0, 56 references | ⬜ external test | `skills/miyar-labour-stats/` |
 | M12 | Code library (ADR-0010) | ✅ Python, R | 🟡 Stata not run | R = Python on 32 results in CI |
 | M13 | Verification Desk | ✅ | ✅ in use | Artifact with `verdicts` and `quotes` collections |
-| M14 | Validation queue (this session) | ✅ | n/a | `tools/build_validation_queue.py` → `VALIDATION.md`, checked in CI |
+| M18 | عربي / English switcher on national definitions (ADR-0012) | ✅ | 🟡 10 unofficial translations to review | Country cards next (I-063) |
+| M14 | Validation queue | ✅ | n/a | `tools/build_validation_queue.py` → `VALIDATION.md`, checked in CI |
 | M15 | Practitioner directory (ADR-0003) | ✅ design | ⬜ form not opened | Phase 1 |
 | M16 | SDG hub (F-07) | ⬜ | ⬜ | SDG metadata sources collected |
 | M17 | Standards library (F-03) | ⬜ | ⬜ | Sources collected; pages not built |

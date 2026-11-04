@@ -111,6 +111,16 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > They made at least one specific, active effort to find a job during the 4-week period ending with the survey reference week (see active job search methods) OR they were temporarily laid off and expecting to be recalled to their job.
 > People waiting to start a new job must have actively looked for a job within the last 4 weeks in order to be classified as unemployed. Otherwise, they are classified as not in the labor force.
 
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> المتعطلون
+> في مسح السكان الحالي (CPS)، يُصنَّف الأشخاص متعطلين إذا استوفوا جميع المعايير التالية:
+>
+> لم يكونوا مشتغلين خلال أسبوع الإسناد للمسح.
+> كانوا متاحين للعمل خلال أسبوع الإسناد، إلا في حالة المرض المؤقت.
+> بذلوا جهداً فعلياً محدداً واحداً على الأقل للعثور على عمل خلال فترة الأسابيع الأربعة المنتهية بأسبوع الإسناد (انظر طرق البحث الفعلي عن عمل)، أو كانوا مسرَّحين مؤقتاً وينتظرون استدعاءهم إلى عملهم.
+> يجب أن يكون الأشخاص الذين ينتظرون بدء عمل جديد قد بحثوا فعلياً عن عمل خلال الأسابيع الأربعة الأخيرة حتى يُصنَّفوا متعطلين، وإلا يُصنَّفون خارج القوة العاملة.
+
 ### المملكة المتحدة
 
 **Source:** Labour Force Survey — user guidance (volumes 1–11) — Office for National Statistics  
@@ -134,6 +144,14 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > machinery or equipment to establish own enterprise; arranging for financial resources;
 > applying for permits and licences, etc.
 
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> البطالة
+> 10. (1) يشمل «المتعطلون» جميع الأشخاص فوق سن محددة الذين كانوا خلال فترة الإسناد:
+> (أ) «بلا عمل»، أي لم يكونوا في عمل بأجر أو عمل لحسابهم الخاص على النحو المحدد في الفقرة 9؛
+> (ب) «متاحين حالياً للعمل»، أي كانوا متاحين لعمل بأجر أو عمل لحسابهم الخاص خلال فترة الإسناد؛
+> (ج) «باحثين عن عمل»، أي اتخذوا خطوات محددة خلال فترة حديثة محددة للبحث عن عمل بأجر أو عمل لحسابهم الخاص. وقد تشمل الخطوات المحددة: التسجيل في مكتب تشغيل عام أو خاص؛ والتقدم بطلبات إلى أصحاب العمل؛ والسؤال في مواقع العمل والمزارع وأبواب المصانع والأسواق وأماكن التجمع الأخرى؛ ونشر إعلانات في الصحف أو الرد عليها؛ وطلب المساعدة من الأصدقاء أو الأقارب؛ والبحث عن أرض أو مبنى أو آلات أو معدات لإنشاء مشروع خاص؛ وتدبير الموارد المالية؛ والتقدم بطلبات الحصول على التصاريح والرخص، إلخ.
+
 ### فرنسا
 
 **Source:** Enquête Emploi en continu — methodology — Insee  
@@ -156,6 +174,22 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > personnelles ; la recherche de terrain, d'immeubles, de machines ou d'équipement pour créer une entreprise personnelle ;
 > les démarches pour obtenir des ressources financières, des permis et licences, etc.
 
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> البطالة
+> 10.1. يشمل «المتعطلون» جميع الأشخاص الذين تجاوزوا سناً محددة والذين كانوا، خلال فترة الإسناد:
+> أ) «بلا عمل»، أي لم يكن لديهم عمل بأجر ولا عمل لحسابهم الخاص؛
+> ب) «متاحين للعمل» في عمل بأجر أو عمل لحسابهم الخاص خلال فترة الإسناد؛
+> ج) «باحثين عن عمل»، أي اتخذوا إجراءات محددة خلال فترة حديثة محددة للبحث عن عمل بأجر أو عمل لحسابهم الخاص. وقد تشمل هذه الإجراءات المحددة: التسجيل في مكتب تشغيل عام أو خاص؛ والتقدم بطلبات إلى أصحاب العمل؛ والسعي في أماكن العمل أو المزارع أو عند أبواب المصانع أو في الأسواق أو في الأماكن الأخرى التي يُستقدَم فيها العمال عادةً؛ ونشر إعلانات في الصحف أو الرد عليها؛ والبحث عن طريق العلاقات الشخصية؛ والبحث عن أرض أو مبانٍ أو آلات أو معدات لإنشاء مشروع خاص؛ والسعي للحصول على موارد مالية وتصاريح ورخص، إلخ.
+
+**English translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> Unemployment
+> 10.1. The "unemployed" comprise all persons above a specified age who, during the reference period, were:
+> a) "without work", i.e. had neither paid employment nor self-employment;
+> b) "available for work" in paid employment or self-employment during the reference period;
+> c) "seeking work", i.e. had taken specific steps in a specified recent period to seek paid employment or self-employment. These specific steps may include: registration at a public or private employment office; applications to employers; checking at workplaces, farms, factory gates, markets or other places where workers are traditionally recruited; placing or answering newspaper advertisements; searching through personal contacts; looking for land, buildings, machinery or equipment to set up a personal business; arranging for financial resources, permits and licences, etc.
+
 ### أستراليا
 
 **Source:** Labour Statistics — Concepts, Sources and Methods (6102.0.55.001), Feb 2018 — Australian Bureau of Statistics  
@@ -167,6 +201,12 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > Unemployed persons are defined as all persons aged 15 years and over who were not employed during the reference week, and:
 > had actively looked for full-time or part-time work at any time in the four weeks up to the end of the reference week, and were available for work in the reference week, or
 > were waiting to start a new job within four weeks from the end of the reference week, and could have started in the reference week if the job had been available then.
+
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> يُعرَّف المتعطلون بأنهم جميع الأشخاص البالغين 15 سنة فأكثر الذين لم يكونوا مشتغلين خلال أسبوع الإسناد، والذين:
+> بحثوا فعلياً عن عمل بدوام كامل أو جزئي في أي وقت خلال الأسابيع الأربعة حتى نهاية أسبوع الإسناد، وكانوا متاحين للعمل في أسبوع الإسناد، أو
+> كانوا ينتظرون بدء عمل جديد خلال أربعة أسابيع من نهاية أسبوع الإسناد، وكان بإمكانهم البدء في أسبوع الإسناد لو كان العمل متاحاً حينها.
 
 ### السعودية
 
@@ -183,6 +223,15 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > •	Seeking work, i.e., had taken active measure during the reference week or the previous three weeks  to seek paid employment or self-employment.
 > Future starters, that is, persons who did not look for work but have a future job start are also counted as unemployed.
 
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> 2.3.1.19 المتعطلون
+> يشمل المتعطلون جميع الأشخاص في سن العمل (15 سنة فأكثر) الذين:
+> • كانوا بلا وظيفة أو نشاط تجاري خلال فترة الإسناد، أي لم يكونوا في عمل بأجر أو عمل لحسابهم الخاص
+> • متاحون حالياً للعمل، أي كانوا متاحين لعمل بأجر أو عمل لحسابهم الخاص خلال أسبوع الإسناد أو في الأسبوعين التاليين له؛
+> • يبحثون عن عمل، أي اتخذوا إجراءً فعلياً خلال أسبوع الإسناد أو الأسابيع الثلاثة السابقة له للبحث عن عمل بأجر أو عمل لحسابهم الخاص.
+> ويُعدّ من المتعطلين أيضاً «المنتظرون لعمل مستقبلي»، أي الأشخاص الذين لم يبحثوا عن عمل ولكن لديهم عمل سيبدؤونه مستقبلاً.
+
 ### تونس
 
 **Source:** Methodological note — Employment survey Tunisia — Institut National de la Statistique  
@@ -198,6 +247,22 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > • L’absence de travail
 > • La recherche d’un emploi
 > • La disponibilité pour travailler.
+
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> 3. السكان المتعطلون
+> يشمل السكان المتعطلون الأشخاص الذين ليس لديهم عمل ويبحثون عن عمل ومتاحون للعمل، وفق المعايير المعتمدة في المنظومة الإحصائية. ويرتكز تحديد البطالة أساساً على ثلاثة معايير:
+> • عدم وجود عمل
+> • البحث عن عمل
+> • الإتاحة للعمل.
+
+**English translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> 3. Unemployed population
+> The unemployed population comprises persons without work who are seeking employment and are available for work, in accordance with the criteria adopted in the statistical system. The determination of unemployment rests mainly on three criteria:
+> • Absence of work
+> • Seeking employment
+> • Availability for work.
 
 ### المغرب
 
@@ -218,6 +283,22 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > leur interview ou avoir pu prendre un emploi contre revenu si une opportunité
 > professionnelle s’était présentée au cours de la semaine précédant leur interview.
 
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> الأشخاص في حالة بطالة بالمعنى الضيق
+> الأشخاص في حالة بطالة بالمعنى الضيق هم الأشخاص البالغون 15 سنة فأكثر الذين يستوفون في آن واحد الشروط الثلاثة التالية:
+> 1. أن يكونوا بلا عمل مقابل دخل خلال الأسبوع السابق لمقابلتهم.
+> 2. أن يكونوا قد بحثوا عن عمل مأجور أو قاموا بخطوات لبدء مشروع، خلال الأسابيع الأربعة السابقة لمقابلتهم.
+> 3. أن يكونوا متاحين لتولي عمل مقابل دخل خلال الأسبوعين التاليين لمقابلتهم، أو كان بإمكانهم تولي عمل مقابل دخل لو أُتيحت لهم فرصة مهنية خلال الأسبوع السابق لمقابلتهم.
+
+**English translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> Persons in strict unemployment
+> Persons in strict unemployment are persons aged 15 and over who simultaneously meet the following three conditions:
+> 1. Being without paid employment during the week preceding their interview.
+> 2. Having looked for paid work or taken steps to start a project during the four weeks preceding their interview.
+> 3. Being available to take up paid employment within the two weeks following their interview, or having been able to take up paid employment had a job opportunity arisen during the week preceding their interview.
+
 ### الأردن
 
 **Source:** DoS — Employment and unemployment: labour force concepts page — Department of Statistics  
@@ -230,6 +311,13 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > a. Not working (without work): The person must not have worked for at least one hour during the seven days before the interview and must not be temporarily absent from work.
 > b. Available for work: The person must be in a position to accept a job immediately within the week preceding the interview or within the following fifteen days.
 > c. Actively seeking work: The person must have taken specific steps to look for work either full-time or part-time in the recent four weeks prior to the interview. These steps may include registering and directly applying to employers, checking job postings in places of employment and community centers, placing and responding to advertisements in newspapers, inquiring about job opportunities through friends or relatives, or any similar actions.
+
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> المتعطل: الفرد البالغ من العمر 15 سنة فأكثر، القادر على العمل، الذي لا يعمل حالياً، والمتاح للعمل، والباحث عنه فعلياً. ويجب أن تتوفر الشروط التالية ليُعدّ الشخص متعطلاً:
+> أ. لا يعمل (بلا عمل): ألا يكون الشخص قد عمل ساعة واحدة على الأقل خلال الأيام السبعة السابقة للمقابلة، وألا يكون متغيباً مؤقتاً عن العمل.
+> ب. متاح للعمل: أن يكون الشخص في وضع يسمح له بقبول عمل فوراً خلال الأسبوع السابق للمقابلة أو خلال الخمسة عشر يوماً التالية.
+> ج. يبحث فعلياً عن عمل: أن يكون الشخص قد اتخذ خطوات محددة للبحث عن عمل بدوام كامل أو جزئي خلال الأسابيع الأربعة الأخيرة السابقة للمقابلة. وقد تشمل هذه الخطوات التسجيل والتقدم مباشرة إلى أصحاب العمل، والاطلاع على إعلانات الوظائف في أماكن العمل والمراكز المجتمعية، ونشر الإعلانات في الصحف والرد عليها، والسؤال عن فرص العمل عن طريق الأصدقاء أو الأقارب، أو أي إجراءات مماثلة.
 
 ### الإمارات
 
@@ -246,6 +334,14 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 > 	ج. الباحث عن عمل: أن يكون الشخص قد اتخذ خطوات محددة للبحث عن عمل لبعض الوقت أو كله بصفة دائمة خلال الأربعة أسابيع التي سبقت يوم المقابلة. وقد تشمل الخطوات المحددة التسجيل في برنامج توطين، أو التسجيل في مبادرات حكومية مثل: معرض وظائف ، أو التسجيل لدى إدارة الموارد البشرية (للمواطنين فقط)، أو التقدم مباشرة إلى أصحاب العمل، والبحث في أماكن العمل وأماكن التجمعات الخاصة، ونشر إعلانات في الصحف والرد عليها، والبحث عن عمل من خلال الإنترنت والتحري عن فرص العمل لدى الأصدقاء أو الأقارب أو أي إجراء مماثل…الخ.
 > 	د. ويعتبر من ضمن المتعطلين أيضا الأشخاص المتاحون حاليا للعمل ولم يبحثوا عن العمل خلال الأربعة أسابيع السابقة ليوم المقابلة بسبب انتظارهم للعودة لعملهم السابق أو أنهم وجدوا عملا بانتظار المباشرة به لاحقا.
 
+**English translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> Unemployed: an individual aged (15) years or over, able to work, not engaged in any work, available for work and seeking it. The following conditions must be met for a person to be unemployed:
+> a. Not engaged in any work (without work): the person has not worked for one hour or more during the seven days preceding the interview day (the reference period), and was not temporarily absent from work.
+> b. Available for work: the person is in a position to take up work immediately within the four weeks following the interview day.
+> c. Seeking work: the person has taken specific steps to look for part-time or full-time permanent work during the four weeks preceding the interview day. Specific steps may include registering in an Emiratisation (Tawteen) programme, registering in government initiatives such as a job fair, registering with the human resources department (nationals only), applying directly to employers, searching at workplaces and private gathering places, placing and answering newspaper advertisements, searching for work on the internet, and enquiring about job opportunities with friends or relatives, or any similar action, etc.
+> d. Also counted as unemployed are persons currently available for work who did not seek work during the four weeks preceding the interview day because they were waiting to return to their previous job or had found a job they are waiting to start later.
+
 ### فلسطين
 
 **Source:** PCBS — Guide to the statistical indicators provided by PCBS, 2025 (book2740) — Palestinian Central Bureau of Statistics  
@@ -256,6 +352,10 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Language:** ar
 
 > مؤشر يقيس الأفراد (15 سنة فأكثر) الذين كانوا خلال فترة الاسناد بدون عمل، ومستعدين للعمل، وبحثوا عن عمل خلال ل 4 أسابيع التي تسبق فترة الأسناد بطرق محددة، قد تشمل تسجيل في مكاتب التشغيل الخاصة او الحكومية، والتحقق من اماكن العمل، بحث عن مساعدة من صديق أو قريب
+
+**English translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> An indicator that measures individuals (aged 15 and over) who, during the reference period, were without work, ready to work, and searched for work during the 4 weeks preceding the reference period through specific means, which may include registering at private or government employment offices, checking workplaces, and seeking help from a friend or relative.
 
 ## Comparability notes (Miʿyar commentary, sourced)
 

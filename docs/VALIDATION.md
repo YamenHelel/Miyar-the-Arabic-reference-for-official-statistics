@@ -15,6 +15,7 @@ Where to act: the **Verification Desk** (link in `docs/STATUS.md`): ✍️ tab f
 | 5. Country facts from search snippets | 15 | Confirmed automatically once the country's text is pasted |
 | 6. Country-profile fields to confirm | 20 | Reply in chat or edit the YAML |
 | 7. AI-drafted pages awaiting review | 54 | Read the page; say "reviewed <id>" or send corrections |
+| 7b. Unofficial translations to review | 10 | Read each against its original on the indicator page (language switcher) |
 | 8. Code not yet executed | 1 | Stata script (needs someone with Stata) |
 | 9. Lead decisions and settings | 7 | See the list at the end |
 
@@ -299,6 +300,21 @@ AI text is always labelled on the site; review means a statistician has read it 
 - **data sources (10):** `ds-administrative-records`, `ds-establishment-survey`, `ds-labour-force-survey`, `ds-lfs-framework`, `ds-lfs-periodicity`, `ds-lfs-quality`, `ds-lfs-questionnaire`, `ds-lfs-sample-design`, `ds-lfs-weighting-estimation`, `ds-population-census`
 - **indicators (4):** `ind-employment-to-population-ratio`, `ind-labour-force-participation-rate`, `ind-unemployment-rate`, `ind-youth-unemployment-rate`
 - **concepts (40):** `con-bias`, `con-cluster-sampling`, `con-coefficient-of-variation`, `con-confidence-interval`, `con-design-effect`, `con-employed`, `con-estimate`, `con-index-number`, `con-interquartile-range`, `con-labour-force`, `con-margin-of-error`, `con-mean`, `con-median`, `con-mode`, `con-non-response`, `con-non-sampling-error`, `con-outlier`, `con-outside-labour-force`, `con-percentage-point`, `con-percentile`, `con-population`, `con-potential-labour-force`, `con-range`, `con-rate`, `con-ratio`, `con-response-rate`, `con-sample`, `con-sampling-error`, `con-sampling-frame`, `con-sampling-weight`, `con-seasonal-adjustment`, `con-simple-random-sampling`, `con-standard-deviation`, `con-standard-error`, `con-stratified-sampling`, `con-time-related-underemployment`, `con-unemployed`, `con-variance`, `con-weighted-mean`, `con-working-age-population`
+
+## 7b. Unofficial translations to review
+
+Shown on indicator pages through the عربي / English switcher, always labelled unofficial, with the original one click away.
+
+- `q-usa-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-gbr-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-fra-unemployed` (fr → ar, en): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-aus-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-sau-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-tun-unemployed` (fr → ar, en): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-mar-unemployed` (fr → ar, en): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-jor-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-are-unemployed` (ar → en): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-pse-unemployed` (ar → en): AI-assisted (Claude), 2026-11-05, not yet reviewed
 
 ## 8. Code not yet executed
 

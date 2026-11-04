@@ -43,7 +43,7 @@ LFS_LABELS = {"name_en": "الاسم", "name_fr": "الاسم", "name_ar": "ال
               "unemployed_fr": "تعريف المتعطل", "scope": "النطاق", "coverage_note": "ملاحظة التغطية"}
 
 
-LIST_START = re.compile(r"^\s*(\(?[a-z]\)|\(?[ivx]+\)|\([a-z]\)|LU\d|\d+(\.\d+)*\.?\s|\d+\.\S|[•\-–]|[أ-ي]\.|\d+\s*\.|[a-zA-Z][a-zA-Z ]{0,24}$)")
+LIST_START = re.compile(r"^\s*([a-d]\.\s|\(?[a-z]\)|\(?[ivx]+\)|\([a-z]\)|LU\d|\d+(\.\d+)*\.?\s|\d+\.\S|[•\-–]|[أ-ي]\.|\d+\s*\.|[a-zA-Z][a-zA-Z ]{0,24}$)")
 
 
 def reflow(text):
@@ -177,6 +177,9 @@ def main():
             national.append({"iso": iso, "name": COUNTRIES[iso], "pending": not (q and q.get("text")),
                              "state": status_state(q) if q else "يُضاف لاحقاً",
                              "text": reflow((q or {}).get("text")), "lang": (q or {}).get("lang", "ar"),
+                             "tr_ar": reflow((q or {}).get("translation_ar")), "tr_en": reflow((q or {}).get("translation_en")),
+                             "tr_official": (q or {}).get("translation_status") == "official",
+                             "tr_note": (q or {}).get("translation_note_ar", ""),
                              "url": (q or {}).get("quoted_from_url") or src.get("url", ""),
                              "src_title": src.get("title_ar") or src.get("title_en", ""),
                              "note": (q or {}).get("document_note") or c.get("definition_note") or (q or {}).get("locator", "")})

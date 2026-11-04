@@ -24,3 +24,25 @@
 {% macro ai(text, label='شرح مُعدّ بمساعدة الذكاء الاصطناعي، وليس نصاً رسمياً') -%}
 <div class="ai"><p class="who">{{ label }}</p><p>{{ text }}</p></div>
 {%- endmacro %}
+
+{% macro view(n, L) -%}
+{% set names = {'ar': ('العربية', 'Arabic'), 'en': ('الإنجليزية', 'English'), 'fr': ('الفرنسية', 'French')} %}
+{% set tr = n.tr_ar if L == 'ar' else n.tr_en %}
+{% set orig_name = names[n.lang][0] if L == 'ar' else names[n.lang][1] %}
+<div class="v v-{{ L }}"{% if L == 'en' %} lang="en" dir="ltr"{% endif %}>
+{% if n.lang == L %}
+  <p class="v-label">{{ 'النص الرسمي بلغته الأصلية' if L == 'ar' else 'Official text, original language' }}</p>
+  <blockquote class="text" dir="{{ 'rtl' if L == 'ar' else 'ltr' }}" lang="{{ L }}" style="margin:0">{{ n.text }}</blockquote>
+{% elif tr %}
+  <p class="v-label tr">{% if n.tr_official %}{{ 'ترجمة رسمية من الناشر' if L == 'ar' else 'Official translation by the publisher' }}{% else %}{{ 'ترجمة غير رسمية أعدّها مِعيار بمساعدة الذكاء الاصطناعي، لم تُراجَع بعد. المرجع هو النص الأصلي.' if L == 'ar' else 'Unofficial translation by Miʿyar (AI-assisted, not yet reviewed). The original text is the reference.' }}{% endif %}</p>
+  <blockquote class="text" dir="{{ 'rtl' if L == 'ar' else 'ltr' }}" lang="{{ L }}" style="margin:0">{{ tr }}</blockquote>
+  {% if L == 'ar' and n.tr_note %}<p class="v-label">{{ n.tr_note }}</p>{% endif %}
+  <details class="orig"><summary>{{ ('النص الأصلي (' ~ orig_name ~ ')') if L == 'ar' else ('Original text (' ~ orig_name ~ ')') }}</summary>
+    <blockquote class="text" dir="{{ 'rtl' if n.lang == 'ar' else 'ltr' }}" lang="{{ n.lang }}" style="margin:0">{{ n.text }}</blockquote>
+  </details>
+{% else %}
+  <p class="v-label">{{ ('لا توجد ترجمة بعد؛ النص الأصلي (' ~ orig_name ~ '):') if L == 'ar' else ('No translation yet; original text (' ~ orig_name ~ '):') }}</p>
+  <blockquote class="text" dir="{{ 'rtl' if n.lang == 'ar' else 'ltr' }}" lang="{{ n.lang }}" style="margin:0">{{ n.text }}</blockquote>
+{% endif %}
+</div>
+{%- endmacro %}

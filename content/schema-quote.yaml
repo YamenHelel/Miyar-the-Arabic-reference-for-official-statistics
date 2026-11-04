@@ -10,5 +10,8 @@ pasted_on: {type: date, optional: true}
 verified_by: {type: str, optional: true}
 quoted_from_url: {type: str, optional: true, note: "exact document the text was copied from"}
 document_note:   {type: str, optional: true, note: "context, e.g. amended version, reproduced wording, transcription"}
-translation_ar:  {type: str, optional: true}
-translation_status: {type: str, enum: [official, unofficial], optional: true}
+translation_ar:  {type: str, optional: true, note: "Arabic version when the original is not Arabic"}
+translation_en:  {type: str, optional: true, note: "English version when the original is not English (site language switcher)"}
+translation_status: {type: str, enum: [official, unofficial], optional: true, note: "required when a translation exists; unofficial = made by Miʿyar"}
+translation_by:  {type: str, optional: true, note: "e.g. 'AI-assisted (Claude), unreviewed' or reviewer initials"}
+translation_note_ar: {type: str, optional: true}

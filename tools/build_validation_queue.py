@@ -87,6 +87,7 @@ def build():
            f"| 5. Country facts from search snippets | {len(snippets)} | Confirmed automatically once the country's text is pasted |",
            f"| 6. Country-profile fields to confirm | {len(to_verify)} | Reply in chat or edit the YAML |",
            f"| 7. AI-drafted pages awaiting review | {len(drafts)} | Read the page; say \"reviewed <id>\" or send corrections |",
+           f"| 7b. Unofficial translations to review | {sum(1 for q in quotes if q.get('translation_status') == 'unofficial')} | Read each against its original on the indicator page (language switcher) |",
            f"| 8. Code not yet executed | 1 | Stata script (needs someone with Stata) |",
            f"| 9. Lead decisions and settings | {len(open_manual)} | See the list at the end |", ""]
 
@@ -134,6 +135,10 @@ def build():
         ids = [f"`{i}`" for k, i, _ in drafts if k == kind]
         if ids:
             md.append(f"- **{kind}s ({len(ids)}):** {', '.join(ids)}")
+    md += ["", "## 7b. Unofficial translations to review", "",
+           "Shown on indicator pages through the عربي / English switcher, always labelled unofficial, with the original one click away.", ""]
+    md += [f"- `{q['slot']}` ({q['lang']} → {', '.join(x for x, k in (('ar', 'translation_ar'), ('en', 'translation_en')) if q.get(k))}): "
+           f"{q.get('translation_by', '')}" for q in quotes if q.get("translation_status") == "unofficial"] or ["- none"]
     md += ["", "## 8. Code not yet executed", "",
            "- `code/stata/miyar_lfs.do`: written to match Python and R, never run. Someone with Stata runs it on "
            "`code/data/synthetic_lfs.csv` and compares with `code/expected/results_python.json`.",

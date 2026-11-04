@@ -69,8 +69,9 @@ def save_quotes(quotes):
     out = []
     for q in quotes:
         q = dict(q)
-        if isinstance(q.get("text"), str) and "\n" in q["text"]:
-            q["text"] = _Literal(q["text"])
+        for k in ("text", "translation_ar", "translation_en"):
+            if isinstance(q.get(k), str) and "\n" in q[k]:
+                q[k] = _Literal(q[k])
         out.append(q)
     body = yaml.safe_dump({"quotes": out}, allow_unicode=True, sort_keys=False, width=1000)
     QUOTES_FILE.write_text(QUOTES_HEADER + body, encoding="utf-8")
