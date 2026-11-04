@@ -40,9 +40,45 @@ def indicator_files():
     return sorted((CONTENT_DIR / "indicators").glob("*.yml"))
 
 
-def iter_quote_slots():
-    """Yield (indicator_path, indicator_id, quote_dict) for every quote slot."""
-    for path in indicator_files():
-        ind = load_yaml(path)
-        for qd in ind.get("quotes", []) or []:
-            yield path, ind.get("id"), qd
+QUOTES_FILE = CONTENT_DIR / "quotes.yml"
+QUOTES_HEADER = """# Miʿyar shared quotes store — official wording, copied verbatim by a human from a verified source.
+# Machine-maintained: edit through tools/apply_quotes.py (or by hand with care; keep text verbatim).
+# Indicators and concepts reference these slots by id. Schema: content/schema-quote.yaml.
+"""
+
+
+class _Literal(str):
+    pass
+
+
+def _literal_representer(dumper, data):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
+
+
+yaml.SafeDumper.add_representer(_Literal, _literal_representer)
+
+
+def load_quotes():
+    """Return the list of quote slots (dicts) from content/quotes.yml."""
+    if not QUOTES_FILE.exists():
+        return []
+    return load_yaml(QUOTES_FILE).get("quotes", []) or []
+
+
+def save_quotes(quotes):
+    out = []
+    for q in quotes:
+        q = dict(q)
+        if isinstance(q.get("text"), str) and "\n" in q["text"]:
+            q["text"] = _Literal(q["text"])
+        out.append(q)
+    body = yaml.safe_dump({"quotes": out}, allow_unicode=True, sort_keys=False, width=1000)
+    QUOTES_FILE.write_text(QUOTES_HEADER + body, encoding="utf-8")
+
+
+def quotes_by_slot():
+    return {q["slot"]: q for q in load_quotes()}
+
+
+def concept_files():
+    return sorted((CONTENT_DIR / "concepts").glob("*.yml"))

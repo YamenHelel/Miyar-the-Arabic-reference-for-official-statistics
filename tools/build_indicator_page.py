@@ -15,7 +15,7 @@ import html
 import sys
 from pathlib import Path
 
-from common import CONTENT_DIR, iter_sources, load_yaml
+from common import CONTENT_DIR, iter_sources, load_yaml, quotes_by_slot
 
 COUNTRIES = {
     "tun": "تونس", "sau": "السعودية", "mar": "المغرب", "jor": "الأردن", "are": "الإمارات", "pse": "فلسطين",
@@ -49,7 +49,11 @@ def main():
         sys.exit(__doc__)
     ind = load_yaml(CONTENT_DIR / "indicators" / f"{sys.argv[1]}.yml")
     reg = {r["id"]: r for _, r in iter_sources()}
-    quotes = {q["slot"]: q for q in ind.get("quotes", [])}
+    allq = quotes_by_slot()
+    refs = [intl_ref for intl_ref in (ind["international"].get("definition_quote"), ind["international"].get("formula_quote"))]
+    refs += [c.get("quote") for c in ind["international"].get("components", [])]
+    refs += [c.get("definition_quote") for c in ind["countries"].values()]
+    quotes = {r: allq[r] for r in refs if r in allq}
     intl = ind["international"]
 
     def src_of(slot):

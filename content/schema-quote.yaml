@@ -1,0 +1,14 @@
+# Quote slot schema — content/quotes.yml (shared by indicators and concepts)
+slot:      {type: str, pattern: "^q-[a-z0-9-]+$"}
+source:    {type: str, note: "src-* id; text is accepted only when this source is verified"}
+lang:      {type: str, enum: [ar, en, fr]}
+status:    {type: str, enum: [to-paste, pasted, verified, source-missing]}
+text:      {type: str, note: "verbatim official wording; empty while to-paste"}
+locator:   {type: str, note: "paragraph / page / section to copy"}
+what_ar:   {type: str, note: "instruction for the person pasting"}
+pasted_on: {type: date, optional: true}
+verified_by: {type: str, optional: true}
+quoted_from_url: {type: str, optional: true, note: "exact document the text was copied from"}
+document_note:   {type: str, optional: true, note: "context, e.g. amended version, reproduced wording, transcription"}
+translation_ar:  {type: str, optional: true}
+translation_status: {type: str, enum: [official, unofficial], optional: true}

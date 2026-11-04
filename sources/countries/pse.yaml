@@ -96,7 +96,6 @@ sources:
     notes: Yearly 2025 file with quarterly files Q1–Q4 (63,446 cases per search snippet). Includes LU3 variable.
 
   - id: src-pse-pcbs-book2740
-    title_en: PCBS publication book2740.pdf (labour force definitions) — exact title to record
     publisher: Palestinian Central Bureau of Statistics
     country: pse
     type: publication
@@ -105,6 +104,9 @@ sources:
     date_accessed: 2026-11-04
     priority: P1
     status: verified
+    notes: "verified via quote paste (lead opened the document). Title given by the lead 2026-11-04; PDF letter-order artefacts in the pasted title (e.g. «المؤش ارت») corrected. Copying from the PDF garbles Arabic — use screenshots or retype."
+    date_published: 2025
+    title_ar: دليل المؤشرات الإحصائية التي يوفرها الجهاز المركزي للإحصاء الفلسطيني، 2025
+    title_en: "PCBS — Guide to the statistical indicators provided by PCBS, 2025 (book2740)"
     verified_by: YH
     verified_date: 2026-11-04
-    notes: "verified via quote paste (lead opened the document and copied the text). Copying from this PDF produced broken Arabic characters; the definition must be retyped or copied from another format."

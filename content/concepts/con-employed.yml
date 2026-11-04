@@ -1,0 +1,19 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-employed
+name_ar: المشتغلون (الأشخاص في العمالة)
+names:
+  en: Persons in employment
+  fr: Personnes en emploi
+term_variants:
+- term: العاملون
+  used_in: []
+  basis: common variant — confirm per country
+category: labour
+source: src-ilo-icls19-res1-pdf
+definition_quote: q-ilo-employed
+explanation_ai_ar: يُعدّ مشتغلاً كل من عمل ساعة واحدة على الأقل خلال فترة الإسناد القصيرة مقابل أجر أو ربح، أو كان غائباً مؤقتاً عن عمله. منذ المؤتمر التاسع عشر (2013) لم يعد إنتاج السلع للاستهلاك الذاتي يُحسب عمالة، وهو فرق مهم عن معايير 1982.
+related:
+- con-labour-force
+- ind-employment-to-population-ratio
+status: draft
+last_updated: '2026-11-04'

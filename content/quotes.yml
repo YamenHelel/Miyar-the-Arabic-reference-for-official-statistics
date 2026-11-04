@@ -1,0 +1,430 @@
+# Miʿyar shared quotes store — official wording, copied verbatim by a human from a verified source.
+# Machine-maintained: edit through tools/apply_quotes.py (or by hand with care; keep text verbatim).
+# Indicators and concepts reference these slots by id. Schema: content/schema-quote.yaml.
+quotes:
+- slot: q-ilo-unemployed
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: verified
+  text: |-
+    Unemployment
+    47.Persons in unemployment are defined as all those of working age who were not in
+    employment, carried out activities to seek employment during a specified recent period and
+    were currently available to take up employment given a job opportunity, where:
+    (a) “not in employment” is assessed with respect to the short reference period for the
+    measurement of employment;
+    (b) to “seek employment” refers to any activity when carried out, during a specified recent
+    period comprising the last four weeks or one month, for the purpose of finding a job
+    or setting up a business or agricultural undertaking. This includes also part-time,
+    informal, temporary, seasonal or casual employment, within the national territory or
+    abroad. Examples of such activities are:
+    (i) arranging for financial resources, applying for permits, licences;
+    (ii) looking for land, premises, machinery, supplies, farming inputs;
+    (iii) seeking the assistance of friends, relatives or other types of intermediaries;
+    (iv) registering with or contacting public or private employment services;
+    (v) applying to employers directly, checking at worksites, farms, factory gates,
+    markets or other assembly places;
+    (vi) placing or answering newspaper or online job advertisements;
+    (vii) placing or updating résumés on professional or social networking sites online;
+    (c) the point when the enterprise starts to exist should be used to distinguish between
+    search activities aimed at setting up a business and the work activity itself, as evidenced
+    by the enterprise’s registration to operate or by when financial resources become
+    available, the necessary infrastructure or materials are in place or the first client or
+    order is received, depending on the context;
+    (d) “currently available” serves as a test of readiness to start a job in the present, assessed
+    with respect to a short reference period comprising that used to measure employment:
+    (i) depending on national circumstances, the reference period may be extended to
+    include a short subsequent period not exceeding two weeks in total, so as to
+    ensure adequate coverage of unemployment situations among different
+    population groups.
+  locator: 19th ICLS resolution, paragraph 47 (with items a, b, c)
+  what_ar: انسخ نص الفقرة 47 كاملاً (تعريف الأشخاص في البطالة) بالإنجليزية كما هو
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
+  document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).
+- slot: q-ilo-employed
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: verified
+  text: |-
+    Employment
+    27.Persons in employment are defined as all those of working age who, during a short reference
+    period, were engaged in any activity to produce goods or provide services for pay or profit.
+    They comprise:
+    (a) employed persons “at work”, i.e. who worked in a job for at least one hour;
+    (b) employed persons “not at work” due to temporary absence from a job, or to workingtime arrangements (such as shift work, flexitime and compensatory leave for overtime).
+  locator: 19th ICLS resolution, paragraph 27
+  what_ar: انسخ الفقرة 27 (تعريف الأشخاص في العمالة)
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
+  document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).
+- slot: q-ilo-labour-force
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: verified
+  text: |-
+    16.Priority is given to employment over the other two categories, and to unemployment over
+    outside the labour force. The three categories of labour force status are, thus, mutually
+    exclusive and exhaustive. The sum of persons in employment and in unemployment equals the
+    labour force. Persons outside the labour force are those of working age who were neither in
+    employment nor in unemployment in the short reference period.
+  locator: 19th ICLS resolution, paragraph defining the labour force (§16 approx.)
+  what_ar: انسخ الفقرة التي تعرّف القوة العاملة
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
+  document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).
+- slot: q-ilo-lu1
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: verified
+  text: |-
+    73.
+    (c) measures of labour underutilization, of which more than one amongst the following
+    headline indicators is needed so as to reflect the nature of underutilization in different
+    settings and phases of the economic cycle:
+    LU1: Unemployment rate:
+    [persons in unemployment / labour force] x 100
+    LU2: Combined rate of time-related underemployment and unemployment:
+    [(persons in time-related underemployment + persons in unemployment) / labour
+    force] x 100
+    LU3: Combined rate of unemployment and potential labour force:
+    2
+    [(persons in unemployment + potential labour force) / (extended labour force)] x
+    100
+    2 Replaces optional relaxation of the “seeking work” criterion in the previous standards.
+    LU4: Composite measure of labour underutilization:
+    [(persons in time-related underemployment + persons in unemployment +
+    potential labour force) / (extended labour force)] x 100
+  locator: 19th ICLS resolution, paragraph listing LU1–LU4 (§71 approx.)
+  what_ar: انسخ الفقرة التي تعرّف المقاييس LU1 إلى LU4 (ومنها LU1 = معدل البطالة)
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
+  document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023). Footnote 2 (on LU3) is printed inside the quoted paragraph.
+- slot: q-usa-unemployed
+  source: src-usa-bls-cps-definitions
+  lang: en
+  status: verified
+  text: |-
+    Unemployed
+    In the Current Population Survey, people are classified as unemployed if they meet all of the following criteria:
+
+    They were not employed during the survey reference week.
+    They were available for work during the survey reference week, except for temporary illness.
+    They made at least one specific, active effort to find a job during the 4-week period ending with the survey reference week (see active job search methods) OR they were temporarily laid off and expecting to be recalled to their job.
+    People waiting to start a new job must have actively looked for a job within the last 4 weeks in order to be classified as unemployed. Otherwise, they are classified as not in the labor force.
+  locator: CPS definitions page — 'Unemployed persons'
+  what_ar: انسخ تعريف Unemployed persons
+  pasted_on: '2026-11-04'
+  verified_by: YH
+- slot: q-gbr-unemployed
+  source: src-gbr-ons-lfs-user-guidance
+  lang: en
+  status: verified
+  text: |-
+    Unemployment
+    10. (1) The "unemployed" comprise all persons above a specified age who during the reference period
+    were:
+    (a) "without work", i.e. were not in paid employment or self-employment as defined in
+    paragraph 9;
+    (b) "currently available for work", i.e. were available for paid employment or selfemployment during the reference period; and
+    (c) "seeking work", i.e. had taken specific steps in a specified recent period to seek paid
+    employment or self-employment. The specific steps may include registration at a public or
+    private employment exchange; application to employers; checking at work sites, farms,
+    factory gates, market or other assembly places; placing or answering newspaper
+    advertisements: seeking assistance of friends or relatives: looking for land, building,
+    machinery or equipment to establish own enterprise; arranging for financial resources;
+    applying for permits and licences, etc.
+  locator: LFS QMI — definition of unemployment (ILO definition)
+  what_ar: انسخ تعريف البطالة المستخدم في المسح
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/methodologies/labourforcesurveyuserguidance#volume-5-lfs-classifications
+  document_note: 'LFS User Guide – Volume 5: LFS Classifications (July 2024), p.10. ONS reproduces paragraph 10 of the 13th ICLS (1982) resolution.'
+- slot: q-fra-unemployed
+  source: src-fra-insee-eec-methodo
+  lang: fr
+  status: verified
+  text: |-
+    Chômage
+    10.1. Les « chômeurs » comprennent toutes les personnes ayant dépassé un âge spécifié qui, au cours de la période de
+    référence, étaient :
+    a) « sans travail », c'est-à-dire qui n'étaient pourvues ni d'un emploi salarié ni d'un emploi non salarié ;
+    b) « disponibles pour travailler » dans un emploi salarié ou non salarié durant la période de référence ;
+    c) « à la recherche d'un travail », c'est-à-dire qui avaient pris des dispositions spécifiques au cours d'une période récente
+    spécifiée pour chercher un emploi salarié ou un emploi non salarié. Ces dispositions spécifiques peuvent inclure :
+    l'inscription à un bureau de placement public ou privé ; la candidature auprès d'employeurs ; les démarches sur les lieux
+    de travail, dans les fermes ou à la porte des usines, sur les marchés ou dans les autres endroits où sont traditionnellement
+    recrutés les travailleurs ; l'insertion ou la réponse à des annonces dans les journaux ; les recherches par relations
+    personnelles ; la recherche de terrain, d'immeubles, de machines ou d'équipement pour créer une entreprise personnelle ;
+    les démarches pour obtenir des ressources financières, des permis et licences, etc.
+  locator: Méthodologie EEC — définition du chômeur au sens du BIT
+  what_ar: انسخ تعريف «chômeur au sens du BIT» بالفرنسية
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  document_note: Insee methodology reproduces paragraph 10.1 of the 13th ICLS (1982) resolution in French; Insee's operational criteria (15+, availability within 2 weeks, 4-week search) are stated elsewhere.
+- slot: q-aus-unemployed
+  source: src-aus-abs-lscsm-2018
+  lang: en
+  status: verified
+  text: |-
+    Unemployed persons are defined as all persons aged 15 years and over who were not employed during the reference week, and:
+    had actively looked for full-time or part-time work at any time in the four weeks up to the end of the reference week, and were available for work in the reference week, or
+    were waiting to start a new job within four weeks from the end of the reference week, and could have started in the reference week if the job had been available then.
+  locator: 'Labour Statistics: Concepts, Sources and Methods — ''Unemployed'''
+  what_ar: انسخ تعريف Unemployed
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/6102.0.55.001~Feb%202018~Main%20Features~Unemployment~6
+- slot: q-sau-unemployed
+  source: src-sau-gastat-lms-methodology-2025q1
+  lang: en
+  status: verified
+  text: "2.3.1.19\tUnemployed persons\nThe unemployed comprise all persons of working age (15 years and older) who were:\n•\tWere without a job or business during the reference period, i.e., were not in paid employment or self-employment\n•\tCurrently available for work, i.e., were available for paid employment or self-employment during the reference week or in the following two weeks; and\n•\tSeeking work, i.e., had taken active measure during the reference week or the previous three weeks  to seek paid employment or self-employment.\nFuture starters, that is, persons who did not look for work but have a future job start are also counted as unemployed."
+  locator: Methodology of Labor Market Statistics Q1 2025 — definition of unemployed
+  what_ar: انسخ تعريف المتعطل (ويُفضَّل النص العربي إن وُجد في النسخة العربية)
+  pasted_on: '2026-11-04'
+  verified_by: YH
+- slot: q-tun-unemployed
+  source: src-tun-ins-enpe-methodo
+  lang: fr
+  status: verified
+  text: |-
+    3. Population au chômage
+    La population au chômage comprend les personnes sans travail qui recherchent un emploi et qui sont
+    disponibles pour travailler, conformément aux critères retenus dans le dispositif statistique. La
+    détermination du chômage repose principalement sur trois critères :
+    • L’absence de travail
+    • La recherche d’un emploi
+    • La disponibilité pour travailler.
+  locator: Note méthodologique — définition du chômeur
+  what_ar: انسخ تعريف «chômeur» بالفرنسية
+  pasted_on: '2026-11-04'
+  verified_by: YH
+- slot: q-mar-unemployed
+  source: src-mar-hcp-chomage-strict
+  lang: fr
+  status: verified
+  text: |-
+    Personnes au chômage strict
+    Les personnes au chômage strict sont les personnes de 15 ans et plus qui remplissent
+    simultanément les trois conditions suivantes :
+    1. Être sans emploi contre revenu au cours de la semaine précédant leur interview.
+    2. Avoir recherché un travail rémunéré ou fait des démarches pour commencer un
+    projet, au cours des quatre semaines précédant leur interview.
+    3. Être disponible pour prendre un emploi contre revenu dans les deux semaines suivant
+    leur interview ou avoir pu prendre un emploi contre revenu si une opportunité
+    professionnelle s’était présentée au cours de la semaine précédant leur interview.
+  locator: Note méthodologique ENE — définition de la population active en chômage
+  what_ar: انسخ تعريف «chômeur / population active en chômage»
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://www.hcp.ma/attachment/2927551/
+  document_note: HCP information note on the labour market, Q3 2026, Enquête sur la Main-d'Œuvre (EMO). The lead confirmed this is the EMO2026 definition.
+- slot: q-jor-unemployed
+  source: src-jor-dos-methodology
+  lang: en
+  status: verified
+  text: |-
+    Unemployed: An individual aged 15 years or older, who is capable of working, not currently working, available for work, and actively seeking employment. The following conditions must be met for someone to be considered unemployed:
+    a. Not working (without work): The person must not have worked for at least one hour during the seven days before the interview and must not be temporarily absent from work.
+    b. Available for work: The person must be in a position to accept a job immediately within the week preceding the interview or within the following fifteen days.
+    c. Actively seeking work: The person must have taken specific steps to look for work either full-time or part-time in the recent four weeks prior to the interview. These steps may include registering and directly applying to employers, checking job postings in places of employment and community centers, placing and responding to advertisements in newspapers, inquiring about job opportunities through friends or relatives, or any similar actions.
+  locator: DoS — EUS concepts and definitions (quarterly report annex)
+  what_ar: انسخ تعريف «المتعطل» من التقرير الربعي أو منهجية المسح
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://dosweb.dos.gov.jo/labourforce/employment-and-unemployment/
+- slot: q-are-unemployed
+  source: src-are-lfs-methodology
+  lang: ar
+  status: verified
+  text: "متعطل: \tهو الفرد الذي عمره/ عمرها (15) سنة فأكثر، القادر على العمل، والذي لا يزاول أي عمل، والمتاح للعمل، والباحث عنه، وتجدر الإشارة إلى أنه يجب توافر الشروط التالية في المتعطل:\n\tأ. لا يزاول أي عمل (دون عمل): أن لا يكون الشخص قد عمل لمدة ساعة فأكثر من الزمن خلال السبعة أيام التي سبقت يوم المقابلة (فترة الإسناد الزمني)، ولم يكن متغيباً بصورة مؤقتة عن العمل.\n\tب. المتاح للعمل: أي أن يكون الشخص في وضع يسمح له باستلام عمل فوراً خلال الأربعة أسابيع اللاحقة ليوم المقابلة.\n\tج. الباحث عن عمل: أن يكون الشخص قد اتخذ خطوات محددة للبحث عن عمل لبعض الوقت أو كله بصفة دائمة خلال الأربعة أسابيع التي سبقت يوم المقابلة. وقد تشمل الخطوات المحددة التسجيل في برنامج توطين، أو التسجيل في مبادرات حكومية مثل: معرض وظائف ، أو التسجيل لدى إدارة الموارد البشرية (للمواطنين فقط)، أو التقدم مباشرة إلى أصحاب العمل، والبحث في أماكن العمل وأماكن التجمعات الخاصة، ونشر إعلانات في الصحف والرد عليها، والبحث عن عمل من خلال الإنترنت والتحري عن فرص العمل لدى الأصدقاء أو الأقارب أو أي إجراء مماثل…الخ.\n\tد. ويعتبر\
+    \ من ضمن المتعطلين أيضا الأشخاص المتاحون حاليا للعمل ولم يبحثوا عن العمل خلال الأربعة أسابيع السابقة ليوم المقابلة بسبب انتظارهم للعودة لعملهم السابق أو أنهم وجدوا عملا بانتظار المباشرة به لاحقا."
+  locator: FCSC — LFS definitions
+  what_ar: انسخ تعريف «المتعطل» من منشورات مسح القوى العاملة
+  pasted_on: '2026-11-04'
+  verified_by: YH
+  quoted_from_url: https://fcsc.gov.ae/wp-content/uploads/2025/06/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9-%D8%A8%D9%82%D9%88%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84-ar.xlsx
+  document_note: Definition taken from the FCSC labour force data file (xlsx, Arabic).
+- slot: q-pse-unemployed
+  source: src-pse-pcbs-book2740
+  lang: ar
+  status: pasted
+  text: مؤشر يقيس الأفراد (15 سنة فأكثر) الذين كانوا خلال فترة الاسناد بدون عمل، ومستعدين للعمل، وبحثوا عن عمل خلال ل 4 أسابيع التي تسبق فترة الأسناد بطرق محددة، قد تشمل تسجيل في مكاتب التشغيل الخاصة او الحكومية، والتحقق من اماكن العمل، بحث عن مساعدة من صديق أو قريب
+  locator: book2740.pdf — indicators guide, row defining the unemployment indicator (العاطلون عن العمل)
+  what_ar: النسخ من ملف PDF أنتج حروفاً مشوّهة. انسخ التعريف من نسخة Word/HTML على موقع الجهاز، أو اكتبه يدوياً حرفاً بحرف من الملف
+  pasted_on: '2026-11-04'
+  quoted_from_url: https://www.pcbs.gov.ps/media/qznfsoov/book2740.pdf
+  document_note: Transcribed by Claude from the lead's screenshot of the table cell (line breaks were cell wrapping); spelling kept as printed, including «خلال ل 4» and «الاسناد/الأسناد». Lead to confirm on the desk.
+- slot: q-ilo-working-age
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 19th ICLS resolution — paragraph setting the working-age population and its lower age limit (section on population coverage)
+  what_ar: انسخ الفقرة التي تحدد «السكان في سن العمل» والحد الأدنى للسن
+- slot: q-ilo-potential-lf
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 19th ICLS resolution — paragraph defining the 'potential labour force' (§51 approx.)
+  what_ar: انسخ الفقرة التي تعرّف «القوة العاملة المحتملة»
+- slot: q-ilo-time-related-underemployment
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 19th ICLS resolution — paragraph defining 'persons in time-related underemployment' (§43 approx.)
+  what_ar: انسخ الفقرة التي تعرّف «الأشخاص في نقص التشغيل المرتبط بالوقت»
+- slot: q-ilo-headline-73ab
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 19th ICLS resolution — paragraph 73 items (a) and (b) (labour force participation rate; employment-to-population ratio)
+  what_ar: انسخ البندين (أ) و(ب) من الفقرة 73 (معدل المشاركة في القوة العاملة، ونسبة العمالة إلى السكان)
+- slot: q-sdg-852-youth
+  source: src-sdg-goal8-metadata
+  lang: en
+  status: to-paste
+  text: ''
+  locator: SDG metadata 8.5.2 — 'Definition' and 'Disaggregation' sections (age groups, youth 15–24)
+  what_ar: من بطاقة بيانات المؤشر 8.5.2 انسخ فقرة التعريف وفقرة التصنيف حسب العمر (الشباب 15–24)
+- slot: q-isi-standard-error
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: ISI glossary — entry 'standard error' (English, and the Arabic term if listed)
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «standard error» والمقابل العربي إن وُجد
+- slot: q-tun-lfpr
+  source: src-tun-ins-enpe-methodo
+  lang: fr
+  status: to-paste
+  text: ''
+  locator: Note méthodologique INS — definition of the labour force participation rate
+  what_ar: انسخ تعريف «معدل المشاركة في القوة العاملة» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-sau-lfpr
+  source: src-sau-gastat-lms-methodology-2025q1
+  lang: en
+  status: to-paste
+  text: ''
+  locator: GASTAT Methodology of Labor Market Statistics Q1 2025 — definitions section 2.3.1 — definition of the labour force participation rate
+  what_ar: انسخ تعريف «معدل المشاركة في القوة العاملة» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-mar-lfpr
+  source: src-mar-hcp-chomage-strict
+  lang: fr
+  status: to-paste
+  text: ''
+  locator: HCP note d'information EMO T3 2026 — encadré définitions — definition of the labour force participation rate
+  what_ar: انسخ تعريف «معدل المشاركة في القوة العاملة» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-jor-lfpr
+  source: src-jor-dos-methodology
+  lang: en
+  status: to-paste
+  text: ''
+  locator: DoS employment and unemployment concepts page — definition of the labour force participation rate
+  what_ar: انسخ تعريف «معدل المشاركة في القوة العاملة» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-are-lfpr
+  source: src-are-lfs-methodology
+  lang: ar
+  status: to-paste
+  text: ''
+  locator: FCSC labour force data file — definitions sheet — definition of the labour force participation rate
+  what_ar: انسخ تعريف «معدل المشاركة في القوة العاملة» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-pse-lfpr
+  source: src-pse-pcbs-book2740
+  lang: ar
+  status: to-paste
+  text: ''
+  locator: PCBS indicators guide 2025 (book2740) — indicators table — definition of the labour force participation rate
+  what_ar: انسخ تعريف «معدل المشاركة في القوة العاملة» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-tun-epr
+  source: src-tun-ins-enpe-methodo
+  lang: fr
+  status: to-paste
+  text: ''
+  locator: Note méthodologique INS — definition of the employment-to-population ratio
+  what_ar: انسخ تعريف «نسبة العمالة إلى السكان (معدل التشغيل)» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-sau-epr
+  source: src-sau-gastat-lms-methodology-2025q1
+  lang: en
+  status: to-paste
+  text: ''
+  locator: GASTAT Methodology of Labor Market Statistics Q1 2025 — definitions section 2.3.1 — definition of the employment-to-population ratio
+  what_ar: انسخ تعريف «نسبة العمالة إلى السكان (معدل التشغيل)» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-mar-epr
+  source: src-mar-hcp-chomage-strict
+  lang: fr
+  status: to-paste
+  text: ''
+  locator: HCP note d'information EMO T3 2026 — encadré définitions — definition of the employment-to-population ratio
+  what_ar: انسخ تعريف «نسبة العمالة إلى السكان (معدل التشغيل)» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-jor-epr
+  source: src-jor-dos-methodology
+  lang: en
+  status: to-paste
+  text: ''
+  locator: DoS employment and unemployment concepts page — definition of the employment-to-population ratio
+  what_ar: انسخ تعريف «نسبة العمالة إلى السكان (معدل التشغيل)» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-are-epr
+  source: src-are-lfs-methodology
+  lang: ar
+  status: to-paste
+  text: ''
+  locator: FCSC labour force data file — definitions sheet — definition of the employment-to-population ratio
+  what_ar: انسخ تعريف «نسبة العمالة إلى السكان (معدل التشغيل)» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-pse-epr
+  source: src-pse-pcbs-book2740
+  lang: ar
+  status: to-paste
+  text: ''
+  locator: PCBS indicators guide 2025 (book2740) — indicators table — definition of the employment-to-population ratio
+  what_ar: انسخ تعريف «نسبة العمالة إلى السكان (معدل التشغيل)» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-tun-yur
+  source: src-tun-ins-enpe-methodo
+  lang: fr
+  status: to-paste
+  text: ''
+  locator: Note méthodologique INS — definition of the youth unemployment rate (and the youth age band used)
+  what_ar: انسخ تعريف «معدل البطالة بين الشباب» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-sau-yur
+  source: src-sau-gastat-lms-methodology-2025q1
+  lang: en
+  status: to-paste
+  text: ''
+  locator: GASTAT Methodology of Labor Market Statistics Q1 2025 — definitions section 2.3.1 — definition of the youth unemployment rate (and the youth age band used)
+  what_ar: انسخ تعريف «معدل البطالة بين الشباب» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-mar-yur
+  source: src-mar-hcp-chomage-strict
+  lang: fr
+  status: to-paste
+  text: ''
+  locator: HCP note d'information EMO T3 2026 — encadré définitions — definition of the youth unemployment rate (and the youth age band used)
+  what_ar: انسخ تعريف «معدل البطالة بين الشباب» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-jor-yur
+  source: src-jor-dos-methodology
+  lang: en
+  status: to-paste
+  text: ''
+  locator: DoS employment and unemployment concepts page — definition of the youth unemployment rate (and the youth age band used)
+  what_ar: انسخ تعريف «معدل البطالة بين الشباب» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-are-yur
+  source: src-are-lfs-methodology
+  lang: ar
+  status: to-paste
+  text: ''
+  locator: FCSC labour force data file — definitions sheet — definition of the youth unemployment rate (and the youth age band used)
+  what_ar: انسخ تعريف «معدل البطالة بين الشباب» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-pse-yur
+  source: src-pse-pcbs-book2740
+  lang: ar
+  status: to-paste
+  text: ''
+  locator: PCBS indicators guide 2025 (book2740) — indicators table — definition of the youth unemployment rate (and the youth age band used)
+  what_ar: انسخ تعريف «معدل البطالة بين الشباب» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)

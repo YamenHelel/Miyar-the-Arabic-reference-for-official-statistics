@@ -1,0 +1,27 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-unemployed
+name_ar: المتعطلون (الأشخاص في البطالة)
+names:
+  en: Persons in unemployment
+  fr: Personnes au chômage
+term_variants:
+- term: العاطلون عن العمل
+  used_in:
+  - pse
+  basis: PCBS indicators guide
+- term: المتعطلون
+  used_in:
+  - are
+  - jor
+  basis: FCSC data file; DoS usage — to confirm
+category: labour
+source: src-ilo-icls19-res1-pdf
+definition_quote: q-ilo-unemployed
+explanation_ai_ar: المتعطل هو من لم يعمل خلال فترة الإسناد، وبحث فعلياً عن عمل خلال فترة حديثة (عادة أربعة أسابيع)، وكان متاحاً للبدء في العمل. يجب أن تتوفر الشروط الثلاثة معاً.
+related:
+- con-labour-force
+- con-potential-labour-force
+- ind-unemployment-rate
+- ind-youth-unemployment-rate
+status: draft
+last_updated: '2026-11-04'

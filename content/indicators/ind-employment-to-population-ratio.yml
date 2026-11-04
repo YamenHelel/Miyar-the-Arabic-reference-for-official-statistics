@@ -1,0 +1,121 @@
+# Miʿyar indicator (pilot). Official wording: content/quotes.yml. facts_basis says where each fact comes from.
+id: ind-employment-to-population-ratio
+name_ar: نسبة العمالة إلى السكان
+names:
+  en: Employment-to-population ratio
+  fr: Taux d'emploi
+term_variants:
+- term: معدل التشغيل
+  used_in:
+  - mar
+  - tun
+  basis: Maghreb usage — to confirm from national texts
+domain: labour
+sdg: []
+international:
+  standard_source: src-ilo-icls19-res1-pdf
+  custodian: ILO
+  definition_quote: q-ilo-headline-73ab
+  formula_ar: نسبة العمالة إلى السكان = (عدد المشتغلين ÷ السكان في سن العمل) × 100
+  formula: EPR = E / WAP × 100
+  components:
+  - id: con-employed
+    name_ar: المشتغلون
+    quote: q-ilo-employed
+  - id: con-working-age-population
+    name_ar: السكان في سن العمل
+    quote: q-ilo-working-age
+  notes_ar: مؤشر رئيسي في قرار المؤتمر التاسع عشر (الفقرة 73)، يقيس قدرة الاقتصاد على تشغيل سكانه دون أن يتأثر بقرار البحث عن عمل.
+countries:
+  tun:
+    source: src-tun-ins-enpe-methodo
+    survey: ENPE
+    age: 15+
+    frequency: quarterly
+    facts_basis: search-snippet
+    definition_quote: q-tun-epr
+  sau:
+    source: src-sau-gastat-lms-methodology-2025q1
+    survey: Labour Force Survey
+    age: 15+
+    frequency: quarterly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-sau-epr
+  mar:
+    source: src-mar-hcp-chomage-strict
+    survey: EMO2026 (ENE before 2026)
+    age: 15+
+    frequency: quarterly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-mar-epr
+  jor:
+    source: src-jor-dos-methodology
+    survey: Employment and Unemployment Survey (EUS)
+    age: 15+
+    frequency: quarterly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-jor-epr
+  are:
+    source: src-are-lfs-methodology
+    survey: Labour Force Survey (FCSC)
+    age: 15+
+    frequency: annual
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-are-epr
+  pse:
+    source: src-pse-pcbs-book2740
+    survey: Labour Force Survey (PCBS)
+    age: 15+
+    frequency: quarterly + annual
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-pse-epr
+  usa:
+    source: src-usa-bls-cps-definitions
+    survey: Current Population Survey (CPS)
+    age: 16+
+    frequency: monthly
+    facts_basis: search-snippet
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+  gbr:
+    source: src-gbr-ons-lfs-user-guidance
+    survey: Labour Force Survey (LFS)
+    age: 16+ (to confirm)
+    frequency: quarterly (rolling)
+    facts_basis: search-snippet
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+  aus:
+    source: src-aus-abs-lscsm-2018
+    survey: Labour Force Survey
+    age: 15+
+    frequency: monthly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+  fra:
+    source: src-fra-insee-eec-methodo
+    survey: Enquête Emploi en continu (EEC)
+    age: 15+
+    frequency: continuous, quarterly results
+    facts_basis: search-snippet
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+comparability_notes_ar:
+- text: الحد الأدنى للسن 16 سنة في الولايات المتحدة (والمملكة المتحدة، للتأكيد) مقابل 15 سنة في الدول الأخرى، ما يغيّر المقام ويؤثر على المقارنة المباشرة.
+  sources:
+  - src-usa-bls-cps-definitions
+  - src-gbr-ons-lfs-user-guidance
+- text: في الدول ذات العمالة الوافدة الكبيرة (السعودية، الإمارات، الأردن) يختلف المؤشر كثيراً بين المواطنين وإجمالي السكان؛ يجب ذكر السكان المرجعيين مع كل رقم.
+  sources:
+  - src-sau-gastat-lfs-page
+  - src-jor-dos-home
+  - src-are-glmm-lfs-notes
+- text: انتقال الدول من معايير 1982 إلى معايير 2013 يُخرج الإنتاج للاستهلاك الذاتي من العمالة، فينخفض عدد المشتغلين والقوة العاملة في الدول ذات الزراعة المعيشية؛ قاعدة ILOSTAT للقوى العاملة (LFS) ما زالت مبنية على معايير 1982.
+  sources:
+  - src-ilo-icls19-res1-pdf
+  - src-ilo-lfs-db-description
+  - src-ilo-work-db-description
+explanation_ai_ar: 'هذه النسبة تجيب عن سؤال بسيط: من بين كل مئة شخص في سن العمل، كم شخصاً يعمل فعلاً؟ ميزتها أنها لا تتأثر بتوقف بعض الأشخاص عن البحث عن عمل، على عكس معدل البطالة.'
+related:
+- ind-labour-force-participation-rate
+- ind-unemployment-rate
+- con-employed
+status: draft
+last_updated: '2026-11-04'

@@ -1,0 +1,17 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-standard-error
+name_ar: الخطأ المعياري
+names:
+  en: Standard error
+  fr: Erreur type
+category: statistical
+source: src-isi-glossary
+definition_quote: q-isi-standard-error
+formula: SE(θ̂) = √Var(θ̂)
+explanation_ai_ar: الخطأ المعياري يقيس مقدار تذبذب التقدير (مثل معدل البطالة) لو أُعيد سحب العينة مرات عديدة. كلما صغر كان التقدير أدق. في مسوح القوى العاملة يُحسب مع مراعاة تصميم العينة (الطبقات والعناقيد والأوزان)، لذلك لا تصح الصيغ البسيطة للعينة العشوائية إلا تقريباً.
+example_ai_ar: إذا كان معدل البطالة 16.1% وخطؤه المعياري 0.4 نقطة، فإن مجال الثقة التقريبي عند 95% هو 16.1 ± 0.8، أي من 15.3% إلى 16.9% (مثال توضيحي، ليس رقماً منشوراً).
+related:
+- ind-unemployment-rate
+term_variants: []
+status: draft
+last_updated: '2026-11-04'

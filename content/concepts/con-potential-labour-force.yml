@@ -1,0 +1,17 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-potential-labour-force
+name_ar: القوة العاملة المحتملة
+names:
+  en: Potential labour force
+  fr: Main-d'œuvre potentielle
+category: labour
+source: src-ilo-icls19-res1-pdf
+definition_quote: q-ilo-potential-lf
+explanation_ai_ar: 'فئة من خارج القوة العاملة قريبة من سوق العمل: أشخاص يرغبون في العمل لكن ينقصهم أحد الشرطين، فإما بحثوا دون أن يكونوا متاحين، أو كانوا متاحين دون أن يبحثوا. تدخل في المقياسين LU3 وLU4.'
+related:
+- con-unemployed
+- con-outside-labour-force
+- ind-unemployment-rate
+term_variants: []
+status: draft
+last_updated: '2026-11-04'

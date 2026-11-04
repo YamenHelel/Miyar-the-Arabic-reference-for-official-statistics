@@ -1,0 +1,16 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-time-related-underemployment
+name_ar: نقص التشغيل المرتبط بالوقت
+names:
+  en: Time-related underemployment
+  fr: Sous-emploi lié à la durée du travail
+category: labour
+source: src-ilo-icls19-res1-pdf
+definition_quote: q-ilo-time-related-underemployment
+explanation_ai_ar: مشتغلون يعملون عدداً من الساعات أقل من حد معيّن، ويرغبون في العمل ساعات إضافية ومتاحون لذلك. يدخلون في المقياسين LU2 وLU4.
+related:
+- con-employed
+- ind-unemployment-rate
+term_variants: []
+status: draft
+last_updated: '2026-11-04'

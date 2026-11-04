@@ -1,0 +1,19 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-outside-labour-force
+name_ar: خارج القوة العاملة
+names:
+  en: Outside the labour force
+  fr: Hors de la population active (inactifs)
+term_variants:
+- term: غير النشيطين اقتصادياً
+  used_in: []
+  basis: older term (13th ICLS 'economically inactive') — to confirm usage
+category: labour
+source: src-ilo-icls19-res1-pdf
+definition_quote: q-ilo-labour-force
+explanation_ai_ar: هم الأشخاص في سن العمل الذين ليسوا مشتغلين ولا متعطلين، مثل الطلاب المتفرغين والمتقاعدين ومن لا يبحث عن عمل. حلّ هذا المصطلح محل «غير النشيطين اقتصادياً».
+related:
+- con-labour-force
+- con-potential-labour-force
+status: draft
+last_updated: '2026-11-04'

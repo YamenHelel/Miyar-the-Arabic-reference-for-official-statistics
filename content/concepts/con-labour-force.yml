@@ -1,0 +1,27 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-labour-force
+name_ar: القوة العاملة
+names:
+  en: Labour force
+  fr: Population active
+term_variants:
+- term: قوة العمل
+  used_in: []
+  basis: common variant — confirm per country
+- term: السكان النشيطون
+  used_in:
+  - mar
+  - tun
+  basis: Maghreb usage (calque of «population active») — to confirm from national texts
+category: labour
+source: src-ilo-icls19-res1-pdf
+definition_quote: q-ilo-labour-force
+explanation_ai_ar: القوة العاملة هي مجموع المشتغلين والمتعطلين. من لا يعمل ولا يبحث عن عمل أو غير متاح للعمل لا يدخل في القوة العاملة، بل يُصنَّف خارجها.
+related:
+- con-employed
+- con-unemployed
+- con-outside-labour-force
+- ind-unemployment-rate
+- ind-labour-force-participation-rate
+status: draft
+last_updated: '2026-11-04'

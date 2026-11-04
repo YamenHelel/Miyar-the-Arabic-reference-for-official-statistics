@@ -1,0 +1,16 @@
+# Concept schema — content/concepts/*.yml (glossary entries: labour concepts and statistical concepts)
+required: [id, name_ar, names, category, definition_quote, explanation_ai_ar, status, last_updated]
+fields:
+  id:            {type: str, pattern: "^con-[a-z0-9-]+$"}
+  name_ar:       {type: str}
+  names:         {type: map, keys: [en, fr]}
+  term_variants: {type: list, item: {term: str, used_in: list, basis: str}}
+  category:      {type: str, enum: [labour, statistical, survey, classification]}
+  source:        {type: str, note: "src-* id of the defining standard"}
+  definition_quote: {type: str, note: "slot id in content/quotes.yml"}
+  formula:       {type: str, optional: true}
+  example_ai_ar: {type: str, optional: true, note: "AI-assisted worked example; always displayed with the AI label"}
+  explanation_ai_ar: {type: str}
+  related:       {type: list, note: "con-* or ind-* ids"}
+  status:        {type: str, enum: [draft, reviewed, verified]}
+  last_updated:  {type: date}

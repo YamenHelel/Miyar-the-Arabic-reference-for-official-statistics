@@ -1,0 +1,17 @@
+# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+id: con-working-age-population
+name_ar: السكان في سن العمل
+names:
+  en: Working-age population
+  fr: Population en âge de travailler
+category: labour
+source: src-ilo-icls19-res1-pdf
+definition_quote: q-ilo-working-age
+explanation_ai_ar: 'هم الأشخاص الذين بلغوا الحد الأدنى للسن المعتمد لقياس العمل، وهو 15 سنة في معظم الدول (16 في الولايات المتحدة). يُقسَّم هؤلاء إلى ثلاث فئات متنافية: مشتغلون، ومتعطلون، وخارج القوة العاملة؛ وهم مقام معدل المشاركة ونسبة العمالة إلى السكان.'
+related:
+- con-labour-force
+- ind-labour-force-participation-rate
+- ind-employment-to-population-ratio
+term_variants: []
+status: draft
+last_updated: '2026-11-04'

@@ -103,7 +103,6 @@ sources:
     link_check: "2026-11-04 200"
 
   - id: src-mar-hcp-chomage-strict
-    title_en: HCP document defining 'chômage strict' (attachment 2927551) — exact title to record
     publisher: Haut-Commissariat au Plan
     country: mar
     type: methodology
@@ -112,6 +111,10 @@ sources:
     date_accessed: 2026-11-04
     priority: P1
     status: verified
+    notes: "verified via quote paste. Lead confirmed 2026-11-04 that «chômage strict» is the EMO2026 definition (Q3 2026 information note)."
+    icls_standard: 19th
+    date_published: 2026
+    title_orig: "NOTE D'INFORMATION SUR LA SITUATION DU MARCHÉ DU TRAVAIL AU MAROC AU TROISIÈME TRIMESTRE 2026 SELON L'ENQUÊTE SUR LA MAIN-D'ŒUVRE (EMO)"
+    title_en: "HCP — Note d'information sur la situation du marché du travail au Maroc au troisième trimestre 2026 selon l'Enquête sur la Main-d'Œuvre (EMO)"
     verified_by: YH
     verified_date: 2026-11-04
-    notes: "verified via quote paste (lead opened the document and copied the text). Defines 'personnes au chômage strict' (15+, sans emploi la semaine précédente, recherche 4 semaines, disponibilité 2 semaines). Likely EMO2026 — confirm and record the document title."

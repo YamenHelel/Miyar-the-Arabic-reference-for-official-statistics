@@ -1,0 +1,122 @@
+# Miʿyar indicator (pilot). Official wording: content/quotes.yml. facts_basis says where each fact comes from.
+id: ind-youth-unemployment-rate
+name_ar: معدل البطالة بين الشباب
+names:
+  en: Youth unemployment rate
+  fr: Taux de chômage des jeunes
+domain: labour
+sdg:
+- 8.5.2
+international:
+  standard_source: src-sdg-goal8-metadata
+  custodian: ILO
+  definition_quote: q-sdg-852-youth
+  formula_ar: معدل بطالة الشباب = (المتعطلون 15–24 ÷ القوة العاملة 15–24) × 100
+  formula: YUR = U(15–24) / LF(15–24) × 100
+  components:
+  - id: con-unemployed
+    name_ar: المتعطلون
+    quote: q-ilo-unemployed
+  - id: con-labour-force
+    name_ar: القوة العاملة
+    quote: q-ilo-labour-force
+  notes_ar: التعريف الدولي للشباب في إحصاءات العمل هو الفئة العمرية 15–24 سنة، ويُنشر ضمن تصنيفات مؤشر أهداف التنمية المستدامة 8.5.2.
+countries:
+  tun:
+    source: src-tun-ins-enpe-methodo
+    survey: ENPE
+    age: 15+
+    frequency: quarterly
+    facts_basis: search-snippet
+    definition_quote: q-tun-yur
+    youth_band: to confirm from the national definition
+  sau:
+    source: src-sau-gastat-lms-methodology-2025q1
+    survey: Labour Force Survey
+    age: 15+
+    frequency: quarterly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-sau-yur
+    youth_band: to confirm from the national definition
+  mar:
+    source: src-mar-hcp-chomage-strict
+    survey: EMO2026 (ENE before 2026)
+    age: 15+
+    frequency: quarterly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-mar-yur
+    youth_band: to confirm from the national definition
+  jor:
+    source: src-jor-dos-methodology
+    survey: Employment and Unemployment Survey (EUS)
+    age: 15+
+    frequency: quarterly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-jor-yur
+    youth_band: to confirm from the national definition
+  are:
+    source: src-are-lfs-methodology
+    survey: Labour Force Survey (FCSC)
+    age: 15+
+    frequency: annual
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-are-yur
+    youth_band: to confirm from the national definition
+  pse:
+    source: src-pse-pcbs-book2740
+    survey: Labour Force Survey (PCBS)
+    age: 15+
+    frequency: quarterly + annual
+    facts_basis: quote (age, from the unemployment definition)
+    definition_quote: q-pse-yur
+    youth_band: to confirm from the national definition
+  usa:
+    source: src-usa-bls-cps-definitions
+    survey: Current Population Survey (CPS)
+    age: 16+
+    frequency: monthly
+    facts_basis: search-snippet
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+    youth_band: to confirm from the national definition
+  gbr:
+    source: src-gbr-ons-lfs-user-guidance
+    survey: Labour Force Survey (LFS)
+    age: 16+ (to confirm)
+    frequency: quarterly (rolling)
+    facts_basis: search-snippet
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+    youth_band: to confirm from the national definition
+  aus:
+    source: src-aus-abs-lscsm-2018
+    survey: Labour Force Survey
+    age: 15+
+    frequency: monthly
+    facts_basis: quote (age, from the unemployment definition)
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+    youth_band: to confirm from the national definition
+  fra:
+    source: src-fra-insee-eec-methodo
+    survey: Enquête Emploi en continu (EEC)
+    age: 15+
+    frequency: continuous, quarterly results
+    facts_basis: search-snippet
+    definition_note: national definition to add (Phase 1); the formula follows the ILO standard
+    youth_band: to confirm from the national definition
+comparability_notes_ar:
+- text: بعض الأجهزة العربية تنشر بطالة الشباب للفئة 15–29 أو 15–34 بدل 15–24، فتنخفض النسبة لأن الفئات الأكبر سناً أقل بطالة؛ يجب التحقق من الفئة العمرية قبل أي مقارنة.
+  sources:
+  - src-escwa-state-lfs-arab-states-2024
+- text: في الولايات المتحدة تبدأ الفئة من 16 سنة (16–24).
+  sources:
+  - src-usa-bls-cps-definitions
+- text: في الدول ذات العمالة الوافدة الكبيرة (السعودية، الإمارات، الأردن) يختلف المؤشر كثيراً بين المواطنين وإجمالي السكان؛ يجب ذكر السكان المرجعيين مع كل رقم.
+  sources:
+  - src-sau-gastat-lfs-page
+  - src-jor-dos-home
+  - src-are-glmm-lfs-notes
+explanation_ai_ar: بطالة الشباب أعلى عادة من البطالة الإجمالية بمرتين أو ثلاث، لأن الشباب في بداية مسارهم المهني وكثيرو الانتقال. يُستحسن قراءتها مع نسبة الشباب خارج التعليم والعمل والتدريب (NEET، المؤشر 8.6.1) لأن كثيراً من الشباب لا يُحسبون في القوة العاملة أصلاً.
+related:
+- ind-unemployment-rate
+- con-unemployed
+status: draft
+last_updated: '2026-11-04'

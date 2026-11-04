@@ -1,12 +1,12 @@
 # Indicator schema — used by tools/validate.py for content/indicators/*.yml
 # Design rules (see docs/prd/07-data-model.md and CLAUDE.md hard rules):
-#  - Official wording lives ONLY in `quotes[]`, copied verbatim by a human from a verified source.
+#  - Official wording lives ONLY in content/quotes.yml, copied verbatim by a human from a verified source.
 #  - A quote slot starts as `status: to-paste` with empty `text`, and says exactly what to copy (`locator`, `what_ar`).
 #  - Facts (age, reference period…) carry `basis`: quote | source-doc | search-snippet. Only `quote` and `source-doc` are publishable as-is;
 #    `search-snippet` facts are shown with a "to confirm" flag until a quote backs them.
 #  - AI-written prose lives only in fields named explanation_ai_* and is always displayed with the AI label.
 
-required: [id, name_ar, names, domain, international, countries, quotes, status, last_updated]
+required: [id, name_ar, names, domain, international, countries, status, last_updated]
 
 fields:
   id:            {type: str, pattern: "^ind-[a-z0-9-]+$"}
@@ -20,21 +20,6 @@ fields:
   comparability_notes_ar: {type: list, item: {text: str, sources: list}}
   explanation_ai_ar: {type: str, note: "AI-assisted plain-Arabic explanation; displayed with label"}
   related:       {type: list}
-  quotes:
-    type: list
-    item:
-      slot:     {type: str, pattern: "^q-[a-z0-9-]+$"}
-      source:   {type: str, note: "src-* id; must exist in the registry and be verified before text is accepted"}
-      locator:  {type: str, note: "paragraph / page / section to copy"}
-      what_ar:  {type: str, note: "instruction for the person pasting"}
-      lang:     {type: str, enum: [ar, en, fr]}
-      text:     {type: str, note: "verbatim; empty while to-paste"}
-      translation_ar: {type: str, optional: true}
-      translation_status: {type: str, enum: [official, unofficial], optional: true}
-      status:   {type: str, enum: [to-paste, pasted, verified, source-missing]}
-      pasted_on: {type: date, optional: true}
-      verified_by: {type: str, optional: true}
-      quoted_from_url: {type: str, optional: true, note: "exact document the text was copied from"}
-      document_note: {type: str, optional: true, note: "context about the document, e.g. amended version, reproduced wording"}
+  # quote slots live in content/quotes.yml (schema-quote.yaml); fields above reference them by id
   status:        {type: str, enum: [draft, reviewed, verified]}
   last_updated:  {type: date}

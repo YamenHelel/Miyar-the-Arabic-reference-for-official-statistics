@@ -17,7 +17,7 @@ import json
 import sys
 from pathlib import Path
 
-from common import SOURCES_DIR, indicator_files, iter_sources, load_yaml
+from common import SOURCES_DIR, concept_files, indicator_files, iter_sources, load_quotes, load_yaml
 
 TEMPLATE = Path(__file__).resolve().parent / "verification" / "template.html"
 
@@ -68,16 +68,27 @@ def main():
               if any(q["group"] == k for q in queue)}
 
     reg = {r["id"]: r for _, r in iter_sources()}
+    # which indicator/concept uses each slot (for the card label)
+    users = {}
+    for f in indicator_files() + concept_files():
+        d = load_yaml(f)
+        refs = []
+        intl = d.get("international") or {}
+        refs += [intl.get("definition_quote"), intl.get("formula_quote")]
+        refs += [c.get("quote") for c in intl.get("components", []) or []]
+        refs += [c.get("definition_quote") for c in (d.get("countries") or {}).values()]
+        refs += [d.get("definition_quote")]
+        for r in filter(None, refs):
+            users.setdefault(r, (d["id"], d.get("name_ar", "")))
     quotes = []
-    for ipath in indicator_files():
-        ind = load_yaml(ipath)
-        for qd in ind.get("quotes", []) or []:
-            if qd.get("status") != "to-paste":
-                continue
-            src = reg.get(qd.get("source"), {})
-            quotes.append({"slot": qd["slot"], "indicator": ind["id"], "indicator_name_ar": ind.get("name_ar", ""),
-                           "source": qd.get("source"), "source_title": src.get("title_en", ""), "url": src.get("url", ""),
-                           "locator": qd.get("locator", ""), "what_ar": qd.get("what_ar", ""), "lang": qd.get("lang", "en")})
+    for qd in load_quotes():
+        if qd.get("status") != "to-paste":
+            continue
+        src = reg.get(qd.get("source"), {})
+        uid, uname = users.get(qd["slot"], ("", ""))
+        quotes.append({"slot": qd["slot"], "indicator": uid, "indicator_name_ar": uname,
+                       "source": qd.get("source"), "source_title": src.get("title_en", ""), "url": src.get("url", ""),
+                       "locator": qd.get("locator", ""), "what_ar": qd.get("what_ar", ""), "lang": qd.get("lang", "en")})
 
     html = TEMPLATE.read_text(encoding="utf-8")
     html = html.replace("/*__QUOTES__*/[]", json.dumps(quotes, ensure_ascii=False).replace("</", "<\\/"))
