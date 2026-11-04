@@ -1,5 +1,7 @@
 # Instructions for AI agents (Claude, Codex, others)
 
+Project: **Miʿyar (مِعيار) — the Arabic reference for official statistics**. Content licence: CC BY 4.0.
+
 ## Read order (to save tokens)
 1. `docs/STATUS.md`: always read this first. It is short.
 2. Read only the specific files the task needs. Use `docs/00-index.md` to find them.

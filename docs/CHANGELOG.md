@@ -2,6 +2,16 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-04: Name, licence, first push (session 2)
+**Done**
+- Lead's decisions applied: project name **مِعيار · Miʿyar, the Arabic reference for official statistics** (ADR-0006) and content licence **CC BY 4.0** (ADR-0005 accepted for content; the code licence is still open).
+- Added `LICENSE` and a citation format to the README.
+- Repository published at github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics (first push of the foundation from session 1).
+
+**Files:** README.md, CLAUDE.md, LICENSE, docs/00-index.md, docs/decisions/ADR-0005, ADR-0006, docs/prd/01, 10, 15, docs/STATUS.md
+
+**Open questions:** project contact email (directory form, corrections); code licence (MIT?); domain name and LinkedIn page for Miʿyar.
+
 ## 2026-11-03: Project foundation (session 1)
 **Done**
 - Created the repo structure and the agent rules (`CLAUDE.md`) with an end-of-session routine.

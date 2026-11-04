@@ -1,12 +1,13 @@
-# Arab Labour Statistics Wiki — working title
+# مِعيار · Miʿyar
+### المرجع العربي للإحصاء الرسمي — The Arabic reference for official statistics
 
-> A free, Arabic-first, **verified** knowledge base on labour statistics for Arab statisticians: definitions, international standards, how each statistical office applies them, related SDGs and where to get the microdata. The labour domain is the first in what will become a wider "statistics AI wiki" for the Arab region.
+> A free, Arabic-first, **verified** knowledge base on labour statistics for Arab statisticians: definitions, international standards, how each statistical office applies them, related SDGs and where to get the microdata. Labour statistics is the first domain; Miʿyar will grow into the "statistics AI wiki" for Arab statisticians across all domains.
 >
 > النسخة الأولى: إحصاءات العمل — مرجع عربي موثّق لتعاريف المؤشرات ومعاييرها الدولية وتطبيقاتها في الأجهزة الإحصائية العربية والدولية.
 
 **Status:** Phase 0, foundation (see [docs/STATUS.md](docs/STATUS.md))
 **Owner:** independent consultant (project lead) · Maintained with AI assistance (Claude)
-**Licence:** content CC BY 4.0 (proposed), code MIT (proposed). See [ADR-0005](docs/decisions/ADR-0005-licensing.md).
+**Licence:** content [CC BY 4.0](LICENSE). See [ADR-0005](docs/decisions/ADR-0005-licensing.md).
 
 ---
 
@@ -22,6 +23,15 @@
 | 6 | **Source registry** | [sources/README.md](sources/README.md) | Archived official sources: international bodies, 10 countries, SDGs, microdata |
 | 7 | Practitioner directory | [directory/README.md](directory/README.md) | Opt-in directory of Arab labour statisticians (design and consent) |
 | 8 | Tools | [tools/](tools/) | Validation, link checking, web archiving scripts |
+
+## Licence and how to cite
+
+Miʿyar's original content is licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**. You may share and adapt it, including commercially, as long as you give credit.
+
+**Citation format:** «مِعيار — <عنوان الصفحة>، <الرابط>، تاريخ الاطلاع <التاريخ>»
+*Miʿyar — <page title>, <URL>, accessed <date>.*
+
+Quoted official texts (ILO, UN, national statistical offices…) remain under their publishers' own terms.
 
 ## Countries in phase 1
 

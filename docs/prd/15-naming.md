@@ -1,6 +1,10 @@
-# 15: Naming proposals
+# 15: Naming
 
-The working title is "Arab Labour Statistics Wiki". The final name should work for **all statistics domains later**, not only labour.
+## ✅ Decision (2026-11-04): **مِعيار — المرجع العربي للإحصاء الرسمي** · *Miʿyar: the Arabic reference for official statistics*
+See [ADR-0006](../decisions/ADR-0006-name-miyar.md). Repo: `YamenHelel/Miyar-the-Arabic-reference-for-official-statistics`.
+Spelling conventions: Arabic **مِعيار** (with kasra on the first letter in titles); Latin **Miʿyar** (in titles), **Miyar** (in URLs, handles and file names).
+
+## Options considered (history)
 
 | # | Arabic | Latin / English | Meaning and rationale | Notes |
 |---|---|---|---|---|
@@ -10,9 +14,9 @@ The working title is "Arab Labour Statistics Wiki". The final name should work f
 | 4 | **مِعيار** | Miʿyar | "Standard / benchmark": evokes international standards | Strong fit with the ICLS focus |
 | 5 | **بوصلة الإحصاء** | Statistical Compass | Orientation in a complex field | Common word "compass" may be overused |
 
-**Recommendation:** a short brand name (1 or 4) with a descriptive Arabic subtitle, e.g. «مِعيار — المرجع العربي للإحصاء الرسمي» (Miʿyar: the Arabic reference for official statistics).
+**Recommendation (adopted):** a short brand name (1 or 4) with a descriptive Arabic subtitle, e.g. «مِعيار — المرجع العربي للإحصاء الرسمي» (Miʿyar: the Arabic reference for official statistics).
 
-## Checks to run before deciding (lead)
+## Remaining checks (lead)
 - [ ] Domain availability (.org / .net / .com, plus country TLDs if desired)
 - [ ] LinkedIn page and GitHub organisation name availability
 - [ ] Existing projects or trademarks with the same name in the region

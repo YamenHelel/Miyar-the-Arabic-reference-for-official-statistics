@@ -1,5 +1,7 @@
 # 01: Vision, problem, positioning and goals
 
+**Project name:** مِعيار · Miʿyar, the Arabic reference for official statistics
+
 ## Vision
 Become **the reference Arabic knowledge base and AI toolbox for official statistics**. Labour statistics comes first; then every domain (prices, national accounts, population, social, environment) and every role (methodologist, survey designer, data engineer, communicator).
 

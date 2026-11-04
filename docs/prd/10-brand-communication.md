@@ -5,6 +5,9 @@
 
 Claude is shown openly as the main tool ("built with Claude": tutorials, published skills, demos). The **identity** rests on trustworthy official statistics, not on a vendor. This keeps doors open with neutral institutions (UN, ILO, NSOs) and keeps the brand alive if tools change.
 
+## Brand line
+«مِعيار — المرجع العربي للإحصاء الرسمي». The name means "standard / benchmark", which echoes the international standards (ICLS, SDG metadata) at the core of the project. Hashtag suggestion: #مِعيار #Miyar
+
 ## Channels
 | Channel | Use | Rhythm |
 |---|---|---|
@@ -25,4 +28,4 @@ Claude is shown openly as the main tool ("built with Claude": tutorials, publish
 Write pages with question-style headings, a short answer at the top, named entities (ILO, ICLS, country names), dates and sources. These are the features that make AI engines cite a page. The skills installed in this workspace (linkedin-article-writer, ai-visibility-check) can be used to track this monthly.
 
 ## Visual identity
-To be defined once the name is chosen (`15-naming.md`). Requirements: Arabic-first typography, works in RTL, a neutral "official statistics" look, and readable charts.
+Name: **مِعيار · Miʿyar** (`15-naming.md`). Logo and colours still to be defined. Requirements: Arabic-first typography, works in RTL, a neutral "official statistics" look, and readable charts.

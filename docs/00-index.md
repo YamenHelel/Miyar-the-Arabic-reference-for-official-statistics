@@ -24,14 +24,15 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 | [prd/12-legal-privacy.md](prd/12-legal-privacy.md) | Copyright and attribution, data-protection laws, consent |
 | [prd/13-metrics-kpis.md](prd/13-metrics-kpis.md) | KPIs and how they are measured |
 | [prd/14-risks.md](prd/14-risks.md) | Risk register with mitigations |
-| [prd/15-naming.md](prd/15-naming.md) | Name proposals and checks to run |
+| [prd/15-naming.md](prd/15-naming.md) | Name decision (Miʿyar), options considered, remaining checks |
 
 ## Decisions (ADR)
 - [ADR-0001](decisions/ADR-0001-repo-and-single-source-of-truth.md): GitHub repo as the single source of truth
 - [ADR-0002](decisions/ADR-0002-languages.md): English internal docs, Arabic user content
 - [ADR-0003](decisions/ADR-0003-practitioner-directory-privacy.md): directory uses an opt-in form and private storage
 - [ADR-0004](decisions/ADR-0004-source-status-lifecycle.md): source status lifecycle and no binaries in git
-- [ADR-0005](decisions/ADR-0005-licensing.md): proposed licences (CC BY 4.0 content, MIT code)
+- [ADR-0005](decisions/ADR-0005-licensing.md): licence, CC BY 4.0 for content (accepted)
+- [ADR-0006](decisions/ADR-0006-name-miyar.md): project name Miʿyar (مِعيار)
 
 ## Data
 - [../sources/README.md](../sources/README.md): source registry guide and counts
