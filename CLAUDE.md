@@ -42,6 +42,11 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
 - After any content change: `python tools/build_site.py` (website), `python tools/build_skill.py` (Claude skill, commit the output),
   and refresh the private previews (`tools/prepare_site_preview.py`, URLs in STATUS.md).
 - Design changes: follow ADR-0008 and re-run the tasteskill gate (`lint.mjs`, `inspect.mjs`) on `_site/`.
+- SEO/GEO (PRD 16, ADR-0009):
+  - The base URL lives only in `tools/site/config.yaml`.
+  - Builders: `tools/seo.py` (JSON-LD, quick answers, quote-backed FAQ, robots, sitemap, llms.txt); `tools/build_social_cards.mjs` (OG images).
+  - After building, run `python tools/check_seo.py` (add `--skip-images` without social cards).
+  - Quick answers and FAQ must stay deterministic and quote-backed: never add free AI prose there.
 - The sandbox cannot reach statistical sites (WebFetch too), so never fill a quote yourself: create a `to-paste` slot with a precise `locator` and `what_ar`.
 - A screenshot from the lead is a valid source: transcribe exactly, set `status: pasted` and a `document_note`, and let the lead confirm.
 

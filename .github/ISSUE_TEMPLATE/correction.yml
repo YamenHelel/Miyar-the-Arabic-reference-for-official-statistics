@@ -1,0 +1,37 @@
+name: تصحيح / Correction
+description: أبلغ عن خطأ في تعريف أو مصدر، أو عن إصدار أحدث لوثيقة · Report an error or a newer edition of a source
+title: "[تصحيح] "
+labels: [correction]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: الصفحة · Page
+      description: رابط الصفحة في مِعيار أو اسم المؤشر/المفهوم
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: ما الخطأ؟ · What is wrong?
+      description: النص أو الرقم الخاطئ، وما يجب أن يكون
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: رابط الوثيقة الرسمية · Link to the official document
+      description: الصفحة أو ملف PDF الذي يثبت التصحيح (مع رقم الفقرة أو الصفحة إن أمكن)
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: صفتك (اختياري) · Your role (optional)
+      options: ["إحصائي في جهاز وطني · NSO statistician", "منظمة دولية أو إقليمية · International/regional body", "باحث أو أكاديمي · Researcher", "أخرى · Other"]
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: الإشادة · Credit
+      options:
+        - label: أوافق على ذكر اسمي (اسم حسابي في GitHub) كمراجع إن قُبل التصحيح · I agree to be credited (GitHub handle) if accepted

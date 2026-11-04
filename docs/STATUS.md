@@ -16,6 +16,11 @@
 - **Registry:** 123 sources: 56 verified, 34 link-ok, 17 collected, 5 broken, 3 superseded, 8 to-locate.
 - **Website:** generator + design system (ADR-0008), 28 Arabic pages, search, live ruler; passes the design gate on the home page. Deploy workflow is ready but manual.
 - **Claude skill v0:** `skills/miyar-labour-stats/`, generated from the base.
+- **SEO/GEO (PRD 16):**
+  - structured data, sitemap, robots (AI allowed), social cards
+  - quick answers, fact-based FAQ, citation box, llms.txt and Markdown twins
+  - `check_seo.py` in CI
+  - README, CITATION.cff and CONTRIBUTING rewritten for search and AI
 
 ## Next 3 tasks
 1. **Lead:**
@@ -25,7 +30,8 @@
    - Review the website preview and give feedback on the design and wording.
    - Confirm the Arabic spelling of your name for the founder's letter; the letter is a draft in your voice, so edit it freely.
    - To go live: Settings → Pages → Source "GitHub Actions", then Actions → website → Run workflow.
-3. **Agent:** apply the quotes; confirm facts and add `measures` for the new indicators; add national definitions for USA, UK, Australia and France (Phase 1); refresh the site, skill and previews.
+3. **Lead (SEO/GEO, ~10 min):** paste the repo About box, topics and social preview from `docs/github-settings.md`. After go-live: Search Console + Bing, Zenodo DOI, Wikidata.
+4. **Agent:** apply the quotes; confirm facts and add `measures` for the new indicators; add national definitions for USA, UK, Australia and France (Phase 1); refresh the site, skill and previews.
 
 ## Blockers / open questions
 - The sandbox and WebFetch cannot reach statistical sites or open image collections, so quotes come from the lead, and the site's pictures are limited to the project's own artefacts (I-048).

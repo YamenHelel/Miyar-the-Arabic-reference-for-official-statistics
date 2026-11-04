@@ -27,6 +27,8 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 | [prd/16-seo-geo.md](prd/16-seo-geo.md) | SEO and GEO: target queries and AI prompts, technical checklist, citability rules, KPIs, lead actions |
 | [prd/15-naming.md](prd/15-naming.md) | Name decision (Miʿyar), options considered, remaining checks |
 
+- [github-settings.md](github-settings.md): copy-paste values for the repo About box, topics, social preview, Pages, Search Console, Zenodo, Wikidata
+
 ## Decisions (ADR)
 - [ADR-0001](decisions/ADR-0001-repo-and-single-source-of-truth.md): GitHub repo as the single source of truth
 - [ADR-0002](decisions/ADR-0002-languages.md): English internal docs, Arabic user content

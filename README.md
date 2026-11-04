@@ -1,13 +1,29 @@
-# مِعيار · Miʿyar
-### المرجع العربي للإحصاء الرسمي — The Arabic reference for official statistics
+# مِعيار · Miʿyar: the Arabic reference for official statistics
 
-> A free, Arabic-first, **verified** knowledge base on labour statistics for Arab statisticians: definitions, international standards, how each statistical office applies them, related SDGs and where to get the microdata. Labour statistics is the first domain; Miʿyar will grow into the "statistics AI wiki" for Arab statisticians across all domains.
->
-> النسخة الأولى: إحصاءات العمل — مرجع عربي موثّق لتعاريف المؤشرات ومعاييرها الدولية وتطبيقاتها في الأجهزة الإحصائية العربية والدولية.
+[![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-1d5c4a)](LICENSE) [![Code: MIT](https://img.shields.io/badge/code-MIT-1d5c4a)](LICENSE-CODE) [![Checks](https://github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics/actions/workflows/checks.yml/badge.svg)](https://github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics/actions/workflows/checks.yml)
 
-**Status:** Phase 0, foundation (see [docs/STATUS.md](docs/STATUS.md))
-**Owner:** independent consultant (project lead) · Maintained with AI assistance (Claude)
-**Licence:** content [CC BY 4.0](LICENSE) · code [MIT](LICENSE-CODE) · **Contact:** yamen.hlel@gmail.com. See [ADR-0005](docs/decisions/ADR-0005-licensing.md).
+**مِعيار** مرجع عربي مفتوح لتعاريف **إحصاءات العمل** الرسمية. يجمع التعريف الدولي لكل مؤشر، منسوخاً حرفياً من قرارات **المؤتمر الدولي لخبراء إحصاءات العمل (ICLS)** لدى **منظمة العمل الدولية**، ويضع بجانبه التعريف الذي يطبّقه كل جهاز إحصائي وطني في **تونس والسعودية والمغرب والأردن والإمارات وفلسطين**، مع **الولايات المتحدة والمملكة المتحدة وأستراليا وفرنسا** للمقارنة. كل نص رسمي يحمل مصدره وفقرته وتاريخ التحقق منه، وكل شرح كتبه الذكاء الاصطناعي موسوم بذلك.
+
+**Miʿyar** is an open Arabic reference of official **labour-statistics definitions**. For each indicator (unemployment rate, labour force participation rate, employment-to-population ratio, youth unemployment, SDG 8.5.2), it quotes the **ILO / 19th ICLS** standard verbatim. It sets that next to the definition applied by national statistical offices in six Arab countries and four reference countries, and explains what makes the published figures comparable or not. Every official text carries its source, paragraph and verification date; AI-assisted explanations are always labelled.
+
+- **Website:** https://yamenhelel.github.io/Miyar-the-Arabic-reference-for-official-statistics/ (beta)
+- **For AI assistants:** [`llms.txt`](https://yamenhelel.github.io/Miyar-the-Arabic-reference-for-official-statistics/llms.txt) · a [Claude skill](skills/miyar-labour-stats/) generated from the same verified data
+- **Status:** pilot, with 4 indicators, 8 glossary concepts and 123 registered sources (56 verified by a human). See [docs/STATUS.md](docs/STATUS.md).
+- **Maintainer:** an independent Arab statistician working on AI for official statistics, with Claude as the main tool · contact yamen.hlel@gmail.com
+
+### What you will find
+| | |
+|---|---|
+| **Indicators** | معدل البطالة · معدل المشاركة في القوة العاملة · نسبة العمالة إلى السكان · معدل البطالة بين الشباب |
+| **Official texts** | ILO 19th ICLS resolution (2013, amended 2023) §16, §27, §47, §73; national definitions from INS, GASTAT, HCP, DoS, FCSC, PCBS, BLS, ONS, ABS, Insee |
+| **Glossary** | القوة العاملة، المشتغلون، المتعطلون، خارج القوة العاملة، القوة العاملة المحتملة، نقص التشغيل المرتبط بالوقت، الخطأ المعياري… with Arabic term variants by country |
+| **Registry** | Every source document with its verification status ([sources/](sources/)) |
+
+### How to cite
+> مِعيار، «عنوان الصفحة»، الرابط، تاريخ الاطلاع. ترخيص CC BY 4.0.
+> Miʿyar, "page title", URL, accessed date. CC BY 4.0.
+
+To cite the repository, use GitHub's **"Cite this repository"** button ([CITATION.cff](CITATION.cff)).
 
 ---
 

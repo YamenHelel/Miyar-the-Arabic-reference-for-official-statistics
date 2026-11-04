@@ -2,6 +2,26 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-04: SEO and GEO for the website and the repository (session 7)
+**Done**
+- Plan: PRD 16 (20 target queries/AI prompts AR/FR/EN, checklist, citability rules, KPIs, lead actions); ADR-0009 (Pages URL as canonical; all crawlers incl. AI allowed); roadmap Phase 1/2 items; backlog I-050…I-053.
+- **Technical SEO:**
+  - `tools/site/config.yaml`; canonical, hreflang, OG/Twitter, robots meta, favicon, manifest, 404
+  - JSON-LD: WebSite/Organization, DefinedTerm(Set), Article with `isBasedOn`, BreadcrumbList, FAQPage, Dataset
+  - `sitemap.xml`; `robots.txt` naming 17 AI user agents; social cards for 13 pages + site (`tools/build_social_cards.mjs`)
+- **GEO:**
+  - deterministic quick answers and quote-backed FAQ (US age from a snippet is excluded); citation box with copy on every page
+  - `llms.txt`, `llms-full.txt` (67 KB), and a `.md` twin per indicator/concept
+  - shared `tools/markdown_render.py` (skill output byte-identical after the refactor)
+- **Gate:** `tools/check_seo.py` passes (29 pages, 28 sitemap URLs); added to both workflows. The design gate shows no new failures.
+- **GitHub:**
+  - README opening rewritten (bilingual quick answer, badges, what's inside, how to cite)
+  - `CITATION.cff` (valid against the CFF 1.2.0 schema), `CONTRIBUTING.md`, correction issue form + label
+  - Repo description/topics/homepage are blocked by the sandbox proxy, so ready-to-paste values are in `docs/github-settings.md`
+- Private site preview refreshed (with the SEO files and social cards).
+
+**Open questions:** none new; the lead's actions are listed in `docs/github-settings.md`.
+
 ## 2026-11-04: Programming day: quotes store, concepts, indicators 2–4, website, Claude skill (session 6)
 **Done**
 - **Lead's inputs:**

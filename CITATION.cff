@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use Miʿyar, please cite it as below. Official texts quoted in Miʿyar remain under their publishers' terms."
+title: "Miʿyar (مِعيار): the Arabic reference for official statistics"
+abstract: >-
+  An open Arabic reference of official labour-statistics definitions. It quotes ILO / ICLS standards and the definitions
+  of national statistical offices (Tunisia, Saudi Arabia, Morocco, Jordan, UAE, Palestine, USA, UK, Australia, France)
+  verbatim, with source, paragraph and verification date, and compares them across countries.
+type: dataset
+authors:
+  - alias: YamenHelel
+    email: yamen.hlel@gmail.com
+    affiliation: "Independent consultant"
+repository-code: "https://github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics"
+url: "https://yamenhelel.github.io/Miyar-the-Arabic-reference-for-official-statistics/"
+license: CC-BY-4.0
+version: 0.1.0-beta
+date-released: 2026-11-04
+keywords:
+  - official statistics
+  - labour statistics
+  - labour force survey
+  - unemployment rate
+  - ILO
+  - ICLS
+  - SDG 8.5.2
+  - Arabic
+  - Arab region
+  - metadata
+  - إحصاءات العمل
+  - الإحصاء الرسمي

@@ -58,6 +58,7 @@ GEO is the priority, because it is where the "Arab statistician using AI" positi
 8. **Same entity everywhere:** "Miʿyar (مِعيار) — the Arabic reference for official statistics". Use exactly this on the site, GitHub, LinkedIn, Wikidata and in talks (see the `profile-entity-alignment` skill).
 
 ## GitHub repository
+Ready-to-paste values: [`docs/github-settings.md`](../github-settings.md). The agent cannot write repo settings through the sandbox proxy.
 - Description (AR + EN), topics, and the homepage pointing to the site
 - README opens with a two-language quick answer, then "how to cite"
 - `CITATION.cff` ("Cite this repository"), `CONTRIBUTING.md`, a correction issue template
