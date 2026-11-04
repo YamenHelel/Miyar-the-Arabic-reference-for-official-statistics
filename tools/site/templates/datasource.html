@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% from "macros.html" import sheet, ai %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <h1>{{ ds.name_ar }}</h1>
+    <p class="alt"><span lang="en">{{ ds.names.en }}</span><span lang="fr">{{ ds.names.fr }}</span><span class="kind-inline">{% if ds.kind == 'guide' %}دليل مسح القوى العاملة · {{ ds.order }} من {{ guide_total }}{% else %}مصدر بيانات{% endif %}</span></p>
+    <p class="facts-line">{{ 'مسودة' if ds.status == 'draft' else 'مُراجَع' }} · النصوص الرسمية {{ done }} من {{ total }} · آخر تحديث {{ ds.last_updated }}</p>
+    {{ ai(ds.summary_ai_ar, 'خلاصة مُعدّة بمساعدة الذكاء الاصطناعي، والنص الرسمي أدناه') }}
+  </header>
+  <div class="layout">
+    <article>
+      <section data-in class="block" id="official" aria-labelledby="d1">
+        <h2 id="d1">ما تقوله النصوص الرسمية</h2>
+        {% for oq in ds.official_quotes %}
+        <h3 class="sub-h">{{ oq.heading_ar }}</h3>
+        {{ sheet(q(oq.slot), srcq(oq.slot), root) }}
+        {% endfor %}
+      </section>
+      {% if ds.what_ai_ar %}
+      <section data-in class="block" id="how" aria-labelledby="d2">
+        <h2 id="d2">كيف يعمل</h2>
+        {{ ai(ds.what_ai_ar) }}
+      </section>
+      {% endif %}
+      {% if ds.strengths_ai_ar or ds.limits_ai_ar %}
+      <section data-in class="block" id="pros" aria-labelledby="d3">
+        <h2 id="d3">نقاط القوة والحدود</h2>
+        <p class="legend">قائمتان مُعدّتان بمساعدة الذكاء الاصطناعي، تُراجَعان مع النص الرسمي أعلاه.</p>
+        <div class="two-col">
+          <div><h3 class="sub-h">ما يُحسنه</h3><ul class="notes">{% for s in ds.strengths_ai_ar %}<li>{{ s }}</li>{% endfor %}</ul></div>
+          <div><h3 class="sub-h">ما لا يُحسنه</h3><ul class="notes">{% for s in ds.limits_ai_ar %}<li>{{ s }}</li>{% endfor %}</ul></div>
+        </div>
+      </section>
+      {% endif %}
+      {% if produces %}
+      <section data-in class="block" id="produces" aria-labelledby="d4">
+        <h2 id="d4">ماذا يقيس لإحصاءات العمل</h2>
+        <div class="table-wrap"><table class="cmp" style="min-width:560px">
+          <thead><tr><th scope="col">الموضوع</th><th scope="col">الملاءمة</th><th scope="col">ملاحظة</th></tr></thead>
+          <tbody>{% for p in produces %}<tr><th scope="row">{{ p.topic }}</th><td><span class="lvl lvl-{{ p.level }}">{{ p.level_ar }}</span></td><td>{{ p.note }}</td></tr>{% endfor %}</tbody>
+        </table></div>
+        <p class="legend">تقدير مُعدّ بمساعدة الذكاء الاصطناعي، يختلف من بلد إلى آخر حسب تصميم المصدر.</p>
+      </section>
+      {% endif %}
+      {% for s in ds.sections_ai or [] %}
+      <section data-in class="block" id="s{{ loop.index }}" aria-labelledby="ds{{ loop.index }}">
+        <h2 id="ds{{ loop.index }}">{{ s.heading_ar }}</h2>
+        <div class="ai"><p class="who">شرح مُعدّ بمساعدة الذكاء الاصطناعي، وليس نصاً رسمياً</p>
+          {% if s.body_ai_ar is string %}<p>{{ s.body_ai_ar }}</p>{% else %}<ul class="notes">{% for b in s.body_ai_ar %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+        </div>
+      </section>
+      {% endfor %}
+      {% if guide %}
+      <section data-in class="block" id="guide" aria-labelledby="d5">
+        <h2 id="d5">دليل مسح القوى العاملة</h2>
+        <div class="index-rows">{% for g in guide %}<a href="{{ root }}data-sources/{{ g.id }}.html"><b>{{ g.order }}. {{ g.name_ar }}</b><span>{{ g.state }}</span><small lang="en">{{ g.en }}</small></a>{% endfor %}</div>
+      </section>
+      {% endif %}
+      {% if lfs_rows %}
+      <section data-in class="block" id="countries" aria-labelledby="d6">
+        <h2 id="d6">مسح القوى العاملة في الدول العشر</h2>
+        <div class="table-wrap"><table class="cmp" style="min-width:600px">
+          <thead><tr><th scope="col">البلد</th><th scope="col">المسح</th><th scope="col">الدورية</th><th scope="col">المعيار المطبَّق</th></tr></thead>
+          <tbody>{% for r in lfs_rows %}<tr><th scope="row"><a href="{{ root }}countries/{{ r.iso }}.html">{{ r.name }}</a></th><td dir="auto">{{ r.survey }}</td><td dir="auto">{{ r.frequency }}</td><td>{{ r.standard }}</td></tr>{% endfor %}</tbody>
+        </table></div>
+        <p class="legend">من بطاقات الدول في سجل مِعيار. بعض الخانات من مقتطفات بحث أو وصف ثانوي، وتُؤكَّد من منهجية كل جهاز إحصائي. حجم العينة وطريقة الجمع في صفحة كل بلد.</p>
+      </section>
+      {% elif ds.kind == 'type' %}
+      <section data-in class="block" id="countries" aria-labelledby="d6">
+        <h2 id="d6">في الدول العشر</h2>
+        <p class="legend">يُضاف جرد هذا المصدر في كل بلد في مرحلة لاحقة. البداية بمسح القوى العاملة.</p>
+      </section>
+      {% endif %}
+      {% if reading %}
+      <section data-in class="block" id="reading" aria-labelledby="d7">
+        <h2 id="d7">للمزيد من المراجع</h2>
+        <ul class="notes">{% for s in reading %}<li>{% if s.url %}<a href="{{ s.url }}" dir="auto">{{ s.title }}</a>{% else %}<span dir="auto">{{ s.title }}</span>{% endif %}<span class="cite"><span class="st st-{{ s.status }}">{{ s.status_ar }}</span> · {{ s.publisher }}</span></li>{% endfor %}</ul>
+      </section>
+      {% endif %}
+    </article>
+    <aside class="toc" aria-label="ذو صلة">
+      {% if parent %}<span class="tl">الدليل</span><a href="{{ root }}data-sources/{{ parent.id }}.html">{{ parent.name_ar }}</a>{% for g in siblings %}<a href="{{ root }}data-sources/{{ g.id }}.html"{% if g.id == ds.id %} aria-current="page"{% endif %}>{{ g.order }}. {{ g.name_ar }}</a>{% endfor %}{% endif %}
+      {% if related %}<span class="tl"{% if parent %} style="margin-top:20px"{% endif %}>ذو صلة</span>{% for r in related %}<a href="{{ root }}{{ r.href }}">{{ r.name }}</a>{% endfor %}{% endif %}
+    </aside>
+  </div>
+</div>
+{% endblock %}

@@ -3,7 +3,8 @@ name: miyar-labour-stats
 description: >-
   Miʿyar (مِعيار), the Arabic reference for official statistics. Use when someone asks about labour-statistics definitions,
   indicators or concepts (unemployment rate, labour force participation, employment-to-population ratio, youth unemployment,
-  employed/unemployed, labour force, potential labour force, time-related underemployment, standard error), ILO/ICLS
+  employed/unemployed, labour force, potential labour force, time-related underemployment, standard error), data sources
+  (labour force survey design, questionnaire, sampling, weighting; census; administrative records; establishment surveys), ILO/ICLS
   standards, SDG 8.5.2, or how Tunisia, Saudi Arabia, Morocco, Jordan, UAE, Palestine, USA, UK, Australia or France define them —
   in Arabic, French or English. Answers come only from Miʿyar's verified references, with sources.
 ---
@@ -72,6 +73,16 @@ in another language.
 - `references/con-variance.md` — concept: التباين (Variance)
 - `references/con-weighted-mean.md` — concept: المتوسط المرجّح (Weighted mean)
 - `references/con-working-age-population.md` — concept: السكان في سن العمل (Working-age population)
+- `references/ds-administrative-records.md` — data source: السجلات الإدارية (Administrative records and registers)
+- `references/ds-establishment-survey.md` — data source: مسوح المؤسسات (Establishment (enterprise) surveys)
+- `references/ds-labour-force-survey.md` — data source: مسح القوى العاملة (Labour force survey (LFS))
+- `references/ds-lfs-framework.md` — LFS guide: الغرض والإطار المفاهيمي (Purpose and conceptual framework (19th ICLS))
+- `references/ds-lfs-periodicity.md` — LFS guide: الدورية والمسح المستمر (Periodicity and continuous surveys)
+- `references/ds-lfs-quality.md` — LFS guide: الجودة وقابلية المقارنة (Quality and comparability)
+- `references/ds-lfs-questionnaire.md` — LFS guide: الاستمارة ونموذج منظمة العمل الدولية (Questionnaire and the ILO model LFS)
+- `references/ds-lfs-sample-design.md` — LFS guide: تصميم العينة والتدوير (Sample design and rotation)
+- `references/ds-lfs-weighting-estimation.md` — LFS guide: الترجيح والتقدير والخطأ المعياري (Weighting, estimation and standard errors)
+- `references/ds-population-census.md` — data source: التعداد العام للسكان (Population and housing census)
 - `references/code.md` — code library (Python/R/Stata) to compute the indicators with SEs; country presets
 - `references/sources.md` — every source with its verification status
 

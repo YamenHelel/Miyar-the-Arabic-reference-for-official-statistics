@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "macros.html" import sheet, ai %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <h1>مصادر البيانات</h1>
+    <p class="alt"><span lang="en">Data sources for labour statistics</span></p>
+    <p class="quick">{{ quick }}</p>
+    <p class="go"><a class="btn" href="{{ root }}data-sources/ds-labour-force-survey.html">ابدأ بمسح القوى العاملة</a></p>
+  </header>
+  <section data-in class="block" id="icls" aria-labelledby="x1">
+    <h2 id="x1">ما يقوله قرار المؤتمر التاسع عشر</h2>
+    {{ sheet(q('q-ilo-icls19-data-sources'), srcq('q-ilo-icls19-data-sources'), root) }}
+  </section>
+  <section data-in class="block" id="types" aria-labelledby="x2">
+    <h2 id="x2">أربعة مصادر</h2>
+    <div class="index-rows">{% for t in types %}<a href="{{ root }}data-sources/{{ t.id }}.html"><b>{{ t.name_ar }}</b><span>{{ t.state }}</span><small lang="en">{{ t.en }}</small></a>{% endfor %}</div>
+  </section>
+  <section data-in class="block" id="matrix" aria-labelledby="x3">
+    <h2 id="x3">أي مصدر لأي سؤال</h2>
+    <div class="table-wrap"><table class="cmp matrix">
+      <thead><tr><th scope="col">الموضوع</th>{% for t in types %}<th scope="col"><a href="{{ root }}data-sources/{{ t.id }}.html">{{ t.name_ar }}</a></th>{% endfor %}</tr></thead>
+      <tbody>{% for row in matrix %}<tr><th scope="row">{{ row.topic }}</th>{% for c in row.cells %}<td><span class="lvl lvl-{{ c.level }}" title="{{ c.note }}">{{ c.level_ar }}</span></td>{% endfor %}</tr>{% endfor %}</tbody>
+    </table></div>
+    <p class="legend">رئيسي = المصدر المناسب لهذا الموضوع · جزئي = يعطي جزءاً من الصورة أو بدقة أقل · لا = لا يصلح. تقدير مُعدّ بمساعدة الذكاء الاصطناعي، والتفاصيل في صفحة كل مصدر.</p>
+  </section>
+  <section data-in class="block" id="guide" aria-labelledby="x4">
+    <h2 id="x4">دليل مسح القوى العاملة</h2>
+    <p class="lede" style="margin-bottom:22px">منظمة العمل الدولية هي المرجع الأول لمسح القوى العاملة. يعرض الدليل خطوات المسح من المفهوم إلى الرقم المنشور، وكل قسم يبدأ بنص المنظمة.</p>
+    <div class="index-rows">{% for g in guide %}<a href="{{ root }}data-sources/{{ g.id }}.html"><b>{{ g.order }}. {{ g.name_ar }}</b><span>{{ g.state }}</span><small lang="en">{{ g.en }}</small></a>{% endfor %}</div>
+  </section>
+</div>
+{% endblock %}

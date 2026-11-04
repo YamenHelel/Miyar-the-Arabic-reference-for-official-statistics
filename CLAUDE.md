@@ -23,7 +23,8 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
 3. Add any new idea to `docs/prd/05-ideas-backlog.md`, giving it the next free ID.
 4. If a decision was made, add `docs/decisions/ADR-NNNN-*.md` and link it from `docs/00-index.md`.
 5. On the first session of a new month, move the previous month's CHANGELOG entries to `docs/progress/YYYY-MM.md`.
-6. Run `python tools/validate.py` before committing.
+6. Run `python tools/validate.py` and `python tools/build_validation_queue.py` (rewrites `docs/VALIDATION.md`; CI fails if it is stale) before committing.
+   Update `docs/IMPLEMENTATION.md` (built vs validated per module).
 7. When the lead says "apply my verifications" (or at session start if verdicts exist): export the Verification Desk verdicts
    (`ArtifactData` list, collection `verdicts`, url https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE, out_dir in scratchpad), run
    `python tools/apply_verification.py <out_dir>/verdicts`, then delete the applied `ok`/`broken` verdict docs and act on `fix` notes
@@ -37,7 +38,7 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
 
 ## Content (content/)
 - Official wording ONLY in `content/quotes.yml` (ADR-0007), pasted verbatim by a human from a verified source; indicators
-  (`content/indicators/`) and concepts (`content/concepts/`) reference slots by id. Schemas: `content/schema-*.yaml`.
+  (`content/indicators/`), concepts (`content/concepts/`) and data sources (`content/data-sources/`, ADR-0011; ILO first) reference slots by id. Schemas: `content/schema-*.yaml`.
 - Numbers used by the site's ruler (`measures:`) must be read from verified/pasted quotes only.
 - After any content change: `python tools/build_site.py` (website), `python tools/build_skill.py` (Claude skill, commit the output),
   and refresh the private previews (`tools/prepare_site_preview.py`, URLs in STATUS.md).

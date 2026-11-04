@@ -4,6 +4,8 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 
 ## Progress
 - [STATUS.md](STATUS.md): 1-page snapshot of the current phase, what is done, the next 3 tasks and blockers.
+- [IMPLEMENTATION.md](IMPLEMENTATION.md): progress per module (built vs validated) and the phase checklist.
+- [VALIDATION.md](VALIDATION.md): **generated** queue of everything awaiting the lead's check (quotes, sources, facts, drafts, decisions); manual items in [lead-actions.yml](lead-actions.yml).
 - [CHANGELOG.md](CHANGELOG.md): daily log for the current month, newest first.
 - [progress/](progress/): archived monthly logs (`YYYY-MM.md`).
 
@@ -13,7 +15,7 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 | [prd/01-vision-goals.md](prd/01-vision-goals.md) | Vision, problem, positioning, long-term goals, definition of success |
 | [prd/02-users-personas.md](prd/02-users-personas.md) | Target users, personas, jobs-to-be-done, typical questions |
 | [prd/03-scope-phases-roadmap.md](prd/03-scope-phases-roadmap.md) | Phases 0–4, exit criteria, country/domain expansion order, 1h/day plan |
-| [prd/04-features-current.md](prd/04-features-current.md) | Features in scope now (MVP): indicator pages, glossary, comparisons, registry |
+| [prd/04-features-current.md](prd/04-features-current.md) | Features in scope now (MVP): indicator pages, glossary, data sources, comparisons, registry |
 | [prd/05-ideas-backlog.md](prd/05-ideas-backlog.md) | **All future ideas**, with ID, priority and target phase |
 | [prd/06-architecture.md](prd/06-architecture.md) | Single source of truth → website + AI skills + MCP; hosting; CI |
 | [prd/07-data-model.md](prd/07-data-model.md) | Schemas: indicator, concept, country implementation, source, term, practitioner |
@@ -40,10 +42,11 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 - [ADR-0008](decisions/ADR-0008-site-generator-and-design.md): website generator (jinja2) and the Miʿyar design system
 - [ADR-0010](decisions/ADR-0010-code-library.md): code library (Python tested, R checked in CI, Stata not executed; presets only from quotes)
 - [ADR-0009](decisions/ADR-0009-canonical-url-and-crawlers.md): canonical address (GitHub Pages for now) and allowing AI crawlers
+- [ADR-0011](decisions/ADR-0011-data-sources-section.md): data sources section (4 source types, 6-part LFS guide, ILO first) and the registry renamed «المراجع»
 
 ## Data
 - [../content/quotes.yml](../content/quotes.yml): all official wording (shared store); schemas `content/schema-*.yaml`
-- [../content/indicators/](../content/indicators/) and [../content/concepts/](../content/concepts/): indicators and glossary
+- [../content/indicators/](../content/indicators/), [../content/concepts/](../content/concepts/) and [../content/data-sources/](../content/data-sources/): indicators, glossary, data sources and the LFS guide
 - [../tools/site/](../tools/site/): website templates and design system · [../skills/miyar-labour-stats/](../skills/miyar-labour-stats/): generated Claude skill
 - [../sources/README.md](../sources/README.md): source registry guide and counts
 - [../directory/README.md](../directory/README.md): practitioner directory design

@@ -1,0 +1,35 @@
+# Miʿyar LFS guide section. Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-lfs-periodicity
+kind: guide
+parent: ds-labour-force-survey
+order: 5
+name_ar: الدورية والمسح المستمر
+names:
+  en: Periodicity and continuous surveys
+  fr: Périodicité et enquête en continu
+summary_ai_ar: >-
+  تجري معظم الدول العشر مسح القوى العاملة كل ربع سنة، وبعضها شهرياً أو بشكل مستمر توزَّع فيه المقابلات على كل أسابيع السنة.
+  الدورية تحدد ما يمكن قياسه، فالمسح السنوي لا يرصد التقلبات الموسمية، والمسح المستمر يحتاج تعديلاً موسمياً قبل المقارنة بين
+  الأرباع.
+official_quotes:
+- slot: q-ilo-icls19-lfs-frequency
+  heading_ar: ما يوصي به قرار المؤتمر التاسع عشر بشأن دورية جمع البيانات
+sections_ai:
+- heading_ar: الخيارات
+  body_ai_ar:
+  - مسح سنوي، وهو أرخص، لكنه لا يرصد الموسمية، ونتائجه متأخرة.
+  - مسح ربع سنوي، وهو الأكثر شيوعاً في الدول العربية.
+  - مسح مستمر، تتوزع فيه المقابلات على كل الأسابيع، ويعطي نتائج شهرية أو ربع سنوية مع تقديرات سنوية أدق.
+- heading_ar: الموسمية
+  body_ai_ar:
+  - البطالة ترتفع وتنخفض موسمياً (الزراعة، والسياحة، ورمضان، ونهاية العام الدراسي). المقارنة الصحيحة تكون مع الربع نفسه من السنة السابقة، أو بعد التعديل الموسمي.
+related:
+- con-seasonal-adjustment
+- ds-lfs-sample-design
+- ind-unemployment-rate
+further_reading:
+- src-ilo-icls19-res1-pdf
+- src-fra-insee-eec-methodo
+- src-gbr-ons-lfs-qmi
+status: draft
+last_updated: '2026-11-04'

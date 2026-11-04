@@ -131,7 +131,7 @@ def sitemap_xml(cfg, pages):
             + rows + "</urlset>\n")
 
 
-def llms_txt(cfg, inds, cons, countries):
+def llms_txt(cfg, inds, cons, countries, dss=()):
     out = [f"# {cfg['name_en']} ({cfg['name_ar']}) — {cfg['tagline_en']}", "",
            f"> {cfg['description_en']}", "",
            "Miʿyar quotes official definitions verbatim in their original language (Arabic, French or English), always with the source "
@@ -142,9 +142,13 @@ def llms_txt(cfg, inds, cons, countries):
             f"definitions in 10 countries" for i in inds]
     out += ["", "## Concepts (glossary)"]
     out += [f"- [{c['names']['en']} — {c['name_ar']}]({cfg['base_url']}concepts/{c['id']}.md)" for c in cons]
+    if dss:
+        out += ["", "## Data sources (LFS, census, administrative records, establishment surveys) and the LFS guide"]
+        out += [f"- [{d['names']['en']} — {d['name_ar']}]({cfg['base_url']}data-sources/{d['id']}.md)"
+                for d in sorted(dss, key=lambda d: (d['kind'] != 'type', d['order']))]
     out += ["", "## Countries"]
     out += [f"- [{name}]({cfg['base_url']}countries/{iso}.html)" for iso, name in countries]
     out += ["", "## Optional", f"- [All verified content in one file]({cfg['base_url']}llms-full.txt)",
-            f"- [Source registry]({cfg['base_url']}sources/index.html)", f"- [Methodology]({cfg['base_url']}about/index.html)",
+            f"- [Reference registry]({cfg['base_url']}sources/index.html)", f"- [Methodology]({cfg['base_url']}about/index.html)",
             f"- [Source code and data]({cfg['github']})", ""]
     return "\n".join(out)

@@ -82,3 +82,7 @@ def quotes_by_slot():
 
 def concept_files():
     return sorted((CONTENT_DIR / "concepts").glob("*.yml"))
+
+
+def datasource_files():
+    return sorted((CONTENT_DIR / "data-sources").glob("*.yml"))

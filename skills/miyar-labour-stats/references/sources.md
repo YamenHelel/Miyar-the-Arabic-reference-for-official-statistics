@@ -91,6 +91,8 @@
 | src-ihsn-catalog | IHSN Survey Catalog (metadata of national surveys incl. LFS) | International Household Survey Network | int | link-ok |   |
 | src-isi-glossary | ISI Multilingual Glossary of Statistical Terms | International Statistical Institute (ISI) | int | verified | YH 2026-11-04 |
 | src-unsc-2013-employment-stats-ar | UN Statistical Commission 44th session (2013) — Employment statistics, ILO report (Arabic version) | UN Statistical Commission / ILO | int | link-ok |   |
+| src-un-census-pr-rev3 | Principles and Recommendations for Population and Housing Censuses, Revision 3 (UN, 2017) | United Nations, Department of Economic and Social Affairs, Statistics Division | int | collected |   |
+| src-un-ilo-census-economically-active-handbook | Measuring the Economically Active in Population Censuses: A Handbook (UN and ILO, 2010) | United Nations Statistics Division and ILO Department of Statistics | int | collected |   |
 | src-ilo-icls-documents | ICLS documents (all resolutions and guidelines) — ILOSTAT | ILO Department of Statistics | int | verified | YH 2026-11-04 |
 | src-ilo-icls19-res1 | Resolution concerning statistics of work, employment and labour underutilization (19th ICLS, 2013), including amendments | ILO — 19th International Conference of Labour Statisticians | int | verified | YH 2026-11-04 |
 | src-ilo-icls19-description | Description of work statistics (19th ICLS) — ILOSTAT concepts and definitions | ILO Department of Statistics | int | verified | YH 2026-11-04 |
@@ -119,6 +121,14 @@
 | src-ilo-aligning-lfs-icls-en | ILO guidelines and tools for aligning national LFS with latest ICLS standards and best practices (English page) | ILO Department of Statistics | int | collected |   |
 | src-ilo-microdata-quick-guide | ILOSTAT Microdata Processing Quick Guide — principles and methods for processing anonymized household survey microdata | ILO Department of Statistics | int | link-ok |   |
 | src-ilo-icls19-res1-pdf | Resolution concerning statistics of work, employment and labour underutilization (19th ICLS, 2013) — PDF, as amended by the 21st ICLS (2023) | ILO | int | verified | YH 2026-11-04 |
+| src-ilo-quick-guide-sources-uses | Quick guide on sources and uses of labour statistics (ILO, 2017) | ILO Department of Statistics | int | collected |   |
+| src-ilo-admin-data-sources | ILOSTAT — Administrative data sources for labour statistics (resources page) | ILO Department of Statistics | int | collected |   |
+| src-ilo-establishment-surveys-resources | ILOSTAT — Establishment surveys for labour statistics (resources page) | ILO Department of Statistics | int | collected |   |
+| src-ilo-ssm2-establishment-surveys | Sources and Methods: Labour Statistics, Volume 2 — Employment, wages, hours of work and labour cost (establishment surveys) | ILO Department of Statistics | int | collected |   |
+| src-ilo-ssm3-household-surveys | Sources and Methods: Labour Statistics, Volume 3 — Economically active population, employment, unemployment and hours of work (household surveys) | ILO Department of Statistics | int | collected |   |
+| src-ilo-ssm4-admin-records | Sources and Methods: Labour Statistics, Volume 4 — Employment, unemployment, wages and hours of work (administrative records and related sources) | ILO Department of Statistics | int | collected |   |
+| src-ilo-admin-records-guidelines-1997 | Labour statistics based on administrative records: guidelines on compilation and presentation (ILO, Bangkok, 1997) | ILO East Asia Multidisciplinary Advisory Team / ILO Regional Office for Asia and the Pacific | int | to-locate |   |
+| src-ilo-census-resources | ILOSTAT — Population census resources (aligning censuses with the latest labour standards) | ILO Department of Statistics | int | to-locate |   |
 | src-sdg-goal1-metadata | UN SDG metadata — Goal 1 (1.1.1 working poverty; 1.3.1 social protection coverage) | UNSD / IAEG-SDGs | int | verified | YH 2026-11-04 |
 | src-sdg-goal5-metadata | UN SDG metadata — Goal 5 (5.4.1 unpaid care work; 5.5.2 women in managerial positions) | UNSD / IAEG-SDGs | int | verified | YH 2026-11-04 |
 | src-sdg-goal8-metadata | UN SDG metadata — Goal 8 (decent work and economic growth) | UNSD / IAEG-SDGs | int | verified | YH 2026-11-04 |

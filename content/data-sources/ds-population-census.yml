@@ -1,0 +1,49 @@
+# Miʿyar data source (type). Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-population-census
+kind: type
+order: 2
+name_ar: التعداد العام للسكان
+names:
+  en: Population and housing census
+  fr: Recensement général de la population et de l'habitat
+summary_ai_ar: >-
+  التعداد عدٌّ شامل لكل السكان في لحظة واحدة، عادة كل عشر سنوات. يتضمن أسئلة قليلة عن النشاط الاقتصادي، فيعطي صورة عن
+  التشغيل والبطالة حتى أصغر وحدة إدارية، لكنه أقل دقة من مسح القوى العاملة في قياس البطالة. ودوره الأهم لإحصاءات العمل أنه
+  يوفّر إطار المعاينة والتقديرات السكانية التي تُبنى عليها أوزان المسح.
+official_quotes:
+- slot: q-un-census-definition
+  heading_ar: تعريف التعداد في توصيات الأمم المتحدة
+- slot: q-ilo-qg-census
+  heading_ar: التعداد مصدراً لإحصاءات العمل عند منظمة العمل الدولية
+- slot: q-un-ilo-census-vs-lfs
+  heading_ar: التعداد ومسح القوى العاملة
+strengths_ai_ar:
+- يغطي كل السكان، فيعطي أرقاماً لكل منطقة وكل فئة صغيرة.
+- يوفّر إطار المعاينة لمسح القوى العاملة وللمسوح الأسرية الأخرى.
+- يوفّر عدد السكان الذي تُعايَر عليه أوزان المسح.
+limits_ai_ar:
+- دورية بعيدة (عشر سنوات غالباً)، فلا يرصد التغيرات القصيرة الأجل.
+- أسئلة النشاط قليلة ومختصرة، ويجمعها عدّادون أقل تخصصاً، فيقل التشغيل المسجَّل (خاصة عمل النساء والعمل غير المنظم) وتختلف البطالة عن المسح.
+- قد يعتمد التعداد معايير أقدم من المسح، فلا تُقارن أرقام البطالة بينهما مباشرة.
+produces:
+- {topic: unemployment, level: partial, note_ai_ar: بأسئلة مختصرة؛ للمقارنة بين المناطق لا لقياس المستوى الوطني الدقيق.}
+- {topic: participation, level: partial, note_ai_ar: صالح للتوزيع الجغرافي، مع خطر نقص تسجيل التشغيل.}
+- {topic: structure, level: main, note_ai_ar: النشاط والمهنة لكل منطقة صغيرة إذا رُمِّزت الإجابات.}
+- {topic: informality, level: none, note_ai_ar: نادراً ما يتضمن الأسئلة اللازمة.}
+- {topic: hours, level: none, note_ai_ar: نادراً.}
+- {topic: earnings, level: none, note_ai_ar: لا يُسأل عادة.}
+- {topic: small_area, level: main, note_ai_ar: ميزته الأساسية.}
+- {topic: timeliness, level: none, note_ai_ar: كل عشر سنوات تقريباً.}
+related:
+- ds-labour-force-survey
+- ds-lfs-sample-design
+- con-population
+- con-sampling-frame
+further_reading:
+- src-un-census-pr-rev3
+- src-un-ilo-census-economically-active-handbook
+- src-ilo-quick-guide-sources-uses
+- src-ilo-census-resources
+- src-ipums-international
+status: draft
+last_updated: '2026-11-04'

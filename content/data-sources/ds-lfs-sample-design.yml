@@ -1,0 +1,42 @@
+# Miʿyar LFS guide section. Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-lfs-sample-design
+kind: guide
+parent: ds-labour-force-survey
+order: 3
+name_ar: تصميم العينة والتدوير
+names:
+  en: Sample design and rotation
+  fr: Plan de sondage et rotation
+summary_ai_ar: >-
+  تُسحب عينة مسح القوى العاملة عادة على مرحلتين: مناطق تعدادية (وحدات أولية) من إطار التعداد بعد تقسيمه إلى طبقات، ثم مساكن
+  داخل كل منطقة. وتبقى الأسرة في العينة عدة أرباع متتالية وفق نمط تدوير، فتتحسن دقة قياس التغير من ربع إلى آخر.
+official_quotes:
+- slot: q-ilo-aligning-sample
+  heading_ar: إرشادات منظمة العمل الدولية بشأن تصميم العينة
+sections_ai:
+- heading_ar: عناصر التصميم
+  body_ai_ar:
+  - إطار المعاينة، وهو غالباً قائمة المناطق التعدادية من آخر تعداد، مع تحديث للمناطق السريعة النمو.
+  - التقسيم الطبقي، عادة حسب المنطقة الإدارية والوسط (حضر/ريف)، وأحياناً حسب الجنسية في دول الخليج.
+  - المعاينة العنقودية، أي سحب مناطق ثم مساكن داخلها، وهي أرخص ميدانياً لكنها ترفع الخطأ المعياري (أثر التصميم).
+  - حجم العينة، ويُحدَّد بالدقة المطلوبة لأصغر مستوى سيُنشر (مثلاً بطالة النساء في كل منطقة).
+- heading_ar: التدوير
+  body_ai_ar:
+  - يُستبدل جزء من العينة كل ربع ويبقى جزء. نمط «2-2-2» مثلاً يعني ربعين داخل العينة، وربعين خارجها، ثم ربعين داخلها.
+  - التداخل بين الأرباع يجعل تقدير التغير أدق، لكنه يحتاج حساباً خاصاً للتباين.
+- heading_ar: بعد تعداد جديد
+  body_ai_ar:
+  - تجديد الإطار بعد التعداد يحسّن التغطية، لكنه قد يُحدث انقطاعاً في السلسلة يجب الإعلان عنه.
+related:
+- con-sampling-frame
+- con-stratified-sampling
+- con-cluster-sampling
+- con-design-effect
+- con-sample
+- ds-population-census
+further_reading:
+- src-ilo-aligning-lfs-icls-en
+- src-ilo-ssm3-household-surveys
+- src-ilo-national-sources-catalogue
+status: draft
+last_updated: '2026-11-04'

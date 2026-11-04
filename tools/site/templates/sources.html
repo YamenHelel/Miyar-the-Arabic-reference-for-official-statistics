@@ -2,11 +2,11 @@
 {% block main %}
 <div class="wrap">
   <header class="page-head" data-in>
-    <h1>سجل المصادر</h1>
+    <h1>سجل المراجع</h1>
     <p class="lede" style="margin-top:14px">كل وثيقة يستند إليها مِعيار، بحالتها كما هي اليوم. لا يُعدّ مصدر «مُتحقَّقاً منه» إلا إذا فتحه إنسان وتأكد من عنوانه وناشره وإصداره.</p>
     <p class="facts-line">{{ counts }}</p>
   </header>
-  <section class="block" id="registry" aria-label="المصادر">
+  <section class="block" id="registry" aria-label="المراجع">
     <div class="filters" role="group" aria-label="تصفية">
       <button type="button" data-filter="all" aria-pressed="true">الكل</button>
       {% for k, v in filters %}<button type="button" data-filter="{{ k }}" aria-pressed="false">{{ v }}</button>{% endfor %}

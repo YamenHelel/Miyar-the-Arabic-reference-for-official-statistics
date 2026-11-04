@@ -4,36 +4,35 @@
 **Updated:** 2026-11-05 · **Phase:** 0b, Pilot content (site and skill foundations of Phase 1 already built)
 
 **Lead's tools:**
-- Verification Desk https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE (sources + ✍️ 56 texts to paste: 24 labour + 32 ISI statistical definitions)
+- Verification Desk https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE (sources + ✍️ 71 texts to paste)
 - Website preview (private) https://claude.ai/artifact/HN6DnYMFTDKFiSaHke6jqg
-- Old single-indicator preview https://claude.ai/artifact/LXjvP5D5bhewcrVLFGCx6y (superseded by the site)
+- **What to validate:** [VALIDATION.md](VALIDATION.md) (generated) · **Progress per module:** [IMPLEMENTATION.md](IMPLEMENTATION.md)
 
 ## Done
 - **Content:**
-  - 4 pilot indicators: unemployment rate (13 verified + 1 pasted official texts), participation rate, employment-to-population ratio, youth unemployment.
-  - 40 concepts: 7 labour + 33 statistical (descriptive, sampling, estimation, rates), with a calculator on descriptive pages.
-  - One shared quotes store, 38 slots: 13 verified, 1 pasted, 24 to paste.
-- **Registry:** 123 sources: 56 verified, 34 link-ok, 17 collected, 5 broken, 3 superseded, 8 to-locate.
-- **Website:** generator + design system (ADR-0008), 28 Arabic pages, search, live ruler; passes the design gate on the home page. Deploy workflow is ready but manual.
-- **Code library (ADR-0010):** Python (tested), R (matches Python in CI), Stata (not executed); country presets from verified quotes; code page and tabs on indicator pages.
-- **Claude skill v0:** `skills/miyar-labour-stats/`, generated from the base.
-- **SEO/GEO (PRD 16):**
-  - structured data, sitemap, robots (AI allowed), social cards
-  - quick answers, fact-based FAQ, citation box, llms.txt and Markdown twins
-  - `check_seo.py` in CI
-  - README, CITATION.cff and CONTRIBUTING rewritten for search and AI
+  - 4 pilot indicators and 40 concepts (7 labour, 33 statistical)
+  - **New: data sources section (ADR-0011).** It covers the LFS, census, administrative records and establishment surveys, plus a 6-part LFS guide with the ILO as first source. There is a "which source for which question" matrix and an LFS table for the 10 countries.
+  - Quotes store: 85 slots, of which 13 verified, 1 pasted, 71 to paste.
+- **Registry:** 133 sources: 56 verified, 34 link-ok, 26 collected, 9 to-locate, 5 broken, 3 superseded.
+- **Website:** 73 Arabic pages, private preview only. The nav now has «مصادر البيانات», and the document registry is renamed «المراجع».
+- **Code library:** Python tested, R = Python in CI, Stata not executed.
+- **Skill:** 56 references.
+- **SEO/GEO:** checks pass on all pages.
+- **Validation queue:** `tools/build_validation_queue.py` writes `docs/VALIDATION.md` from the data, and CI fails if it is stale. Manual decisions live in `docs/lead-actions.yml`.
 
 ## Next 3 tasks
-1. **Lead:**
-   - On the desk's ✍️ tab, paste the 56 texts (the 32 statistical ones come from the ISI glossary, about 1 minute each), including the 24 texts (ILO §73(a)(b), working age, potential LF, underemployment, SDG 8.5.2 youth, ISI standard error, and the 6 Arab countries × 3 indicators). Then say "apply my quotes".
-   - Confirm the Palestine transcription on the unemployment page.
+1. **Lead:** work through [VALIDATION.md](VALIDATION.md) top-down, starting with queue 1.
+   - Paste the texts on the desk ✍️ tab and say "apply my quotes".
+   - The new data-source texts mostly come from one ILO document (quick guide on sources and uses, 4 texts) and the ICLS-19 PDF (3 texts).
 2. **Lead:**
-   - Review the website preview and give feedback on the design and wording.
-   - Confirm the Arabic spelling of your name for the founder's letter; the letter is a draft in your voice, so edit it freely.
-   - To go live: Settings → Pages → Source "GitHub Actions", then Actions → website → Run workflow.
-3. **Lead (SEO/GEO, ~10 min):** paste the repo About box, topics and social preview from `docs/github-settings.md`. After go-live: Search Console + Bing, Zenodo DOI, Wikidata.
-4. **Agent:** apply the quotes; confirm facts and add `measures` for the new indicators; add national definitions for USA, UK, Australia and France (Phase 1); refresh the site, skill and previews.
+   - Review the preview, including the new data sources pages.
+   - Confirm the Palestine transcription and the Arabic spelling of your name.
+   - Go-live steps (Pages, GitHub About, then Search Console, Zenodo, Wikidata) are listed in section 9 of VALIDATION.md.
+3. **Agent:**
+   - Apply quotes and verifications as they arrive.
+   - Build indicators 5–10 (NEET, LU2–LU4, informality, underemployment).
+   - Then census and registers per country (I-059).
 
 ## Blockers / open questions
-- The sandbox and WebFetch cannot reach statistical sites or open image collections, so quotes come from the lead, and the site's pictures are limited to the project's own artefacts (I-048).
-- Domain name and LinkedIn page for Miʿyar (to record).
+- The sandbox cannot reach statistical sites, so quotes come from the lead (I-044 would lift this).
+- Domain name and LinkedIn page are still to be decided.

@@ -183,3 +183,33 @@ sources:
     status: link-ok
     link_check: "2026-11-04 200"
     notes: Official UN Arabic text on employment statistics from the year of the 19th ICLS — source for official Arabic terminology.
+
+  - id: src-un-census-pr-rev3
+    title_en: "Principles and Recommendations for Population and Housing Censuses, Revision 3 (UN, 2017)"
+    title_ar: مبادئ وتوصيات تعدادات السكان والمساكن، التنقيح 3 (الأمم المتحدة، 2017)
+    publisher: United Nations, Department of Economic and Social Affairs, Statistics Division
+    country: int
+    type: standard
+    languages: [en]
+    url: https://unstats.un.org/unsd/publication/seriesM/Series_M67Rev3en.pdf
+    date_published: 2017
+    date_accessed: 2026-11-04
+    version: ST/ESA/STAT/SER.M/67/Rev.3
+    priority: P1
+    status: collected
+    notes: "Adopted by the UN Statistical Commission (46th session, 2015). A Revision 4 was in preparation for the 2030 round; check whether it has been endorsed and supersedes Rev.3. Arabic version: TO-LOCATE."
+
+  - id: src-un-ilo-census-economically-active-handbook
+    title_en: "Measuring the Economically Active in Population Censuses: A Handbook (UN and ILO, 2010)"
+    publisher: United Nations Statistics Division and ILO Department of Statistics
+    country: int
+    type: manual
+    languages: [en]
+    url: https://unstats.un.org/unsd/publication/seriesf/Seriesf_102e.pdf
+    date_published: 2010
+    date_accessed: 2026-11-04
+    version: ST/ESA/STAT/SER.F/102
+    icls_standard: 13th
+    priority: P1
+    status: collected
+    notes: Census questions on economic characteristics and how census results compare with the LFS. Written before the 19th ICLS (2013); read with that in mind.

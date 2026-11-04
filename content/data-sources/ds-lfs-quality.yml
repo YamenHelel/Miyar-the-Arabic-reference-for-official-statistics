@@ -1,0 +1,42 @@
+# Miʿyar LFS guide section. Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-lfs-quality
+kind: guide
+parent: ds-labour-force-survey
+order: 6
+name_ar: الجودة وقابلية المقارنة
+names:
+  en: Quality and comparability
+  fr: Qualité et comparabilité
+summary_ai_ar: >-
+  رقم البطالة المنشور يحمل نوعين من الخطأ: خطأ المعاينة، ويُقاس بالخطأ المعياري، وأخطاء غير المعاينة (عدم الاستجابة، وفهم
+  الأسئلة، والتغطية). وتتأثر المقارنة بين الدول أو عبر الزمن بالمعيار المطبَّق (المؤتمر 13 أو 19)، وبالسكان المرجعيين، وبتغيير
+  الاستمارة أو الإطار.
+official_quotes:
+- slot: q-ilo-work-db-comparability
+  heading_ar: قابلية المقارنة بين إحصاءات المؤتمرين 13 و19 عند منظمة العمل الدولية
+sections_ai:
+- heading_ar: قبل أن تقارن، اسأل
+  body_ai_ar:
+  - أي معيار طُبّق، المؤتمر 13 أم 19؟ قاعدة ILOSTAT تفصل بينهما في قاعدتين.
+  - من هم السكان المرجعيون، المواطنون فقط أم كل المقيمين؟ هذا الفرق كبير في الأردن ودول الخليج.
+  - ما الحد الأدنى للسن، وما مدة البحث، وما مدة الإتاحة؟
+  - هل تغيّرت الاستمارة أو الإطار أو الأوزان في الفترة المقارنة؟
+  - هل الفرق أكبر من هامش الخطأ؟
+- heading_ar: مؤشرات الجودة التي يجب أن تُنشر
+  body_ai_ar:
+  - معدل الاستجابة، والأخطاء المعيارية أو معاملات الاختلاف للمؤشرات الرئيسية، ووصف التغطية، وسجل التغييرات المنهجية.
+  - إطار الجودة المعتمد في كثير من الأجهزة الإحصائية مبني على نموذج GSBPM ومبادئ الإحصاء الرسمي الأساسية.
+related:
+- con-sampling-error
+- con-non-sampling-error
+- con-response-rate
+- con-coefficient-of-variation
+- con-margin-of-error
+- ind-unemployment-rate
+further_reading:
+- src-ilo-work-db-description
+- src-ilo-lfs-db-description
+- src-gbr-ons-lfs-qmi
+- src-escwa-state-lfs-arab-states-2024
+status: draft
+last_updated: '2026-11-04'

@@ -2,6 +2,31 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-05: Data sources section, validation queue, implementation tracker (session 10)
+**Done**
+- **Data sources (ADR-0011):** `content/data-sources/` with schema `content/schema-datasource.yaml`. Scope chosen by the lead: the core 4 types, a full LFS guide, and LFS-only country inventory.
+  - **Types:** labour force survey, population census, administrative records, establishment surveys. Each has:
+    - official-text slots
+    - how the source works, its strengths and limits, and a "what it measures" grid (all AI-labelled)
+    - further reading from the registry
+  - **LFS guide:** framework (ICLS-19), questionnaire (ILO model), sample design and rotation, weighting and estimation, periodicity, quality and comparability. Linked to the glossary and the code library.
+  - **15 new to-paste quote slots.** ILO first: ICLS-19 (3), ILO quick guide on sources and uses (4), LFS toolkit, microdata guide, aligning-LFS hub, WORK database description, Sources and Methods vol. 2 and 4. UN for the census: P&R Rev.3, UN/ILO 2010 handbook.
+  - **10 new source records** (8 collected, 2 to-locate), all from search results and not opened: ILO quick guide, ILOSTAT admin-data and establishment-survey pages, Sources and Methods vols 2, 3 and 4, UN census P&R Rev.3, UN/ILO census handbook. To-locate: the ILO 1997 admin-records guidelines and the ILOSTAT census resources page.
+- **Site:**
+  - new «مصادر البيانات» section: index with the source × topic matrix, 10 pages with Markdown twins, JSON-LD, social cards, search entries and llms.txt
+  - the registry is renamed «المراجع / سجل المراجع»
+  - the home folder tab now opens data sources
+  - 73 pages; SEO check passes
+  - no horizontal scroll at 390 px
+- **Skill:** gains 10 data-source references (56 total).
+- **Validation queue:** `tools/build_validation_queue.py` writes `docs/VALIDATION.md` from the data, with 9 queues and counts. Manual decisions are in `docs/lead-actions.yml`. CI checks it is current (`--check`).
+- **Implementation tracker:** `docs/IMPLEMENTATION.md` shows built vs validated per module and the phase checklist.
+- **Docs:** PRD 04 F-11, roadmap 0b, backlog I-059…I-062, index, and the CLAUDE.md routine (step 6).
+
+**Files:** content/data-sources/*, content/schema-datasource.yaml, content/quotes.yml, sources/international/{ilo,global-other}.yaml, tools/{build_site,validate,common,markdown_render,seo,build_skill,build_validation_queue}.py, tools/site/templates/{datasource,datasources_index,base,home,sources}.html, tools/site/static/miyar.css, .github/workflows/checks.yml, docs/*.
+
+**Open questions:** none. Census and registers per country are deferred to Phase 1 by the lead's choice.
+
 ## 2026-11-05: Code library (session 9)
 **Done**
 - `code/`: computes the ICLS-19 indicators (LFPR, EPR, LU1–LU4, youth UR, NEET) from LFS microdata, with weights, linearised SE, CV, 95% CI and approximate design effect; disaggregation by any variable.

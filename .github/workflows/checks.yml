@@ -16,6 +16,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install -r tools/requirements.txt
       - run: python tools/validate.py --stats
+      - run: python tools/build_validation_queue.py --check
       - run: python tools/build_site.py _site && python tools/check_seo.py _site --skip-images
       - run: pip install numpy pandas && python tools/test_code.py
 

@@ -1,0 +1,24 @@
+# Lead decisions and settings that are not data checks. Read by tools/build_validation_queue.py (section 9 of docs/VALIDATION.md).
+# Mark an item done with `status: done`; add new ones at the end.
+actions:
+  - title: Review the website preview
+    detail: Feedback on design and wording (private preview link in docs/STATUS.md), including the new «مصادر البيانات» section.
+    status: open
+  - title: Confirm the Arabic spelling of your name
+    detail: Used in the founder's letter on the methodology page (draft in your voice; edit freely).
+    status: open
+  - title: Paste the repository About box, topics and social preview
+    detail: Values ready in docs/github-settings.md (about 10 minutes).
+    status: open
+  - title: Turn on GitHub Pages and publish
+    detail: Settings → Pages → Source "GitHub Actions", then Actions → website → Run workflow.
+    status: open
+  - title: After go-live, register the site
+    detail: Google Search Console and Bing Webmaster Tools, then Zenodo DOI and Wikidata item (docs/github-settings.md).
+    status: open
+  - title: Decide the domain name and LinkedIn page
+    detail: Custom domain (I-051) and a LinkedIn page for Miʿyar; record them in docs/prd/15-naming.md.
+    status: open
+  - title: Optional — allow statistical sites in the cloud environment's network policy
+    detail: Lets the agent open ILO/NSO documents and draft quotes for you to confirm (I-044). Without it, quotes stay paste-only.
+    status: open

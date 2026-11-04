@@ -1,0 +1,52 @@
+# Miʿyar data source (type). Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-administrative-records
+kind: type
+order: 3
+name_ar: السجلات الإدارية
+names:
+  en: Administrative records and registers
+  fr: Sources administratives et registres
+summary_ai_ar: >-
+  السجلات الإدارية بيانات تجمعها جهات حكومية لأغراض عملها، لا لأغراض إحصائية: الضمان الاجتماعي، ومكاتب التشغيل، والخدمة
+  المدنية، وتصاريح عمل الوافدين، والضرائب. تعطي أرقاماً شهرية شاملة ورخيصة عن العمل المسجَّل، لكنها تقيس ما يعرّفه القانون
+  لا ما يعرّفه المعيار الإحصائي، فلا تُقارن بين الدول ولا تقيس البطالة بالمفهوم الدولي.
+official_quotes:
+- slot: q-ilo-qg-admin
+  heading_ar: السجلات الإدارية عند منظمة العمل الدولية
+- slot: q-ilo-ssm4-admin-intro
+  heading_ar: إحصاءات العمل من السجلات الإدارية
+what_ai_ar: >-
+  أهم السجلات لإحصاءات العمل في الدول العشر: سجلات التأمينات والضمان الاجتماعي (المشتركون حسب القطاع والأجر)، وسجلات
+  الخدمة المدنية (موظفو الحكومة)، وسجلات مكاتب التشغيل (طالبو العمل المسجلون)، وتصاريح العمل وإقامات الوافدين (مهمة جداً في
+  دول الخليج)، وسجلات الضرائب، وسجلات تفتيش العمل وإصابات العمل.
+strengths_ai_ar:
+- شاملة للفئة التي يغطيها القانون، بلا خطأ معاينة.
+- متاحة بسرعة وبدورية شهرية أحياناً، وبتكلفة إحصائية منخفضة.
+- تصلح للمناطق الصغيرة وللقطاعات الدقيقة.
+- مفيدة جداً للأجور في القطاع المنظم ولإصابات العمل والحماية الاجتماعية.
+limits_ai_ar:
+- تغطي العمل المسجَّل فقط؛ يغيب عنها العمل غير المنظم والعمل لحساب النفس غالباً.
+- تعاريفها قانونية وإدارية؛ «طالب العمل المسجل» ليس «المتعطل» بالمفهوم الدولي.
+- تتغير مع تغيّر القوانين والإجراءات، فتنقطع السلاسل لأسباب غير إحصائية.
+- الوصول إليها يحتاج اتفاقات بين الجهاز الإحصائي والجهات المالكة، مع حماية البيانات الشخصية.
+produces:
+- {topic: unemployment, level: none, note_ai_ar: طالبو العمل المسجلون مؤشر إداري مختلف؛ لا يُقدَّم على أنه معدل البطالة.}
+- {topic: participation, level: none, note_ai_ar: لا تغطي السكان كلهم.}
+- {topic: structure, level: partial, note_ai_ar: العمالة المسجلة حسب النشاط بدقة عالية، للقطاع المنظم فقط.}
+- {topic: informality, level: none, note_ai_ar: غياب الشخص عن السجل قد يدل على عدم الانتظام، لكنه ليس قياساً.}
+- {topic: hours, level: none, note_ai_ar: نادراً.}
+- {topic: earnings, level: main, note_ai_ar: الأجور المصرَّح بها للضمان الاجتماعي، مع حدود سقف الاشتراك.}
+- {topic: small_area, level: main, note_ai_ar: حسب مكان المنشأة أو مكتب التسجيل.}
+- {topic: timeliness, level: main, note_ai_ar: شهرية أو ربع سنوية.}
+related:
+- ds-labour-force-survey
+- ds-establishment-survey
+- con-unemployed
+further_reading:
+- src-ilo-quick-guide-sources-uses
+- src-ilo-admin-data-sources
+- src-ilo-ssm4-admin-records
+- src-ilo-admin-records-guidelines-1997
+- src-escwa-lm-data-structures
+status: draft
+last_updated: '2026-11-04'

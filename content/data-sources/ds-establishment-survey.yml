@@ -1,0 +1,46 @@
+# Miʿyar data source (type). Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-establishment-survey
+kind: type
+order: 4
+name_ar: مسوح المؤسسات
+names:
+  en: Establishment (enterprise) surveys
+  fr: Enquêtes auprès des établissements
+summary_ai_ar: >-
+  مسح المؤسسات يسأل المنشآت، لا الأسر، عن عدد العاملين لديها وأجورهم وساعات عملهم وتكلفة العمل والوظائف الشاغرة. يعطي
+  أرقاماً دقيقة عن الأجور والتشغيل في القطاع المنظم حسب النشاط، لكنه لا يقيس البطالة ولا يغطي العمل خارج المنشآت المسجلة.
+official_quotes:
+- slot: q-ilo-qg-establishment
+  heading_ar: مسوح المؤسسات عند منظمة العمل الدولية
+- slot: q-ilo-ssm2-establishment-intro
+  heading_ar: مسوح المؤسسات في سلسلة المصادر والطرق
+what_ai_ar: >-
+  تُسحب العينة من سجل المؤسسات (السجل التجاري أو سجل الضمان الاجتماعي)، ويجيب عنها قسم الموارد البشرية أو المحاسبة من سجلات
+  الرواتب. لذلك تكون الأجور فيها أدق مما يصرّح به الأفراد في مسح الأسر.
+strengths_ai_ar:
+- أجور وتكلفة عمل دقيقة لأنها من سجلات الرواتب.
+- تفصيل جيد حسب النشاط الاقتصادي وحجم المنشأة.
+- تقيس الوظائف الشاغرة والطلب على العمل، وهو ما لا يقيسه مسح الأسر.
+limits_ai_ar:
+- تعدّ الوظائف لا الأشخاص: من له عملان يُعدّ مرتين.
+- لا تغطي العمل غير المنظم ولا العاملين لحسابهم ولا الأسر التي توظّف عمالاً منزليين.
+- لا تقيس البطالة.
+- جودتها مرهونة بتحديث سجل المؤسسات؛ المنشآت الجديدة قد تغيب.
+produces:
+- {topic: unemployment, level: none, note_ai_ar: لا تقيس البطالة.}
+- {topic: participation, level: none, note_ai_ar: لا تغطي السكان.}
+- {topic: structure, level: main, note_ai_ar: الوظائف في القطاع المنظم حسب النشاط وحجم المنشأة.}
+- {topic: informality, level: none, note_ai_ar: خارج نطاقها.}
+- {topic: hours, level: main, note_ai_ar: الساعات المدفوعة الأجر.}
+- {topic: earnings, level: main, note_ai_ar: الأجور وتكلفة العمل من سجلات الرواتب.}
+- {topic: small_area, level: partial, note_ai_ar: حسب حجم العينة وموقع المنشأة.}
+- {topic: timeliness, level: partial, note_ai_ar: ربع سنوية أو سنوية حسب البلد.}
+related:
+- ds-labour-force-survey
+- ds-administrative-records
+further_reading:
+- src-ilo-quick-guide-sources-uses
+- src-ilo-establishment-surveys-resources
+- src-ilo-ssm2-establishment-surveys
+status: draft
+last_updated: '2026-11-04'

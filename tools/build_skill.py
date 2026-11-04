@@ -13,8 +13,8 @@ always with its source and verification date; AI explanations labelled; say "not
 import datetime as dt
 import shutil
 
-from common import ROOT, concept_files, indicator_files, iter_sources, load_yaml, quotes_by_slot
-from markdown_render import concept_md, indicator_md
+from common import ROOT, concept_files, datasource_files, indicator_files, iter_sources, load_yaml, quotes_by_slot
+from markdown_render import concept_md, datasource_md, indicator_md
 
 OUT = ROOT / "skills" / "miyar-labour-stats"
 def main():
@@ -34,6 +34,12 @@ def main():
         c = load_yaml(p)
         (OUT / "references" / f"{c['id']}.md").write_text(concept_md(c, quotes, reg), encoding="utf-8")
         index.append(f"- `references/{c['id']}.md` — concept: {c['name_ar']} ({c['names']['en']})")
+
+    for p in datasource_files():
+        d = load_yaml(p)
+        (OUT / "references" / f"{d['id']}.md").write_text(datasource_md(d, quotes, reg), encoding="utf-8")
+        kind = "LFS guide" if d["kind"] == "guide" else "data source"
+        index.append(f"- `references/{d['id']}.md` — {kind}: {d['name_ar']} ({d['names']['en']})")
 
     code_readme = (ROOT / "code" / "README.md").read_text(encoding="utf-8")
     presets = (ROOT / "code" / "presets" / "countries.json").read_text(encoding="utf-8")
@@ -55,7 +61,8 @@ name: miyar-labour-stats
 description: >-
   Miʿyar (مِعيار), the Arabic reference for official statistics. Use when someone asks about labour-statistics definitions,
   indicators or concepts (unemployment rate, labour force participation, employment-to-population ratio, youth unemployment,
-  employed/unemployed, labour force, potential labour force, time-related underemployment, standard error), ILO/ICLS
+  employed/unemployed, labour force, potential labour force, time-related underemployment, standard error), data sources
+  (labour force survey design, questionnaire, sampling, weighting; census; administrative records; establishment surveys), ILO/ICLS
   standards, SDG 8.5.2, or how Tunisia, Saudi Arabia, Morocco, Jordan, UAE, Palestine, USA, UK, Australia or France define them —
   in Arabic, French or English. Answers come only from Miʿyar's verified references, with sources.
 ---

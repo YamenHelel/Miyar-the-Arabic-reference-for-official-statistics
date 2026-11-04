@@ -385,6 +385,20 @@ pre { margin: 0; background: #0d2617; color: var(--ink); padding: 18px 20px; ove
 .drift { animation: drift 14s ease-in-out infinite alternate; transform-origin: 50% 50%; }
 @keyframes drift { from { transform: rotate(-4deg) scale(1); } to { transform: rotate(4deg) scale(1.04); } }
 
+
+/* ---------- data sources ---------- */
+.sub-h { font-size: var(--step-lead); margin: 28px 0 14px; }
+.sub-h:first-of-type { margin-top: 0; }
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 48px; margin-top: 18px; }
+.lvl { font-weight: 700; white-space: nowrap; }
+.lvl-main { color: var(--ink); }
+.lvl-main::before { content: ""; display: inline-block; width: .7em; height: .7em; background: var(--ink); margin-inline-end: 8px; }
+.lvl-partial { color: var(--ink); font-weight: 400; }
+.lvl-partial::before { content: ""; display: inline-block; width: .7em; height: .7em; border: 2px solid var(--ink); margin-inline-end: 8px; box-sizing: border-box; }
+.lvl-none { color: var(--muted); font-weight: 400; }
+table.matrix { min-width: 720px; }
+.page-head .ai { margin-top: 22px; }
+
 @media (max-width: 900px) {
   .bar .wrap { grid-template-columns: 1fr auto; }
   .bar nav { display: none; }
@@ -404,6 +418,7 @@ pre { margin: 0; background: #0d2617; color: var(--ink); padding: 18px 20px; ove
   .cfolder .band { grid-template-columns: 1fr; min-height: 0; }
   .cfolder .ctab { font-size: 1.25rem; min-width: 0; height: 40px; }
   .toc { position: static; display: none; }
+  .two-col { grid-template-columns: minmax(0, 1fr); }
   .preview-frame { display: none; }
   .card-back .stamp { width: 64px; top: 34px; }
 }

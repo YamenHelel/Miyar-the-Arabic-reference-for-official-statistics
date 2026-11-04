@@ -67,3 +67,39 @@ def concept_md(c, quotes, reg, url=None):
     if url:
         md += [f"Page: {url}", ""]
     return "\n".join(md)
+
+
+TOPICS_EN = {"unemployment": "Unemployment (ILO definition)", "participation": "Participation / employment-to-population",
+             "structure": "Employment by industry, occupation, status", "informality": "Informal employment",
+             "hours": "Hours of work, underemployment", "earnings": "Earnings and labour cost",
+             "small_area": "Small areas", "timeliness": "Frequency and timeliness"}
+
+
+def datasource_md(d, quotes, reg, url=None):
+    kind = "LFS guide section" if d["kind"] == "guide" else "data source type"
+    md = [f"# {d['name_ar']} — {d['names']['en']} / {d['names']['fr']}", "", f"Miʿyar id: `{d['id']}` · {kind} · status: {d['status']}", "",
+          "## Summary — AI-ASSISTED", "", " ".join(str(d["summary_ai_ar"]).split()), ""]
+    for oq in d.get("official_quotes", []):
+        md += [f"## Official text: {oq['heading_ar']}", "", quote_md(quotes.get(oq["slot"]), reg)]
+    if d.get("what_ai_ar"):
+        md += ["## How it works — AI-ASSISTED", "", " ".join(str(d["what_ai_ar"]).split()), ""]
+    if d.get("strengths_ai_ar"):
+        md += ["## Strengths — AI-ASSISTED", ""] + [f"- {s}" for s in d["strengths_ai_ar"]] + [""]
+    if d.get("limits_ai_ar"):
+        md += ["## Limits — AI-ASSISTED", ""] + [f"- {s}" for s in d["limits_ai_ar"]] + [""]
+    if d.get("produces"):
+        md += ["## What it measures for labour statistics — AI-ASSISTED assessment", "", "| Topic | Fit | Note |", "|---|---|---|"]
+        md += [f"| {TOPICS_EN[p['topic']]} | {p['level']} | {p['note_ai_ar']} |" for p in d["produces"]] + [""]
+    for s in d.get("sections_ai", []) or []:
+        body = s["body_ai_ar"]
+        md += [f"## {s['heading_ar']} — AI-ASSISTED", ""]
+        md += ([f"- {b}" for b in body] if isinstance(body, list) else [" ".join(str(body).split())]) + [""]
+    if d.get("further_reading"):
+        md += ["## Further reading (Miʿyar registry)", ""]
+        for sid in d["further_reading"]:
+            r = reg.get(sid, {})
+            md.append(f"- {r.get('title_en', sid)} — {r.get('publisher', '')} — {r.get('url', '')} (status: {r.get('status', '?')})")
+        md.append("")
+    if url:
+        md += [f"Page: {url}", ""]
+    return "\n".join(md)

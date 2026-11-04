@@ -66,6 +66,10 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 | I-056 | Code library: replicate-weight / bootstrap and calibration-aware variance | P2 | 2 | idea |
 | I-057 | Code library: SPSS syntax version | P3 | 2 | idea |
 | I-058 | Code library: mapping templates for each Arab country's LFS file (variable names, category → days conversion) | P1 | 2 | idea |
+| I-059 | Data sources: inventory of each country's census and main labour registers (social security, civil service, employment offices, work permits), ~30 new source records | P1 | 1 | idea |
+| I-060 | Data sources: per-country LFS fact sheet (design, rotation, weighting, release calendar) built from each NSO's methodology text | P2 | 1 | idea |
+| I-061 | Data sources batch 2: household income/expenditure surveys, informal-sector and mixed surveys (21st ICLS), time-use surveys | P2 | 2 | idea |
+| I-062 | Show the validation queue (docs/VALIDATION.md summary) on the Verification Desk's first screen | P2 | 1 | idea |
 | I-038 | Link rot protection: auto-archive every new URL on the Wayback Machine | P1 | 0a | planned |
 
 ## D. Business

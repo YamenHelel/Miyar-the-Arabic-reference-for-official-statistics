@@ -16,7 +16,10 @@ Capacity: **about 1 hour per day, 7 days a week** for the lead (~30 h/month). AI
 - **50 concepts** in the glossary (statistical and labour).
 - [x] Site generator running (Python/jinja2, ADR-0008, not Quarto); private preview published.
 - [x] Claude skill v0 that answers only from the base (`skills/miyar-labour-stats/`).
-- [x] 4 pilot indicators and 8 concepts drafted (official texts: 14 for the unemployment rate, 24 to paste).
+- [x] 4 pilot indicators and 40 concepts drafted.
+- [x] Code library: Python and R (ADR-0010).
+- [x] Data sources section: 4 source types and a 6-part LFS guide (ADR-0011); country inventory of census and registers moved to Phase 1 (I-059).
+- [x] Validation queue (`docs/VALIDATION.md`) and implementation tracker (`docs/IMPLEMENTATION.md`).
 
 **Exit:** 5 external statisticians test it and give feedback.
 

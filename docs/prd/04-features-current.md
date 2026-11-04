@@ -46,3 +46,15 @@ A "suggest a correction" link on every page (form or GitHub issue) that feeds th
 
 ## Out of scope for the MVP
 Interactive calculators, questionnaire reviewer, MCP server, other domains, user accounts, paid features. All are in the backlog.
+
+## F-11 Data sources (مصادر البيانات)
+Added 2026-11-04 (ADR-0011). A section on where labour statistics come from, with the ILO as the first source of truth.
+- **Four source types:** labour force survey, population census, administrative records and registers, establishment surveys. Each page has:
+  - the official ILO/UN wording (quote slots)
+  - how the source works, its strengths and limits (AI-assisted, labelled)
+  - what it can measure for labour statistics
+  - its instance in each of the 10 countries (LFS now; census and registers in Phase 1)
+- **LFS guide in six parts:** conceptual framework (19th ICLS), questionnaire and the ILO model, sample design and rotation, weighting and estimation, periodicity, quality and comparability. Linked to the glossary and the code library.
+- **Index page:** a "which source for which question" matrix.
+- Not yet covered (backlog I-061): household income/expenditure surveys, informal-sector/mixed surveys, time-use surveys.
+

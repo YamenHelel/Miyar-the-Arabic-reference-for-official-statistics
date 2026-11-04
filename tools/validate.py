@@ -10,7 +10,7 @@ import re
 import sys
 from collections import Counter
 
-from common import CONTENT_DIR, SOURCES_DIR, concept_files, indicator_files, iter_sources, load_quotes, load_yaml, source_files
+from common import CONTENT_DIR, SOURCES_DIR, concept_files, datasource_files, indicator_files, iter_sources, load_quotes, load_yaml, source_files
 
 
 def check_type(value, spec):
@@ -150,8 +150,34 @@ def main():
         for r in con.get("related", []) or []:
             if r not in con_ids | ind_ids:
                 errors.append(f"{where}: related id {r} not found")
+    # ---- data sources (types + LFS guide) ----
+    ds_ids = {p.stem for p in datasource_files()}
+    dschema = load_yaml(CONTENT_DIR / "schema-datasource.yaml")
+    topics = {"unemployment", "participation", "structure", "informality", "hours", "earnings", "small_area", "timeliness"}
+    for path in datasource_files():
+        ds = load_yaml(path)
+        where = f"content/data-sources/{path.name}"
+        for key in dschema.get("required", []):
+            if key not in ds:
+                errors.append(f"{where}: missing '{key}'")
+        if path.stem != ds.get("id") or not path.stem.startswith("ds-"):
+            errors.append(f"{where}: id must start with ds- and match the file name")
+        if ds.get("kind") not in ("type", "guide"):
+            errors.append(f"{where}: kind must be type or guide")
+        if ds.get("kind") == "guide" and ds.get("parent") not in ds_ids:
+            errors.append(f"{where}: guide needs a parent ds-* id")
+        for oq in ds.get("official_quotes", []) or []:
+            check_ref(where, oq.get("slot"))
+        for pr in ds.get("produces", []) or []:
+            if pr.get("topic") not in topics or pr.get("level") not in ("main", "partial", "none"):
+                errors.append(f"{where}: bad produces entry {pr}")
+        for r in ds.get("related", []) or []:
+            if r not in con_ids | ind_ids | ds_ids:
+                errors.append(f"{where}: related id {r} not found")
+        for sid in ds.get("further_reading", []) or []:
+            check_src(where, sid)
     for s in set(slots) - used:
-        errors.append(f"content/quotes.yml::{s}: slot not referenced by any indicator or concept")
+        errors.append(f"content/quotes.yml::{s}: slot not referenced by any indicator, concept or data source")
 
     if "--stats" in sys.argv:
         recs = [r for _, r in iter_sources()]
@@ -161,7 +187,7 @@ def main():
         print("By priority:", dict(Counter(r.get("priority") for r in recs)))
         print("By type:    ", dict(Counter(r.get("type") for r in recs)))
         qs = load_quotes()
-        print(f"Indicators: {len(indicator_files())} · concepts: {len(concept_files())} · quote slots: {len(qs)} ·",
+        print(f"Indicators: {len(indicator_files())} · concepts: {len(concept_files())} · data sources: {len(datasource_files())} · quote slots: {len(qs)} ·",
               dict(Counter(q.get("status") for q in qs)))
         print("By file:")
         for f, n in sorted(by_file.items()):

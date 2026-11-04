@@ -18,8 +18,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import seo
-from markdown_render import concept_md, indicator_md
-from common import (CONTENT_DIR, ROOT, SOURCES_DIR, concept_files, indicator_files, iter_sources,
+from markdown_render import concept_md, datasource_md, indicator_md
+from common import (CONTENT_DIR, ROOT, SOURCES_DIR, concept_files, datasource_files, indicator_files, iter_sources,
                     load_yaml, quotes_by_slot, source_files)
 
 SITE = Path(__file__).resolve().parent / "site"
@@ -320,6 +320,92 @@ def main():
            groups=[{"title": "الدول العربية", "rows": [{"href": f"countries/{i}.html", "name": cards[i]["name"], "meta": f"{cards[i]['verified']} مصدراً مُتحقَّقاً منه", "sub": cards[i]["nso"]} for i in ARAB]},
                    {"title": "دول مرجعية", "rows": [{"href": f"countries/{i}.html", "name": cards[i]["name"], "meta": f"{cards[i]['verified']} مصدراً مُتحقَّقاً منه", "sub": cards[i]["nso"]} for i in REFC]}])
 
+    # ---------------- data sources (types + LFS guide) ----------------
+    TOPICS = {"unemployment": "البطالة بالمفهوم الدولي", "participation": "المشاركة ونسبة العمالة إلى السكان",
+              "structure": "التشغيل حسب النشاط والمهنة والحالة", "informality": "العمالة غير المنظمة",
+              "hours": "ساعات العمل ونقص التشغيل", "earnings": "الأجور وتكلفة العمل",
+              "small_area": "المناطق الصغيرة", "timeliness": "الدورية وسرعة النشر"}
+    LEVEL_AR = {"main": "رئيسي", "partial": "جزئي", "none": "لا"}
+    dss = [load_yaml(p) for p in datasource_files()]
+    ds_by = {d["id"]: d for d in dss}
+    ds_types = sorted((d for d in dss if d["kind"] == "type"), key=lambda d: d["order"])
+    ds_guide = sorted((d for d in dss if d["kind"] == "guide"), key=lambda d: d["order"])
+
+    def ds_count(d):
+        slots = [oq["slot"] for oq in d.get("official_quotes", [])]
+        return sum(1 for s_ in slots if (quotes.get(s_) or {}).get("status") in ("verified", "pasted")), len(slots)
+
+    def ds_state(d):
+        dn, tt = ds_count(d)
+        return f"النصوص الرسمية {dn} من {tt}"
+
+    def rel_link(r):
+        if r in con_by:
+            return {"href": f"concepts/{r}.html", "name": con_by[r]["name_ar"]}
+        if r in ind_by:
+            return {"href": f"indicators/{r}.html", "name": ind_by[r]["name_ar"]}
+        if r in ds_by:
+            return {"href": f"data-sources/{r}.html", "name": ds_by[r]["name_ar"]}
+        return None
+
+    def reading_of(d):
+        outl = []
+        for sid in d.get("further_reading", []) or []:
+            r = reg.get(sid)
+            if r:
+                outl.append({"url": r["url"] if str(r.get("url", "")).startswith("http") else "", "title": r.get("title_ar") or r["title_en"],
+                             "status": r["status"], "status_ar": STATUS_AR[r["status"]], "publisher": r.get("publisher", "")})
+        return outl
+
+    lfs_rows = []
+    for iso in ARAB + REFC:
+        lf = ((profiles.get(iso, {}).get("profile") or {}).get("lfs") or {})
+        lfs_rows.append({"iso": iso, "name": COUNTRIES[iso], "survey": lf.get("name_ar") or lf.get("name_fr") or lf.get("name_en") or "—",
+                         "frequency": FREQ_AR.get(str(lf.get("frequency", "")), lf.get("frequency") or "—"),
+                         "standard": {"19th": "المؤتمر 19", "13th": "المؤتمر 13", "mixed": "مختلط", "unknown": "غير مؤكَّد"}.get(
+                             str(lf.get("icls_standard", "")), "انظر صفحة البلد")})
+    for d in dss:
+        dn, tt = ds_count(d)
+        dpath = f"data-sources/{d['id']}.html"
+        parent = ds_by.get(d.get("parent")) if d["kind"] == "guide" else None
+        produces = [{"topic": TOPICS[p_["topic"]], "level": p_["level"], "level_ar": LEVEL_AR[p_["level"]], "note": p_["note_ai_ar"]}
+                    for p_ in d.get("produces", []) or []]
+        guide_rows = [{"id": g["id"], "order": g["order"], "name_ar": g["name_ar"], "en": g["names"]["en"], "state": ds_state(g)}
+                      for g in ds_guide] if d["id"] == "ds-labour-force-survey" else []
+        dq = seo.clip(" ".join(str(d["summary_ai_ar"]).split()), 300)
+        crumbs = [("مصادر البيانات", "data-sources/index.html")]
+        if parent:
+            crumbs.append((parent["name_ar"], f"data-sources/{parent['id']}.html"))
+        crumbs.append((d["name_ar"], None))
+        bc = [("مِعيار", ""), ("مصادر البيانات", "data-sources/")] + ([(parent["name_ar"], f"data-sources/{parent['id']}.html")] if parent else []) + [(d["name_ar"], None)]
+        art = {"@type": "Article", "headline": d["name_ar"], "alternativeHeadline": d["names"]["en"], "inLanguage": "ar", "url": base + dpath,
+               "description": dq, "dateModified": str(d.get("last_updated", built)), "license": cfg["license_url"], "publisher": seo.org(cfg),
+               "isAccessibleForFree": True, "isBasedOn": [{"@type": "CreativeWork", "name": r["title"], "url": r["url"], "publisher": r["publisher"]}
+                                                          for r in reading_of(d) if r["url"]]}
+        render("datasource.html", dpath, title=f"{d['name_ar']} · مِعيار", title_en=d["names"]["en"], section="data-sources", ds=d,
+               done=dn, total=tt, produces=produces, guide=guide_rows, guide_total=len(ds_guide),
+               lfs_rows=lfs_rows if d.get("country_table") else [], reading=reading_of(d), parent=parent,
+               siblings=[{"id": g["id"], "order": g["order"], "name_ar": g["name_ar"]} for g in ds_guide] if parent else [],
+               related=[x for x in (rel_link(r) for r in d.get("related", []) or []) if x and not (parent and x["href"].startswith("data-sources/ds-lfs-"))],
+               description=dq, jsonld=seo.graph(art, seo.breadcrumbs(cfg, bc)), crumbs=crumbs, md_alt=f"{d['id']}.md",
+               lastmod=str(d.get("last_updated", built)),
+               card={"file": f"{d['id']}.png", "kind": "مصادر البيانات" + (" · دليل مسح القوى العاملة" if parent else ""), "title": d["name_ar"], "sub": d["names"]["en"]})
+        (out / "data-sources" / f"{d['id']}.md").write_text(datasource_md(d, quotes, reg, url=base + dpath), encoding="utf-8")
+    matrix = [{"topic": TOPICS[k], "cells": [next(({"level": p_["level"], "level_ar": LEVEL_AR[p_["level"]], "note": p_["note_ai_ar"]}
+                                                    for p_ in t.get("produces", []) if p_["topic"] == k), {"level": "none", "level_ar": "—", "note": ""})
+                                              for t in ds_types]} for k in TOPICS]
+    ds_quick = ("لإحصاءات العمل أربعة مصادر رئيسية: مسح القوى العاملة، والتعداد العام للسكان، والسجلات الإدارية، ومسوح المؤسسات. "
+                "مسح القوى العاملة هو المصدر الرئيسي للبطالة والمشاركة وفق معايير منظمة العمل الدولية، والمصادر الأخرى تكمّله: "
+                "التعداد للمناطق الصغيرة وإطار المعاينة، والسجلات للبيانات الشهرية عن العمل المسجَّل، ومسوح المؤسسات للأجور والوظائف.")
+    dset = {"@type": "CollectionPage", "name": "مصادر بيانات إحصاءات العمل", "inLanguage": "ar", "url": base + "data-sources/", "description": ds_quick,
+            "hasPart": [{"@type": "Article", "name": d["name_ar"], "url": base + f"data-sources/{d['id']}.html"} for d in ds_types + ds_guide]}
+    render("datasources_index.html", "data-sources/index.html", title="مصادر البيانات · مِعيار", title_en="Data sources", section="data-sources",
+           quick=ds_quick, description=ds_quick, crumbs=[("مصادر البيانات", None)],
+           jsonld=seo.graph(dset, seo.breadcrumbs(cfg, [("مِعيار", ""), ("مصادر البيانات", None)])),
+           types=[{"id": t["id"], "name_ar": t["name_ar"], "en": t["names"]["en"], "state": ds_state(t)} for t in ds_types],
+           guide=[{"id": g["id"], "order": g["order"], "name_ar": g["name_ar"], "en": g["names"]["en"], "state": ds_state(g)} for g in ds_guide],
+           matrix=matrix, card={"file": "data-sources.png", "kind": "مِعيار", "title": "مصادر البيانات", "sub": "LFS · census · registers · establishments"})
+
     # ---------------- sources registry ----------------
     rows = []
     for _, r in iter_sources():
@@ -328,13 +414,13 @@ def main():
                      "status": r["status"], "status_ar": STATUS_AR[r["status"]], "vdate": str(r.get("verified_date", "") or ""),
                      "scope": "int" if r.get("country") in (None, "int") else "country"})
     rows.sort(key=lambda x: (["verified", "link-ok", "collected", "to-locate", "broken", "superseded"].index(x["status"]), x["title"]))
-    ds = {"@type": "Dataset", "name": "سجل مصادر مِعيار", "alternateName": "Miʿyar source registry", "inLanguage": "ar",
+    ds = {"@type": "Dataset", "name": "سجل مراجع مِعيار", "alternateName": "Miʿyar source registry", "inLanguage": "ar",
           "description": "قائمة الوثائق الرسمية التي يستند إليها مِعيار (معايير منظمة العمل الدولية، منهجيات الأجهزة الإحصائية) مع حالة التحقق من كل منها.",
           "license": cfg["license_url"], "creator": seo.org(cfg), "url": base + "sources/", "isAccessibleForFree": True,
           "distribution": {"@type": "DataDownload", "encodingFormat": "application/x-yaml", "contentUrl": cfg["github"] + "/tree/main/sources"}}
-    render("sources.html", "sources/index.html", title="سجل المصادر · مِعيار", section="sources", rows=rows, counts=counts_line, title_en="Source registry",
-           jsonld=seo.graph(ds, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المصادر", None)])), crumbs=[("المصادر", None)],
-           description="سجل مصادر مِعيار: كل وثيقة رسمية يستند إليها المرجع، بحالة التحقق منها وتاريخه، من منظمة العمل الدولية والأجهزة الإحصائية في عشر دول.",
+    render("sources.html", "sources/index.html", title="سجل المراجع · مِعيار", section="sources", rows=rows, counts=counts_line, title_en="Source registry",
+           jsonld=seo.graph(ds, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المراجع", None)])), crumbs=[("المراجع", None)],
+           description="سجل مراجع مِعيار: كل وثيقة رسمية يستند إليها المرجع، بحالة التحقق منها وتاريخه، من منظمة العمل الدولية والأجهزة الإحصائية في عشر دول.",
            filters=[(k, v) for k, v in STATUS_AR.items()] + [("int", "دولية"), ("country", "وطنية")])
 
     presets = json.loads((ROOT / "code" / "presets" / "countries.json").read_text(encoding="utf-8"))
@@ -396,7 +482,7 @@ def main():
     ilo47 = quotes.get("q-ilo-unemployed", {})
     tun = reg.get("src-tun-ins-enpe-methodo", {})
     moments = [
-        {"title": "وُجد المصدر", "gap": 24, "text": "يُسجَّل كل رابط يُعثر عليه في سجل المصادر بحالة «قيد التحقق»، ولا يُبنى عليه شيء بعد.",
+        {"title": "وُجد المصدر", "gap": 24, "text": "يُسجَّل كل رابط يُعثر عليه في سجل المراجع بحالة «قيد التحقق»، ولا يُبنى عليه شيء بعد.",
          "art": "<pre>id: src-tun-ins-enpe-methodo\ntitle_orig: Note méthodologique\npublisher: Institut National\n  de la Statistique\ntype: methodology\nstatus: collected</pre>"},
         {"title": "فُحص الرابط آلياً", "gap": 96, "text": "كل أسبوع يفتح روبوت كل الروابط ويسجّل النتيجة. بعض المواقع ترفض الروبوت، فيبقى القرار للإنسان.",
          "art": "<pre>link_check: \"2026-11-04 200\"\nstatus: link-ok\n\nlink_check: \"2026-11-04 403\"\n# الموقع يحجب الروبوت\nstatus: collected</pre>"},
@@ -459,6 +545,9 @@ def main():
     for c in cons:
         idx.append({"t": c["name_ar"], "c": "مفهوم", "u": f"concepts/{c['id']}.html",
                     "k": " ".join([c["names"]["en"], c["names"]["fr"]] + [v["term"] for v in c.get("term_variants", [])])})
+    for d in dss:
+        idx.append({"t": d["name_ar"], "c": "مصدر بيانات" if d["kind"] == "type" else "دليل مسح القوى العاملة", "u": f"data-sources/{d['id']}.html",
+                    "k": " ".join([d["names"]["en"], d["names"]["fr"], "LFS census register survey مصدر بيانات"])})
     idx.append({"t": "مكتبة الشيفرة: Python وR وStata", "c": "أداة", "u": "code/index.html",
                 "k": "code python r stata survey standard error microdata شيفرة برمجة بيانات جزئية"})
     for iso, card in cards.items():
@@ -469,10 +558,12 @@ def main():
     pages[:] = [(pth, d) for pth, d in pages if pth != "404.html"]
     (out / "robots.txt").write_text(seo.robots_txt(cfg), encoding="utf-8")
     (out / "sitemap.xml").write_text(seo.sitemap_xml(cfg, pages), encoding="utf-8")
-    (out / "llms.txt").write_text(seo.llms_txt(cfg, inds, cons, [(i, COUNTRIES[i]) for i in ARAB + REFC]), encoding="utf-8")
-    full = [seo.llms_txt(cfg, inds, cons, [(i, COUNTRIES[i]) for i in ARAB + REFC]), "\n---\n"]
+    llms = seo.llms_txt(cfg, inds, cons, [(i, COUNTRIES[i]) for i in ARAB + REFC], dss)
+    (out / "llms.txt").write_text(llms, encoding="utf-8")
+    full = [llms, "\n---\n"]
     full += [indicator_md(i, quotes, reg, url=base + f"indicators/{i['id']}.html") + "\n---\n" for i in inds]
     full += [concept_md(c, quotes, reg, url=base + f"concepts/{c['id']}.html") + "\n---\n" for c in cons]
+    full += [datasource_md(d, quotes, reg, url=base + f"data-sources/{d['id']}.html") + "\n---\n" for d in ds_types + ds_guide]
     (out / "llms-full.txt").write_text("\n".join(full), encoding="utf-8")
     manifest = {"name": f"{cfg['name_ar']} · {cfg['tagline_ar']}", "short_name": cfg["name_ar"], "lang": "ar", "dir": "rtl",
                 "start_url": "./", "display": "browser", "background_color": cfg["theme_color"], "theme_color": cfg["theme_color"],

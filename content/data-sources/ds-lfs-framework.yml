@@ -1,0 +1,42 @@
+# Miʿyar LFS guide section. Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-lfs-framework
+kind: guide
+parent: ds-labour-force-survey
+order: 1
+name_ar: الغرض والإطار المفاهيمي
+names:
+  en: Purpose and conceptual framework (19th ICLS)
+  fr: Objectifs et cadre conceptuel (19e CIST)
+summary_ai_ar: >-
+  يقيس مسح القوى العاملة وضع كل شخص في سن العمل خلال فترة إسناد قصيرة (أسبوع)، ويصنّفه وفق قرار المؤتمر التاسع عشر
+  (2013): مشتغل، أو متعطل، أو خارج القوة العاملة. هذا الإطار هو ما يجعل أرقام الدول قابلة للمقارنة.
+official_quotes:
+- slot: q-ilo-icls19-reference-period
+  heading_ar: فترة الإسناد القصيرة في قرار المؤتمر التاسع عشر
+sections_ai:
+- heading_ar: من «النشاط الاقتصادي» إلى «العمل»
+  body_ai_ar:
+  - قرار المؤتمر الثالث عشر (1982) كان يعدّ كل إنتاج اقتصادي عملاً، بما فيه إنتاج السلع للاستهلاك الذاتي.
+  - قرار المؤتمر التاسع عشر وسّع مفهوم «العمل» ليشمل خمسة أشكال (العمل للاستخدام الذاتي، والعمل بأجر أو ربح، والتدريب غير المأجور، والتطوع، وأشكالاً أخرى)، وحصر «العمالة» في العمل مقابل أجر أو ربح.
+  - النتيجة العملية أن منتجي الغذاء للاستهلاك الذاتي يخرجون من المشتغلين، فتنخفض العمالة في بعض الدول وقد يتغير معدل البطالة.
+- heading_ar: التصنيف الثلاثي
+  body_ai_ar:
+  - المشتغل والمتعطل معاً هما القوة العاملة؛ والباقي خارجها. التعاريف الرسمية في صفحات المفاهيم.
+  - ترتيب الأولوية مهم، فمن عمل ساعة واحدة يُعدّ مشتغلاً حتى لو كان يبحث عن عمل آخر.
+- heading_ar: ما يحدده البلد
+  body_ai_ar:
+  - الحد الأدنى للسن، ومدة البحث عن عمل، ومدة الإتاحة، ومعاملة من وجد عملاً سيبدأ لاحقاً. هذه هي الفروق التي تعرضها مسطرة مِعيار في الصفحة الرئيسية.
+related:
+- con-employed
+- con-unemployed
+- con-labour-force
+- con-outside-labour-force
+- con-working-age-population
+- con-potential-labour-force
+- ind-unemployment-rate
+further_reading:
+- src-ilo-icls19-res1-pdf
+- src-ilo-icls19-description
+- src-ilo-aligning-lfs-icls-en
+status: draft
+last_updated: '2026-11-04'

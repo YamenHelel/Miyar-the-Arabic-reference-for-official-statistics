@@ -1,0 +1,62 @@
+# Miʿyar data source (type). Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-labour-force-survey
+kind: type
+order: 1
+name_ar: مسح القوى العاملة
+names:
+  en: Labour force survey (LFS)
+  fr: Enquête sur la population active / enquête emploi
+summary_ai_ar: >-
+  مسح القوى العاملة مسح أسري بالعينة يسأل أفراد الأسر عن نشاطهم خلال أسبوع محدد، ومنه تُحسب البطالة والعمالة والمشاركة
+  وفق معايير المؤتمر الدولي لخبراء إحصاءات العمل. تعدّه منظمة العمل الدولية المصدر الرئيسي لإحصاءات القوى العاملة، لأنه
+  المصدر الوحيد الذي يغطي كل السكان، بمن فيهم العاملون لحسابهم وفي القطاع غير المنظم والمتعطلون، بتعاريف موحدة.
+official_quotes:
+- slot: q-ilo-qg-lfs
+  heading_ar: كيف تصف منظمة العمل الدولية مسح القوى العاملة
+- slot: q-ilo-icls19-data-sources
+  heading_ar: مصادر البيانات في قرار المؤتمر التاسع عشر
+what_ai_ar: >-
+  يُسحب عدد من المساكن من إطار معاينة (غالباً من آخر تعداد)، ثم يُسأل كل فرد في سن العمل: هل عمل ولو ساعة مقابل أجر أو ربح
+  خلال أسبوع الإسناد؟ هل له عمل غاب عنه مؤقتاً؟ هل بحث عن عمل وهل هو متاح للبدء؟ من هذه الأجوبة يُصنَّف كل شخص مشتغلاً أو
+  متعطلاً أو خارج القوة العاملة، ثم تُرجَّح النتائج بأوزان العينة لتمثل كل السكان.
+strengths_ai_ar:
+- يغطي كل أشكال العمل، بما فيها العمل لحساب النفس والعمل غير المنظم، لا العمل المسجَّل فقط.
+- يطبّق التعريف الدولي للبطالة مباشرة (بلا عمل، يبحث، متاح)، فيمكن المقارنة بين الدول.
+- يربط حالة العمل بخصائص الشخص والأسرة (السن، التعليم، الجنس، الجنسية).
+- دورية متكررة (غالباً ربع سنوية) تتيح رصد التغيرات القصيرة الأجل.
+limits_ai_ar:
+- نتائج بالعينة، فلها خطأ معياري؛ التقديرات للمناطق الصغيرة أو الفئات النادرة غير دقيقة.
+- مكلف ويحتاج فريقاً ميدانياً دائماً.
+- يعتمد على تصريح المجيب أو من يجيب عنه، فيتأثر بالفهم والذاكرة (أخطاء غير المعاينة).
+- قد لا يغطي من يعيشون خارج المساكن العادية (العمال في السكن الجماعي مثلاً)، وهذا مهم في دول الخليج.
+- تغيير الاستمارة أو المعيار (من المؤتمر 13 إلى 19) يُحدث انقطاعاً في السلسلة.
+produces:
+- {topic: unemployment, level: main, note_ai_ar: المصدر المرجعي للبطالة والمقاييس LU1 إلى LU4.}
+- {topic: participation, level: main, note_ai_ar: معدل المشاركة ونسبة العمالة إلى السكان.}
+- {topic: structure, level: main, note_ai_ar: حسب النشاط والمهنة والحالة في العمل، بدقة تحددها العينة.}
+- {topic: informality, level: main, note_ai_ar: العمالة غير المنظمة إذا تضمنت الاستمارة الأسئلة اللازمة (قرار المؤتمر 21).}
+- {topic: hours, level: main, note_ai_ar: الساعات المعتادة والفعلية، ونقص التشغيل المرتبط بالوقت.}
+- {topic: earnings, level: partial, note_ai_ar: أجور المستخدَمين غالباً، مع ضعف في دخل العاملين لحسابهم وكثرة عدم الإجابة.}
+- {topic: small_area, level: none, note_ai_ar: العينة لا تكفي عادة لمستوى المعتمديات أو البلديات.}
+- {topic: timeliness, level: main, note_ai_ar: نتائج ربع سنوية في معظم الدول العشر.}
+country_table: true
+related:
+- ds-lfs-framework
+- ds-lfs-questionnaire
+- ds-lfs-sample-design
+- ds-lfs-weighting-estimation
+- ds-lfs-periodicity
+- ds-lfs-quality
+- ind-unemployment-rate
+- con-sample
+- con-sampling-weight
+further_reading:
+- src-ilo-quick-guide-sources-uses
+- src-ilo-icls19-res1-pdf
+- src-ilo-lfs-toolkit
+- src-ilo-aligning-lfs-icls-en
+- src-ilo-national-sources-catalogue
+- src-ilo-surveylib
+- src-escwa-state-lfs-arab-states-2024
+status: draft
+last_updated: '2026-11-04'

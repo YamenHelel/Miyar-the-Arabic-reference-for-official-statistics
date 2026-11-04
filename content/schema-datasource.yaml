@@ -1,0 +1,22 @@
+# Data-source schema — content/data-sources/*.yml (types of statistical sources and the LFS guide)
+# Official wording lives in content/quotes.yml (ADR-0007); every *_ai_* field is AI-assisted and shown labelled.
+required: [id, kind, order, name_ar, names, summary_ai_ar, official_quotes, status, last_updated]
+fields:
+  id:              {type: str, pattern: "^ds-[a-z0-9-]+$"}
+  kind:            {type: str, enum: [type, guide], note: "type = a kind of source (LFS, census...); guide = a section of the LFS guide"}
+  parent:          {type: str, optional: true, note: "for kind guide: the ds-* type it belongs to"}
+  order:           {type: int}
+  name_ar:         {type: str}
+  names:           {type: map, keys: [en, fr]}
+  summary_ai_ar:   {type: str, note: "one-paragraph answer used as the page's quick answer; AI-assisted, labelled"}
+  official_quotes: {type: list, item: {slot: "q-* id", heading_ar: str}}
+  what_ai_ar:      {type: str, optional: true}
+  strengths_ai_ar: {type: list, optional: true}
+  limits_ai_ar:    {type: list, optional: true}
+  produces:        {type: list, optional: true, item: {topic: "key of TOPICS in tools/build_site.py", level: "main | partial | none", note_ai_ar: str}}
+  sections_ai:     {type: list, optional: true, item: {heading_ar: str, body_ai_ar: "str or list of str"}}
+  country_table:   {type: bool, optional: true, note: "show the national LFS of each country (from sources/countries/*.yaml profile.lfs)"}
+  related:         {type: list, optional: true, note: "con-*, ind-* or ds-* ids"}
+  further_reading: {type: list, optional: true, note: "src-* ids"}
+  status:          {type: str, enum: [draft, reviewed, verified]}
+  last_updated:    {type: date}

@@ -8,7 +8,7 @@
 
 - **Website:** https://yamenhelel.github.io/Miyar-the-Arabic-reference-for-official-statistics/ (beta)
 - **For AI assistants:** [`llms.txt`](https://yamenhelel.github.io/Miyar-the-Arabic-reference-for-official-statistics/llms.txt) · a [Claude skill](skills/miyar-labour-stats/) generated from the same verified data
-- **Status:** pilot, with 4 indicators, 8 glossary concepts and 123 registered sources (56 verified by a human). See [docs/STATUS.md](docs/STATUS.md).
+- **Status:** pilot, with 4 indicators, 40 glossary concepts, a data sources section (LFS, census, registers, establishment surveys) and 133 registered sources (56 verified by a human). See [docs/STATUS.md](docs/STATUS.md).
 - **Maintainer:** an independent Arab statistician working on AI for official statistics, with Claude as the main tool · contact yamen.hlel@gmail.com
 
 ### What you will find
@@ -32,13 +32,14 @@ To cite the repository, use GitHub's **"Cite this repository"** button ([CITATIO
 | # | Area | Where | What's inside |
 |---|------|-------|---------------|
 | 1 | **Start here** | [docs/STATUS.md](docs/STATUS.md) | Current phase, what is done, the next 3 tasks, blockers (1 page) |
+| 1b | **What awaits validation** | [docs/VALIDATION.md](docs/VALIDATION.md) · [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md) | Generated queue of items to check; progress per module |
 | 2 | Index of project docs | [docs/00-index.md](docs/00-index.md) | One-line description of every document |
 | 3 | Product Requirements (PRD) | [docs/prd/](docs/prd/) | Vision, users, scope, features, ideas backlog, architecture, data model, governance, business model, brand, partnerships, legal, KPIs, risks, naming |
 | 4 | Daily progress log | [docs/CHANGELOG.md](docs/CHANGELOG.md) | Newest first; older months are in [docs/progress/](docs/progress/) |
 | 5 | Decisions | [docs/decisions/](docs/decisions/) | Architecture Decision Records (ADR) |
 | 6 | **Source registry** | [sources/README.md](sources/README.md) | Archived official sources: international bodies, 10 countries, SDGs, microdata |
 | 7 | Practitioner directory | [directory/README.md](directory/README.md) | Opt-in directory of Arab labour statisticians (design and consent) |
-| 8 | Content | [content/](content/) | Indicators, concepts and the shared store of official texts (`quotes.yml`) |
+| 8 | Content | [content/](content/) | Indicators, concepts, data sources (LFS guide) and the shared store of official texts (`quotes.yml`) |
 | 9 | Website | [tools/site/](tools/site/) | Generator, templates and design system (`python tools/build_site.py`) |
 | 9b | **Code library** | [code/](code/) | Python (tested), R (checked in CI) and Stata code computing the indicators with SEs from LFS microdata |
 | 10 | Claude skill | [skills/miyar-labour-stats/](skills/miyar-labour-stats/) | Generated from the base; answers only from verified references |

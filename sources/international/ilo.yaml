@@ -422,3 +422,106 @@ sources:
     verified_by: YH
     verified_date: 2026-11-04
     notes: "Full text of the resolution (wcms_230304.pdf), with Resolution II of the 21st ICLS amendments. verified via quote paste (lead opened the document and copied the text)."
+
+  # ---------- Data sources (added 2026-11-04 for the «مصادر البيانات» section; URLs from search results, not opened) ----------
+  - id: src-ilo-quick-guide-sources-uses
+    title_en: "Quick guide on sources and uses of labour statistics (ILO, 2017)"
+    title_ar: دليل سريع لمصادر إحصاءات العمل واستخداماتها (منظمة العمل الدولية، 2017)
+    publisher: ILO Department of Statistics
+    country: int
+    type: manual
+    languages: [en]
+    url: https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Quick-guide-on-sources-and-uses/995219003402676
+    date_published: 2017
+    date_accessed: 2026-11-04
+    priority: P1
+    status: collected
+    notes: "Main ILO text for the data-sources section: describes each type of source (household surveys, censuses, establishment surveys, administrative records) with advantages and disadvantages; annex summarises the sources. Repository record; find the PDF from it. The French version is src-ilo-understanding-labour-stats-fr (same guide, title «Comprendre les statistiques du travail»: to confirm)."
+
+  - id: src-ilo-admin-data-sources
+    title_en: ILOSTAT — Administrative data sources for labour statistics (resources page)
+    publisher: ILO Department of Statistics
+    country: int
+    type: manual
+    languages: [en]
+    url: https://ilostat.ilo.org/resources/administrative-data-sources/
+    date_accessed: 2026-11-04
+    priority: P1
+    status: collected
+    notes: Online resources to use administrative records for labour statistics, in the absence of or in complement to the LFS.
+
+  - id: src-ilo-establishment-surveys-resources
+    title_en: ILOSTAT — Establishment surveys for labour statistics (resources page)
+    publisher: ILO Department of Statistics
+    country: int
+    type: manual
+    languages: [en]
+    url: https://ilostat.ilo.org/resources/establishment-surveys-for-labour-statistics/
+    date_accessed: 2026-11-04
+    priority: P1
+    status: collected
+    notes: A search snippet suggested the page may hold placeholder text; check its content.
+
+  - id: src-ilo-ssm2-establishment-surveys
+    title_en: "Sources and Methods: Labour Statistics, Volume 2 — Employment, wages, hours of work and labour cost (establishment surveys)"
+    publisher: ILO Department of Statistics
+    country: int
+    type: methodology
+    languages: [en]
+    url: https://webapps.ilo.org/ilostat-files/SSM/SSM2_NEW/E/main.html
+    date_published: 2012
+    date_accessed: 2026-11-04
+    priority: P2
+    status: collected
+    notes: Country-by-country descriptions of establishment surveys under standard headings. Edition year 2012 per ILOSTAT tag page (to confirm).
+
+  - id: src-ilo-ssm3-household-surveys
+    title_en: "Sources and Methods: Labour Statistics, Volume 3 — Economically active population, employment, unemployment and hours of work (household surveys)"
+    publisher: ILO Department of Statistics
+    country: int
+    type: methodology
+    languages: [en]
+    url: https://webapps.ilo.org/ilostat-files/SSM/SSM3/E/SSM3.html
+    date_published: 2004
+    date_accessed: 2026-11-04
+    icls_standard: 13th
+    priority: P2
+    status: collected
+    notes: Historical (13th ICLS era) descriptions of national household surveys under standard headings; useful for series history, not for current definitions.
+
+  - id: src-ilo-ssm4-admin-records
+    title_en: "Sources and Methods: Labour Statistics, Volume 4 — Employment, unemployment, wages and hours of work (administrative records and related sources)"
+    publisher: ILO Department of Statistics
+    country: int
+    type: methodology
+    languages: [en]
+    url: https://webapps.ilo.org/ilostat-files/SSM/SSM4A/E/INTRO.html
+    date_accessed: 2026-11-04
+    priority: P2
+    status: collected
+    notes: "Introduction and chapters on statistics from administrative records (e.g. chapter 4, unemployment statistics based on administrative records: https://webapps.ilo.org/ilostat-files/SSM/SSM4A/E/INTRO9.html). Edition year to confirm (1989 / 2004 differ across catalogues)."
+
+  - id: src-ilo-admin-records-guidelines-1997
+    title_en: "Labour statistics based on administrative records: guidelines on compilation and presentation (ILO, Bangkok, 1997)"
+    publisher: ILO East Asia Multidisciplinary Advisory Team / ILO Regional Office for Asia and the Pacific
+    country: int
+    type: manual
+    languages: [en]
+    url: TO-LOCATE
+    date_published: 1997
+    date_accessed: 2026-11-04
+    priority: P3
+    status: to-locate
+    notes: Found only as library catalogue records; no ILO URL yet.
+
+  - id: src-ilo-census-resources
+    title_en: ILOSTAT — Population census resources (aligning censuses with the latest labour standards)
+    publisher: ILO Department of Statistics
+    country: int
+    type: manual
+    languages: [en]
+    url: TO-LOCATE
+    date_accessed: 2026-11-04
+    priority: P2
+    status: to-locate
+    notes: An ILO guide lists this resource category on ILOSTAT; the page URL was not found in search results.

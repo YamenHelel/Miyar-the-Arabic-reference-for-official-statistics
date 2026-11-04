@@ -41,8 +41,9 @@
     <nav aria-label="الأقسام">
       <a href="{{ root }}indicators/index.html"{% if section == 'indicators' %} aria-current="page"{% endif %}>المؤشرات</a>
       <a href="{{ root }}concepts/index.html"{% if section == 'concepts' %} aria-current="page"{% endif %}>المفاهيم</a>
+      <a href="{{ root }}data-sources/index.html"{% if section == 'data-sources' %} aria-current="page"{% endif %}>مصادر البيانات</a>
       <a href="{{ root }}countries/index.html"{% if section == 'countries' %} aria-current="page"{% endif %}>الدول</a>
-      <a href="{{ root }}sources/index.html"{% if section == 'sources' %} aria-current="page"{% endif %}>المصادر</a>
+      <a href="{{ root }}sources/index.html"{% if section == 'sources' %} aria-current="page"{% endif %}>المراجع</a>
       <a href="{{ root }}code/index.html"{% if section == 'code' %} aria-current="page"{% endif %}>الشيفرة</a>
       <a href="{{ root }}about/index.html"{% if section == 'about' %} aria-current="page"{% endif %}>المنهجية</a>
     </nav>
@@ -83,7 +84,7 @@
           <a href="mailto:yamen.hlel@gmail.com" dir="ltr">yamen.hlel@gmail.com</a>
           <a href="https://github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics" dir="ltr">GitHub · Miʿyar</a>
           <a href="{{ root }}about/index.html#cite">كيف تستشهد بمِعيار</a>
-          <a href="{{ root }}sources/index.html">سجل المصادر ({{ stats.sources }})</a>
+          <a href="{{ root }}sources/index.html">سجل المراجع ({{ stats.sources }})</a>
         </div>
       </div>
       <p class="imprint">© 2026 مِعيار · المحتوى بترخيص CC BY 4.0 · الشيفرة بترخيص MIT · النصوص الرسمية المقتبسة لناشريها · بُني في {{ built }}</p>

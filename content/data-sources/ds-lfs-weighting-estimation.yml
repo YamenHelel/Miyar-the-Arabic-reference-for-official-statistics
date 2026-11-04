@@ -1,0 +1,40 @@
+# Miʿyar LFS guide section. Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-lfs-weighting-estimation
+kind: guide
+parent: ds-labour-force-survey
+order: 4
+name_ar: الترجيح والتقدير والخطأ المعياري
+names:
+  en: Weighting, estimation and standard errors
+  fr: Pondération, estimation et erreurs-types
+summary_ai_ar: >-
+  يحصل كل فرد في العينة على وزن يساوي عدد الأشخاص الذين يمثلهم. يُبنى الوزن على ثلاث خطوات: وزن التصميم (مقلوب احتمال
+  السحب)، ثم تصحيح عدم الاستجابة، ثم المعايرة على تقديرات السكان حسب السن والجنس والمنطقة. وتُحسب المعدلات على أنها نسبة
+  مجموعين مرجحين، ولكل معدل خطأ معياري يجب نشره.
+official_quotes:
+- slot: q-ilo-microdata-weights
+  heading_ar: الأوزان في دليل منظمة العمل الدولية لمعالجة البيانات الجزئية
+sections_ai:
+- heading_ar: خطوات الترجيح
+  body_ai_ar:
+  - وزن التصميم يساوي 1 ÷ احتمال سحب المسكن.
+  - تصحيح عدم الاستجابة يوزّع وزن الأسر التي لم تُجب على الأسر المشابهة لها التي أجابت.
+  - المعايرة تجعل مجموع الأوزان يطابق تقديرات السكان الرسمية. لذلك تتغير الأرقام المنشورة عند تحديث تقديرات السكان بعد تعداد.
+- heading_ar: التقدير والخطأ المعياري
+  body_ai_ar:
+  - معدل البطالة يساوي مجموع أوزان المتعطلين ÷ مجموع أوزان القوة العاملة. هو نسبة تقديرين، فيُحسب خطؤه المعياري بطريقة التقريب الخطي (Taylor) أو بالأوزان المكررة.
+  - تجاهل التصميم (الطبقات والعناقيد) يجعل الخطأ المعياري أصغر من حقيقته.
+  - مكتبة الشيفرة في مِعيار تطبق هذا بلغات Python وR وStata.
+related:
+- con-sampling-weight
+- con-weighted-mean
+- con-ratio
+- con-standard-error
+- con-design-effect
+- con-confidence-interval
+- con-non-response
+further_reading:
+- src-ilo-microdata-quick-guide
+- src-ilo-aligning-lfs-icls-en
+status: draft
+last_updated: '2026-11-04'

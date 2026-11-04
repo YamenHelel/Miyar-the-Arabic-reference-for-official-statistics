@@ -1,0 +1,45 @@
+# Miʿyar LFS guide section. Official wording: content/quotes.yml. AI-assisted text is labelled on the site.
+id: ds-lfs-questionnaire
+kind: guide
+parent: ds-labour-force-survey
+order: 2
+name_ar: الاستمارة ونموذج منظمة العمل الدولية
+names:
+  en: Questionnaire and the ILO model LFS
+  fr: Questionnaire et modèle d'enquête de l'OIT
+summary_ai_ar: >-
+  تنشر منظمة العمل الدولية استمارة نموذجية لمسح القوى العاملة (إصدار CAPI) مع دليل لتكييفها وطنياً وشيفرة لاشتقاق المؤشرات.
+  ترتيب الأسئلة وصياغتها يحددان من يُصنَّف مشتغلاً أو متعطلاً، لذلك تُعدّ الاستمارة جزءاً من التعريف لا مجرد أداة.
+official_quotes:
+- slot: q-ilo-lfs-toolkit-model
+  heading_ar: الاستمارة النموذجية كما تصفها منظمة العمل الدولية
+sections_ai:
+- heading_ar: الوحدات الرئيسية في الاستمارة
+  body_ai_ar:
+  - قائمة أفراد الأسرة وخصائصهم (السن، الجنس، العلاقة برب الأسرة، الجنسية، التعليم).
+  - تحديد التشغيل خلال أسبوع الإسناد (العمل ولو ساعة، والغياب المؤقت، والعمل في مشروع عائلي).
+  - خصائص العمل الرئيسي (المهنة، النشاط، الحالة في العمل، القطاع، عدم الانتظام).
+  - ساعات العمل المعتادة والفعلية، والرغبة في العمل ساعات أكثر.
+  - البحث عن عمل والإتاحة، ثم من هم خارج القوة العاملة وأسباب ذلك.
+  - وحدات اختيارية، مثل الإنتاج للاستهلاك الذاتي والأجور.
+  - هذه قائمة توضيحية؛ المرجع هو الاستمارة النموذجية نفسها.
+- heading_ar: أخطاء شائعة عند التكييف
+  body_ai_ar:
+  - حذف سؤال «العمل ولو ساعة واحدة» أو دمجه مع «الوظيفة الرئيسية» فيقل تسجيل الأعمال الصغيرة.
+  - ترجمة حرفية للمصطلحات بلا اختبار ميداني؛ كلمة «عمل» تفهم أحياناً على أنها وظيفة حكومية فقط.
+  - تغيير الاستمارة دون ربط السلسلة القديمة بالجديدة.
+- heading_ar: من الاستمارة إلى المتغيرات
+  body_ai_ar:
+  - مكتبة الشيفرة في مِعيار تفترض متغيرات بأسماء موحدة (worked_1h، temp_absent، searched_days، available_days...). تحويل أسئلة الاستمارة الوطنية إلى هذه المتغيرات هو المكان الذي تظهر فيه القواعد الوطنية؛ وثّقه.
+related:
+- ds-lfs-framework
+- con-employed
+- con-unemployed
+- con-non-sampling-error
+further_reading:
+- src-ilo-lfs-toolkit
+- src-ilo-lfs-questionnaire-viewer
+- src-ilo-capi-adaptation-guide
+- src-ilo-lfs-dos-donts
+status: draft
+last_updated: '2026-11-04'

@@ -652,3 +652,108 @@ quotes:
   text: ''
   locator: 'ISI Multilingual Glossary — entry ''Seasonal adjustment'' (if missing: OECD Glossary of Statistical Terms)'
   what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Seasonal adjustment» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-ilo-icls19-data-sources
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: to-paste
+  text: ''
+  locator: '19th ICLS resolution I — the paragraph(s) on data sources in the part on the national programme of work statistics (search the PDF for "administrative records" or "establishment surveys"): the text naming household surveys, population censuses, establishment surveys and administrative records'
+  what_ar: انسخ الفقرة أو الفقرات التي تعدد مصادر البيانات (المسوح الأسرية، والتعداد، ومسوح المؤسسات، والسجلات الإدارية) مع رقم كل فقرة
+- slot: q-ilo-icls19-lfs-frequency
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 19th ICLS resolution I — the paragraph recommending how often labour force statistics should be collected and published (search the PDF for "frequency", "sub-annual" or "monthly or quarterly")
+  what_ar: انسخ الفقرة التي توصي بدورية جمع البيانات ونشرها (شهرية/ربع سنوية/سنوية) مع رقمها
+- slot: q-ilo-icls19-reference-period
+  source: src-ilo-icls19-res1-pdf
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 19th ICLS resolution I — the paragraph defining the short reference period (one week or seven days) for measuring employment and labour underutilization (search the PDF for "short reference period")
+  what_ar: انسخ الفقرة التي تحدد «فترة الإسناد القصيرة» (أسبوع أو سبعة أيام) مع رقمها
+- slot: q-ilo-qg-lfs
+  source: src-ilo-quick-guide-sources-uses
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'Quick guide on sources and uses of labour statistics — section on household-based surveys / labour force surveys: the description and the listed advantages and disadvantages'
+  what_ar: انسخ الفقرة التي تصف مسح القوى العاملة (المسوح الأسرية) مع مزاياه وعيوبه كما وردت، واذكر الصفحة
+- slot: q-ilo-qg-census
+  source: src-ilo-quick-guide-sources-uses
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'Quick guide on sources and uses of labour statistics — section on population censuses: description, advantages and disadvantages'
+  what_ar: انسخ الفقرة الخاصة بالتعداد السكاني مصدراً لإحصاءات العمل مع المزايا والعيوب، واذكر الصفحة
+- slot: q-ilo-qg-admin
+  source: src-ilo-quick-guide-sources-uses
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'Quick guide on sources and uses of labour statistics — section on administrative records: description, advantages and disadvantages'
+  what_ar: انسخ الفقرة الخاصة بالسجلات الإدارية مع المزايا والعيوب، واذكر الصفحة
+- slot: q-ilo-qg-establishment
+  source: src-ilo-quick-guide-sources-uses
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'Quick guide on sources and uses of labour statistics — section on establishment surveys: description, advantages and disadvantages'
+  what_ar: انسخ الفقرة الخاصة بمسوح المؤسسات مع المزايا والعيوب، واذكر الصفحة
+- slot: q-un-census-definition
+  source: src-un-census-pr-rev3
+  lang: en
+  status: to-paste
+  text: ''
+  locator: UN Principles and Recommendations for Population and Housing Censuses, Rev.3 — Part one, the paragraph that begins "A population census is …" (definition) and, if separate, the paragraph listing its essential features
+  what_ar: انسخ تعريف التعداد السكاني (الفقرة التي تبدأ بـ A population census is) مع رقم الفقرة
+- slot: q-un-ilo-census-vs-lfs
+  source: src-un-ilo-census-economically-active-handbook
+  lang: en
+  status: to-paste
+  text: ''
+  locator: UN/ILO handbook (2010) — the paragraph comparing the population census with labour force surveys as sources on the economically active population (introduction or first chapter)
+  what_ar: انسخ الفقرة التي تقارن بين التعداد ومسح القوى العاملة في قياس النشاط الاقتصادي، مع رقمها والصفحة
+- slot: q-ilo-ssm4-admin-intro
+  source: src-ilo-ssm4-admin-records
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ILO Sources and Methods vol. 4 — Introduction: the paragraph describing administrative records as a source of labour statistics and their limits for international comparison'
+  what_ar: انسخ فقرة المقدمة التي تصف السجلات الإدارية مصدراً لإحصاءات العمل وحدودها في المقارنة الدولية
+- slot: q-ilo-ssm2-establishment-intro
+  source: src-ilo-ssm2-establishment-surveys
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ILO Sources and Methods vol. 2 — Introduction: the paragraph describing establishment surveys and what they measure (employment, earnings, hours, labour cost)'
+  what_ar: انسخ فقرة المقدمة التي تصف مسوح المؤسسات وما تقيسه
+- slot: q-ilo-lfs-toolkit-model
+  source: src-ilo-lfs-toolkit
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ILO LFS toolkit page — the introductory description of the model LFS questionnaire (CAPI edition): what it covers and how countries should adapt it'
+  what_ar: انسخ الفقرة التعريفية بالاستمارة النموذجية في صفحة أدوات مسح القوى العاملة
+- slot: q-ilo-aligning-sample
+  source: src-ilo-aligning-lfs-icls-en
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ILO guidelines and tools for aligning national LFS — the section or item on sample design (survey phase: design). If the hub has no text on sampling, set status source-missing'
+  what_ar: انسخ ما ورد عن تصميم العينة في صفحة الإرشادات؛ وإن لم يرد شيء فاكتب ذلك لنغيّر الحالة إلى source-missing
+- slot: q-ilo-microdata-weights
+  source: src-ilo-microdata-quick-guide
+  lang: en
+  status: to-paste
+  text: ''
+  locator: ILOSTAT Microdata Processing Quick Guide — the paragraph on survey weights (how ILO uses the national weights when deriving indicators)
+  what_ar: انسخ الفقرة الخاصة بالأوزان في دليل معالجة البيانات الجزئية، واذكر القسم والصفحة
+- slot: q-ilo-work-db-comparability
+  source: src-ilo-work-db-description
+  lang: en
+  status: to-paste
+  text: ''
+  locator: ILOSTAT WORK database description — the paragraph explaining why statistics based on the 19th ICLS are not comparable with those based on the 13th ICLS (LFS database)
+  what_ar: انسخ الفقرة التي تشرح الفرق وعدم قابلية المقارنة بين إحصاءات المؤتمر 13 والمؤتمر 19
