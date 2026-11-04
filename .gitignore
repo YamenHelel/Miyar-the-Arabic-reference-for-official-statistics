@@ -8,3 +8,5 @@ directory/exports/
 *.csv
 _site/
 .taste-skill/
+# the SYNTHETIC test file of the code library is invented data and must be committed
+!code/data/synthetic_lfs.csv
