@@ -26,6 +26,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
   - id: src-usa-bls-hom-cps
     title_en: BLS Handbook of Methods — Current Population Survey
     publisher: U.S. Bureau of Labor Statistics
@@ -36,6 +37,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
   - id: src-usa-bls-hom-cps-concepts
     title_en: BLS Handbook of Methods — CPS concepts
     publisher: U.S. Bureau of Labor Statistics
@@ -46,6 +48,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
   - id: src-usa-bls-cps-documentation
     title_en: CPS technical documentation (incl. "How the Government Measures Unemployment")
     publisher: U.S. Bureau of Labor Statistics
@@ -56,6 +59,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
   - id: src-usa-bls-cps-puf
     title_en: CPS public use microdata — BLS page pointing to Census Bureau files
     publisher: U.S. Bureau of Labor Statistics
@@ -66,3 +70,4 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"

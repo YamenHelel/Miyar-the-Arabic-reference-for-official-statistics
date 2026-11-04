@@ -30,7 +30,8 @@ sources:
     url: https://dosweb.dos.gov.jo
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-jor-dos-quarterly-report
     title_en: DoS quarterly employment and unemployment report (latest)
     publisher: Department of Statistics
@@ -60,7 +61,8 @@ sources:
     url: https://datacatalog.ihsn.org/catalog/6942
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-jor-erf-eus
     title_en: Jordan EUS / HLFS on ERF data portal (raw and harmonised)
     publisher: ERF / DoS
@@ -70,4 +72,5 @@ sources:
     url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"

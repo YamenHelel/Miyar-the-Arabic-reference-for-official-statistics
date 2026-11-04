@@ -18,6 +18,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: Entry point to all ICLS resolutions. Use this to find official PDFs and any Arabic versions.
 
   - id: src-ilo-icls19-res1
@@ -34,6 +35,7 @@ sources:
     sdg_indicators: ["8.5.2", "8.6.1"]
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: >
       Core standard. Replaces 13th ICLS (1982) for employment/unemployment and narrows "employment" to work for pay or profit.
       Official PDF is known as wcms_230304.pdf (cited in a CEPAL training deck) — exact ilo.org URL TO-LOCATE.
@@ -50,6 +52,7 @@ sources:
     icls_standard: 19th
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: ILOSTAT WORK database follows 19th ICLS. French version exists under /fr/.
 
   - id: src-ilo-icls13-res1
@@ -64,7 +67,8 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 13th
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     superseded_by: src-ilo-icls19-res1
     notes: Superseded internationally by 19th ICLS but still the basis of many national LFS and of ILOSTAT LFS database. Old ilo.org URL pattern — may redirect.
 
@@ -78,7 +82,8 @@ sources:
     date_published: 2023-08
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Resolution concerning statistics on work relationships (20th ICLS, Oct 2018) replaced ICSE-93. Manual last updated Aug 2023 (per search snippet).
 
   - id: src-ilo-icls20-classification-status
@@ -91,6 +96,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-gccstat-icse18-workshop-ar
     title_en: GCC regional workshop on ICSE-18 and informal sector (2021) — presentation
@@ -102,7 +108,8 @@ sources:
     url: "https://gccstat.org/images/gccstat/docman/population-and-social-statistics/%d9%88%d8%b1%d8%b4%d8%a9-%d8%b9%d9%85%d9%84-%d8%a5%d9%82%d9%84%d9%8a%d9%85%d9%8a%d8%a9-%d8%ad%d9%88%d9%84-%d8%aa%d8%b5%d9%86%d9%8a%d9%81-%d8%a7%d9%84%d8%ad%d8%a7%d9%84%d8%a9-%d8%a7%d9%84%d8%b9%d9%85%d9%84%d9%8a%d8%a9-icse18-%d9%88%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d9%85%d9%86%d8%b8%d9%85-%d8%b9%d9%86-%d8%a8%d8%b9%d8%af-2021%d9%85/ICSE_18%20GCC.pdf"
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: broken
+    link_check: "2026-11-04 404"
     notes: Useful source for Arabic terminology on ICSE-18 used in the Gulf.
 
   - id: src-ilo-icls21-informality-res
@@ -117,7 +124,8 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["8.3.1"]
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: ICLS/21/2023/RES.I. Replaces the 1993 (15th ICLS) informal sector resolution and the 2003 (17th ICLS) informal employment guidelines.
 
   - id: src-ilo-icls21-news
@@ -130,7 +138,8 @@ sources:
     date_published: 2023-10
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   # ---------- ILOSTAT methods & databases ----------
   - id: src-ilo-concepts-definitions-hub
@@ -143,6 +152,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: Indicator descriptions, database descriptions, guidelines. Check whether an Arabic interface exists.
 
   - id: src-ilo-lfs-db-description
@@ -156,6 +166,7 @@ sources:
     icls_standard: 13th
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: LFS database indicators based on 13th ICLS; WORK database on 19th ICLS — key comparability point.
 
   - id: src-ilo-work-db-description
@@ -169,6 +180,7 @@ sources:
     icls_standard: 19th
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-ilo-forms-of-work
     title_en: ILOSTAT — Forms of work (concepts)
@@ -181,6 +193,7 @@ sources:
     icls_standard: 19th
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-ilo-sdg-description
     title_en: ILOSTAT — Description of SDG labour market indicators (ILOSDG database)
@@ -192,6 +205,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: ILO is custodian of 14 labour SDG indicators across 5 goals (per ILOSTAT). Database description also at /databases/ilosdg/description/.
 
   - id: src-ilo-sdg-topic
@@ -204,6 +218,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-ilo-national-sources-catalogue
     title_en: ILOSTAT — National sources catalogue (metadata on national surveys)
@@ -215,6 +230,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: For each of the 10 countries, extract the ILO record of the national LFS (standard, age, reference period).
 
   - id: src-ilo-arab-states-stats
@@ -227,6 +243,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-ilo-understanding-labour-stats-fr
     title_en: Understanding labour statistics (French version)
@@ -238,7 +255,8 @@ sources:
     url: https://webapps.ilo.org/ilostat-files/Documents/Understanding%20labour%20statistics_FR.pdf
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-ilo-surveylib
     title_en: ILO Survey Library (catalogue of national labour force survey microdata/metadata)
@@ -249,7 +267,8 @@ sources:
     url: https://webapps.ilo.org/surveyLib/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: >
       Base URL inferred from catalogue entry URLs in search results (e.g. /surveyLib/index.php/catalog/8572 = Tunisia ENPE 2022).
       Contains related materials (questionnaires, reports) for national LFS.
@@ -266,6 +285,7 @@ sources:
     icls_standard: 19th
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: CAPI model is current; PAPI resources no longer updated (per ILOSTAT).
 
   - id: src-ilo-lfs-questionnaire-viewer
@@ -278,6 +298,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-ilo-capi-adaptation-guide
     title_en: ILO CAPI LFS National Adaptation Guide
@@ -289,6 +310,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 502"
 
   - id: src-ilo-lfs-dos-donts
     title_en: Dos and Don'ts working with the ILO model LFS CAPI questionnaire
@@ -299,7 +321,8 @@ sources:
     url: https://www.ilo.org/resource/other/dos-and-don%E2%80%99ts-working-ilo-model-lfs-capi-questionnaire
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-ilo-aligning-lfs-icls
     title_en: ILO guidelines and tools for aligning national LFS with latest ICLS standards and best practices
@@ -312,6 +335,7 @@ sources:
     icls_standard: 19th
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: Key resource for the 13th→19th ICLS migration guide (backlog I-001).
 
   - id: src-ilo-icls-arabic-translations

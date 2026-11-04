@@ -27,6 +27,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 SSLError"
   - id: src-pse-pcbs-lfs-annual-2024
     title_en: Labour Force Survey annual report 2024 (concepts and definitions, methodology, quality)
     publisher: Palestinian Central Bureau of Statistics
@@ -37,6 +38,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 SSLError"
     notes: Contains full "Concepts and Definitions" and "Methodology" chapters — prime source for the indicator pages.
   - id: src-pse-pcbs-microdata-portal
     title_en: PCBS microdata / metadata catalogue (NADA)
@@ -47,7 +49,8 @@ sources:
     url: https://microdata.pcbs.gov.ps/PCBS-Metadata-en-v5.2/index.php/catalog/740/related-materials
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Catalogue entry with LFS related materials (questionnaire, reports). Access policy for LFS microdata — verify.
   - id: src-pse-erf-lfs
     title_en: Palestine LFS on ERF data portal (e.g. LFS 2021)
@@ -58,4 +61,5 @@ sources:
     url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"

@@ -14,7 +14,8 @@ sources:
     url: https://unstats.un.org/sdgs/metadata/
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Per-goal pages, e.g. ?Goal=8. Some indicators have pre/post 2025 Comprehensive Review versions. Check whether Arabic metadata files exist.
 
   - id: src-un-sdg-metadata-goal8
@@ -26,7 +27,8 @@ sources:
     url: https://unstats.un.org/sdgs/metadata/?Goal=8
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-oecd-unemployment-indicator
     title_en: OECD — Unemployment rate indicator (definition)
@@ -38,6 +40,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
     notes: Old data.oecd.org URL — may redirect to OECD Data Explorer.
 
   - id: src-oecd-glossary
@@ -61,7 +64,8 @@ sources:
     url: https://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Reference for France (INSEE applies EU-LFS regulation, IESS framework since 2021).
 
   - id: src-eurostat-eulfs-methodology
@@ -73,7 +77,8 @@ sources:
     url: https://ec.europa.eu/eurostat/statistics-explained/index.php/EU_labour_force_survey_-_methodology
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-eurostat-glossary-unemployed
     title_en: Eurostat glossary — Unemployed
@@ -84,7 +89,8 @@ sources:
     url: https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Unemployed
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: ILO-based, age 15–74.
 
   - id: src-eurostat-lfs-public-microdata
@@ -96,7 +102,8 @@ sources:
     url: https://ec.europa.eu/eurostat/web/microdata/public-microdata/labour-force-survey
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Public files not for statistical inference — good for training.
 
   - id: src-ipums-international
@@ -108,7 +115,8 @@ sources:
     url: https://international.ipums.org
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Mostly census samples (Morocco 3, Jordan 1 per an IPUMS overview); no LFS samples found for Arab phase-1 countries.
 
   - id: src-wb-microdata-library
@@ -120,7 +128,8 @@ sources:
     url: https://microdata.worldbank.org
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-ihsn-catalog
     title_en: IHSN Survey Catalog (metadata of national surveys incl. LFS)
@@ -131,7 +140,8 @@ sources:
     url: https://catalog.ihsn.org
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Holds metadata for Morocco ENE quarterly rounds, Tunisia ENPE, Jordan EUS.
 
   - id: src-isi-glossary
@@ -144,4 +154,5 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: Arabic coverage uncertain (sources disagree) — verify. Key input for the statistical concepts glossary (F-02).

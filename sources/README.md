@@ -12,7 +12,7 @@ The registry of every official source the knowledge base relies on. Schema: [sch
 | [countries/](countries/) | One file per country, with `profile` (survey facts) + `sources` | 49 |
 | [microdata/puf-catalog.yaml](microdata/puf-catalog.yaml) | Access routes to LFS microdata per country | 11 entries |
 
-Totals on 2026-11-03: **112 source records**: 101 `collected`, 11 `to-locate`, 0 `verified`. 66 are priority P1.
+Totals on 2026-11-04 after the first link check: **112 source records**: 61 `link-ok`, 32 `collected` (site blocks automated checks, so check by hand), 8 `broken`, 11 `to-locate`, 0 `verified`. 66 are priority P1.
 
 ## How to add a source
 1. Pick the right file (country or organisation). Copy an existing record.
@@ -20,6 +20,10 @@ Totals on 2026-11-03: **112 source records**: 101 `collected`, 11 `to-locate`, 0
 3. Set `status: collected` (or `to-locate` with `url: TO-LOCATE`).
 4. Run `python tools/validate.py`.
 5. Run `python tools/archive.py` to get a Wayback snapshot, and fill in `archived_url`.
+
+## Link checks
+GitHub Actions → **checks** → *Run workflow* (it also runs every Monday). The report is shown in the run's summary. To apply it:
+`python tools/apply_link_report.py <report.md> --date YYYY-MM-DD`. A 403 usually means the site blocks bots, not that the page is gone.
 
 ## How to verify a source (lead's daily task)
 Open the URL, then check the title, publisher, date and edition, and that it is the latest one. Then set:

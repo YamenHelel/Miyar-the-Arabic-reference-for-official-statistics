@@ -17,6 +17,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: Based on a Jan 2023 survey of 18 NSOs; all 18 have LFS-based databases. Essential baseline on which ICLS standard each Arab country applies.
 
   - id: src-escwa-lm-data-structures
@@ -30,6 +31,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
     notes: Also in UN Digital Library https://digitallibrary.un.org/record/1292610 (E/ESCWA/SD/2013/2).
 
   - id: src-escwa-data-portal
@@ -43,6 +45,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: URL taken from 2019 launch notice — current address must be confirmed on unescwa.org.
 
   - id: src-escwa-skills-monitor
@@ -55,6 +58,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P3
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-escwa-statistical-abstract
     title_en: Statistical Abstract of the Arab Region (Arabic version, UN iLibrary)
@@ -67,6 +71,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P2
     status: collected
+    link_check: "2026-11-04 403"
 
   - id: src-escwa-icls19-preparatory-meeting
     title_en: Preparatory regional meeting of labour statisticians in support of the 19th ICLS (ESCWA archive)
@@ -78,7 +83,8 @@ sources:
     url: https://archive.unescwa.org/node/5320
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: broken
+    link_check: "2026-11-04 ConnectionError"
     notes: Useful for official Arabic terminology (e.g. المؤتمر الدولي لخبراء الإحصاءات العمالية).
 
   # ---------- AITRS ----------
@@ -92,7 +98,8 @@ sources:
     url: https://www.aitrs.org
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: >
       Address taken from UN profile (https://unstats.un.org/gist/data/Profile_AITRS.pdf), not opened directly.
       Intergovernmental, members = Arab NSOs. Check for: training catalogue, Arabic statistical glossary, labour statistics courses.
@@ -106,7 +113,8 @@ sources:
     url: https://unstats.un.org/gist/data/Profile_AITRS.pdf
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-aitrs-glossary
     title_en: AITRS Arabic statistical glossary / dictionary (if published)
@@ -131,7 +139,8 @@ sources:
     url: https://gccstat.org/en/statistic/publications/labor-statistics
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: broken
+    link_check: "2026-11-04 404"
 
   - id: src-gccstat-labour-survey-page
     title_en: GCC-Stat — Labour statistics survey page
@@ -142,7 +151,8 @@ sources:
     url: https://gccstat.org/en/statistic/surveys/2017/labour_statstics
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: broken
+    link_check: "2026-11-04 404"
     notes: GCC-Stat runs a quarterly harmonised LFS covering citizens and non-citizens (per search snippet) — verify.
 
   - id: src-gccstat-marsa-labour
@@ -154,7 +164,8 @@ sources:
     url: https://dp.marsa.gccstat.org/dataset/labour
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-gccstat-ilo-lfs-workshop
     title_en: Regional workshop on labour force statistics organised by GCC-Stat & ILO
@@ -166,7 +177,8 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P3
-    status: collected
+    status: broken
+    link_check: "2026-11-04 404"
 
   # ---------- Arab Labour Organization ----------
   - id: src-alo-home
@@ -179,7 +191,8 @@ sources:
     url: https://alolabor.org
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Check publications/library for current statistical yearbook and employment reports.
 
   - id: src-alo-employment-report-1-summary
@@ -191,7 +204,8 @@ sources:
     url: https://alolabor.org/wp-content/uploads/2011/12/Report_Operation_And_Unemployment_Nu_01_Summary_En.pdf
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-alo-employment-report-2-summary
     title_en: Second ALO report on employment and unemployment in Arab States — English summary
@@ -202,7 +216,8 @@ sources:
     url: https://alolabor.org/wp-content/uploads/2010/07/Report_Employment-n-Unemployment_n02_En_Summary.pdf
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   - id: src-alo-statistical-yearbook
     title_en: ALO Arab labour statistical yearbook (latest edition)
@@ -226,7 +241,8 @@ sources:
     url: https://www.erfdataportal.com
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Licensed access (registration + data access agreement). Holds raw and harmonised LFS for Tunisia, Jordan, Palestine, Egypt and others.
 
   - id: src-erf-harmonized-catalog
@@ -238,7 +254,8 @@ sources:
     url: https://www.erfdataportal.com/index.php/catalog/Harmonized_Data
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
   # ---------- Arab Monetary Fund ----------
   - id: src-amf-arab-statistics

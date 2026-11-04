@@ -31,4 +31,5 @@ fields:
   verified_by:   {type: str, optional: true}
   verified_date: {type: date, optional: true}
   superseded_by: {type: str, optional: true}
+  link_check:    {type: str, optional: true, note: "Last automated check: \"YYYY-MM-DD <http code or error>\""}
   notes:         {type: str, optional: true}

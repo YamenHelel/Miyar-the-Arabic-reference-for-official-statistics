@@ -24,6 +24,7 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
 4. If a decision was made, add `docs/decisions/ADR-NNNN-*.md` and link it from `docs/00-index.md`.
 5. On the first session of a new month, move the previous month's CHANGELOG entries to `docs/progress/YYYY-MM.md`.
 6. Run `python tools/validate.py` before committing.
+7. After a CI link check, apply it with `python tools/apply_link_report.py` (read the report from the run log with `gh run view <id> --log`).
 
 ## Conventions
 - Country codes: ISO 3166-1 alpha-3 lowercase (`tun`, `sau`, `mar`, `jor`, `are`, `pse`, `usa`, `gbr`, `aus`, `fra`).

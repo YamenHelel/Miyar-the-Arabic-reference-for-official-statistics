@@ -26,7 +26,8 @@ sources:
     url: https://insee.fr/fr/metadonnees/source/fichier/methodologie_emploi_continu.pdf
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-fra-insee-eec-source-doc
     title_en: Enquête Emploi en continu — methodological documentation (source page)
     publisher: Insee
@@ -36,7 +37,8 @@ sources:
     url: https://www.insee.fr/fr/metadonnees/source/operation/s1415/documentation-methodologique
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-fra-insee-eec-puf-2024
     title_en: Activité, emploi et chômage en 2024 — EEC detail file (public, CSV/Parquet)
     title_orig: Activité, emploi et chômage en 2024 — Enquête emploi en continu — Fichier détail
@@ -48,7 +50,8 @@ sources:
     date_published: 2025-09-22
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: 83 variables, 353,420 observations; free download. 2025 file also listed (insee.fr/fr/statistiques/9034119).
   - id: src-fra-insee-eec-puf-2025
     title_en: Activité, emploi et chômage en 2025 — EEC detail file
@@ -59,7 +62,8 @@ sources:
     url: https://www.insee.fr/fr/statistiques/9034119
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-fra-insee-eec-research-access
     title_en: Enquête Emploi — micro-data access for researchers (via Quetelet-Progedo / ADISP)
     publisher: Insee
@@ -69,4 +73,5 @@ sources:
     url: https://insee.fr/en/metadonnees/source/operation/s1449/acces-micro-donnees
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"

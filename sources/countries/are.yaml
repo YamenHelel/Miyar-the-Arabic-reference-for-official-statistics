@@ -30,6 +30,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
   - id: src-are-uaestat-portal
     title_en: UAE Stat portal (raw LFS datasets from 2019)
     publisher: Federal Competitiveness and Statistics Centre
@@ -40,6 +41,7 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: Address inferred from portal name in GLMM notes — confirm.
   - id: src-are-lfs-methodology
     title_en: UAE LFS methodology / metadata
@@ -60,7 +62,8 @@ sources:
     url: https://gulfmigration.grc.net/?p=10504
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-are-ilo-country-profile
     title_en: ILO profile of UAE labour statistics system
     publisher: ILO
@@ -70,5 +73,6 @@ sources:
     url: https://www.ilo.org/media/569656/download
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Title assumed from search snippet context — verify.

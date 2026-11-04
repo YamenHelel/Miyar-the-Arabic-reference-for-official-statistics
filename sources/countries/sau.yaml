@@ -30,7 +30,8 @@ sources:
     url: https://stats.gov.sa/en/w/lfs-1
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-sau-gastat-lms-methodology-2025q1
     title_en: Methodology of Labor Market Statistics — Q1 2025 (EN)
     publisher: General Authority for Statistics
@@ -41,7 +42,8 @@ sources:
     date_published: 2025
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Most recent methodology found; check for Q2 2026 edition and Arabic version.
   - id: src-sau-gastat-lms-methodology-2020q4
     title_en: Methodology of Labor Market Statistics — Q4 2020 (EN)
@@ -53,7 +55,8 @@ sources:
     date_published: 2021
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: broken
+    link_check: "2026-11-04 404"
     superseded_by: src-sau-gastat-lms-methodology-2025q1
   - id: src-sau-gastat-microdata
     title_en: GASTAT microdata page
@@ -64,7 +67,8 @@ sources:
     url: https://stats.gov.sa/en/microdata
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Unclear whether LFS microdata are offered and on what terms — verify.
   - id: src-sau-glmm-lfs-tables
     title_en: Gulf Labour Markets, Migration and Population (GLMM) — Saudi LFS tables and notes
@@ -75,5 +79,6 @@ sources:
     url: https://gulfmigration.grc.net/?p=10336
     date_accessed: 2026-11-03
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Secondary source; useful for history of the survey and nationality breakdowns.

@@ -27,7 +27,8 @@ sources:
     url: https://www.ins.tn
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-tun-ins-enpe-methodo
     title_en: Methodological note — Employment survey Tunisia
     title_orig: Note méthodologique — Enquête emploi Tunisie
@@ -38,7 +39,8 @@ sources:
     url: "https://ins.tn/sites/default/files-ftp3/files/publication/pdf/Note%20M%C3%A9thodologique%20Enquete%20emploi%20Tunisie.pdf"
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Covers concepts, definitions and history of the employment survey methods.
   - id: src-tun-ins-serie-methodes
     title_en: INS statistical methods series
@@ -50,7 +52,8 @@ sources:
     url: https://www.ins.tn/sites/default/files-ftp3/files/publication/pdf/serie_methodes_statistiques.pdf
     date_accessed: 2026-11-03
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-tun-ilo-surveylib-enpe2022
     title_en: ENPE 2022 — ILO Survey Library catalogue entry (metadata, related materials)
     publisher: ILO / INS
@@ -60,7 +63,8 @@ sources:
     url: https://webapps.ilo.org/surveyLib/index.php/catalog/8572
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-tun-ins-nada
     title_en: INS national survey catalogue (NADA) — microdata
     publisher: Institut National de la Statistique
@@ -70,7 +74,8 @@ sources:
     url: http://nada.ins.tn
     date_accessed: 2026-11-03
     priority: P1
-    status: collected
+    status: broken
+    link_check: "2026-11-04 ConnectionError"
     notes: Address from IHSN ADP table (adp.ihsn.org/node/1334); access conditions to verify.
   - id: src-tun-ins-questionnaire
     title_en: ENPE questionnaire (latest)

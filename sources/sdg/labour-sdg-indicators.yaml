@@ -20,7 +20,8 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["1.1.1", "1.3.1"]
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-sdg-goal5-metadata
     title_en: UN SDG metadata — Goal 5 (5.4.1 unpaid care work; 5.5.2 women in managerial positions)
     publisher: UNSD / IAEG-SDGs
@@ -30,7 +31,8 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["5.4.1", "5.5.2"]
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-sdg-goal8-metadata
     title_en: UN SDG metadata — Goal 8 (decent work and economic growth)
     publisher: UNSD / IAEG-SDGs
@@ -40,7 +42,8 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["8.2.1", "8.3.1", "8.5.1", "8.5.2", "8.6.1", "8.7.1", "8.8.1", "8.8.2", "8.b.1"]
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-sdg-goal9-metadata
     title_en: UN SDG metadata — Goal 9 (9.2.2 manufacturing employment share)
     publisher: UNSD / IAEG-SDGs
@@ -50,7 +53,8 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["9.2.2"]
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-sdg-goal10-metadata
     title_en: UN SDG metadata — Goal 10 (10.4.1 labour share of GDP; 10.7.1 recruitment cost)
     publisher: UNSD / IAEG-SDGs
@@ -60,7 +64,8 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["10.4.1", "10.7.1"]
     priority: P1
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
   - id: src-sdg-metadata-8-5-2-docx
     title_en: SDG metadata file 8.5.2 (unemployment rate) — docx
     publisher: UNSD / ILO
@@ -70,7 +75,8 @@ sources:
     date_accessed: 2026-11-03
     sdg_indicators: ["8.5.2"]
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
 
 # Indicator list (not source records — reference table for page building)
 indicators:

@@ -12,7 +12,12 @@ Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Ol
 
 - Later the same day: contact email set to yamen.hlel@gmail.com (README, consent texts, form spec, legal); **MIT** confirmed for code (`LICENSE-CODE`); first manual link-check run triggered in GitHub Actions.
 
-**Open questions:** domain name and LinkedIn page for Miʿyar (lead says checks are done; record the result).
+- **First link check** (Actions run 41775682762): 120 URLs, 77 OK and 43 failing. Applied with the new `tools/apply_link_report.py`: **61 → link-ok, 8 → broken, 32 unchanged**.
+  - Unchanged = the site blocks automated checkers (403: ILOSTAT, BLS, ESCWA, OECD, ISI, FCSC), SSL errors (PCBS) or temporary errors (ILO 502). These need a manual check in a browser.
+  - Broken (404 / unreachable): HCP May 2026 ENE→new-survey note, GASTAT 2020 methodology PDF (already superseded), nada.ins.tn, archive.unescwa.org node, and 4 GCC-Stat pages (the site seems restructured).
+- Added the `link_check` field to the schema. The workflow now prints the report into the run log and job summary (the artifact can't be downloaded from the sandbox). Actions bumped off Node 20.
+
+**Open questions:** domain name and LinkedIn page for Miʿyar (lead says checks are done; record what was chosen).
 
 ## 2026-11-03: Project foundation (session 1)
 **Done**
