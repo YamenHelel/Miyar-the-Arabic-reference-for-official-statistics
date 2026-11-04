@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <h1>{{ heading }}</h1>
+    <p class="lede" style="margin-top:14px">{{ intro }}</p>
+  </header>
+  {% for g in groups %}
+  <section class="block" aria-label="{{ g.title or heading }}">
+    {% if g.title %}<h2 style="font-size:var(--step-lead);margin-bottom:18px">{{ g.title }}</h2>{% endif %}
+    <div class="index-rows">
+      {% for r in g.rows %}<a href="{{ root }}{{ r.href }}"><b>{{ r.name }}</b><span>{{ r.meta }}</span>{% if r.sub %}<small dir="auto">{{ r.sub }}</small>{% endif %}</a>{% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "macros.html" import sheet, ai %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <p class="kind">مفهوم · {{ cat }}</p>
+    <h1>{{ con.name_ar }}</h1>
+    <p class="alt"><span lang="en">{{ con.names.en }}</span><span lang="fr">{{ con.names.fr }}</span></p>
+    {% if variants %}<p class="facts-line">يُقال أيضاً: {{ variants }}</p>{% endif %}
+  </header>
+  <div class="layout">
+    <article>
+      <section data-in class="block" aria-labelledby="c1">
+        <h2 id="c1">التعريف الرسمي</h2>
+        {{ sheet(q(con.definition_quote), srcq(con.definition_quote), root) }}
+      </section>
+      {% if con.formula %}<section data-in class="block" aria-labelledby="c2"><h2 id="c2">الصيغة</h2><div class="formula"><p class="lt" style="font-size:var(--step-lead);color:var(--ink)">{{ con.formula }}</p></div></section>{% endif %}
+      <section data-in class="block" aria-labelledby="c3">
+        <h2 id="c3">بعبارة بسيطة</h2>
+        {{ ai(con.explanation_ai_ar) }}
+        {% if con.example_ai_ar %}<div style="margin-top:16px">{{ ai(con.example_ai_ar, 'مثال توضيحي مُعدّ بمساعدة الذكاء الاصطناعي، أرقامه ليست منشورة') }}</div>{% endif %}
+      </section>
+      {% if variants_list %}
+      <section data-in class="block" aria-labelledby="c4">
+        <h2 id="c4">المصطلح في الدول العربية</h2>
+        <ul class="notes">{% for v in variants_list %}<li>{{ v.term }}<span class="cite">{{ v.where }} · {{ v.basis }}</span></li>{% endfor %}</ul>
+      </section>
+      {% endif %}
+    </article>
+    <aside class="toc" aria-label="ذو صلة">
+      <span class="tl">ذو صلة</span>
+      {% for r in related %}<a href="{{ root }}{{ r.href }}">{{ r.name }}</a>{% endfor %}
+    </aside>
+  </div>
+</div>
+{% endblock %}

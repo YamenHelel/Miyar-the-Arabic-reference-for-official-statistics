@@ -16,7 +16,7 @@ fields:
   domain:        {type: str, enum: [labour]}
   sdg:           {type: list}
   international: {type: map, keys: [standard_source, custodian, definition_quote, formula, formula_ar, formula_quote, components, notes_ar]}
-  countries:     {type: map, note: "iso3 -> {source, definition_quote, standard, age, job_search_period, reference_period, frequency, survey, population_note, facts_basis}"}
+  countries:     {type: map, note: "iso3 -> {measures: {age_min, search_days, availability_days_after_reference} (quote-backed numbers only), source, definition_quote, standard, age, job_search_period, reference_period, frequency, survey, population_note, facts_basis}"}
   comparability_notes_ar: {type: list, item: {text: str, sources: list}}
   explanation_ai_ar: {type: str, note: "AI-assisted plain-Arabic explanation; displayed with label"}
   related:       {type: list}

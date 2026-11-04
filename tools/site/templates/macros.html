@@ -1,0 +1,26 @@
+{% macro sheet(q, src, root) -%}
+{% if q and q.status in ['verified', 'pasted'] and q.text %}
+<figure class="sheet on-paper" style="margin:0">
+  <div class="hallmark">
+    <svg viewBox="0 0 100 130" aria-hidden="true">{% include "hallmark.svg" %}</svg>
+    <span>{% if q.status == 'verified' %}نص رسمي مُتحقَّق منه · {{ q.verified_by }} · {{ q.pasted_on }}{% else %}نص رسمي منسوخ، بانتظار تأكيد المراجع{% endif %}</span>
+  </div>
+  <blockquote class="text" dir="{{ 'rtl' if q.lang == 'ar' else 'ltr' }}" lang="{{ q.lang }}" style="margin:0">{{ q.text | reflow }}</blockquote>
+  <figcaption class="src">
+    <a href="{{ q.quoted_from_url or src.url }}" dir="auto">{{ src.title_ar or src.title_en }}</a>
+    <span>{{ src.publisher }}</span>
+    {% if q.locator %}<span dir="auto">{{ q.locator }}</span>{% endif %}
+  </figcaption>
+  {% if q.document_note %}<p class="doc-note" dir="auto">{{ q.document_note }}</p>{% endif %}
+</figure>
+{% elif q %}
+<div class="sheet pending">
+  <p>بانتظار النص الرسمي. سيُنسخ هنا حرفياً من: <a href="{{ src.url }}">{{ src.title_ar or src.title_en }}</a></p>
+  <p class="src" dir="auto">{{ q.locator }}</p>
+</div>
+{% endif %}
+{%- endmacro %}
+
+{% macro ai(text, label='شرح مُعدّ بمساعدة الذكاء الاصطناعي، وليس نصاً رسمياً') -%}
+<div class="ai"><p class="who">{{ label }}</p><p>{{ text }}</p></div>
+{%- endmacro %}

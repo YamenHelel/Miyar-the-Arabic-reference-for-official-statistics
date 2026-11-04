@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "macros.html" import ai %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <h1>كيف يعمل مِعيار</h1>
+    <p class="lede" style="margin-top:14px">ثلاثة أنواع من النص في كل صفحة، ولكل نوع شكله، حتى لا يختلط الرسمي بالتعليق ولا التعليق بما كتبه الذكاء الاصطناعي.</p>
+  </header>
+  <div class="layout">
+    <article>
+      <section data-in class="block" aria-labelledby="a1">
+        <h2 id="a1">النص الرسمي: الورقة الذهبية</h2>
+        <figure class="sheet on-paper" style="margin:0">
+          <div class="hallmark"><svg viewBox="0 0 100 130" aria-hidden="true">{% include "hallmark.svg" %}</svg><span>هكذا يظهر النص الرسمي المُتحقَّق منه</span></div>
+          <p class="text">منسوخ حرفياً بلغته الأصلية من الوثيقة الرسمية، ومعه رابطها والفقرة التي أُخذ منها، واسم من تحقق منه وتاريخ ذلك. لا يُترجم ولا يُختصر ولا يُصحَّح.</p>
+        </figure>
+      </section>
+      <section data-in class="block" aria-labelledby="a2">
+        <h2 id="a2">التعليق: على الأرضية الخضراء</h2>
+        <p>المقارنات وملاحظات قابلية المقارنة والجداول كتبها فريق مِعيار، وكل ملاحظة تشير إلى المصادر التي تستند إليها.</p>
+      </section>
+      <section data-in class="block" aria-labelledby="a3">
+        <h2 id="a3">شرح الذكاء الاصطناعي: لوحة موسومة</h2>
+        {{ ai('الشروح المبسطة والأمثلة يكتبها الذكاء الاصطناعي ويراجعها إنسان، وتظهر دائماً في هذه اللوحة مع وسمها. لا تُستعمل مصدراً لتعريف رسمي.') }}
+      </section>
+      <section data-in class="block" aria-labelledby="a4">
+        <h2 id="a4">مراحل التحقق من المصدر</h2>
+        <ul class="notes">
+          <li><b>غير موجود بعد:</b> نعرف أن الوثيقة موجودة ولم نجد رابطها.</li>
+          <li><b>قيد التحقق:</b> وُجد الرابط عبر البحث ولم يُفتح بعد.</li>
+          <li><b>الرابط يعمل:</b> نجح الفحص الآلي الأسبوعي للرابط.</li>
+          <li><b>مُتحقَّق منه:</b> فتح إنسان الوثيقة وتأكد من عنوانها وناشرها وإصدارها، مع اسمه والتاريخ.</li>
+          <li><b>مُستبدَل أو معطّل:</b> صدرت نسخة أحدث، أو لم يعد الرابط يعمل؛ نحتفظ بالسجل للتاريخ.</li>
+        </ul>
+        <p style="margin-top:20px">اليوم: {{ counts }}.</p>
+      </section>
+      <section data-in class="block" id="cite" aria-labelledby="a5">
+        <h2 id="a5">كيف تستشهد بمِعيار</h2>
+        <div class="formula"><p class="ar">مِعيار، «عنوان الصفحة»، الرابط، تاريخ الاطلاع.</p><p class="lt">Miʿyar, "page title", URL, accessed date. CC BY 4.0.</p></div>
+        <p style="margin-top:20px">المحتوى الأصلي مرخّص بموجب CC BY 4.0، والشيفرة بموجب MIT. النصوص الرسمية المقتبسة تبقى خاضعة لشروط ناشريها.</p>
+      </section>
+      <section data-in class="block" aria-labelledby="a6">
+        <h2 id="a6">البيانات الشخصية</h2>
+        <p>لا يحتوي مِعيار على بيانات جزئية سرية، ولا على بيانات شخصية. سجل الممارسين، حين يُفتح، يقوم على موافقة صريحة لكل حقل، ويُحفظ خارج المستودع العام.</p>
+      </section>
+    </article>
+    <aside class="toc" aria-label="في هذه الصفحة">
+      <span class="tl">في هذه الصفحة</span>
+      <a href="#a1">النص الرسمي</a><a href="#a2">التعليق</a><a href="#a3">شرح الذكاء الاصطناعي</a><a href="#a4">مراحل التحقق</a><a href="#cite">الاستشهاد</a>
+    </aside>
+  </div>
+</div>
+{% endblock %}

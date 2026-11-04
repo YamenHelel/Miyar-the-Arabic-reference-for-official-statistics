@@ -1,53 +1,75 @@
 # Pilot indicator #1 — Unemployment rate (معدل البطالة)
 # Status: draft. Official wording is pending in quotes[] (status to-paste) because the sandbox cannot open the sources;
 # the lead pastes them from the Verification Desk. Nothing below the quotes is official text.
-
+# measures: numbers read from the verified/pasted quotes only (age_min in years, periods in days).
 id: ind-unemployment-rate
 name_ar: معدل البطالة
 names:
   en: Unemployment rate
   fr: Taux de chômage
 term_variants:
-  - {term: معدل البطالة, used_in: [sau, jor, pse, are, tun, mar], basis: common usage — to confirm per country from quotes}
-  - {term: نسبة البطالة, used_in: [], basis: to confirm — collect countries that use it}
+- term: معدل البطالة
+  used_in:
+  - sau
+  - jor
+  - pse
+  - are
+  - tun
+  - mar
+  basis: common usage — to confirm per country from quotes
+- term: نسبة البطالة
+  used_in: []
+  basis: to confirm — collect countries that use it
 domain: labour
-sdg: ["8.5.2"]
-
+sdg:
+- 8.5.2
 international:
   standard_source: src-ilo-icls19-res1-pdf
   custodian: ILO
   definition_quote: q-ilo-unemployed
-  formula_ar: "معدل البطالة = (عدد المتعطلين ÷ القوة العاملة) × 100"
-  formula: "UR = U / (E + U) × 100"
+  formula_ar: معدل البطالة = (عدد المتعطلين ÷ القوة العاملة) × 100
+  formula: UR = U / (E + U) × 100
   formula_quote: q-ilo-lu1
   components:
-    - {id: con-unemployed, name_ar: المتعطلون (الأشخاص في البطالة), quote: q-ilo-unemployed}
-    - {id: con-labour-force, name_ar: القوة العاملة, quote: q-ilo-labour-force}
-    - {id: con-employed, name_ar: المشتغلون (الأشخاص في العمالة), quote: q-ilo-employed}
-  notes_ar: >
-    في إطار المؤتمر الدولي التاسع عشر لخبراء إحصاءات العمل (2013) يُعدّ معدل البطالة المقياسَ الأول (LU1) من بين أربعة مقاييس رئيسية لنقص استخدام العمالة.
-    يُنشر المؤشر أيضاً بوصفه مؤشر أهداف التنمية المستدامة 8.5.2، مصنفاً حسب الجنس والعمر والإعاقة، ومنظمة العمل الدولية هي الجهة الراعية.
+  - id: con-unemployed
+    name_ar: المتعطلون (الأشخاص في البطالة)
+    quote: q-ilo-unemployed
+  - id: con-labour-force
+    name_ar: القوة العاملة
+    quote: q-ilo-labour-force
+  - id: con-employed
+    name_ar: المشتغلون (الأشخاص في العمالة)
+    quote: q-ilo-employed
+  notes_ar: 'في إطار المؤتمر الدولي التاسع عشر لخبراء إحصاءات العمل (2013) يُعدّ معدل البطالة المقياسَ الأول (LU1) من بين أربعة مقاييس رئيسية لنقص استخدام العمالة. يُنشر المؤشر أيضاً بوصفه مؤشر أهداف التنمية المستدامة 8.5.2، مصنفاً حسب الجنس والعمر والإعاقة، ومنظمة العمل الدولية هي الجهة الراعية.
 
+    '
+  measures:
+    search_days: 28
+    availability_days_after_reference_max: 14
+    note: 'ILO §47(b): last four weeks or one month; §47(d)(i): availability may be extended by a short subsequent period not exceeding two weeks in total'
 countries:
   usa:
     source: src-usa-bls-cps-definitions
     survey: Current Population Survey (CPS)
     definition_quote: q-usa-unemployed
     standard: national (ILO-consistent)
-    age: "16+"
-    job_search_period: "4 weeks ending with the reference week"
+    age: 16+
+    job_search_period: أربعة أسابيع تنتهي بأسبوع الإسناد
     reference_period: reference week
     frequency: monthly
-    availability: during the reference week (except temporary illness)
+    availability: خلال أسبوع الإسناد (باستثناء المرض المؤقت)
     future_starters: counted only if they searched in the last 4 weeks; temporary layoffs expecting recall are unemployed
     population_note: civilian noninstitutional population
     facts_basis: quote (search period, availability); age 16+ from search snippet
+    measures:
+      search_days: 28
+      availability_days_after_reference: 0
   gbr:
     source: src-gbr-ons-lfs-user-guidance
     survey: Labour Force Survey (LFS)
     definition_quote: q-gbr-unemployed
     standard: ILO-based
-    age: "16+ (to confirm)"
+    age: 16+ (to confirm)
     frequency: quarterly (rolling)
     population_note: the quoted text is the 13th ICLS (1982) wording reproduced by ONS; operational thresholds to add
     facts_basis: search-snippet
@@ -56,9 +78,9 @@ countries:
     survey: Enquête Emploi en continu (EEC)
     definition_quote: q-fra-unemployed
     standard: ILO-based (EU-LFS)
-    age: "15+"
-    job_search_period: "4 dernières semaines (ou emploi trouvé commençant dans les 3 mois)"
-    availability: "dans les 2 semaines"
+    age: 15+
+    job_search_period: 4 dernières semaines (ou emploi trouvé commençant dans les 3 mois)
+    availability: dans les 2 semaines
     frequency: continuous, quarterly results
     population_note: the quoted text is the 13th ICLS (1982) wording reproduced by Insee; operational thresholds from search snippet
     facts_basis: search-snippet
@@ -67,99 +89,134 @@ countries:
     survey: Labour Force Survey
     definition_quote: q-aus-unemployed
     standard: ILO-based
-    age: "15+"
-    job_search_period: "4 weeks up to the end of the reference week"
-    availability: reference week
+    age: 15+
+    job_search_period: أربعة أسابيع حتى نهاية أسبوع الإسناد
+    availability: خلال أسبوع الإسناد
     future_starters: counted if starting within 4 weeks and could have started in the reference week
     frequency: monthly
     facts_basis: quote
+    measures:
+      age_min: 15
+      search_days: 28
+      availability_days_after_reference: 0
   sau:
     source: src-sau-gastat-lms-methodology-2025q1
     survey: Labour Force Survey (household telephone survey)
     definition_quote: q-sau-unemployed
-    age: "15+"
-    job_search_period: "reference week + previous 3 weeks"
-    availability: reference week or the following 2 weeks
+    age: 15+
+    job_search_period: أسبوع الإسناد والأسابيع الثلاثة السابقة له
+    availability: أسبوع الإسناد أو الأسبوعان التاليان
     future_starters: counted as unemployed
     frequency: quarterly
     population_note: Saudis and non-Saudis habitually resident; rates also published for Saudis only
     facts_basis: quote (age, search, availability); survey mode and population from search snippet
+    measures:
+      age_min: 15
+      search_days: 28
+      availability_days_after_reference: 14
   tun:
     source: src-tun-ins-enpe-methodo
     survey: Enquête Nationale sur la Population et l'Emploi (ENPE)
     definition_quote: q-tun-unemployed
-    age: "15+"
+    age: 15+
     frequency: quarterly
     facts_basis: search-snippet
   mar:
     source: src-mar-hcp-chomage-strict
-    survey: "ENE (to 2025) → Enquête sur la Main-d'Œuvre EMO2026 (from Jan 2026)"
+    survey: ENE (to 2025) → Enquête sur la Main-d'Œuvre EMO2026 (from Jan 2026)
     definition_quote: q-mar-unemployed
-    age: "15+"
-    job_search_period: "4 weeks before the interview"
-    availability: within 2 weeks after the interview (or the week before it)
+    age: 15+
+    job_search_period: الأسابيع الأربعة السابقة للمقابلة
+    availability: خلال أسبوعين بعد المقابلة (أو الأسبوع السابق لها)
     measure_note: EMO2026 definition («chômage strict», confirmed by the lead) — HCP publishes several unemployment measures
     frequency: quarterly
     population_note: series break in 2026 — state ENE or EMO2026 for every figure
     facts_basis: quote (age, search, availability); survey history from search snippet
+    measures:
+      age_min: 15
+      search_days: 28
+      availability_days_after_reference: 14
   jor:
     source: src-jor-dos-methodology
     survey: Employment and Unemployment Survey (EUS)
     definition_quote: q-jor-unemployed
-    age: "15+"
-    reference_period: 7 days before the interview
-    job_search_period: "4 weeks before the interview"
-    availability: immediately (week before the interview) or within the following 15 days
+    age: 15+
+    reference_period: الأيام السبعة السابقة للمقابلة
+    job_search_period: الأسابيع الأربعة السابقة للمقابلة
+    availability: فوراً (الأسبوع السابق للمقابلة) أو خلال 15 يوماً تالية
     frequency: quarterly
     population_note: DoS publishes overall, Jordanians and non-Jordanians rates (Q1 2026 per press — 16.1% / 21.1% / 8.7%)
     facts_basis: quote (age, periods); published rates from press
+    measures:
+      age_min: 15
+      search_days: 28
+      availability_days_after_reference: 15
   are:
     source: src-are-lfs-methodology
     survey: Labour Force Survey (FCSC)
     definition_quote: q-are-unemployed
-    age: "15+"
-    reference_period: 7 days before the interview
-    job_search_period: "4 weeks before the interview"
-    availability: within the 4 weeks after the interview
+    age: 15+
+    reference_period: الأيام السبعة السابقة للمقابلة
+    job_search_period: الأسابيع الأربعة السابقة للمقابلة
+    availability: خلال الأسابيع الأربعة التالية للمقابلة
     future_starters: counted (also those waiting to return to their previous job)
     frequency: annual
     population_note: no split by nationality since 2020 (per GLMM)
     facts_basis: quote (age, periods); nationality note from GLMM
+    measures:
+      age_min: 15
+      search_days: 28
+      availability_days_after_reference: 28
   pse:
     source: src-pse-pcbs-book2740
     survey: Labour Force Survey (PCBS)
     definition_quote: q-pse-unemployed
-    age: "15+"
-    job_search_period: "4 weeks before the reference period"
+    age: 15+
+    job_search_period: الأسابيع الأربعة السابقة لفترة الإسناد
     reference_period: reference period (فترة الإسناد)
     frequency: quarterly + annual
     population_note: coverage of Gaza varies by round (Q3 2025 release covers the West Bank)
     facts_basis: quote (age, search period — transcription pending the lead's confirmation)
-
+    measures:
+      age_min: 15
+      search_days: 28
 comparability_notes_ar:
-  - text: "الحد الأدنى للسن يختلف: 16 سنة في الولايات المتحدة مقابل 15 سنة في معظم الدول الأخرى، ما يؤثر على المقارنة المباشرة."
-    sources: [src-usa-bls-cps-definitions]
-  - text: "في الدول ذات النسبة المرتفعة من العمالة الوافدة (السعودية، الإمارات، الأردن) يتغير المعدل كثيراً بحسب السكان المرجعيين: المواطنون فقط أو إجمالي السكان. يجب دائماً ذكر السكان الذين يشملهم الرقم."
-    sources: [src-sau-gastat-lfs-page, src-jor-dos-home, src-are-glmm-lfs-notes]
-  - text: "المغرب: انتقال من البحث الوطني حول التشغيل إلى بحث القوى العاملة EMO2026 في 2026 (عينة 135 ألف أسرة)، ما قد يُحدث انقطاعاً في السلسلة الزمنية."
-    sources: [src-mar-hcp-ene-to-emo-2026-note]
-  - text: "قاعدة بيانات ILOSTAT للقوى العاملة (LFS) مبنية على معايير المؤتمر الثالث عشر، بينما قاعدة WORK مبنية على المؤتمر التاسع عشر؛ قد تختلف الأرقام عن الأرقام الوطنية لهذا السبب."
-    sources: [src-ilo-lfs-db-description, src-ilo-work-db-description]
+- text: 'الحد الأدنى للسن يختلف: 16 سنة في الولايات المتحدة مقابل 15 سنة في معظم الدول الأخرى، ما يؤثر على المقارنة المباشرة.'
+  sources:
+  - src-usa-bls-cps-definitions
+- text: 'في الدول ذات النسبة المرتفعة من العمالة الوافدة (السعودية، الإمارات، الأردن) يتغير المعدل كثيراً بحسب السكان المرجعيين: المواطنون فقط أو إجمالي السكان. يجب دائماً ذكر السكان الذين يشملهم الرقم.'
+  sources:
+  - src-sau-gastat-lfs-page
+  - src-jor-dos-home
+  - src-are-glmm-lfs-notes
+- text: 'المغرب: انتقال من البحث الوطني حول التشغيل إلى بحث القوى العاملة EMO2026 في 2026 (عينة 135 ألف أسرة)، ما قد يُحدث انقطاعاً في السلسلة الزمنية.'
+  sources:
+  - src-mar-hcp-ene-to-emo-2026-note
+- text: قاعدة بيانات ILOSTAT للقوى العاملة (LFS) مبنية على معايير المؤتمر الثالث عشر، بينما قاعدة WORK مبنية على المؤتمر التاسع عشر؛ قد تختلف الأرقام عن الأرقام الوطنية لهذا السبب.
+  sources:
+  - src-ilo-lfs-db-description
+  - src-ilo-work-db-description
+- text: 'فترة «الإتاحة للعمل» تختلف كثيراً بين الدول: أسبوع الإسناد فقط (أستراليا، الولايات المتحدة)، أو أسبوعان بعده (السعودية، المغرب)، أو 15 يوماً (الأردن)، أو أربعة أسابيع بعد المقابلة (الإمارات). قرار المؤتمر 19 يسمح بتمديد لا يتجاوز أسبوعين إجمالاً (الفقرة 47-د)، فالفترة الأطول تُدخل في البطالة أشخاصاً لا يُحسبون متعطلين في دول أخرى.'
+  sources:
+  - src-ilo-icls19-res1-pdf
+  - src-aus-abs-lscsm-2018
+  - src-usa-bls-cps-definitions
+  - src-sau-gastat-lms-methodology-2025q1
+  - src-mar-hcp-chomage-strict
+  - src-jor-dos-methodology
+  - src-are-lfs-methodology
+- text: النصان المنسوخان للمملكة المتحدة وفرنسا هما صياغة قرار المؤتمر الثالث عشر (1982) كما يعيد مكتبا الإحصاء نشرها، لا القواعد التشغيلية الوطنية؛ أما معايير السن وفترتي البحث والإتاحة فتُذكر في أجزاء أخرى من منهجيتيهما.
+  sources:
+  - src-gbr-ons-lfs-user-guidance
+  - src-fra-insee-eec-methodo
+explanation_ai_ar: 'معدل البطالة يقيس نسبة الأشخاص الذين لا يعملون، ويبحثون فعلياً عن عمل، ومستعدون للبدء فيه، من بين مجموع القوة العاملة (أي المشتغلين والمتعطلين معاً). الشخص الذي لا يعمل ولا يبحث عن عمل لا يُحسب متعطلاً، بل يُصنَّف «خارج القوة العاملة»؛ لذلك قد ينخفض معدل البطالة أحياناً لأن بعض الباحثين توقفوا عن البحث، لا لأنهم وجدوا عملاً. ولهذا يُستحسن قراءته مع مؤشرات أخرى مثل معدل المشاركة في القوة العاملة ونسبة التشغيل إلى السكان والمقاييس المركبة لنقص استخدام العمالة (LU2–LU4).
 
-  - text: "فترة «الإتاحة للعمل» تختلف كثيراً بين الدول: أسبوع الإسناد فقط (أستراليا، الولايات المتحدة)، أو أسبوعان بعده (السعودية، المغرب)، أو 15 يوماً (الأردن)، أو أربعة أسابيع بعد المقابلة (الإمارات). قرار المؤتمر 19 يسمح بتمديد لا يتجاوز أسبوعين إجمالاً (الفقرة 47-د)، فالفترة الأطول تُدخل في البطالة أشخاصاً لا يُحسبون متعطلين في دول أخرى."
-    sources: [src-ilo-icls19-res1-pdf, src-aus-abs-lscsm-2018, src-usa-bls-cps-definitions, src-sau-gastat-lms-methodology-2025q1, src-mar-hcp-chomage-strict, src-jor-dos-methodology, src-are-lfs-methodology]
-  - text: "النصان المنسوخان للمملكة المتحدة وفرنسا هما صياغة قرار المؤتمر الثالث عشر (1982) كما يعيد مكتبا الإحصاء نشرها، لا القواعد التشغيلية الوطنية؛ أما معايير السن وفترتي البحث والإتاحة فتُذكر في أجزاء أخرى من منهجيتيهما."
-    sources: [src-gbr-ons-lfs-user-guidance, src-fra-insee-eec-methodo]
-
-explanation_ai_ar: >
-  معدل البطالة يقيس نسبة الأشخاص الذين لا يعملون، ويبحثون فعلياً عن عمل، ومستعدون للبدء فيه، من بين مجموع القوة العاملة
-  (أي المشتغلين والمتعطلين معاً). الشخص الذي لا يعمل ولا يبحث عن عمل لا يُحسب متعطلاً، بل يُصنَّف «خارج القوة العاملة»؛
-  لذلك قد ينخفض معدل البطالة أحياناً لأن بعض الباحثين توقفوا عن البحث، لا لأنهم وجدوا عملاً. ولهذا يُستحسن قراءته
-  مع مؤشرات أخرى مثل معدل المشاركة في القوة العاملة ونسبة التشغيل إلى السكان والمقاييس المركبة لنقص استخدام العمالة (LU2–LU4).
-
-related: [ind-labour-force-participation-rate, ind-employment-to-population-ratio, ind-youth-unemployment-rate, ind-lu3, ind-lu4]
-
-# Official wording: see content/quotes.yml (slots referenced above by id).
-
+  '
+related:
+- ind-labour-force-participation-rate
+- ind-employment-to-population-ratio
+- ind-youth-unemployment-rate
+- ind-lu3
+- ind-lu4
 status: draft
 last_updated: 2026-11-04

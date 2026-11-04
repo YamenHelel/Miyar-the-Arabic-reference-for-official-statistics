@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-root="{{ root }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% block title %}{{ title }}{% endblock %}</title>
+<meta name="description" content="{{ description | default('مِعيار: المرجع العربي للإحصاء الرسمي. تعاريف منسوخة حرفياً من المعايير الدولية والأجهزة الإحصائية الوطنية، مُتحقَّق منها ومقارنة بين الدول.') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="{{ root }}static/miyar.css">
+</head>
+<body>
+<div class="beta"><div class="wrap">نسخة تجريبية: المحتوى قيد البناء والتحقق. كل نص رسمي يحمل مصدره وتاريخ التحقق منه.</div></div>
+<header class="bar">
+  <div class="wrap">
+    <nav aria-label="الأقسام">
+      <a href="{{ root }}indicators/index.html"{% if section == 'indicators' %} aria-current="page"{% endif %}>المؤشرات</a>
+      <a href="{{ root }}concepts/index.html"{% if section == 'concepts' %} aria-current="page"{% endif %}>المفاهيم</a>
+      <a href="{{ root }}countries/index.html"{% if section == 'countries' %} aria-current="page"{% endif %}>الدول</a>
+      <a href="{{ root }}sources/index.html"{% if section == 'sources' %} aria-current="page"{% endif %}>المصادر</a>
+      <a href="{{ root }}about/index.html"{% if section == 'about' %} aria-current="page"{% endif %}>المنهجية</a>
+    </nav>
+    <a class="wordmark" href="{{ root }}index.html" aria-label="مِعيار، الصفحة الرئيسية">مِعيار</a>
+    <div class="tools">
+      <div class="search" role="search">
+        <label class="sr" for="q" hidden>ابحث</label>
+        <input id="q" type="search" placeholder="ابحث عن مؤشر أو مفهوم…" autocomplete="off" aria-controls="q-results">
+        <ul id="q-results" class="search-results" hidden></ul>
+      </div>
+    </div>
+  </div>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="back">
+  <div class="wrap">
+    <div class="card-back on-paper">
+      <svg class="stamp" viewBox="0 0 100 130" aria-hidden="true">{% include "hallmark.svg" %}</svg>
+      <div class="halves">
+        <div>
+          <p class="signoff">بالمِعيار نَقيس</p>
+          <p class="msg">مرجع مفتوح يبنيه إحصائيون عرب بمساعدة الذكاء الاصطناعي. وجدتَ خطأً أو تريد المراجعة لبلدك؟ اكتب إلينا.</p>
+        </div>
+        <div class="addr">
+          <a href="mailto:yamen.hlel@gmail.com" dir="ltr">yamen.hlel@gmail.com</a>
+          <a href="https://github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics" dir="ltr">GitHub · Miʿyar</a>
+          <a href="{{ root }}about/index.html#cite">كيف تستشهد بمِعيار</a>
+          <a href="{{ root }}sources/index.html">سجل المصادر ({{ stats.sources }})</a>
+        </div>
+      </div>
+      <p class="imprint">© 2026 مِعيار · المحتوى بترخيص CC BY 4.0 · الشيفرة بترخيص MIT · النصوص الرسمية المقتبسة لناشريها · بُني في {{ built }}</p>
+    </div>
+  </div>
+</footer>
+<script src="{{ root }}static/miyar.js" defer></script>
+</body>
+</html>

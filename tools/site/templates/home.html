@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero" aria-labelledby="h-hero">
+  <div class="hero-head wrap" data-in>
+    <h1 id="h-hero">مِعيار</h1>
+    <p class="sub">المرجع العربي للإحصاء الرسمي: تعاريف منسوخة حرفياً من مصادرها، مُتحقَّق منها، ومقارنة بين عشر دول.</p>
+  </div>
+  <div class="folders">
+    <a class="folder" href="about/index.html"><span class="tab">المنهجية</span><span class="body"></span></a>
+    <a class="folder" href="sources/index.html"><span class="tab">المصادر</span><span class="body"></span></a>
+    <a class="folder" href="countries/index.html"><span class="tab">الدول</span><span class="body"></span></a>
+    <a class="folder" href="concepts/index.html"><span class="tab">المفاهيم</span><span class="body"></span></a>
+    <div class="folder open on-paper">
+      <span class="tab">المؤشرات</span>
+      <div class="body">
+        <div>
+          <p class="cta"><a class="btn on-paper-btn" href="indicators/{{ first_indicator }}.html">اقرأ معدل البطالة</a></p>
+          <p>كل مؤشر هنا يبدأ بنصه الرسمي كما ورد في قرار المؤتمر الدولي لخبراء إحصاءات العمل، ثم بتعريفه في كل جهاز إحصائي، ثم بما يجعل الأرقام قابلة للمقارنة أو غير قابلة لها.</p>
+        </div>
+        <div class="facts">
+          <div><b class="num">{{ stats.verified_quotes }}</b><span>نصاً رسمياً مُتحقَّقاً منه</span></div>
+          <div><b class="num">{{ stats.verified_sources }}</b><span>مصدراً فتحه إنسان وتحقق منه</span></div>
+          <div><b class="num">10</b><span>دول: ست عربية وأربع مرجعية</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s slips-sec" aria-labelledby="h-slips">
+  <div class="wrap">
+    <div class="slips-intro">
+      <div data-in>
+        <h2 id="h-slips" class="lede"><b>كلمة واحدة، عشرة تعاريف.</b></h2>
+        <p class="lede">«متعطل» لا تعني الشيء نفسه في كل مكان. الشروط الثلاثة واحدة، لكن المدد تختلف، والفرق يغيّر الرقم المنشور.</p>
+        <p class="lede soft" style="font-size:var(--step-body)">اختر معياراً وانظر أين تقف كل دولة. الأرقام مأخوذة من النصوص الرسمية المنسوخة فقط.</p>
+      </div>
+      <div class="ruler" id="ruler" data-in>
+        <div class="ruler-ctl" role="group" aria-label="المعيار">
+          <button type="button" data-k="availability" aria-pressed="true">مدة الإتاحة للعمل</button>
+          <button type="button" data-k="search" aria-pressed="false">مدة البحث عن عمل</button>
+          <button type="button" data-k="age" aria-pressed="false">الحد الأدنى للسن</button>
+        </div>
+        <div class="ruler-scale"><div class="ruler-marks"></div><div class="ruler-track"></div><div class="ruler-ticks"></div></div>
+        <p class="ruler-note"></p>
+        <noscript><p class="ruler-note">الإتاحة بعد فترة الإسناد: أستراليا والولايات المتحدة 0 يوم، السعودية والمغرب 14، الأردن 15، الإمارات 28. الحد الأقصى في قرار المؤتمر 19: أسبوعان.</p></noscript>
+      </div>
+    </div>
+  </div>
+  <script type="application/json" id="ruler-data">{{ ruler_json | safe }}</script>
+  <div class="slips">
+    {% for s in slips %}
+    <a class="slip" href="indicators/{{ first_indicator }}.html#nat-{{ s.iso }}" style="min-height: {{ s.h }}svh">
+      <b>{{ s.country }}</b>
+      <span class="dots" aria-hidden="true">· · · · · · · · · · · · ·</span>
+      <q dir="{{ 'ltr' if s.lang != 'ar' else 'rtl' }}" lang="{{ s.lang }}" style="-webkit-line-clamp: {{ s.lines }}">{{ s.text }}</q>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="s" aria-labelledby="h-ind">
+  <div class="wrap">
+    <div class="giant-list" data-in>
+      <h2 id="h-ind" class="giant">المؤشرات</h2>
+      <div class="bars">
+        {% for i in indicators %}
+        <details{% if loop.first %} open{% endif %}>
+          <summary>{{ i.name_ar }}</summary>
+          <div class="panel">
+            <p>نُسخ من نصوصه الرسمية {{ i.done }} من {{ i.total }}، والجهة الراعية {{ i.custodian }}{% if i.sdg %}، وهو مؤشر هدف التنمية المستدامة {{ i.sdg }}{% endif %}. <a href="indicators/{{ i.id }}.html">افتح بطاقة المؤشر</a></p>
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" data-row aria-labelledby="h-how">
+  <div class="wrap">
+    <div class="moments-top">
+      <h2 id="h-how" style="font-size:var(--step-head)">كيف يصل النص إلى هنا</h2>
+      <div class="arrows"><button type="button" data-dir="1" aria-label="السابق">→</button><button type="button" data-dir="-1" aria-label="التالي">←</button></div>
+    </div>
+    <div class="progress" aria-hidden="true"><i></i></div>
+  </div>
+  <div class="moments">
+    {% for m in moments %}
+    <article class="moment">
+      <h3>{{ m.title }}</h3>
+      <p>{{ m.text }}</p>
+      <div class="gap" style="height: {{ m.gap }}px"></div>
+      <div class="art">{{ m.art | safe }}</div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="s" aria-labelledby="h-c">
+  <div class="wrap">
+    <h2 id="h-c" style="font-size:var(--step-head)">ستة أجهزة عربية</h2>
+    <div class="cfolders">
+      {% for c in countries %}
+      <article class="cfolder" style="--i: {{ loop.index0 }}">
+        <div class="tabs"><a class="ctab" href="countries/{{ c.iso }}.html">{{ c.name }}</a></div>
+        <div class="band">
+          <div class="strip"><span>{{ c.nso }}</span><span>{{ c.verified }} مصدراً مُتحقَّقاً منه</span></div>
+          <div class="card-doc on-paper">
+            <dl>
+              <dt>المسح</dt><dd dir="auto">{{ c.survey }}</dd>
+              <dt>الدورية</dt><dd>{{ c.frequency }}</dd>
+              <dt>السن</dt><dd>{{ c.age }}</dd>
+              <dt>تعريف المتعطل</dt><dd>{{ c.def_state }}</dd>
+            </dl>
+            <p style="margin-top:18px"><a class="btn on-paper-btn" href="countries/{{ c.iso }}.html">بطاقة {{ c.name }}</a></p>
+          </div>
+          <figure class="desc" style="margin:0">
+            {% if c.excerpt %}<blockquote dir="{{ 'rtl' if c.lang == 'ar' else 'ltr' }}" lang="{{ c.lang }}" style="margin:0;{{ 'text-align:left;' if c.lang != 'ar' else '' }}">«{{ c.excerpt }}»</blockquote>
+            <figcaption class="soft" style="margin-top:14px;font-size:var(--step-small)">تعريف المتعطل كما ورد في <a href="{{ c.src_url }}" dir="auto">{{ c.src_title }}</a></figcaption>{% endif %}
+          </figure>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="s sheet-ground" aria-labelledby="h-g">
+  <div class="wrap">
+    <div class="menu-sheet on-paper" data-in>
+      <h2 id="h-g">المسرد</h2>
+      <p class="note">المصطلح العربي، ومقابله في المعيار الدولي</p>
+      {% for g in glossary %}
+      <div class="menu-group">
+        <h3>{{ g.title }}</h3>
+        {% for t in g.terms %}
+        <a class="menu-item" href="concepts/{{ t.id }}.html" data-name="{{ t.name_ar }}" data-preview="{{ t.preview }}">
+          <b>{{ t.name_ar }}</b><span lang="en">{{ t.en }}</span>
+          {% if t.variants %}<small>يُقال أيضاً: {{ t.variants }}</small>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+      <p class="menu-hours">{{ glossary_count }} مفاهيم في هذه النسخة · المسرد يكبر مع كل مؤشر جديد</p>
+    </div>
+  </div>
+  <div class="preview-frame" aria-hidden="true"><b></b><p></p></div>
+</section>
+
+<section class="letter-ground" aria-label="رسالة المشروع">
+  <div class="wrap">
+    <div class="letter on-paper" data-in>
+      <p>زميلي الإحصائي،</p>
+      <p>كم مرة احتجتَ إلى التعريف الدقيق لمؤشر، فوجدته موزعاً بين قرار دولي بالإنجليزية، ومذكرة منهجية بالفرنسية، وجدول عربي لا يُنسخ؟</p>
+      <p>مِعيار محاولة لجمع ذلك في مكان واحد وبالعربية، بقاعدة صارمة: <mark>لا تعريف بلا مصدر، ولا نص رسمي إلا كما ورد حرفياً</mark>. الذكاء الاصطناعي يساعد في الجمع والتنظيم والشرح، والإنسان هو من يتحقق.</p>
+      <p>نبدأ بإحصاءات العمل وعشر دول، ونكبر مؤشراً بعد مؤشر. إن وجدتَ خطأً أو أردتَ مراجعة ما يخص بلدك، فهذا مكانك.</p>
+      <p class="sign">مؤسس مِعيار</p>
+      <p class="role">إحصائي مستقل</p>
+    </div>
+    <div class="stub on-paper"><span>للمراجعة والمساهمة</span><span class="addr">yamen.hlel@gmail.com</span></div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <h1>سجل المصادر</h1>
+    <p class="lede" style="margin-top:14px">كل وثيقة يستند إليها مِعيار، بحالتها كما هي اليوم. لا يُعدّ مصدر «مُتحقَّقاً منه» إلا إذا فتحه إنسان وتأكد من عنوانه وناشره وإصداره.</p>
+    <p class="facts-line">{{ counts }}</p>
+  </header>
+  <section class="block" id="registry" aria-label="المصادر">
+    <div class="filters" role="group" aria-label="تصفية">
+      <button type="button" data-filter="all" aria-pressed="true">الكل</button>
+      {% for k, v in filters %}<button type="button" data-filter="{{ k }}" aria-pressed="false">{{ v }}</button>{% endfor %}
+    </div>
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead><tr><th scope="col">الوثيقة</th><th scope="col">الجهة</th><th scope="col">البلد</th><th scope="col">النوع</th><th scope="col">الحالة</th></tr></thead>
+        <tbody>
+        {% for s in rows %}
+          <tr data-status="{{ s.status }}" data-scope="{{ s.scope }}">
+            <td>{% if s.url.startswith('http') %}<a href="{{ s.url }}" dir="auto">{{ s.title }}</a>{% else %}<span dir="auto">{{ s.title }}</span>{% endif %}</td>
+            <td dir="auto">{{ s.publisher }}</td><td>{{ s.country }}</td><td>{{ s.type }}</td>
+            <td><span class="st st-{{ s.status }}">{{ s.status_ar }}</span>{% if s.vdate %}<br><span class="soft" style="font-size:var(--step-small)">{{ s.vdate }}</span>{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+{% endblock %}

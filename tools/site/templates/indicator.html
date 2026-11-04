@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% from "macros.html" import sheet, ai %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <p class="kind">مؤشر · إحصاءات العمل{% if ind.sdg %} · هدف التنمية المستدامة {{ ind.sdg | join('، ') }}{% endif %}</p>
+    <h1>{{ ind.name_ar }}</h1>
+    <p class="alt"><span lang="en">{{ ind.names.en }}</span><span lang="fr">{{ ind.names.fr }}</span></p>
+    <p class="facts-line">{{ 'مسودة' if ind.status == 'draft' else 'مُراجَع' }} · النصوص الرسمية {{ done }} من {{ total }} · آخر تحديث {{ ind.last_updated }}{% if variants %} · يُقال أيضاً: {{ variants }}{% endif %}</p>
+    <p class="go"><a class="btn" href="#countries">قارن بين الدول العشر</a></p>
+  </header>
+  <div class="layout">
+    <article>
+      <section data-in class="block" id="intl" aria-labelledby="h1">
+        <h2 id="h1">التعريف الدولي</h2>
+        {{ sheet(q(ind.international.definition_quote), srcq(ind.international.definition_quote), root) }}
+        {% if ind.international.notes_ar %}<p style="margin-top:22px">{{ ind.international.notes_ar }}</p>{% endif %}
+      </section>
+      <section data-in class="block" id="calc" aria-labelledby="h2">
+        <h2 id="h2">طريقة الحساب</h2>
+        <div class="formula"><p class="ar">{{ ind.international.formula_ar }}</p><p class="lt">{{ ind.international.formula }}</p></div>
+        {% if ind.international.formula_quote %}<div style="margin-top:20px">{{ sheet(q(ind.international.formula_quote), srcq(ind.international.formula_quote), root) }}</div>{% endif %}
+        {% if components %}
+        <ul class="notes" style="margin-top:28px">
+          {% for c in components %}<li><a href="{{ root }}concepts/{{ c.id }}.html">{{ c.name_ar }}</a>{% if c.state %}<span class="cite">{{ c.state }}</span>{% endif %}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </section>
+      <section data-in class="block" id="countries" aria-labelledby="h3">
+        <h2 id="h3">التطبيق في عشر دول</h2>
+        <div class="table-wrap">
+          <table class="cmp">
+            <thead><tr><th scope="col">البلد</th><th scope="col">المسح</th><th scope="col">السن</th><th scope="col">مدة البحث</th><th scope="col">الإتاحة للعمل</th><th scope="col">الدورية</th><th scope="col">التعريف الوطني</th></tr></thead>
+            <tbody>
+            {% for r in rows %}
+              <tr>
+                <th scope="row"><a href="{{ root }}countries/{{ r.iso }}.html">{{ r.name }}</a></th>
+                <td dir="auto">{{ r.survey }}</td>
+                <td>{{ r.age }}{% if r.unconfirmed %} <span class="tc" title="معلومة من مقتطف بحث، بانتظار تأكيدها من النص الرسمي">؟</span>{% endif %}</td>
+                <td dir="auto">{{ r.search }}</td>
+                <td dir="auto">{{ r.availability }}</td>
+                <td dir="auto">{{ r.frequency }}</td>
+                <td class="q">{% if r.qstate %}<a href="#nat-{{ r.iso }}">{{ r.qstate }}</a>{% else %}—{% endif %}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="legend">؟ = معلومة أولية من مقتطف بحث، لم تؤكَّد بعد من النص الرسمي للبلد.</p>
+      </section>
+      <section data-in class="block" id="national" aria-labelledby="h4">
+        <h2 id="h4">التعاريف الوطنية كما وردت</h2>
+        <div class="nat">
+          {% for n in national %}
+          <details id="nat-{{ n.iso }}"{% if n.pending %} class="pending"{% endif %}{% if loop.index <= 2 and not n.pending %} open{% endif %}>
+            <summary>{{ n.name }} <span>{{ n.state }}</span></summary>
+            <div class="in">
+              {% if n.text %}<blockquote class="text" dir="{{ 'rtl' if n.lang == 'ar' else 'ltr' }}" lang="{{ n.lang }}" style="margin:0">{{ n.text }}</blockquote>{% endif %}
+              <p class="src"><a href="{{ n.url }}" dir="auto">{{ n.src_title }}</a>{% if n.note %} · <span dir="auto">{{ n.note }}</span>{% endif %}</p>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </section>
+      <section data-in class="block" id="compare" aria-labelledby="h5">
+        <h2 id="h5">قبل أن تقارن</h2>
+        <ul class="notes">
+          {% for n in notes %}<li>{{ n.text }}<span class="cite">{{ n.cites }}</span></li>{% endfor %}
+        </ul>
+      </section>
+      <section data-in class="block" id="plain" aria-labelledby="h6">
+        <h2 id="h6">بعبارة بسيطة</h2>
+        {{ ai(ind.explanation_ai_ar) }}
+      </section>
+      <section data-in class="block" id="sources" aria-labelledby="h7">
+        <h2 id="h7">المصادر</h2>
+        <ul class="notes">
+          {% for s in sources %}<li><a href="{{ s.url }}" dir="auto">{{ s.title }}</a><span class="cite"><span class="st st-{{ s.status }}">{{ s.status_ar }}</span> · {{ s.publisher }}</span></li>{% endfor %}
+        </ul>
+      </section>
+    </article>
+    <aside class="toc" aria-label="في هذه الصفحة">
+      <span class="tl">في هذه الصفحة</span>
+      <a href="#intl">التعريف الدولي</a><a href="#calc">طريقة الحساب</a><a href="#countries">التطبيق في عشر دول</a>
+      <a href="#national">التعاريف الوطنية</a><a href="#compare">قبل أن تقارن</a><a href="#plain">بعبارة بسيطة</a><a href="#sources">المصادر</a>
+      <span class="tl" style="margin-top:20px">مؤشرات أخرى</span>
+      {% for o in others %}<a href="{{ root }}indicators/{{ o.id }}.html">{{ o.name_ar }}</a>{% endfor %}
+    </aside>
+  </div>
+</div>
+{% endblock %}

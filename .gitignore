@@ -6,3 +6,5 @@ __pycache__/
 directory/exports/
 *.pdf
 *.csv
+_site/
+.taste-skill/
