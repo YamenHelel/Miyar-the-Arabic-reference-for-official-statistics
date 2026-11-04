@@ -10,7 +10,9 @@ Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Ol
 
 **Files:** README.md, CLAUDE.md, LICENSE, docs/00-index.md, docs/decisions/ADR-0005, ADR-0006, docs/prd/01, 10, 15, docs/STATUS.md
 
-**Open questions:** project contact email (directory form, corrections); code licence (MIT?); domain name and LinkedIn page for Miʿyar.
+- Later the same day: contact email set to yamen.hlel@gmail.com (README, consent texts, form spec, legal); **MIT** confirmed for code (`LICENSE-CODE`); first manual link-check run triggered in GitHub Actions.
+
+**Open questions:** domain name and LinkedIn page for Miʿyar (lead says checks are done; record the result).
 
 ## 2026-11-03: Project foundation (session 1)
 **Done**

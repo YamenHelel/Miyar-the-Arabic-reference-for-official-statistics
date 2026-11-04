@@ -1,6 +1,6 @@
 # Instructions for AI agents (Claude, Codex, others)
 
-Project: **Miʿyar (مِعيار) — the Arabic reference for official statistics**. Content licence: CC BY 4.0.
+Project: **Miʿyar (مِعيار) — the Arabic reference for official statistics**. Content licence: CC BY 4.0 · Code licence: MIT · Contact: yamen.hlel@gmail.com.
 
 ## Read order (to save tokens)
 1. `docs/STATUS.md`: always read this first. It is short.

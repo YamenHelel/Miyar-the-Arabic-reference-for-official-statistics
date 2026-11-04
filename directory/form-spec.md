@@ -1,6 +1,8 @@
 # Form specification
 
 ## Tool
+Form account and contact address: **yamen.hlel@gmail.com** (with 2FA).
+
 **Tally** (recommended: free tier, good RTL support, conditional logic, GDPR-oriented, CSV export) or Google Forms as a fallback. The account is owned by the lead and has 2FA.
 
 ## Layout (Arabic, RTL)

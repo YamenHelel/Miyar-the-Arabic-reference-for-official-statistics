@@ -24,6 +24,6 @@
 ## Applied rules
 - Explicit, per-field opt-in consent; separate consent for "public listing" and "contact for project".
 - Data minimisation: only the fields in `directory/schema.yaml`.
-- Right to access, correct and delete: by email, within 30 days.
+- Right to access, correct and delete: by email to yamen.hlel@gmail.com, within 30 days.
 - Retention: deleted 24 months after the last confirmation unless renewed.
 - Storage: the form provider's private store, with 2FA on the account. Not in Git.

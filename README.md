@@ -7,7 +7,7 @@
 
 **Status:** Phase 0, foundation (see [docs/STATUS.md](docs/STATUS.md))
 **Owner:** independent consultant (project lead) · Maintained with AI assistance (Claude)
-**Licence:** content [CC BY 4.0](LICENSE). See [ADR-0005](docs/decisions/ADR-0005-licensing.md).
+**Licence:** content [CC BY 4.0](LICENSE) · code [MIT](LICENSE-CODE) · **Contact:** yamen.hlel@gmail.com. See [ADR-0005](docs/decisions/ADR-0005-licensing.md).
 
 ---
 
@@ -26,12 +26,15 @@
 
 ## Licence and how to cite
 
-Miʿyar's original content is licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**. You may share and adapt it, including commercially, as long as you give credit.
+Miʿyar's original content is licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**, and its code under the **[MIT License](LICENSE-CODE)**. You may share and adapt it, including commercially, as long as you give credit.
 
 **Citation format:** «مِعيار — <عنوان الصفحة>، <الرابط>، تاريخ الاطلاع <التاريخ>»
 *Miʿyar — <page title>, <URL>, accessed <date>.*
 
 Quoted official texts (ILO, UN, national statistical offices…) remain under their publishers' own terms.
+
+## Contact and corrections
+Found an error, or want to contribute or review? Write to **yamen.hlel@gmail.com** or open a GitHub issue.
 
 ## Countries in phase 1
 

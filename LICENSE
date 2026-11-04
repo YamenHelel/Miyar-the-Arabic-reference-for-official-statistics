@@ -1,8 +1,12 @@
 Miʿyar (مِعيار) — The Arabic reference for official statistics
 Copyright (c) 2026 Yamen Helel and Miʿyar contributors
 
-Unless otherwise noted, the original content of this repository is licensed under the
-Creative Commons Attribution 4.0 International License (CC BY 4.0).
+Unless otherwise noted, the original content of this repository (texts, definitions pages,
+glossary, comparisons, data files) is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+Software (the tools/ folder, website code, AI skills, MCP server and other code) is licensed
+under the MIT License: see LICENSE-CODE.
 
 You are free to:
   - Share: copy and redistribute the material in any medium or format, for any purpose, even commercially.
