@@ -1,0 +1,13 @@
+# Miʿyar website configuration (ADR-0009). Change base_url here to move to a custom domain.
+base_url: https://yamenhelel.github.io/Miyar-the-Arabic-reference-for-official-statistics/
+name_ar: مِعيار
+name_en: Miʿyar
+tagline_ar: المرجع العربي للإحصاء الرسمي
+tagline_en: The Arabic reference for official statistics
+description_ar: مرجع عربي مفتوح لتعاريف إحصاءات العمل، منسوخة حرفياً من معايير منظمة العمل الدولية والأجهزة الإحصائية الوطنية، مُتحقَّق منها ومقارنة بين عشر دول.
+description_en: An open Arabic reference of official labour-statistics definitions, quoted verbatim from ILO standards and national statistical offices, verified and compared across ten countries.
+email: yamen.hlel@gmail.com
+github: https://github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics
+license_url: https://creativecommons.org/licenses/by/4.0/
+locale: ar_AR
+theme_color: "#133621"

@@ -343,6 +343,20 @@ table.cmp a { text-decoration: none; }
 .st-broken, .st-to-locate { color: var(--danger); }
 .st-collected, .st-link-ok, .st-superseded { color: var(--muted); }
 
+/* SEO/GEO blocks */
+.crumbs { padding-top: 22px; font-size: var(--step-small); color: var(--muted); }
+.crumbs a { color: var(--muted); }
+.quick { margin-top: 22px; font-size: var(--step-lead); line-height: 1.6; max-width: 62ch; }
+.faq { display: grid; gap: 6px; max-width: 860px; }
+.faq details { background: var(--surface); }
+.faq summary { cursor: pointer; padding: 16px 20px; font-weight: 700; font-size: var(--step-body); list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq p { padding: 0 20px 18px; }
+.cite-box { padding-block: 40px 8px; display: grid; gap: 10px; justify-items: start; }
+.cite-box h2 { font-size: var(--step-lead); }
+.cite-box p { max-width: 80ch; font-size: 1rem; color: var(--muted); }
+.cite-box p[dir="ltr"] { text-align: left; }
+
 /* motion: entrance (content visible without JS) */
 .js [data-in] > * { opacity: 0; transform: translateY(22px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
 .js [data-in].in > * { opacity: 1; transform: none; }

@@ -111,6 +111,16 @@
     });
   }
 
+  /* ---- copy citation ---- */
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var el = document.getElementById(b.dataset.copy), txt = el.textContent, old = b.textContent;
+      function done() { b.textContent = "نُسخ ✓"; setTimeout(function () { b.textContent = old; }, 1800); }
+      function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt).then(done, sel); } else { sel(); }
+    });
+  });
+
   /* ---- registry filters ---- */
   var reg = document.getElementById("registry");
   if (reg) {

@@ -4,7 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{% block title %}{{ title }}{% endblock %}</title>
-<meta name="description" content="{{ description | default('مِعيار: المرجع العربي للإحصاء الرسمي. تعاريف منسوخة حرفياً من المعايير الدولية والأجهزة الإحصائية الوطنية، مُتحقَّق منها ومقارنة بين الدول.') }}">
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="alternate" hreflang="ar" href="{{ canonical }}">
+<link rel="alternate" hreflang="x-default" href="{{ canonical }}">
+{% if md_alt %}<link rel="alternate" type="text/markdown" href="{{ md_alt }}" title="Markdown">{% endif %}
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="{{ cfg.theme_color }}">
+<meta property="og:type" content="{{ 'website' if section == 'home' else 'article' }}">
+<meta property="og:site_name" content="{{ cfg.name_ar }} · {{ cfg.name_en }}">
+<meta property="og:locale" content="{{ cfg.locale }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ title }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ og_image }}">
+<link rel="icon" href="{{ root }}static/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ root }}manifest.webmanifest">
+<link rel="alternate" type="text/plain" href="{{ root }}llms.txt" title="llms.txt">
+{% if jsonld %}<script type="application/ld+json">{{ jsonld | safe }}</script>{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap">
@@ -32,7 +56,18 @@
   </div>
 </header>
 <main id="main">
+{% if crumbs %}
+<nav class="crumbs wrap" aria-label="مسار التصفح"><a href="{{ root }}index.html">مِعيار</a>{% for n, h in crumbs %}<span aria-hidden="true"> / </span>{% if h %}<a href="{{ root }}{{ h }}">{{ n }}</a>{% else %}<span aria-current="page">{{ n }}</span>{% endif %}{% endfor %}</nav>
+{% endif %}
 {% block main %}{% endblock %}
+{% if cite and section != 'home' %}
+<section class="wrap cite-box" aria-labelledby="cite-h" id="cite">
+  <h2 id="cite-h">استشهد بهذه الصفحة</h2>
+  <p id="cite-ar">{{ cite.ar }}</p>
+  <p id="cite-en" dir="ltr" lang="en">{{ cite.en }}</p>
+  <button type="button" class="btn" data-copy="cite-ar">انسخ الاستشهاد</button>
+</section>
+{% endif %}
 </main>
 <footer class="back">
   <div class="wrap">

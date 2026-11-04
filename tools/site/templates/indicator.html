@@ -7,6 +7,7 @@
     <h1>{{ ind.name_ar }}</h1>
     <p class="alt"><span lang="en">{{ ind.names.en }}</span><span lang="fr">{{ ind.names.fr }}</span></p>
     <p class="facts-line">{{ 'مسودة' if ind.status == 'draft' else 'مُراجَع' }} · النصوص الرسمية {{ done }} من {{ total }} · آخر تحديث {{ ind.last_updated }}{% if variants %} · يُقال أيضاً: {{ variants }}{% endif %}</p>
+    <p class="quick" id="quick">{{ quick }}</p>
     <p class="go"><a class="btn" href="#countries">قارن بين الدول العشر</a></p>
   </header>
   <div class="layout">
@@ -68,6 +69,14 @@
           {% for n in notes %}<li>{{ n.text }}<span class="cite">{{ n.cites }}</span></li>{% endfor %}
         </ul>
       </section>
+      {% if faq %}
+      <section data-in class="block" id="faq" aria-labelledby="h8">
+        <h2 id="h8">أسئلة شائعة</h2>
+        <div class="faq">
+          {% for qn, a in faq %}<details{% if loop.first %} open{% endif %}><summary>{{ qn }}</summary><p>{{ a }}</p></details>{% endfor %}
+        </div>
+      </section>
+      {% endif %}
       <section data-in class="block" id="plain" aria-labelledby="h6">
         <h2 id="h6">بعبارة بسيطة</h2>
         {{ ai(ind.explanation_ai_ar) }}
@@ -82,7 +91,7 @@
     <aside class="toc" aria-label="في هذه الصفحة">
       <span class="tl">في هذه الصفحة</span>
       <a href="#intl">التعريف الدولي</a><a href="#calc">طريقة الحساب</a><a href="#countries">التطبيق في عشر دول</a>
-      <a href="#national">التعاريف الوطنية</a><a href="#compare">قبل أن تقارن</a><a href="#plain">بعبارة بسيطة</a><a href="#sources">المصادر</a>
+      <a href="#national">التعاريف الوطنية</a><a href="#compare">قبل أن تقارن</a>{% if faq %}<a href="#faq">أسئلة شائعة</a>{% endif %}<a href="#plain">بعبارة بسيطة</a><a href="#sources">المصادر</a>
       <span class="tl" style="margin-top:20px">مؤشرات أخرى</span>
       {% for o in others %}<a href="{{ root }}indicators/{{ o.id }}.html">{{ o.name_ar }}</a>{% endfor %}
     </aside>

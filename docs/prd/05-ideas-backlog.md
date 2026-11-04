@@ -57,6 +57,10 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 | I-047 | English/French site variants generated from the same data (UI strings only; official texts already in original language) | P3 | 2 | idea |
 | I-048 | Real photographs for the site (NSO buildings, ICLS conference archives, survey fieldwork) from open collections or partners, with credits | P2 | 1 | idea |
 | I-049 | Short muted video loop for the home page (e.g. a survey interviewer at work, credited), if an honest clip exists | P3 | 2 | idea |
+| I-050 | Monthly AI-visibility report on the 20 target prompts (PRD 16), logged in docs/progress | P1 | 1 | planned |
+| I-051 | Custom domain for Miʿyar (CNAME + redirect from Pages) | P2 | 1 | idea |
+| I-052 | Wikidata item + Zenodo DOI for Miʿyar (entity and citability) | P1 | 1 | planned |
+| I-053 | LinkedIn series that links each post to one indicator page (traffic + AI citation signals) | P1 | 1 | idea |
 | I-038 | Link rot protection: auto-archive every new URL on the Wayback Machine | P1 | 0a | planned |
 
 ## D. Business

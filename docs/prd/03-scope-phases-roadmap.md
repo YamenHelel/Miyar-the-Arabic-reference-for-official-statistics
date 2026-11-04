@@ -21,6 +21,11 @@ Capacity: **about 1 hour per day, 7 days a week** for the lead (~30 h/month). AI
 **Exit:** 5 external statisticians test it and give feedback.
 
 ## Phase 1: Public launch, labour domain (Jan–Mar 2027)
+- **SEO/GEO base (PRD 16), started 2026-11-04:**
+  - canonical URLs, sitemap, robots (AI crawlers allowed), JSON-LD, social cards
+  - quick answers, fact-based FAQ, citation box, llms.txt and Markdown twins
+  - repo description, topics, CITATION.cff
+- **SEO/GEO launch tasks (lead):** Search Console + Bing, social preview, Zenodo DOI, Wikidata item.
 - ~60 indicators, ~150 concepts, 10 countries, labour SDGs.
 - Public website (GitHub Pages and a custom domain); Claude skill v1 published.
 - Practitioner directory form opened.
@@ -29,6 +34,7 @@ Capacity: **about 1 hour per day, 7 days a week** for the lead (~30 h/month). AI
 **Exit:** 500 monthly visitors, 10 reviewers registered, first training booked.
 
 ## Phase 2: Grow (Apr–Dec 2027)
+- Monthly AI-visibility tracking on the 20 target prompts; content gaps found there feed the next indicators.
 - More Arab countries, one at a time (suggested order: Egypt, Oman, Qatar, Bahrain, Kuwait, Algeria, Lebanon, Iraq, Sudan, Mauritania, Libya, Yemen, Syria, Somalia, Djibouti, Comoros); see the per-country checklist below.
 - Second domain chosen by demand (candidates: prices/CPI, population and demography, national accounts).
 - MCP server; Codex and other agent skills; English/French UI.

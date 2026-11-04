@@ -24,6 +24,7 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 | [prd/12-legal-privacy.md](prd/12-legal-privacy.md) | Copyright and attribution, data-protection laws, consent |
 | [prd/13-metrics-kpis.md](prd/13-metrics-kpis.md) | KPIs and how they are measured |
 | [prd/14-risks.md](prd/14-risks.md) | Risk register with mitigations |
+| [prd/16-seo-geo.md](prd/16-seo-geo.md) | SEO and GEO: target queries and AI prompts, technical checklist, citability rules, KPIs, lead actions |
 | [prd/15-naming.md](prd/15-naming.md) | Name decision (Miʿyar), options considered, remaining checks |
 
 ## Decisions (ADR)
@@ -35,6 +36,7 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 - [ADR-0006](decisions/ADR-0006-name-miyar.md): project name Miʿyar (مِعيار)
 - [ADR-0007](decisions/ADR-0007-shared-quotes-store.md): one shared quotes store (`content/quotes.yml`)
 - [ADR-0008](decisions/ADR-0008-site-generator-and-design.md): website generator (jinja2) and the Miʿyar design system
+- [ADR-0009](decisions/ADR-0009-canonical-url-and-crawlers.md): canonical address (GitHub Pages for now) and allowing AI crawlers
 
 ## Data
 - [../content/quotes.yml](../content/quotes.yml): all official wording (shared store); schemas `content/schema-*.yaml`

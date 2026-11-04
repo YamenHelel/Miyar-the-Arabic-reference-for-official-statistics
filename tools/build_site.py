@@ -17,6 +17,8 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+import seo
+from markdown_render import concept_md, indicator_md
 from common import (CONTENT_DIR, ROOT, SOURCES_DIR, concept_files, indicator_files, iter_sources,
                     load_yaml, quotes_by_slot, source_files)
 
@@ -89,6 +91,10 @@ def main():
     catalog = load_yaml(SOURCES_DIR / "microdata" / "puf-catalog.yaml").get("catalog", [])
 
     built = dt.date.today().isoformat()
+    cfg = load_yaml(SITE / "config.yaml")
+    base = cfg["base_url"]
+    pages = []      # (path, lastmod) for sitemap.xml
+    social = []     # social cards to render: {file, kind, title, sub}
     vq = sum(1 for q in quotes.values() if q.get("status") == "verified")
     stats = {"sources": len(reg), "verified_sources": sum(1 for r in reg.values() if r.get("status") == "verified"), "verified_quotes": vq}
     counts_line = " · ".join(f"{STATUS_AR[k]} {v}" for k, v in sorted(
@@ -99,12 +105,28 @@ def main():
     env.filters["tojson_ar"] = lambda v: json.dumps(v, ensure_ascii=False)
     env.filters["reflow"] = reflow
 
-    def render(tpl, path, **ctx):
+    def url_of(path):
+        return base if path == "index.html" else base + (path[: -len("index.html")] if path.endswith("/index.html") else path)
+
+    def render(tpl, path, lastmod=None, card=None, **ctx):
         depth = len(Path(path).parts) - 1
-        root = "../" * depth
+        root = base if path == "404.html" else "../" * depth   # 404 is served at any depth: absolute links
         f = out / path
         f.parent.mkdir(parents=True, exist_ok=True)
-        ctx.setdefault("description", None)
+        ctx.setdefault("description", cfg["description_ar"])
+        ctx["description"] = seo.clip(ctx["description"], 158)
+        ctx.setdefault("jsonld", None)
+        ctx.setdefault("crumbs", None)
+        ctx.setdefault("md_alt", None)
+        canonical = url_of(path)
+        og = "static/social/site.png"
+        if card:
+            og = f"static/social/{card['file']}"
+            social.append(card)
+        title_plain = ctx.get("title", cfg["name_ar"]).split(" · ")[0]
+        ctx.setdefault("cite", seo.citation(cfg, title_plain, ctx.get("title_en", cfg["name_en"]), canonical, built))
+        ctx.update(cfg=cfg, canonical=canonical, og_image=base + og)
+        pages.append((path if path.endswith(".html") else path, lastmod or built))
         html = env.get_template(tpl).render(root=root, built=built, stats=stats, q=lambda s: quotes.get(s),
                                             srcq=lambda s: reg.get((quotes.get(s) or {}).get("source"), {}), **ctx)
         f.write_text(html, encoding="utf-8")
@@ -154,11 +176,30 @@ def main():
         for c in i["international"].get("components", []):
             components.append({"id": c["id"], "name_ar": c["name_ar"], "state": status_state(quotes.get(c.get("quote"))) if c.get("quote") else ""})
         variants = "، ".join(v["term"] for v in i.get("term_variants", []) if v.get("used_in") and v["term"] != i["name_ar"])
-        render("indicator.html", f"indicators/{i['id']}.html", title=f"{i['name_ar']} · مِعيار", section="indicators", ind=i,
+        quick = seo.indicator_quick(i, quotes, reg)
+        faq = seo.indicator_faq(i, quotes, reg)
+        path = f"indicators/{i['id']}.html"
+        term = {"@type": "DefinedTerm", "@id": base + path + "#term", "name": i["name_ar"],
+                "alternateName": [i["names"]["en"], i["names"]["fr"]], "description": quick,
+                "inDefinedTermSet": base + "indicators/", "url": base + path}
+        art = {"@type": "Article", "headline": i["name_ar"], "inLanguage": "ar", "description": quick, "url": base + path,
+               "dateModified": str(i.get("last_updated", built)), "license": cfg["license_url"], "publisher": seo.org(cfg),
+               "about": {"@id": base + path + "#term"}, "isAccessibleForFree": True,
+               "isBasedOn": [{"@type": "CreativeWork", "name": s["title"], "url": s["url"], "publisher": s["publisher"]} for s in sources]}
+        ld = seo.graph(term, art, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المؤشرات", "indicators/"), (i["name_ar"], None)]), seo.faq_ld(faq))
+        render("indicator.html", path, title=f"{i['name_ar']} · مِعيار", title_en=i["names"]["en"], section="indicators", ind=i,
                done=done, total=total, rows=rows, national=national, notes=notes, sources=sources, components=components,
-               variants=variants, others=[o for o in inds if o["id"] != i["id"]],
-               description=f"{i['name_ar']}: التعريف الدولي والتعاريف الوطنية في عشر دول، منسوخة من مصادرها.")
+               variants=variants, others=[o for o in inds if o["id"] != i["id"]], quick=quick, faq=faq, jsonld=ld,
+               crumbs=[("المؤشرات", "indicators/index.html"), (i["name_ar"], None)], md_alt=f"{i['id']}.md",
+               lastmod=str(i.get("last_updated", built)),
+               card={"file": f"{i['id']}.png", "kind": "مؤشر · إحصاءات العمل", "title": i["name_ar"], "sub": i["names"]["en"]},
+               description=quick)
+        (out / "indicators" / f"{i['id']}.md").write_text(indicator_md(i, quotes, reg, url=base + path), encoding="utf-8")
+    tset = {"@type": "DefinedTermSet", "@id": base + "indicators/", "name": "مؤشرات إحصاءات العمل في مِعيار", "inLanguage": "ar",
+            "hasDefinedTerm": [{"@id": base + f"indicators/{i['id']}.html#term", "name": i["name_ar"]} for i in inds]}
     render("index_list.html", "indicators/index.html", title="المؤشرات · مِعيار", section="indicators", heading="المؤشرات",
+           title_en="Indicators", jsonld=seo.graph(tset, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المؤشرات", None)])),
+           crumbs=[("المؤشرات", None)], description="مؤشرات إحصاءات العمل في مِعيار: معدل البطالة، معدل المشاركة، نسبة العمالة إلى السكان، بطالة الشباب، بتعاريفها الرسمية في عشر دول.",
            intro="أربعة مؤشرات تجريبية في إحصاءات العمل. كل بطاقة تجمع النص الدولي والتعاريف الوطنية وملاحظات المقارنة.",
            groups=[{"title": "", "rows": [{"href": f"indicators/{i['id']}.html", "name": i["name_ar"],
                      "meta": "النصوص الرسمية {} من {}".format(*qref_count(i)), "sub": i["names"]["en"]} for i in inds]}])
@@ -174,16 +215,28 @@ def main():
                 related.append({"href": f"indicators/{r}.html", "name": ind_by[r]["name_ar"]})
         vl = [{"term": v["term"], "where": "، ".join(COUNTRIES.get(x, x) for x in v.get("used_in", [])) or "الاستعمال قيد التحقق",
                "basis": v.get("basis", "")} for v in c.get("term_variants", [])]
-        render("concept.html", f"concepts/{c['id']}.html", title=f"{c['name_ar']} · مِعيار", section="concepts", con=c,
+        cq = seo.concept_quick(c, quotes, reg)
+        cpath = f"concepts/{c['id']}.html"
+        cterm = {"@type": "DefinedTerm", "@id": base + cpath + "#term", "name": c["name_ar"], "alternateName": [c["names"]["en"], c["names"]["fr"]],
+                 "description": cq, "inDefinedTermSet": base + "concepts/", "url": base + cpath}
+        render("concept.html", cpath, title=f"{c['name_ar']} · مِعيار", title_en=c["names"]["en"], section="concepts", con=c,
+               quick=cq, description=cq, jsonld=seo.graph(cterm, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المفاهيم", "concepts/"), (c["name_ar"], None)])),
+               crumbs=[("المفاهيم", "concepts/index.html"), (c["name_ar"], None)], md_alt=f"{c['id']}.md", lastmod=str(c.get("last_updated", built)),
+               card={"file": f"{c['id']}.png", "kind": "مفهوم · مسرد مِعيار", "title": c["name_ar"], "sub": c["names"]["en"]},
                cat=cat_ar.get(c["category"], c["category"]), related=related, variants_list=vl,
                variants="، ".join(v["term"] for v in c.get("term_variants", [])))
+        (out / "concepts" / f"{c['id']}.md").write_text(concept_md(c, quotes, reg, url=base + cpath), encoding="utf-8")
     groups = []
     for cat in ["labour", "statistical"]:
         rows = [{"href": f"concepts/{c['id']}.html", "name": c["name_ar"], "meta": c["names"]["en"],
                  "sub": status_state(quotes.get(c["definition_quote"]))} for c in cons if c["category"] == cat]
         if rows:
             groups.append({"title": cat_ar[cat], "rows": rows})
-    render("index_list.html", "concepts/index.html", title="المفاهيم · مِعيار", section="concepts", heading="المفاهيم",
+    cset = {"@type": "DefinedTermSet", "@id": base + "concepts/", "name": "مسرد مِعيار لمفاهيم إحصاءات العمل والإحصاء", "inLanguage": "ar",
+            "hasDefinedTerm": [{"@id": base + f"concepts/{c['id']}.html#term", "name": c["name_ar"]} for c in cons]}
+    render("index_list.html", "concepts/index.html", title="المفاهيم · مِعيار", section="concepts", heading="المفاهيم", title_en="Glossary",
+           jsonld=seo.graph(cset, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المفاهيم", None)])), crumbs=[("المفاهيم", None)],
+           description="مسرد مِعيار: مفاهيم إحصاءات العمل والمفاهيم الإحصائية بالعربية، مع مقابلها الدولي وتعريفها الرسمي ومتغيرات المصطلح بين الدول.",
            intro="المسرد: المصطلح العربي ومتغيراته بين الدول، ومقابله في المعيار الدولي، وتعريفه الرسمي.", groups=groups)
 
     # ---------------- countries ----------------
@@ -220,9 +273,15 @@ def main():
                              "type": TYPE_AR.get(r.get("type"), r.get("type")), "status": r["status"], "status_ar": STATUS_AR[r["status"]]} for r in recs]}
         cards[iso] = card
     for iso, card in cards.items():
-        render("country.html", f"countries/{iso}.html", title=f"{card['name']} · مِعيار", section="countries", c=card,
-               others=[cards[o] for o in ARAB + REFC if o != iso])
-    render("index_list.html", "countries/index.html", title="الدول · مِعيار", section="countries", heading="الدول",
+        nso_ld = {"@type": "GovernmentOrganization", "name": card["nso"], **({"url": card["nso_url"]} if card["nso_url"] else {})}
+        page_ld = {"@type": "WebPage", "name": f"{card['name']}: إحصاءات العمل", "inLanguage": "ar", "url": base + f"countries/{iso}.html", "about": nso_ld}
+        render("country.html", f"countries/{iso}.html", title=f"{card['name']} · مِعيار", title_en=iso.upper(), section="countries", c=card,
+               others=[cards[o] for o in ARAB + REFC if o != iso],
+               description=f"{card['name']}: {card['nso']}، مسح القوى العاملة، تعاريف البطالة والعمالة كما يعتمدها، والمصادر الرسمية والبيانات الجزئية.",
+               jsonld=seo.graph(page_ld, seo.breadcrumbs(cfg, [("مِعيار", ""), ("الدول", "countries/"), (card["name"], None)])),
+               crumbs=[("الدول", "countries/index.html"), (card["name"], None)])
+    render("index_list.html", "countries/index.html", title="الدول · مِعيار", section="countries", heading="الدول", title_en="Countries",
+           crumbs=[("الدول", None)], description="الدول في مِعيار: تونس والسعودية والمغرب والأردن والإمارات وفلسطين، مع الولايات المتحدة والمملكة المتحدة وأستراليا وفرنسا للمقارنة.",
            intro="ست دول عربية في المرحلة الأولى، وأربع دول مرجعية للمقارنة. تُضاف الدول تباعاً.",
            groups=[{"title": "الدول العربية", "rows": [{"href": f"countries/{i}.html", "name": cards[i]["name"], "meta": f"{cards[i]['verified']} مصدراً مُتحقَّقاً منه", "sub": cards[i]["nso"]} for i in ARAB]},
                    {"title": "دول مرجعية", "rows": [{"href": f"countries/{i}.html", "name": cards[i]["name"], "meta": f"{cards[i]['verified']} مصدراً مُتحقَّقاً منه", "sub": cards[i]["nso"]} for i in REFC]}])
@@ -235,10 +294,18 @@ def main():
                      "status": r["status"], "status_ar": STATUS_AR[r["status"]], "vdate": str(r.get("verified_date", "") or ""),
                      "scope": "int" if r.get("country") in (None, "int") else "country"})
     rows.sort(key=lambda x: (["verified", "link-ok", "collected", "to-locate", "broken", "superseded"].index(x["status"]), x["title"]))
-    render("sources.html", "sources/index.html", title="سجل المصادر · مِعيار", section="sources", rows=rows, counts=counts_line,
+    ds = {"@type": "Dataset", "name": "سجل مصادر مِعيار", "alternateName": "Miʿyar source registry", "inLanguage": "ar",
+          "description": "قائمة الوثائق الرسمية التي يستند إليها مِعيار (معايير منظمة العمل الدولية، منهجيات الأجهزة الإحصائية) مع حالة التحقق من كل منها.",
+          "license": cfg["license_url"], "creator": seo.org(cfg), "url": base + "sources/", "isAccessibleForFree": True,
+          "distribution": {"@type": "DataDownload", "encodingFormat": "application/x-yaml", "contentUrl": cfg["github"] + "/tree/main/sources"}}
+    render("sources.html", "sources/index.html", title="سجل المصادر · مِعيار", section="sources", rows=rows, counts=counts_line, title_en="Source registry",
+           jsonld=seo.graph(ds, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المصادر", None)])), crumbs=[("المصادر", None)],
+           description="سجل مصادر مِعيار: كل وثيقة رسمية يستند إليها المرجع، بحالة التحقق منها وتاريخه، من منظمة العمل الدولية والأجهزة الإحصائية في عشر دول.",
            filters=[(k, v) for k, v in STATUS_AR.items()] + [("int", "دولية"), ("country", "وطنية")])
 
-    render("about.html", "about/index.html", title="المنهجية · مِعيار", section="about", counts=counts_line)
+    render("about.html", "about/index.html", title="المنهجية · مِعيار", section="about", counts=counts_line, title_en="Methodology",
+           crumbs=[("المنهجية", None)], jsonld=seo.graph(seo.breadcrumbs(cfg, [("مِعيار", ""), ("المنهجية", None)])),
+           description="كيف يعمل مِعيار: النص الرسمي منسوخ حرفياً مع مصدره، والتعليق منفصل، وشرح الذكاء الاصطناعي موسوم؛ مراحل التحقق من المصادر وطريقة الاستشهاد.")
 
     # ---------------- home ----------------
     first = "ind-unemployment-rate"
@@ -314,7 +381,10 @@ def main():
         d, t = qref_count(i)
         ind_rows.append({"id": i["id"], "name_ar": i["name_ar"], "formula": i["international"].get("formula", ""), "done": d, "total": t,
                          "custodian": i["international"].get("custodian", ""), "sdg": "، ".join(i.get("sdg", []))})
+    site_ld = {"@type": "WebSite", "@id": base + "#website", "name": cfg["name_en"], "alternateName": [cfg["name_ar"], cfg["tagline_ar"]],
+               "url": base, "inLanguage": "ar", "description": cfg["description_ar"], "license": cfg["license_url"], "publisher": seo.org(cfg)}
     render("home.html", "index.html", title="مِعيار · المرجع العربي للإحصاء الرسمي", section="home", first_indicator=first,
+           title_en=cfg["name_en"], jsonld=seo.graph(site_ld, seo.org(cfg)), description=cfg["description_ar"],
            slips=slips, ruler_json=json.dumps(ruler, ensure_ascii=False), moments=moments, countries=countries_home,
            glossary=glossary, glossary_count=len(cons), indicators=ind_rows)
 
@@ -329,6 +399,23 @@ def main():
     for iso, card in cards.items():
         idx.append({"t": card["name"], "c": "بلد · " + card["nso"], "u": f"countries/{iso}.html", "k": iso})
     (out / "search.json").write_text(json.dumps(idx, ensure_ascii=False), encoding="utf-8")
+    # ---------------- 404, root files, social cards list ----------------
+    render("404.html", "404.html", title="الصفحة غير موجودة · مِعيار", section="", description="الصفحة غير موجودة في مِعيار، المرجع العربي للإحصاء الرسمي. ابحث عن مؤشر أو مفهوم أو ابدأ من الصفحة الرئيسية.")
+    pages[:] = [(pth, d) for pth, d in pages if pth != "404.html"]
+    (out / "robots.txt").write_text(seo.robots_txt(cfg), encoding="utf-8")
+    (out / "sitemap.xml").write_text(seo.sitemap_xml(cfg, pages), encoding="utf-8")
+    (out / "llms.txt").write_text(seo.llms_txt(cfg, inds, cons, [(i, COUNTRIES[i]) for i in ARAB + REFC]), encoding="utf-8")
+    full = [seo.llms_txt(cfg, inds, cons, [(i, COUNTRIES[i]) for i in ARAB + REFC]), "\n---\n"]
+    full += [indicator_md(i, quotes, reg, url=base + f"indicators/{i['id']}.html") + "\n---\n" for i in inds]
+    full += [concept_md(c, quotes, reg, url=base + f"concepts/{c['id']}.html") + "\n---\n" for c in cons]
+    (out / "llms-full.txt").write_text("\n".join(full), encoding="utf-8")
+    manifest = {"name": f"{cfg['name_ar']} · {cfg['tagline_ar']}", "short_name": cfg["name_ar"], "lang": "ar", "dir": "rtl",
+                "start_url": "./", "display": "browser", "background_color": cfg["theme_color"], "theme_color": cfg["theme_color"],
+                "icons": [{"src": "static/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}
+    (out / "manifest.webmanifest").write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+    (out / "static" / "social").mkdir(parents=True, exist_ok=True)
+    social.insert(0, {"file": "site.png", "kind": cfg["tagline_ar"], "title": cfg["name_ar"], "sub": cfg["tagline_en"]})
+    (out / "static" / "social" / "cards.json").write_text(json.dumps(social, ensure_ascii=False), encoding="utf-8")
     n = len(list(out.rglob("*.html")))
     print(f"Built {n} pages into {out}")
 
