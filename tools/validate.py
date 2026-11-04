@@ -158,6 +158,19 @@ def main():
         for r in con.get("related", []) or []:
             if r not in con_ids | ind_ids:
                 errors.append(f"{where}: related id {r} not found")
+    # ---- country profiles: renderings for the language switcher (ADR-0012) ----
+    for p in source_files():
+        if p.parent.name != "countries":
+            continue
+        prof = load_yaml(p).get("profile") or {}
+        where = f"sources/countries/{p.name}:profile"
+        lfs_keys = set((prof.get("lfs") or {}).keys())
+        for k in ("lfs_ar", "lfs_en"):
+            extra = set((prof.get(k) or {}).keys()) - lfs_keys
+            if extra:
+                errors.append(f"{where}: {k} has keys not in lfs: {sorted(extra)}")
+        if any(prof.get(k) for k in ("lfs_ar", "lfs_en", "notes_ar", "nso_ar", "nso_en")) and not prof.get("translation_by"):
+            errors.append(f"{where}: renderings need translation_by")
     # ---- data sources (types + LFS guide) ----
     ds_ids = {p.stem for p in datasource_files()}
     dschema = load_yaml(CONTENT_DIR / "schema-datasource.yaml")

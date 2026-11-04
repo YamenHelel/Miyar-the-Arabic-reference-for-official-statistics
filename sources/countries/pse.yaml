@@ -5,6 +5,15 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  notes_ar: "تختلف تغطية قطاع غزة والقدس الشرقية حسب الفترة والظروف، وتُسجَّل لكل جولة مسح."
+  lfs_ar:
+    name_en: "مسح القوى العاملة"
+    frequency: "ربع سنوي، مع تقرير سنوي"
+    standards_note: "تعاريف منظمة العمل الدولية معتمدة مع مواءمتها للسياق الاجتماعي الفلسطيني (حسب وثائق الجهاز والأمم المتحدة)"
+    icls_standard: "غير مؤكَّد"
+    age: "تُنشر النتائج لمن بلغ 15 سنة فأكثر (فئة 10–14 مشمولة في المسح ومستبعدة من النتائج حسب ملف قديم لمنظمة العمل الدولية)"
   nso: {name_ar: الجهاز المركزي للإحصاء الفلسطيني, name_en: Palestinian Central Bureau of Statistics (PCBS), url: "https://www.pcbs.gov.ps"}
   lfs:
     name_en: Labour Force Survey

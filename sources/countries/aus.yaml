@@ -5,6 +5,16 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  nso_ar: "مكتب الإحصاء الأسترالي (ABS)"
+  notes_ar: "المنشور المرجعي «Labour Statistics: Concepts, Sources and Methods» (رقم 6102.0.55.001). برنامج تحديث مسح القوى العاملة جارٍ، وأداة TableBuilder للمسح متوقفة حتى اكتماله (البيانات من أغسطس 2006 إلى يناير 2026)."
+  lfs_ar:
+    name_en: "مسح القوى العاملة (LFS)، شهري منذ 1978 (والمسح قائم منذ 1960)"
+    frequency: "شهري؛ يُستبدل ثُمن العينة كل شهر"
+    scope: "المقيمون عادةً البالغون 15 سنة فأكثر، باستثناء القوات المسلحة"
+    icls_standard: "مبني على معايير منظمة العمل الدولية"
+    age: "15 سنة فأكثر"
   nso: {name_en: Australian Bureau of Statistics (ABS), url: "https://www.abs.gov.au"}
   lfs:
     name_en: Labour Force Survey (LFS), monthly since 1978 (survey since 1960)

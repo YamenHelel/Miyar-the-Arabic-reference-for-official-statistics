@@ -11,11 +11,24 @@
     <article>
       <section data-in class="block" aria-labelledby="k1">
         <h2 id="k1">مسح القوى العاملة</h2>
-        <div class="card-doc on-paper" style="max-width:860px">
-          <dl>{% for k, v in c.lfs %}<dt>{{ k }}</dt><dd dir="auto">{{ v }}</dd>{% endfor %}</dl>
+        <div class="card-doc on-paper card-view" style="max-width:860px" data-view="ar">
+          {% if c.rendered %}<div class="lang-switch" role="group" aria-label="لغة العرض"><button type="button" data-view="ar" aria-pressed="true">عربي</button><button type="button" data-view="en" aria-pressed="false" lang="en">English</button></div>{% endif %}
+          <div class="v v-ar">
+            {% if c.rendered %}<p class="v-label tr">صياغة مِعيار بالعربية لملاحظات جُمعت من المصادر، وليست نصاً رسمياً (بمساعدة الذكاء الاصطناعي، لم تُراجَع بعد).</p>{% endif %}
+            {% if c.nso_ar %}<p class="v-nso">{{ c.nso_ar }}</p>{% endif %}
+            <dl>{% for k, v in c.lfs %}<dt>{{ k }}</dt><dd dir="auto">{{ v }}</dd>{% endfor %}</dl>
+            {% if c.notes_ar or c.notes %}<p class="v-notes" dir="auto">{{ c.notes_ar or c.notes }}</p>{% endif %}
+          </div>
+          {% if c.rendered %}
+          <div class="v v-en" lang="en" dir="ltr">
+            <p class="v-label tr">Miʿyar's notes collected from sources; not official text.</p>
+            {% if c.nso_en %}<p class="v-nso">{{ c.nso_en }}</p>{% endif %}
+            <dl>{% for k, v in c.lfs_en %}<dt>{{ k }}</dt><dd dir="auto">{{ v }}</dd>{% endfor %}</dl>
+            {% if c.notes %}<p class="v-notes">{{ c.notes }}</p>{% endif %}
+          </div>
+          {% endif %}
         </div>
         <p class="legend">معلومات أولية جُمعت من البحث؛ ما يؤكده نص رسمي يظهر في بطاقات المؤشرات.</p>
-        {% if c.notes %}<p style="margin-top:22px" dir="auto">{{ c.notes }}</p>{% endif %}
       </section>
       {% if c.definitions %}
       <section data-in class="block" aria-labelledby="k2">

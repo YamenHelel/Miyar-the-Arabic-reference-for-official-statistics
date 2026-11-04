@@ -5,6 +5,17 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  lfs_ar:
+    name_en: "مسح القوى العاملة"
+    frequency: "ربع سنوي (منذ 2016؛ أول مسح في 2001، ونصف سنوي بعد 2006، حسب GLMM)"
+    mode: "مسح هاتفي للأسر (حسب منهجية الهيئة العامة للإحصاء)"
+    coverage: "كل المقيمين عادةً البالغين 15 سنة فأكثر، سعوديين وغير سعوديين"
+    sample: "53,360 أسرة (الربع الثالث 2021، حسب GLMM)"
+    icls_standard: "غير مؤكَّد"
+    age: "15 سنة فأكثر"
+    classifications: ["التصنيف السعودي للمهن (المبني على ISCO-08)"]
   nso: {name_ar: الهيئة العامة للإحصاء, name_en: General Authority for Statistics (GASTAT), url: "https://www.stats.gov.sa"}
   lfs:
     name_en: Labour Force Survey (LFS)

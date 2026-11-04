@@ -36,6 +36,11 @@ TYPE_AR = {"standard": "معيار", "manual": "دليل", "methodology": "من�
            "microdata": "بيانات جزئية", "portal": "بوابة", "classification": "تصنيف", "organisation": "جهة", "news": "خبر"}
 ACCESS_AR = {"public": "تنزيل حر", "registration": "تسجيل مجاني", "licensed": "بترخيص وطلب", "secure": "بيئة آمنة فقط",
              "none-found": "لم يُعثر على مسار", "unknown": "شروط الوصول غير معروفة بعد"}
+LFS_LABELS_EN = {"name_en": "Name", "name_fr": "Name", "frequency": "Frequency", "mode": "Collection mode", "coverage": "Coverage",
+                 "sample": "Sample", "icls_standard": "Standard applied", "age": "Age", "history": "History", "universe": "Universe",
+                 "framework": "Framework", "status_note": "Note", "standards_note": "Standards", "employed_definition_note": "Employed (definition)",
+                 "classifications": "Classifications", "unemployed": "Unemployed (definition)", "unemployed_fr": "Unemployed (definition)",
+                 "scope": "Scope", "coverage_note": "Coverage note"}
 LFS_LABELS = {"name_en": "الاسم", "name_fr": "الاسم", "name_ar": "الاسم بالعربية", "frequency": "الدورية", "mode": "طريقة الجمع",
               "coverage": "التغطية", "sample": "العينة", "icls_standard": "المعيار المطبَّق", "age": "السن", "history": "التاريخ",
               "universe": "المجتمع", "framework": "الإطار", "status_note": "ملاحظة", "standards_note": "المعايير",
@@ -284,12 +289,22 @@ def main():
         p = prof.get("profile", {})
         nso = p.get("nso", {})
         recs = [r for r in prof.get("sources", [])]
-        lfs = []
-        for k, v in (p.get("lfs") or {}).items():
-            if isinstance(v, (str, int)) and k in LFS_LABELS:
-                lfs.append((LFS_LABELS[k], v))
-            elif isinstance(v, list) and k in LFS_LABELS:
-                lfs.append((LFS_LABELS[k], "، ".join(map(str, v))))
+        def rows(view):
+            labels = LFS_LABELS if view == "ar" else LFS_LABELS_EN
+            alt = (p.get("lfs_ar") if view == "ar" else p.get("lfs_en")) or {}
+            sep = "، " if view == "ar" else ", "
+            out_rows = []
+            for k, v in (p.get("lfs") or {}).items():
+                if k not in labels or (view == "en" and k == "name_ar"):
+                    continue
+                v = alt.get(k, v)
+                if isinstance(v, list):
+                    v = sep.join(map(str, v))
+                if isinstance(v, (str, int)) and str(v) not in {str(r[1]) for r in out_rows}:
+                    out_rows.append((labels[k], v))
+            return out_rows
+        lfs = rows("ar")
+        lfs_en = rows("en")
         defs = []
         for i in inds:
             c = i["countries"].get(iso)
@@ -306,6 +321,9 @@ def main():
         card = {"iso": iso, "name": COUNTRIES[iso], "arab": iso in ARAB, "nso": name_local, "nso_url": nso.get("url", ""),
                 "verified": sum(1 for r in recs if r.get("status") == "verified"), "total": len(recs), "lfs": lfs,
                 "notes": " ".join(str(p.get("notes", "") or "").split()), "definitions": defs, "micro": micro,
+                "lfs_en": lfs_en, "notes_ar": " ".join(str(p.get("notes_ar", "") or "").split()),
+                "nso_ar": nso.get("name_ar") or p.get("nso_ar", ""), "nso_en": nso.get("name_en") or p.get("nso_en", ""),
+                "rendered": bool(p.get("translation_by")),
                 "sources": [{"url": str(r.get("url", "")), "title": r.get("title_ar") or r.get("title_en", ""),
                              "type": TYPE_AR.get(r.get("type"), r.get("type")), "status": r["status"], "status_ar": STATUS_AR[r["status"]]} for r in recs]}
         cards[iso] = card

@@ -5,6 +5,15 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  nso_ar: "مكتب الإحصاءات الوطنية (ONS)"
+  lfs_ar:
+    name_en: "مسح القوى العاملة (LFS)؛ ومسح القوى العاملة المحوَّل (TLFS) قيد التطوير"
+    frequency: "ربع سنوي (متحرك)"
+    status_note: "تصنّف وثيقة الجودة والمنهجية (QMI، مراجعة نوفمبر 2025) المسح «إحصاءات رسمية قيد التطوير»؛ مشكلات الجودة فيه (معدلات الاستجابة) حالة تعليمية مفيدة"
+    icls_standard: "مبني على معايير منظمة العمل الدولية"
+    age: "16 سنة فأكثر"
   nso: {name_en: Office for National Statistics (ONS), url: "https://www.ons.gov.uk"}
   lfs:
     name_en: Labour Force Survey (LFS); Transformed LFS (TLFS) in development

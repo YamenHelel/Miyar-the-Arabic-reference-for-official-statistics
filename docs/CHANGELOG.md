@@ -2,6 +2,19 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-05: Language switcher on country cards (session 10c)
+**Done**
+- The lead approved extending the switch to the country page. The «مسح القوى العاملة» card now has عربي / English at its top.
+  - The choice is shared with the definitions cards and remembered across pages (checked with Playwright).
+  - Each view is labelled as Miʿyar's notes, not official text.
+- Renderings were added to all 10 `sources/countries/*.yaml` profiles: `lfs_ar`, `lfs_en` for French values, `notes_ar`, `nso_ar`/`nso_en`, and `translation_by`. Existing text is untouched.
+- **Tooling:**
+  - `build_site.py`: English labels (`LFS_LABELS_EN`), and duplicate rows dropped
+  - `validate.py`: rendering keys must match `lfs`, and `translation_by` is required
+  - `miyar.js`: one switch handler for definitions and cards
+  - VALIDATION.md queue 7b lists the 10 cards
+- ADR-0012 extended; I-063 partly done (ILO sheets still open).
+
 ## 2026-11-05: Language switcher on national definitions (session 10b)
 **Done**
 - Lead's request: every national-definition card on indicator pages has a عربي / English switcher at its top (ADR-0012).

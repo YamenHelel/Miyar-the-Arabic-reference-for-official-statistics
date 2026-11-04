@@ -5,6 +5,21 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  nso_ar: "المعهد الوطني للإحصاء والدراسات الاقتصادية (Insee)"
+  nso_en: "National Institute of Statistics and Economic Studies (Insee)"
+  notes_ar: "مفهوم «الهالة حول البطالة» (halo autour du chômage: غير النشطين القريبون من سوق العمل) مقابل مفيد لمفهوم القوة العاملة المحتملة عند منظمة العمل الدولية."
+  lfs_ar:
+    name_fr: "المسح المستمر للتشغيل (Enquête Emploi en continu، EEC)"
+    frequency: "مستمر، بنتائج ربع سنوية"
+    framework: "مسح القوى العاملة الأوروبي (EU-LFS، بموجب لائحة IESS منذ 2021)"
+    unemployed_fr: "من بلغ 15 سنة فأكثر بلا عمل في أسبوع الإسناد، ومتاح خلال أسبوعين، وبحث بنشاط خلال الأسابيع الأربعة الأخيرة أو وجد عملاً يبدأ خلال ثلاثة أشهر"
+    icls_standard: "مبني على معايير منظمة العمل الدولية (EU-LFS)"
+    age: "15 سنة فأكثر"
+  lfs_en:
+    name_fr: "Continuous Employment Survey (Enquête Emploi en continu, EEC)"
+    unemployed_fr: "15+ without a job in the reference week, available within 2 weeks, active search in the last 4 weeks or a job found starting within 3 months"
   nso: {name_fr: "Institut national de la statistique et des études économiques (Insee)", url: "https://www.insee.fr"}
   lfs:
     name_fr: Enquête Emploi en continu (EEC)

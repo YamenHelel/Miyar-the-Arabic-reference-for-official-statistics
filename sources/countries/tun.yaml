@@ -5,6 +5,17 @@ file_meta:
   updated: 2026-11-03
 
 profile:   # facts from search snippets — every item to be verified against cited sources
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  nso_en: "National Institute of Statistics (INS)"
+  notes_ar: "عمود صحفي في أغسطس 2026 (businessnews.com.tn) شكّك في أرقام الربع الثاني 2026 للمسح؛ مقال رأي يُسجَّل للسياق فقط."
+  lfs_ar:
+    name_fr: "المسح الوطني حول السكان والتشغيل (ENPE)"
+    frequency: "ربع سنوي (المسح السنوي ENPE في فهرس منظمة العمل الدولية لعام 2022)"
+    icls_standard: "غير مؤكَّد"
+    age: "15 سنة فأكثر"
+  lfs_en:
+    name_fr: "National Population and Employment Survey (ENPE)"
   nso: {name_ar: المعهد الوطني للإحصاء, name_fr: Institut National de la Statistique (INS), url: "https://www.ins.tn"}
   lfs:
     name_fr: Enquête Nationale sur la Population et l'Emploi (ENPE)

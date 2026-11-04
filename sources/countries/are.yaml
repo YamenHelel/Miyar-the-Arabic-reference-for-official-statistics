@@ -5,6 +5,16 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  notes_ar: "منذ 2020 لم تعد جداول مسح القوى العاملة المنشورة مفصّلة حسب الجنسية (حسب GLMM)، ويشير GLMM إلى قلة البيانات الوصفية المنهجية المتاحة للعموم. تنشر مراكز الإحصاء على مستوى الإمارات (مثل أبوظبي ودبي) بيانات عن العمل أيضاً، وتُضاف في مرحلة لاحقة."
+  lfs_ar:
+    name_en: "مسح القوى العاملة"
+    history: "استؤنف في 2016 (السابق في 2009)؛ نُشرت نتائج 2008 و2009 و2016–2023 بصيغة Excel (حسب GLMM)"
+    employed_definition_note: "من بلغ 15 سنة فأكثر وعمل ساعة مدفوعة واحدة على الأقل في أسبوع الإسناد (حسب ملاحظات GLMM)"
+    classifications: ["ISCO-08"]
+    icls_standard: "غير مؤكَّد"
+    age: "15 سنة فأكثر"
   nso: {name_ar: المركز الاتحادي للتنافسية والإحصاء, name_en: Federal Competitiveness and Statistics Centre (FCSC), url: "https://fcsc.gov.ae"}
   lfs:
     name_en: Labour Force Survey

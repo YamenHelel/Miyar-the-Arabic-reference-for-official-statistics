@@ -5,6 +5,17 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  nso_ar: "مكتب إحصاءات العمل (BLS)؛ ويجري المسحَ مكتبُ التعداد الأمريكي"
+  notes_ar: "أهم فروق المقارنة مع منظمة العمل الدولية، وهي الحد الأدنى للسن 16، والتمييز بين البحث الفعلي والسلبي، ومقاييس نقص الاستخدام U-1 إلى U-6."
+  lfs_ar:
+    name_en: "مسح السكان الحالي (CPS)"
+    frequency: "شهري"
+    universe: "السكان المدنيون غير المقيمين في مؤسسات، البالغون 16 سنة فأكثر"
+    unemployed: "بلا عمل في أسبوع الإسناد، ومتاح، وبحث بنشاط خلال الأسابيع الأربعة السابقة (البحث السلبي مستبعد)؛ ويُعدّ المسرَّحون مؤقتاً متعطلين"
+    icls_standard: "وطني (قريب من منظمة العمل الدولية؛ سن 16 فأكثر، وقاعدة البحث الفعلي)"
+    age: "16 سنة فأكثر"
   nso: {name_en: "Bureau of Labor Statistics (BLS); survey conducted by the U.S. Census Bureau", url: "https://www.bls.gov"}
   lfs:
     name_en: Current Population Survey (CPS)

@@ -5,6 +5,18 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  nso_en: "High Commission for Planning (HCP)"
+  notes_ar: "تغيير منهجي كبير في 2026، فيجب أن تذكر كل صفحة مؤشر المسح أو السلسلة التي يأتي منها الرقم. وقد أوضحت المندوبية (ديسمبر 2024) أن معدل البطالة في الإحصاء العام للسكان والسكنى 2024 (21.3%) غير قابل للمقارنة مع البحث الوطني حول التشغيل."
+  lfs_ar:
+    name_fr: "البحث الوطني حول التشغيل (ENE، 1976–2025) ← البحث حول اليد العاملة (EMO2026) ابتداءً من يناير 2026"
+    frequency: "ربع سنوي، مستمر (منذ 1976)"
+    sample: "نحو 90,000 أسرة سنوياً (ENE) ← 135,000 (البحث الجديد، حسب المذكرة التقنية لماي 2026)"
+    icls_standard: "مختلط"
+    age: "15 سنة فأكثر"
+  lfs_en:
+    name_fr: "National Employment Survey (ENE, 1976–2025) → Labour Force Survey (Enquête sur la Main-d'Œuvre, EMO2026), from January 2026"
   nso: {name_ar: المندوبية السامية للتخطيط, name_fr: Haut-Commissariat au Plan (HCP), url: "https://www.hcp.ma"}
   lfs:
     name_fr: "Enquête Nationale sur l'Emploi (ENE, 1976–2025) → Enquête sur la Main-d'Œuvre (EMO2026), from January 2026"

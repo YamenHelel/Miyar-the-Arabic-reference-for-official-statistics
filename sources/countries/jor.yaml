@@ -5,6 +5,16 @@ file_meta:
   updated: 2026-11-03
 
 profile:
+  # Miʿyar renderings of the notes below for the site's عربي / English switcher (not official text; ADR-0012)
+  translation_by: "AI-assisted (Claude), 2026-11-05, not yet reviewed"
+  lfs_ar:
+    name_en: "مسح العمالة والبطالة / مسح القوى العاملة"
+    frequency: "ربع سنوي (أربع جولات في السنة)"
+    sample: "نحو 16,500 أسرة في كل جولة (حسب وصف ERF)"
+    mode: "بالأجهزة اللوحية (CAPI) في الجولات الأخيرة"
+    coverage_note: "يستثني تاريخياً غير الأردنيين المقيمين خارج المساكن التقليدية"
+    icls_standard: "غير مؤكَّد"
+    age: "15 سنة فأكثر"
   nso: {name_ar: دائرة الإحصاءات العامة, name_en: Department of Statistics (DoS), url: "https://dosweb.dos.gov.jo"}
   lfs:
     name_en: Employment and Unemployment Survey (EUS) / Labour Force Survey

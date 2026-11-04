@@ -21,3 +21,9 @@ wanted to read every card in one language.
 ## Consequences
 - 10 national definitions now read fully in Arabic and in English (AI-assisted translations, pending the lead's review).
 - Official wording is unchanged; the quote store is still the only place for official text (ADR-0007).
+
+## Extended to country cards (2026-11-05, lead's request)
+- The «مسح القوى العاملة» card on each country page has the same switch. The choice is shared with the definitions cards and carries across pages.
+- The card's values are Miʿyar's own notes (not official text), so their renderings live in the country profile. They use `lfs_ar`, `lfs_en` (for French values only), `notes_ar`, `nso_ar` and `nso_en`, with `translation_by`. Each view carries a label saying so.
+- The validator checks that the rendering keys match `lfs` and that `translation_by` is present. Queue 7b lists the 10 cards to review.
+- When a profile value is corrected, its rendering must be corrected in the same edit.

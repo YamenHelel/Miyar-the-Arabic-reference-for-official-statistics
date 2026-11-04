@@ -390,7 +390,9 @@ pre { margin: 0; background: #0d2617; color: var(--ink); padding: 18px 20px; ove
 .lang-switch { display: inline-flex; gap: 0; margin: 0 0 14px; border: 1px solid var(--paper-ink); }
 .lang-switch button { font: inherit; font-size: .95rem; padding: 4px 14px; border: 0; background: transparent; color: var(--paper-ink); cursor: pointer; }
 .lang-switch button[aria-pressed="true"] { background: var(--paper-ink); color: var(--paper); font-weight: 700; }
-.nat[data-view="ar"] .v-en, .nat[data-view="en"] .v-ar { display: none; }
+[data-view="ar"] > .v-en, [data-view="en"] > .v-ar, .nat[data-view="ar"] .v-en, .nat[data-view="en"] .v-ar { display: none; }
+.card-view .v-nso { font-weight: 700; margin-bottom: 12px; }
+.card-view .v-notes { margin-top: 18px; font-size: 1rem; }
 html:not(.js) .lang-switch { display: none; }
 .v-label { font-size: var(--step-small); margin-bottom: 8px; opacity: .85; }
 .v-label.tr { font-style: italic; }

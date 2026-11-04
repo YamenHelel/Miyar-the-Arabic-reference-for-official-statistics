@@ -15,7 +15,7 @@ Where to act: the **Verification Desk** (link in `docs/STATUS.md`): ✍️ tab f
 | 5. Country facts from search snippets | 15 | Confirmed automatically once the country's text is pasted |
 | 6. Country-profile fields to confirm | 20 | Reply in chat or edit the YAML |
 | 7. AI-drafted pages awaiting review | 54 | Read the page; say "reviewed <id>" or send corrections |
-| 7b. Unofficial translations to review | 10 | Read each against its original on the indicator page (language switcher) |
+| 7b. Unofficial translations to review | 10 definitions + 10 country cards | Read each against its original (عربي / English switcher on indicator and country pages) |
 | 8. Code not yet executed | 1 | Stata script (needs someone with Stata) |
 | 9. Lead decisions and settings | 7 | See the list at the end |
 
@@ -315,6 +315,19 @@ Shown on indicator pages through the عربي / English switcher, always labelle
 - `q-jor-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
 - `q-are-unemployed` (ar → en): AI-assisted (Claude), 2026-11-05, not yet reviewed
 - `q-pse-unemployed` (ar → en): AI-assisted (Claude), 2026-11-05, not yet reviewed
+
+Country cards (Arabic/English renderings of Miʿyar's profile notes in `sources/countries/*.yaml`, keys `lfs_ar`, `lfs_en`, `notes_ar`, `nso_ar`, `nso_en`):
+
+- UAE: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- Australia: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- France: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- UK: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- Jordan: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- Morocco: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- Palestine: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- Saudi Arabia: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- Tunisia: AI-assisted (Claude), 2026-11-05, not yet reviewed
+- USA: AI-assisted (Claude), 2026-11-05, not yet reviewed
 
 ## 8. Code not yet executed
 

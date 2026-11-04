@@ -76,6 +76,12 @@ def build():
             prof = (load_yaml(p).get("profile") or {})
             for f in prof.get("to_verify", []) or []:
                 to_verify.append((p.stem, f))
+    rendered = []
+    for p in source_files():
+        if p.parent.name == "countries":
+            prof = (load_yaml(p).get("profile") or {})
+            if prof.get("translation_by") and "not yet reviewed" in str(prof["translation_by"]):
+                rendered.append((p.stem, prof["translation_by"]))
     manual = load_yaml(ROOT / "docs" / "lead-actions.yml").get("actions", []) if (ROOT / "docs" / "lead-actions.yml").exists() else []
     open_manual = [a for a in manual if a.get("status") != "done"]
 
@@ -87,7 +93,7 @@ def build():
            f"| 5. Country facts from search snippets | {len(snippets)} | Confirmed automatically once the country's text is pasted |",
            f"| 6. Country-profile fields to confirm | {len(to_verify)} | Reply in chat or edit the YAML |",
            f"| 7. AI-drafted pages awaiting review | {len(drafts)} | Read the page; say \"reviewed <id>\" or send corrections |",
-           f"| 7b. Unofficial translations to review | {sum(1 for q in quotes if q.get('translation_status') == 'unofficial')} | Read each against its original on the indicator page (language switcher) |",
+           f"| 7b. Unofficial translations to review | {sum(1 for q in quotes if q.get('translation_status') == 'unofficial')} definitions + {len(rendered)} country cards | Read each against its original (عربي / English switcher on indicator and country pages) |",
            f"| 8. Code not yet executed | 1 | Stata script (needs someone with Stata) |",
            f"| 9. Lead decisions and settings | {len(open_manual)} | See the list at the end |", ""]
 
@@ -139,6 +145,8 @@ def build():
            "Shown on indicator pages through the عربي / English switcher, always labelled unofficial, with the original one click away.", ""]
     md += [f"- `{q['slot']}` ({q['lang']} → {', '.join(x for x, k in (('ar', 'translation_ar'), ('en', 'translation_en')) if q.get(k))}): "
            f"{q.get('translation_by', '')}" for q in quotes if q.get("translation_status") == "unofficial"] or ["- none"]
+    md += ["", "Country cards (Arabic/English renderings of Miʿyar's profile notes in `sources/countries/*.yaml`, keys `lfs_ar`, `lfs_en`, `notes_ar`, `nso_ar`, `nso_en`):", ""]
+    md += [f"- {COUNTRIES.get(iso, iso)}: {by}" for iso, by in rendered] or ["- none"]
     md += ["", "## 8. Code not yet executed", "",
            "- `code/stata/miyar_lfs.do`: written to match Python and R, never run. Someone with Stata runs it on "
            "`code/data/synthetic_lfs.csv` and compares with `code/expected/results_python.json`.",

@@ -178,19 +178,23 @@
     });
   });
 
-  /* ---- national definitions: Arabic / English view (one choice for all cards, remembered) ---- */
-  var nat = document.querySelector(".nat[data-view]");
-  if (nat) {
+  /* ---- Arabic / English view on national definitions and country cards (one choice, remembered across pages) ---- */
+  var views = document.querySelectorAll(".nat[data-view], .card-view[data-view]");
+  if (views.length) {
     var setView = function (v) {
-      nat.setAttribute("data-view", v);
-      nat.querySelectorAll(".lang-switch button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.view === v)); });
+      views.forEach(function (c) {
+        c.setAttribute("data-view", v);
+        c.querySelectorAll(".lang-switch button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.view === v)); });
+      });
       try { localStorage.setItem("miyar-def-view", v); } catch (e) {}
     };
     var saved = null;
     try { saved = localStorage.getItem("miyar-def-view"); } catch (e) {}
     if (saved === "en" || saved === "ar") setView(saved);
-    nat.querySelectorAll(".lang-switch button").forEach(function (b) {
-      b.addEventListener("click", function () { setView(b.dataset.view); });
+    views.forEach(function (c) {
+      c.querySelectorAll(".lang-switch button").forEach(function (b) {
+        b.addEventListener("click", function () { setView(b.dataset.view); });
+      });
     });
   }
 
