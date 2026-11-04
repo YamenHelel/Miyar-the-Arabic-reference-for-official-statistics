@@ -1,0 +1,23 @@
+name: code library
+
+# Runs the Miʿyar code library tests (Python) and checks that the R version reproduces the Python numbers.
+on:
+  push:
+    paths: ["code/**", "tools/test_code.py", "tools/compare_code_results.py", "tools/build_code_presets.py", "content/**", ".github/workflows/code.yml"]
+  workflow_dispatch:
+
+jobs:
+  python-and-r:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.12"}
+      - run: pip install -r tools/requirements.txt numpy pandas
+      - run: python tools/build_code_presets.py && git diff --exit-code code/presets/countries.json
+      - run: python tools/test_code.py
+      - uses: r-lib/actions/setup-r@v2
+        with: {use-public-rspm: true}
+      - run: Rscript -e 'install.packages(c("survey", "jsonlite"), repos = "https://packagemanager.posit.co/cran/__linux__/noble/latest")'
+      - run: Rscript code/r/miyar_lfs.R code/data/synthetic_lfs.csv none results_r.json
+      - run: python tools/compare_code_results.py results_r.json

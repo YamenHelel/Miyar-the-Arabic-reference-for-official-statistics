@@ -17,6 +17,7 @@ jobs:
       - run: pip install -r tools/requirements.txt
       - run: python tools/validate.py --stats
       - run: python tools/build_site.py _site && python tools/check_seo.py _site --skip-images
+      - run: pip install numpy pandas && python tools/test_code.py
 
   links:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
