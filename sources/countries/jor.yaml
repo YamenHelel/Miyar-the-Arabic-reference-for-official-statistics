@@ -31,9 +31,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
   - id: src-jor-dos-quarterly-report
     title_en: DoS quarterly employment and unemployment report (latest)
     publisher: Department of Statistics
@@ -75,6 +75,6 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"

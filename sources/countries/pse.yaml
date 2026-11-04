@@ -27,9 +27,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 SSLError"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 SSLError"
   - id: src-pse-pcbs-lfs-annual-2024
     title_en: Labour Force Survey annual report 2024 (concepts and definitions, methodology, quality)
     publisher: Palestinian Central Bureau of Statistics
@@ -40,9 +40,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: broken
+    link_check: "2026-11-04 SSLError"
     notes: "Direct PDF link broken (lead, 2026-11-04). The 2024 annual report is still listed under \"related materials\" in the PCBS metadata catalogue (src-pse-pcbs-microdata-portal, catalogue 740) — download from there."
     review_note: "This www.pcbs.gov.ps page can’t be found (2026-11-04)"
-    link_check: "2026-11-04 SSLError"
   - id: src-pse-pcbs-microdata-portal
     title_en: PCBS microdata / metadata catalogue (NADA)
     publisher: Palestinian Central Bureau of Statistics
@@ -53,9 +53,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
     notes: Catalogue entry with LFS related materials (questionnaire, reports). Access policy for LFS microdata — verify.
   - id: src-pse-erf-lfs
     title_en: Palestine LFS on ERF data portal (e.g. LFS 2021)
@@ -79,6 +79,7 @@ sources:
     date_accessed: 2026-11-04
     priority: P1
     status: collected
+    link_check: "2026-11-04 SSLError"
     notes: Latest quarterly release found. Coverage is the West Bank for this round.
 
   - id: src-pse-pcbs-lfs-2025-metadata
@@ -90,5 +91,6 @@ sources:
     url: https://microdata.pcbs.gov.ps/PCBS-Metadata-en-v5.2/index.php/catalog/746/data-dictionary
     date_accessed: 2026-11-04
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Yearly 2025 file with quarterly files Q1–Q4 (63,446 cases per search snippet). Includes LU3 variable.

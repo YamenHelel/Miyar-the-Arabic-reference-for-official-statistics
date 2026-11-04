@@ -30,9 +30,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
   - id: src-are-uaestat-portal
     title_en: UAE Stat portal (raw LFS datasets from 2019)
     publisher: Federal Competitiveness and Statistics Centre
@@ -43,9 +43,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: Address inferred from portal name in GLMM notes — confirm.
   - id: src-are-lfs-methodology
     title_en: UAE LFS methodology / metadata
@@ -91,5 +91,6 @@ sources:
     date_published: 2026-06
     date_accessed: 2026-11-04
     priority: P3
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: Emirate-level report; may describe the national LFS methodology.

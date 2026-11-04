@@ -18,9 +18,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: Entry point to all ICLS resolutions. Use this to find official PDFs and any Arabic versions.
 
   - id: src-ilo-icls19-res1
@@ -37,9 +37,9 @@ sources:
     sdg_indicators: ["8.5.2", "8.6.1"]
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: >
       Core standard. Replaces 13th ICLS (1982) for employment/unemployment and narrows "employment" to work for pay or profit.
       Official PDF is known as wcms_230304.pdf (cited in a CEPAL training deck) — exact ilo.org URL TO-LOCATE.
@@ -56,9 +56,9 @@ sources:
     icls_standard: 19th
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: ILOSTAT WORK database follows 19th ICLS. French version exists under /fr/.
 
   - id: src-ilo-icls13-res1
@@ -74,9 +74,9 @@ sources:
     icls_standard: 13th
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
     superseded_by: src-ilo-icls19-res1
     notes: Superseded internationally by 19th ICLS but still the basis of many national LFS and of ILOSTAT LFS database. Old ilo.org URL pattern — may redirect.
 
@@ -91,9 +91,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
     notes: Resolution concerning statistics on work relationships (20th ICLS, Oct 2018) replaced ICSE-93. Manual last updated Aug 2023 (per search snippet).
 
   - id: src-ilo-icls20-classification-status
@@ -135,9 +135,9 @@ sources:
     sdg_indicators: ["8.3.1"]
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
     notes: ICLS/21/2023/RES.I. Replaces the 1993 (15th ICLS) informal sector resolution and the 2003 (17th ICLS) informal employment guidelines.
 
   - id: src-ilo-icls21-news
@@ -164,9 +164,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: Indicator descriptions, database descriptions, guidelines. Check whether an Arabic interface exists.
 
   - id: src-ilo-lfs-db-description
@@ -180,9 +180,9 @@ sources:
     icls_standard: 13th
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: LFS database indicators based on 13th ICLS; WORK database on 19th ICLS — key comparability point.
 
   - id: src-ilo-work-db-description
@@ -196,9 +196,9 @@ sources:
     icls_standard: 19th
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
 
   - id: src-ilo-forms-of-work
     title_en: ILOSTAT — Forms of work (concepts)
@@ -223,9 +223,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: ILO is custodian of 14 labour SDG indicators across 5 goals (per ILOSTAT). Database description also at /databases/ilosdg/description/.
 
   - id: src-ilo-sdg-topic
@@ -250,9 +250,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: For each of the 10 countries, extract the ILO record of the national LFS (standard, age, reference period).
 
   - id: src-ilo-arab-states-stats
@@ -289,10 +289,10 @@ sources:
     url: https://webapps.ilo.org/surveyLib/
     date_accessed: 2026-11-03
     priority: P1
-    status: broken
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: "ILO Survey Catalog retired (HTTP 410, seen by lead 2026-11-04). No successor catalogue found by search on 2026-11-04; national survey metadata is in the ILOSTAT national sources catalogue (src-ilo-national-sources-catalogue)."
     review_note: "410 Survey Catalog Retired (2026-11-04)"
-    link_check: "2026-11-04 200"
     notes: >
       Base URL inferred from catalogue entry URLs in search results (e.g. /surveyLib/index.php/catalog/8572 = Tunisia ENPE 2022).
       Contains related materials (questionnaires, reports) for national LFS.
@@ -309,9 +309,9 @@ sources:
     icls_standard: 19th
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: CAPI model is current; PAPI resources no longer updated (per ILOSTAT).
 
   - id: src-ilo-lfs-questionnaire-viewer
@@ -361,9 +361,9 @@ sources:
     icls_standard: 19th
     priority: P1
     review_note: "Page non trouvée (2026-11-04)"
-    link_check: "2026-11-04 403"
     notes: Key resource for the 13th→19th ICLS migration guide (backlog I-001).
     status: superseded
+    link_check: "2026-11-04 403"
     superseded_by: src-ilo-aligning-lfs-icls-en
 
   - id: src-ilo-icls-arabic-translations
@@ -389,6 +389,7 @@ sources:
     icls_standard: 19th
     priority: P1
     status: collected
+    link_check: "2026-11-04 403"
     notes: Replaces the French URL the lead found broken. Hub organised by survey phase (19th ICLS checklist, ISCO guidance, Stata code for standard tables, quick guide on interpreting the unemployment rate).
 
   - id: src-ilo-microdata-quick-guide
@@ -400,5 +401,6 @@ sources:
     url: https://www.ilo.org/publications/ilostat-microdata-processing-quick-guide-principles-and-methods-underlying
     date_accessed: 2026-11-04
     priority: P2
-    status: collected
+    status: link-ok
+    link_check: "2026-11-04 200"
     notes: How ILO derives harmonised indicators from national LFS microdata (95% of ILOSTAT values). Relevant to the code library idea (I-018).

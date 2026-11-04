@@ -17,9 +17,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: Based on a Jan 2023 survey of 18 NSOs; all 18 have LFS-based databases. Essential baseline on which ICLS standard each Arab country applies.
 
   - id: src-escwa-lm-data-structures
@@ -47,9 +47,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 403"
     notes: URL taken from 2019 launch notice — current address must be confirmed on unescwa.org.
 
   - id: src-escwa-skills-monitor
@@ -103,9 +103,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
     notes: >
       Address taken from UN profile (https://unstats.un.org/gist/data/Profile_AITRS.pdf), not opened directly.
       Intergovernmental, members = Arab NSOs. Check for: training catalogue, Arabic statistical glossary, labour statistics courses.
@@ -145,8 +145,8 @@ sources:
     url: https://gccstat.org/en/statistic/publications/labor-statistics
     date_accessed: 2026-11-03
     priority: P1
-    link_check: "2026-11-04 404"
     status: collected
+    link_check: "2026-11-04 404"
     review_note: "CI returned 404 on 2026-11-04 but the page is still indexed by search engines; check by hand."
 
   - id: src-gccstat-labour-survey-page
@@ -158,9 +158,9 @@ sources:
     url: https://gccstat.org/en/statistic/surveys/2017/labour_statstics
     date_accessed: 2026-11-03
     priority: P2
-    link_check: "2026-11-04 404"
     notes: GCC-Stat runs a quarterly harmonised LFS covering citizens and non-citizens (per search snippet) — verify.
     status: collected
+    link_check: "2026-11-04 404"
     review_note: "CI returned 404 on 2026-11-04 but the page is still indexed by search engines; check by hand."
 
   - id: src-gccstat-marsa-labour
@@ -185,9 +185,9 @@ sources:
     date_accessed: 2026-11-03
     icls_standard: 19th
     priority: P3
-    link_check: "2026-11-04 404"
 
     status: collected
+    link_check: "2026-11-04 404"
     review_note: "CI returned 404 on 2026-11-04 but the page is still indexed by search engines; check by hand."
   # ---------- Arab Labour Organization ----------
   - id: src-alo-home
@@ -251,9 +251,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
     notes: Licensed access (registration + data access agreement). Holds raw and harmonised LFS for Tunisia, Jordan, Palestine, Egypt and others.
 
   - id: src-erf-harmonized-catalog
@@ -266,9 +266,9 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    link_check: "2026-11-04 200"
     verified_by: YH
     verified_date: 2026-11-04
-    link_check: "2026-11-04 200"
 
   # ---------- Arab Monetary Fund ----------
   - id: src-amf-arab-statistics

@@ -42,6 +42,7 @@ def main():
     ap.add_argument("report")
     ap.add_argument("--date", default=str(dt.date.today()))
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--keep", default="", help="comma-separated ids whose status must not change (queued for a hand check)")
     args = ap.parse_args()
 
     results = {}
@@ -50,6 +51,7 @@ def main():
         if m:
             results[m.group(1)] = m.group(2).strip()
 
+    keep = {k.strip() for k in args.keep.split(",") if k.strip()}
     counts = {"link-ok": 0, "broken": 0, "unchanged": 0}
     for path in source_files():
         lines = path.read_text(encoding="utf-8").splitlines()
@@ -65,7 +67,7 @@ def main():
                 indent, status = ms.groups()
                 code = results[cur]
                 new = decide(code)
-                if status not in PROTECTED and new and new != status:
+                if status not in PROTECTED and cur not in keep and new and new != status:
                     line = f"{indent}status: {new}"
                     counts[new] += 1
                 else:
