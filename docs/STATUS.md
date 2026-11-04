@@ -15,6 +15,7 @@
   - One shared quotes store, 38 slots: 13 verified, 1 pasted, 24 to paste.
 - **Registry:** 123 sources: 56 verified, 34 link-ok, 17 collected, 5 broken, 3 superseded, 8 to-locate.
 - **Website:** generator + design system (ADR-0008), 28 Arabic pages, search, live ruler; passes the design gate on the home page. Deploy workflow is ready but manual.
+- **Code library (ADR-0010):** Python (tested), R (matches Python in CI), Stata (not executed); country presets from verified quotes; code page and tabs on indicator pages.
 - **Claude skill v0:** `skills/miyar-labour-stats/`, generated from the base.
 - **SEO/GEO (PRD 16):**
   - structured data, sitemap, robots (AI allowed), social cards

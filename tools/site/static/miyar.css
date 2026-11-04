@@ -365,6 +365,16 @@ table.cmp a { text-decoration: none; }
 .calc-table { margin-top: 18px; max-width: 860px; }
 .calc-table tr.focus th, .calc-table tr.focus td { background: var(--paper); color: var(--paper-ink); font-weight: 700; }
 
+/* code (real code blocks keep monospace) */
+.tabs { display: flex; gap: 6px; margin-top: 18px; flex-wrap: wrap; }
+.tabs button { font: inherit; font-size: 1rem; padding: 8px 18px; border: 0; background: var(--surface); color: var(--ink); cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--paper); color: var(--paper-ink); font-weight: 700; }
+.js .pane[data-hidden] { display: none; }
+pre { margin: 0; background: #0d2617; color: var(--ink); padding: 18px 20px; overflow-x: auto; max-width: 100%; text-align: left;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 14px; line-height: 1.6; } /* taste-skill-ignore: real code blocks */
+.pane pre { max-width: 860px; }
+.presets { min-width: 640px; }
+
 /* motion: entrance (content visible without JS) */
 .js [data-in] > * { opacity: 0; transform: translateY(22px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
 .js [data-in].in > * { opacity: 1; transform: none; }

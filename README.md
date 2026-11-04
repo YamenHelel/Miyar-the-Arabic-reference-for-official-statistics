@@ -40,6 +40,7 @@ To cite the repository, use GitHub's **"Cite this repository"** button ([CITATIO
 | 7 | Practitioner directory | [directory/README.md](directory/README.md) | Opt-in directory of Arab labour statisticians (design and consent) |
 | 8 | Content | [content/](content/) | Indicators, concepts and the shared store of official texts (`quotes.yml`) |
 | 9 | Website | [tools/site/](tools/site/) | Generator, templates and design system (`python tools/build_site.py`) |
+| 9b | **Code library** | [code/](code/) | Python (tested), R (checked in CI) and Stata code computing the indicators with SEs from LFS microdata |
 | 10 | Claude skill | [skills/miyar-labour-stats/](skills/miyar-labour-stats/) | Generated from the base; answers only from verified references |
 | 11 | Tools | [tools/](tools/) | Validation, link checks, archiving, verification desk, quotes, site and skill builders |
 

@@ -164,6 +164,20 @@
     calc.dispatchEvent(new Event("submit", { cancelable: true }));
   }
 
+  /* ---- code tabs ---- */
+  document.querySelectorAll(".tabs").forEach(function (tl) {
+    var btns = tl.querySelectorAll("[data-tab]");
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        btns.forEach(function (x) {
+          var on = x === b; x.setAttribute("aria-selected", String(on));
+          var pane = document.getElementById("pane-" + x.dataset.tab);
+          if (on) pane.removeAttribute("data-hidden"); else pane.setAttribute("data-hidden", "");
+        });
+      });
+    });
+  });
+
   /* ---- copy citation ---- */
   document.querySelectorAll("[data-copy]").forEach(function (b) {
     b.addEventListener("click", function () {

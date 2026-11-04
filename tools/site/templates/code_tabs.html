@@ -1,0 +1,16 @@
+{% if code %}
+<section data-in class="block" id="code" aria-labelledby="h9">
+  <h2 id="h9">احسبه من بياناتك</h2>
+  <p>شيفرة مُختبَرة تحسب هذا المؤشر من البيانات الجزئية لمسح القوى العاملة وفق قرار المؤتمر التاسع عشر، مع الأوزان والخطأ المعياري. قواعد كل بلد (السن، مدة البحث، مدة الإتاحة) مأخوذة من النصوص الرسمية المنسوخة أعلاه فقط.</p>
+  <div class="tabs" role="tablist" aria-label="لغة البرمجة">
+    {% for lang in code.snippets %}<button type="button" role="tab" id="tab-{{ lang.key }}" aria-controls="pane-{{ lang.key }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-tab="{{ lang.key }}">{{ lang.name }}</button>{% endfor %}
+  </div>
+  {% for lang in code.snippets %}
+  <div class="pane" role="tabpanel" id="pane-{{ lang.key }}" aria-labelledby="tab-{{ lang.key }}"{% if not loop.first %} data-hidden{% endif %}>
+    <pre dir="ltr"><code>{{ lang.code }}</code></pre>
+    <p class="legend">{{ lang.status }} · <a href="{{ cfg.github }}/blob/main/{{ lang.file }}" dir="ltr">{{ lang.file }}</a></p>
+  </div>
+  {% endfor %}
+  <p class="legend"><a href="{{ root }}code/index.html">مكتبة الشيفرة كاملة: المتغيرات المطلوبة، وقواعد الدول، والاختبارات</a></p>
+</section>
+{% endif %}

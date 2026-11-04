@@ -2,6 +2,22 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-05: Code library (session 9)
+**Done**
+- `code/`: computes the ICLS-19 indicators (LFPR, EPR, LU1–LU4, youth UR, NEET) from LFS microdata, with weights, linearised SE, CV, 95% CI and approximate design effect; disaggregation by any variable.
+  - Python `code/python/miyar_lfs.py`: tested, `tools/test_code.py` with 22 checks
+  - R `code/r/miyar_lfs.R` (survey package): run in CI, **agrees with Python on all 32 results**
+  - Stata `code/stata/miyar_lfs.do`: not executed, labelled as such
+- Country presets `code/presets/countries.json`, generated from quote-backed measures only (`tools/build_code_presets.py`): ILO, USA, AUS, SAU, MAR, JOR, ARE, PSE.
+- Synthetic, seeded test file (6,824 invented persons). The first CI run failed because `*.csv` was gitignored; fixed with an explicit exception.
+- **Site:**
+  - new code page (`code/index.html`, SoftwareSourceCode JSON-LD) and a "الشيفرة" nav link
+  - «احسبه من بياناتك» tabs (Python/R/Stata) on 4 indicator pages
+  - the website's Python snippet was executed and works
+- Skill gains `references/code.md`. ADR-0010; backlog I-018 done, I-056…I-058.
+
+**Open questions:** none.
+
 ## 2026-11-05: Statistical concepts glossary, core set (session 8)
 **Done**
 - **32 new statistical concepts** in 4 groups:

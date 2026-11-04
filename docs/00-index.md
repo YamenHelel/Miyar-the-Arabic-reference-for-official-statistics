@@ -38,6 +38,7 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 - [ADR-0006](decisions/ADR-0006-name-miyar.md): project name Miʿyar (مِعيار)
 - [ADR-0007](decisions/ADR-0007-shared-quotes-store.md): one shared quotes store (`content/quotes.yml`)
 - [ADR-0008](decisions/ADR-0008-site-generator-and-design.md): website generator (jinja2) and the Miʿyar design system
+- [ADR-0010](decisions/ADR-0010-code-library.md): code library (Python tested, R checked in CI, Stata not executed; presets only from quotes)
 - [ADR-0009](decisions/ADR-0009-canonical-url-and-crawlers.md): canonical address (GitHub Pages for now) and allowing AI crawlers
 
 ## Data

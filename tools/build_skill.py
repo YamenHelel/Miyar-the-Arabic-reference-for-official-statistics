@@ -35,6 +35,14 @@ def main():
         (OUT / "references" / f"{c['id']}.md").write_text(concept_md(c, quotes, reg), encoding="utf-8")
         index.append(f"- `references/{c['id']}.md` — concept: {c['name_ar']} ({c['names']['en']})")
 
+    code_readme = (ROOT / "code" / "README.md").read_text(encoding="utf-8")
+    presets = (ROOT / "code" / "presets" / "countries.json").read_text(encoding="utf-8")
+    (OUT / "references" / "code.md").write_text(
+        "# Miʿyar code library (compute the indicators from LFS microdata)\n\n"
+        "When a user asks how to compute an indicator from microdata, point to these files and adapt the snippets. "
+        "Python is tested; R is checked in CI against Python; Stata has not been executed — say so.\n\n"
+        + code_readme + "\n\n## Country presets (from verified quotes only)\n\n```json\n" + presets + "\n```\n", encoding="utf-8")
+    index.append("- `references/code.md` — code library (Python/R/Stata) to compute the indicators with SEs; country presets")
     src = ["# Miʿyar source registry (snapshot)", "", "| id | title | publisher | country | status | verified |", "|---|---|---|---|---|---|"]
     for _, r in iter_sources():
         src.append(f"| {r['id']} | {r.get('title_en', '')} | {r.get('publisher', '')} | {r.get('country', '')} | {r['status']} | "

@@ -72,6 +72,7 @@ in another language.
 - `references/con-variance.md` — concept: التباين (Variance)
 - `references/con-weighted-mean.md` — concept: المتوسط المرجّح (Weighted mean)
 - `references/con-working-age-population.md` — concept: السكان في سن العمل (Working-age population)
+- `references/code.md` — code library (Python/R/Stata) to compute the indicators with SEs; country presets
 - `references/sources.md` — every source with its verification status
 
 Website: built from the same data (repository: github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics).

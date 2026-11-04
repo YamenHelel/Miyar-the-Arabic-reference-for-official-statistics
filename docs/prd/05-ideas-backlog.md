@@ -27,7 +27,7 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 |---|---|---|---|---|
 | I-016 | Questionnaire reviewer: upload an LFS questionnaire, get a gap check against the 19th ICLS model | P1 | 3 | idea |
 | I-017 | ESMS/SIMS metadata drafter in Arabic for any indicator | P2 | 3 | idea |
-| I-018 | Code library: R, Stata, Python and SPSS to compute each indicator from LFS microdata (with weights and SE) | P1 | 2 | idea |
+| I-018 | Code library: R, Stata, Python and SPSS to compute each indicator from LFS microdata (with weights and SE) | P1 | 2 | done (Python, R, Stata; SPSS → I-057) |
 | I-019 | Sample size and standard error calculator, with an Arabic explanation | P2 | 3 | idea |
 | I-020 | English and French UI for the site | P3 | 2 | idea |
 | I-021 | Arabic terminology checker for press releases | P2 | 3 | idea |
@@ -63,6 +63,9 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 | I-053 | LinkedIn series that links each post to one indicator page (traffic + AI citation signals) | P1 | 1 | idea |
 | I-054 | Statistical concepts batch 2: index numbers (Laspeyres, Paasche, chain-linking), time series (trend, revision), regression basics, small-area estimation, imputation, calibration | P2 | 1 | idea |
 | I-055 | Extend the «احسب بنفسك» calculator: confidence interval for a proportion (with design effect), percentage point vs percent change, simple index numbers | P2 | 1 | idea |
+| I-056 | Code library: replicate-weight / bootstrap and calibration-aware variance | P2 | 2 | idea |
+| I-057 | Code library: SPSS syntax version | P3 | 2 | idea |
+| I-058 | Code library: mapping templates for each Arab country's LFS file (variable names, category → days conversion) | P1 | 2 | idea |
 | I-038 | Link rot protection: auto-archive every new URL on the Wayback Machine | P1 | 0a | planned |
 
 ## D. Business

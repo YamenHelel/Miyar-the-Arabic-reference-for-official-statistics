@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head" data-in>
+    <h1>مكتبة الشيفرة</h1>
+    <p class="alt"><span lang="en">Miʿyar code library · Python · R · Stata</span></p>
+    <p class="quick">{{ quick }}</p>
+    <p class="go"><a class="btn" href="{{ cfg.github }}/tree/main/code">افتح الملفات في GitHub</a></p>
+  </header>
+  <div class="layout">
+    <article>
+      <section data-in class="block" id="what" aria-labelledby="k1">
+        <h2 id="k1">ماذا تحسب</h2>
+        <ul class="notes">{% for name in ind_names %}<li>{{ name }}</li>{% endfor %}</ul>
+        <p style="margin-top:18px">لكل مؤشر: الخطأ المعياري، ومعامل الاختلاف، ومجال الثقة 95%، وأثر التصميم التقريبي، مع إمكان التصنيف حسب الجنس أو الجنسية أو أي متغير.</p>
+      </section>
+      <section data-in class="block" id="files" aria-labelledby="k2">
+        <h2 id="k2">الملفات وحالة الاختبار</h2>
+        <div class="table-wrap"><table class="cmp" style="min-width:560px">
+          <thead><tr><th scope="col">اللغة</th><th scope="col">الملف</th><th scope="col">الحالة</th></tr></thead>
+          <tbody>{% for f in files %}<tr><th scope="row">{{ f.lang }}</th><td><a href="{{ cfg.github }}/blob/main/{{ f.path }}" dir="ltr">{{ f.path }}</a></td><td>{{ f.status }}</td></tr>{% endfor %}</tbody>
+        </table></div>
+      </section>
+      <section data-in class="block" id="start" aria-labelledby="k3">
+        <h2 id="k3">ابدأ في دقيقة</h2>
+        <pre dir="ltr"><code>python code/python/miyar_lfs.py code/data/synthetic_lfs.csv --country jor --by sex</code></pre>
+        <p class="legend">الملف synthetic_lfs.csv بيانات مصطنعة للاختبار والتدريب فقط، لا تمثل أي بلد.</p>
+      </section>
+      <section data-in class="block" id="presets" aria-labelledby="k4">
+        <h2 id="k4">قواعد الدول المطبَّقة</h2>
+        <p>تُبنى هذه القيم آلياً من النصوص الرسمية المنسوخة في مِعيار فقط. ما لم يرد في النص يبقى فارغاً، فتطبّق الشيفرة القيمة الافتراضية لمنظمة العمل الدولية وتُعلن ذلك.</p>
+        <div class="table-wrap" style="margin-top:18px"><table class="cmp presets">
+          <thead><tr><th scope="col">البلد</th><th scope="col">الحد الأدنى للسن</th><th scope="col">مدة البحث (يوم)</th><th scope="col">الإتاحة بعد فترة الإسناد (يوم)</th><th scope="col">النص المصدر</th></tr></thead>
+          <tbody>{% for p in presets %}<tr><th scope="row">{{ p.name }}</th><td>{{ p.age_min if p.age_min is not none else 'افتراضي ILO' }}</td><td>{{ p.search_days if p.search_days is not none else 'افتراضي ILO' }}</td><td>{{ p.availability_days if p.availability_days is not none else 'افتراضي ILO' }}</td><td>{% if p.href %}<a href="{{ root }}{{ p.href }}">{{ p.state }}</a>{% else %}{{ p.state }}{% endif %}</td></tr>{% endfor %}</tbody>
+        </table></div>
+      </section>
+      <section data-in class="block" id="vars" aria-labelledby="k5">
+        <h2 id="k5">المتغيرات المطلوبة</h2>
+        <div class="table-wrap"><table class="cmp" style="min-width:560px">
+          <thead><tr><th scope="col">المتغير</th><th scope="col">المعنى</th></tr></thead>
+          <tbody>{% for v, m in variables %}<tr><td dir="ltr" style="text-align:left">{{ v }}</td><td>{{ m }}</td></tr>{% endfor %}</tbody>
+        </table></div>
+        <p class="legend">تحفظ معظم الملفات الوطنية البحث والإتاحة كفئات لا كأيام؛ حوّلها (مثلاً «خلال الأسبوعين القادمين» = 14) ووثّق التحويل، فهنا تظهر القواعد الوطنية.</p>
+      </section>
+      <section data-in class="block" id="method" aria-labelledby="k6">
+        <h2 id="k6">الطريقة وحدودها</h2>
+        <ul class="notes">
+          <li>الخطأ المعياري بطريقة التقريب الخطي (Taylor) لنسبة تقديرين، في تصميم طبقي عنقودي مع افتراض سحب الوحدات الأولية بالإرجاع، وهو ما تطبقه حزمة survey في R.</li>
+          <li>لا يدخل في الحساب تصحيح المجتمع المحدود ولا أثر معايرة الأوزان؛ طرق الأوزان المكررة على قائمة التطوير.</li>
+          <li>أثر التصميم تقريبي: تباين التصميم مقسوماً على p(1−p)/n بعدد المشاهدات غير المرجح.</li>
+          <li>حد الساعات لنقص التشغيل المرتبط بالوقت اختيار وطني؛ 35 ساعة قيمة مؤقتة حتى يرد الحد في نص البلد.</li>
+        </ul>
+      </section>
+    </article>
+    <aside class="toc" aria-label="في هذه الصفحة">
+      <span class="tl">في هذه الصفحة</span>
+      <a href="#what">ماذا تحسب</a><a href="#files">الملفات</a><a href="#start">ابدأ</a><a href="#presets">قواعد الدول</a><a href="#vars">المتغيرات</a><a href="#method">الطريقة</a>
+    </aside>
+  </div>
+</div>
+{% endblock %}

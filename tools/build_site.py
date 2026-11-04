@@ -139,6 +139,26 @@ def main():
         done = sum(1 for r in refs if (quotes.get(r) or {}).get("status") in ("verified", "pasted"))
         return done, len(refs)
 
+    # ---------------- code library (snippets per indicator) ----------------
+    CODE_MAP = {"ind-unemployment-rate": ("lu1", "unemployed", "lf"), "ind-labour-force-participation-rate": ("lfpr", "lf", "wap"),
+                "ind-employment-to-population-ratio": ("epr", "employed", "wap"), "ind-youth-unemployment-rate": ("yur", "youth_unemployed", "youth_lf")}
+
+    def code_for(ind_id):
+        if ind_id not in CODE_MAP:
+            return None
+        key, num, den = CODE_MAP[ind_id]
+        py = (f"import sys; sys.path.insert(0, \"code/python\")\nfrom miyar_lfs import Params, derive, ratio, read_lfs\n\n"
+              f"p = Params.for_country(\"jor\")          # قواعد الأردن من النص الرسمي\n"
+              f"d = derive(read_lfs(\"lfs.csv\"), p)\nprint(ratio(d, \"{num}\", \"{den}\"))   # estimate, se, cv, ci95, deff")
+        r = (f"source(\"code/r/miyar_lfs.R\")\nd <- derive(read.csv(\"lfs.csv\", comment.char = \"#\"), params_for(\"jor\"))\n"
+             f"des <- svydesign(ids = ~psu, strata = ~stratum, weights = ~weight, data = d)\nsvyratio(~{num}, ~{den}, des)")
+        st = (f"* بعد تشغيل code/stata/miyar_lfs.do لاشتقاق الحالة\nsvyset psu [pweight = weight], strata(stratum)\n"
+              f"svy: ratio ({key}: {num}/{den})")
+        return {"snippets": [
+            {"key": "py", "name": "Python", "code": py, "file": "code/python/miyar_lfs.py", "status": "مُختبَرة"},
+            {"key": "r", "name": "R", "code": r, "file": "code/r/miyar_lfs.R", "status": "تُشغَّل في CI وتطابق Python"},
+            {"key": "st", "name": "Stata", "code": st, "file": "code/stata/miyar_lfs.do", "status": "لم تُشغَّل بعد"}]}
+
     # ---------------- indicators ----------------
     for i in inds:
         done, total = qref_count(i)
@@ -189,7 +209,7 @@ def main():
         ld = seo.graph(term, art, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المؤشرات", "indicators/"), (i["name_ar"], None)]), seo.faq_ld(faq))
         render("indicator.html", path, title=f"{i['name_ar']} · مِعيار", title_en=i["names"]["en"], section="indicators", ind=i,
                done=done, total=total, rows=rows, national=national, notes=notes, sources=sources, components=components,
-               variants=variants, others=[o for o in inds if o["id"] != i["id"]], quick=quick, faq=faq, jsonld=ld,
+               variants=variants, others=[o for o in inds if o["id"] != i["id"]], quick=quick, faq=faq, jsonld=ld, code=code_for(i["id"]),
                crumbs=[("المؤشرات", "indicators/index.html"), (i["name_ar"], None)], md_alt=f"{i['id']}.md",
                lastmod=str(i.get("last_updated", built)),
                card={"file": f"{i['id']}.png", "kind": "مؤشر · إحصاءات العمل", "title": i["name_ar"], "sub": i["names"]["en"]},
@@ -317,6 +337,35 @@ def main():
            description="سجل مصادر مِعيار: كل وثيقة رسمية يستند إليها المرجع، بحالة التحقق منها وتاريخه، من منظمة العمل الدولية والأجهزة الإحصائية في عشر دول.",
            filters=[(k, v) for k, v in STATUS_AR.items()] + [("int", "دولية"), ("country", "وطنية")])
 
+    presets = json.loads((ROOT / "code" / "presets" / "countries.json").read_text(encoding="utf-8"))
+    prow = []
+    for iso, c in presets.items():
+        if iso.startswith("_"):
+            continue
+        prow.append({"name": "المعيار الدولي (ILO)" if iso == "ilo" else COUNTRIES.get(iso, iso), "age_min": c.get("age_min"),
+                     "search_days": c.get("search_days"), "availability_days": c.get("availability_days"),
+                     "state": status_state(quotes.get(c.get("quote"))) or "",
+                     "href": "indicators/ind-unemployment-rate.html" + ("#intl" if iso == "ilo" else f"#nat-{iso}")})
+    variables = [("stratum, psu, weight", "تصميم العينة: الطبقة، الوحدة الأولية، الوزن النهائي"), ("age, sex, nationality", "العمر والجنس والجنسية"),
+                 ("in_education, in_training", "1 إذا كان في التعليم النظامي / التدريب"), ("worked_1h", "1 إذا عمل ساعة على الأقل مقابل أجر أو ربح في أسبوع الإسناد"),
+                 ("temp_absent", "1 إذا كان له عمل وغاب عنه مؤقتاً"), ("searched_days", "عدد الأيام منذ آخر خطوة بحث فعلي عن عمل (فارغ إن لم يبحث)"),
+                 ("available_days", "يستطيع بدء العمل خلال N يوماً بعد أسبوع الإسناد (0 = خلاله؛ فارغ إن لم يكن متاحاً)"),
+                 ("future_starter", "1 إذا وجد عملاً يبدأ لاحقاً"), ("wants_work", "1 إذا كان يرغب في العمل"),
+                 ("hours_usual, wants_more_hours, available_more_hours", "للحساب نقص التشغيل المرتبط بالوقت")]
+    code_quick = ("مكتبة شيفرة مفتوحة (MIT) تحسب مؤشرات سوق العمل من البيانات الجزئية لمسح القوى العاملة وفق قرار المؤتمر الدولي التاسع عشر "
+                  "لخبراء إحصاءات العمل، مع الأوزان والخطأ المعياري ومجال الثقة، بلغات Python وR وStata، وبقواعد كل بلد مأخوذة من نصوصه الرسمية.")
+    soft = {"@type": "SoftwareSourceCode", "name": "Miʿyar code library", "description": code_quick, "codeRepository": cfg["github"] + "/tree/main/code",
+            "programmingLanguage": ["Python", "R", "Stata"], "license": "https://opensource.org/licenses/MIT", "inLanguage": "ar"}
+    render("code.html", "code/index.html", title="مكتبة الشيفرة · مِعيار", title_en="Code library", section="code", quick=code_quick,
+           description=code_quick, presets=prow, variables=variables,
+           ind_names=["معدل المشاركة في القوة العاملة", "نسبة العمالة إلى السكان", "معدل البطالة (LU1)", "LU2: نقص التشغيل المرتبط بالوقت والبطالة",
+                      "LU3: البطالة والقوة العاملة المحتملة", "LU4: المقياس المركب لنقص استخدام العمالة", "معدل البطالة بين الشباب",
+                      "نسبة الشباب خارج التعليم والعمل والتدريب (NEET)"],
+           files=[{"lang": "Python", "path": "code/python/miyar_lfs.py", "status": "مُختبَرة (tools/test_code.py)"},
+                  {"lang": "R", "path": "code/r/miyar_lfs.R", "status": "تُشغَّل في CI وتطابق Python في 32 نتيجة"},
+                  {"lang": "Stata", "path": "code/stata/miyar_lfs.do", "status": "لم تُشغَّل بعد؛ كُتبت لتطابق النسختين"},
+                  {"lang": "بيانات", "path": "code/data/synthetic_lfs.csv", "status": "بيانات مصطنعة للاختبار"}],
+           jsonld=seo.graph(soft, seo.breadcrumbs(cfg, [("مِعيار", ""), ("الشيفرة", None)])), crumbs=[("الشيفرة", None)])
     render("about.html", "about/index.html", title="المنهجية · مِعيار", section="about", counts=counts_line, title_en="Methodology",
            crumbs=[("المنهجية", None)], jsonld=seo.graph(seo.breadcrumbs(cfg, [("مِعيار", ""), ("المنهجية", None)])),
            description="كيف يعمل مِعيار: النص الرسمي منسوخ حرفياً مع مصدره، والتعليق منفصل، وشرح الذكاء الاصطناعي موسوم؛ مراحل التحقق من المصادر وطريقة الاستشهاد.")
@@ -410,6 +459,8 @@ def main():
     for c in cons:
         idx.append({"t": c["name_ar"], "c": "مفهوم", "u": f"concepts/{c['id']}.html",
                     "k": " ".join([c["names"]["en"], c["names"]["fr"]] + [v["term"] for v in c.get("term_variants", [])])})
+    idx.append({"t": "مكتبة الشيفرة: Python وR وStata", "c": "أداة", "u": "code/index.html",
+                "k": "code python r stata survey standard error microdata شيفرة برمجة بيانات جزئية"})
     for iso, card in cards.items():
         idx.append({"t": card["name"], "c": "بلد · " + card["nso"], "u": f"countries/{iso}.html", "k": iso})
     (out / "search.json").write_text(json.dumps(idx, ensure_ascii=False), encoding="utf-8")

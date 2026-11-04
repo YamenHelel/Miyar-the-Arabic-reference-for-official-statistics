@@ -50,6 +50,11 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
 - The sandbox cannot reach statistical sites (WebFetch too), so never fill a quote yourself: create a `to-paste` slot with a precise `locator` and `what_ar`.
 - A screenshot from the lead is a valid source: transcribe exactly, set `status: pasted` and a `document_note`, and let the lead confirm.
 
+## Code library (code/, ADR-0010)
+- Python is the reference: run `python tools/test_code.py` after any change. `.github/workflows/code.yml` checks that R matches.
+- Presets are generated: `python tools/build_code_presets.py`. Never hand-edit `code/presets/countries.json`.
+- Never commit real microdata. Only the synthetic file is allowed.
+
 ## Conventions
 - Country codes: ISO 3166-1 alpha-3 lowercase (`tun`, `sau`, `mar`, `jor`, `are`, `pse`, `usa`, `gbr`, `aus`, `fra`).
 - IDs: `src-<scope>-<short-slug>`, e.g. `src-ilo-icls19-res1`, `src-tun-ins-enpe-methodo`.

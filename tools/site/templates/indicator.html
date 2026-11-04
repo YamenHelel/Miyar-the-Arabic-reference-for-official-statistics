@@ -76,6 +76,7 @@
         </div>
       </section>
       {% endif %}
+      {% include "code_tabs.html" %}
       <section data-in class="block" id="plain" aria-labelledby="h6">
         <h2 id="h6">بعبارة بسيطة</h2>
         {{ ai(ind.explanation_ai_ar) }}
@@ -90,7 +91,7 @@
     <aside class="toc" aria-label="في هذه الصفحة">
       <span class="tl">في هذه الصفحة</span>
       <a href="#intl">التعريف الدولي</a><a href="#calc">طريقة الحساب</a><a href="#countries">التطبيق في عشر دول</a>
-      <a href="#national">التعاريف الوطنية</a><a href="#compare">قبل أن تقارن</a>{% if faq %}<a href="#faq">أسئلة شائعة</a>{% endif %}<a href="#plain">بعبارة بسيطة</a><a href="#sources">المصادر</a>
+      <a href="#national">التعاريف الوطنية</a><a href="#compare">قبل أن تقارن</a>{% if faq %}<a href="#faq">أسئلة شائعة</a>{% endif %}{% if code %}<a href="#code">احسبه من بياناتك</a>{% endif %}<a href="#plain">بعبارة بسيطة</a><a href="#sources">المصادر</a>
       <span class="tl" style="margin-top:20px">مؤشرات أخرى</span>
       {% for o in others %}<a href="{{ root }}indicators/{{ o.id }}.html">{{ o.name_ar }}</a>{% endfor %}
     </aside>
