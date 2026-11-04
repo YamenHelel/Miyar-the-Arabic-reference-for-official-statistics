@@ -1,0 +1,25 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-cluster-sampling
+name_ar: المعاينة العنقودية
+names:
+  en: Cluster sampling
+  fr: Sondage en grappes
+term_variants:
+- term: المعاينة بالعناقيد
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: السبر العنقودي
+  used_in: []
+  basis: المغرب العربي — للتحقق
+category: statistical
+group: sampling
+source: src-isi-glossary
+definition_quote: q-isi-cluster-sampling
+explanation_ai_ar: تُسحب مجموعات من الوحدات المتجاورة (عناقيد، مثل المناطق التعدادية) ثم تُدرس كل الوحدات أو بعضها داخلها. تخفض التكلفة الميدانية لكنها تقلل الدقة لأن الوحدات المتجاورة متشابهة.
+example_ai_ar: سحب 1200 منطقة تعدادية، ثم 12 أسرة من كل منطقة (معاينة على مرحلتين).
+in_labour_stats_ai_ar: معظم مسوح القوى العاملة متعددة المراحل وعنقودية، لذلك أثر التصميم فيها أكبر من 1.
+related:
+- con-stratified-sampling
+- con-design-effect
+status: draft
+last_updated: '2026-11-05'

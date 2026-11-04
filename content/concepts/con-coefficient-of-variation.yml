@@ -1,0 +1,28 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-coefficient-of-variation
+name_ar: معامل الاختلاف
+names:
+  en: Coefficient of variation
+  fr: Coefficient de variation
+term_variants:
+- term: معامل التغير
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: الخطأ النسبي
+  used_in: []
+  basis: عند تطبيقه على الخطأ المعياري للتقدير — للتحقق
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-coefficient-of-variation
+formula: CV = s / x̄ × 100
+formula_basis: standard notation
+explanation_ai_ar: معامل الاختلاف هو الانحراف المعياري منسوباً إلى المتوسط، بالنسبة المئوية. يسمح بمقارنة التشتت بين متغيرات بوحدات أو مستويات مختلفة.
+example_ai_ar: 'متوسط الأجر 600 والانحراف المعياري 150: CV = 150 ÷ 600 × 100 = 25%.'
+in_labour_stats_ai_ar: تطبّقه الأجهزة الإحصائية على الخطأ المعياري للتقدير لتحديد قابليته للنشر؛ تختلف العتبات بين الأجهزة (مثلاً نشر مع تحذير فوق عتبة معينة، وعدم النشر فوق عتبة أعلى) — تُذكر العتبة من منهجية كل جهاز.
+related:
+- con-standard-deviation
+- con-standard-error
+- con-sampling-error
+status: draft
+last_updated: '2026-11-05'

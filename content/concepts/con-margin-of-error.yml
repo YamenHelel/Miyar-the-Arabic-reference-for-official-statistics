@@ -1,0 +1,21 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-margin-of-error
+name_ar: هامش الخطأ
+names:
+  en: Margin of error
+  fr: Marge d'erreur
+term_variants: []
+category: statistical
+group: estimation
+source: src-isi-glossary
+definition_quote: q-isi-margin-of-error
+formula: 'MoE = z × SE ؛ عند 95%: 1.96 × SE'
+formula_basis: standard notation
+explanation_ai_ar: 'هامش الخطأ هو نصف عرض مجال الثقة: المقدار الذي يُضاف ويُطرح من التقدير. يُذكر كثيراً في الإعلام دون ذكر مستوى الثقة.'
+example_ai_ar: هامش خطأ ±0.8 نقطة مئوية حول معدل بطالة 16.1% عند مستوى ثقة 95%.
+in_labour_stats_ai_ar: يُذكر بالنقاط المئوية للمعدلات، لا بالنسبة المئوية.
+related:
+- con-confidence-interval
+- con-percentage-point
+status: draft
+last_updated: '2026-11-05'

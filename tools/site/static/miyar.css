@@ -14,7 +14,7 @@
   --paper-2: #e6c955;     /* a second paper for tabs and stubs */
   --paper-ink: #133621;   /* ink on paper */
   --paper-muted: #3e5a33;
-  --pending: #8f8443;     /* paper still waiting for its official text */
+  --pending: #c4b465;     /* paper still waiting for its official text (contrast ≥ 6:1 with green ink) */
   --accent: #f4d96c;
   --accent-ink: #133621;
   --danger: #f2a07b;
@@ -266,6 +266,7 @@ footer.back { padding: 80px 0 40px; }
 .page-head .go { margin-top: 26px; }
 .page-head .alt { margin-top: 10px; font-size: var(--step-lead); color: var(--muted); display: flex; gap: 20px; flex-wrap: wrap; }
 .page-head .alt span { direction: ltr; unicode-bidi: isolate; }
+.page-head .alt .kind-inline { direction: rtl; font-size: var(--step-body); }
 .page-head .facts-line { margin-top: 16px; font-size: var(--step-small); color: var(--muted); }
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 48px 64px; align-items: start; }
 .toc { position: sticky; top: 24px; font-size: var(--step-small); display: grid; gap: 10px; }
@@ -311,7 +312,7 @@ table.cmp tbody th { font-weight: 700; white-space: nowrap; }
 table.cmp .q { color: var(--muted); }
 table.cmp a { text-decoration: none; }
 .tc { color: var(--danger); cursor: help; }
-.legend { font-size: var(--step-small); color: var(--muted); margin-top: 12px; }
+.legend { font-size: 1rem; color: var(--muted); margin-top: 12px; }
 
 /* national definitions as slips */
 .nat { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 16px; }
@@ -356,6 +357,13 @@ table.cmp a { text-decoration: none; }
 .cite-box h2 { font-size: var(--step-lead); }
 .cite-box p { max-width: 80ch; font-size: 1rem; color: var(--muted); }
 .cite-box p[dir="ltr"] { text-align: left; }
+
+/* calculator */
+.calc { display: grid; gap: 10px; max-width: 860px; }
+.calc label { font-size: 1rem; color: var(--ink); }
+.calc textarea, .calc input { font: inherit; font-size: 1.125rem; padding: 12px 14px; border: 0; background: var(--surface); color: var(--ink); width: 100%; }
+.calc-table { margin-top: 18px; max-width: 860px; }
+.calc-table tr.focus th, .calc-table tr.focus td { background: var(--paper); color: var(--paper-ink); font-weight: 700; }
 
 /* motion: entrance (content visible without JS) */
 .js [data-in] > * { opacity: 0; transform: translateY(22px); transition: opacity .6s var(--ease), transform .6s var(--ease); }

@@ -53,11 +53,12 @@ sources:
     country: int
     type: glossary
     languages: [en]
-    url: TO-LOCATE
-    date_accessed: 2026-11-03
     priority: P2
-    status: to-locate
-    notes: Historical URL stats.oecd.org/glossary — current location not confirmed by search.
+    url: https://www.oecd.org/en/publications/oecd-glossary-of-statistical-terms_9789264055087-en.html
+    status: collected
+    title_ar: مسرد المصطلحات الإحصائية لمنظمة التعاون الاقتصادي والتنمية (OECD)
+    notes: "Publication page of the OECD Glossary of Statistical Terms (over 6,700 definitions), found by search 2026-11-05; also on OECD iLibrary with a PDF. The old online glossary (oecd.org/std/glossary) may be retired. Second source for statistical concepts after ISI."
+    date_accessed: 2026-11-05
 
   - id: src-eurostat-eulfs-main
     title_en: EU labour force survey — Statistics Explained (overview)
@@ -162,10 +163,11 @@ sources:
     date_accessed: 2026-11-03
     priority: P1
     status: verified
+    title_ar: المسرد الإحصائي متعدد اللغات للمعهد الدولي للإحصاء (ISI)
+    notes: "Main source for statistical concepts (decision 2026-11-05). Locator for each quote = the glossary entry of the English term; copy the English definition and the Arabic equivalent if listed."
     link_check: "2026-11-04 403"
     verified_by: YH
     verified_date: 2026-11-04
-    notes: Arabic coverage uncertain (sources disagree) — verify. Key input for the statistical concepts glossary (F-02).
 
   - id: src-unsc-2013-employment-stats-ar
     title_en: UN Statistical Commission 44th session (2013) — Employment statistics, ILO report (Arabic version)

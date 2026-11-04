@@ -2,6 +2,33 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-05: Statistical concepts glossary, core set (session 8)
+**Done**
+- **32 new statistical concepts** in 4 groups:
+  - descriptive (11): mean, weighted mean, median, mode, range, variance, SD, CV, percentiles, IQR, outlier
+  - sampling (9): population, sample, frame, SRS, stratified, cluster, weights, non-response, response rate
+  - estimation (8, with standard error): estimate, sampling/non-sampling error, CI, margin of error, design effect, bias
+  - rates (5): rate, ratio/proportion, percentage point, index number, seasonal adjustment
+
+  The glossary now has 40 concepts.
+- Each concept has:
+  - Arabic name and EN/FR names
+  - Arabic term variants (Mashreq/Maghreb, marked «للتحقق»)
+  - a formula in standard notation (labelled «صيغة رياضية قياسية، وليست نصاً رسمياً منقولاً»)
+  - an AI explanation, a worked example and a "use in labour statistics" note, all labelled
+  - a quote slot for the official ISI wording (32 new to-paste slots; the OECD Glossary is the fallback)
+- `src-oecd-glossary` URL found (publication page, `collected`); Arabic titles added for the ISI and OECD glossaries.
+- Schema: `group`, `formula_basis`, `in_labour_stats_ai_ar`; the validator requires `group` for statistical concepts.
+- **«احسب بنفسك» calculator** on descriptive concept pages: deterministic, shows the formula of each measure, accepts Arabic digits. Checked against known values (mean 5, median 4.5, mode 4, SD 2 / 2.138; weighted mean 620).
+- **Site:**
+  - concepts index and home glossary sheet grouped into 5 sections
+  - "concept · group" label moved under the title (it read as an eyebrow); the pending-sheet contrast fixed
+  - quick answer rewritten so the Latin names come last (it scrambled on phones)
+  - 61 pages; `check_seo.py` passes; the design gate shows only the defended picture floor on reading pages
+- Skill regenerated (45 reference files); desk (56 texts to paste) and private preview refreshed. Backlog I-054, I-055.
+
+**Open questions:** none; the lead pastes the ISI definitions from the desk.
+
 ## 2026-11-04: SEO and GEO for the website and the repository (session 7)
 **Done**
 - Plan: PRD 16 (20 target queries/AI prompts AR/FR/EN, checklist, citability rules, KPIs, lead actions); ADR-0009 (Pages URL as canonical; all crawlers incl. AI allowed); roadmap Phase 1/2 items; backlog I-050…I-053.

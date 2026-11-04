@@ -1,0 +1,24 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-ratio
+name_ar: النسبة
+names:
+  en: Ratio and proportion
+  fr: Ratio et proportion
+term_variants:
+- term: الحصة
+  used_in: []
+  basis: للحصص — للتحقق
+category: statistical
+group: rates
+source: src-isi-glossary
+definition_quote: q-isi-ratio
+formula: النسبة = a / b ؛ الحصة = a / (a + b)
+formula_basis: standard notation
+explanation_ai_ar: النسبة (ratio) قسمة كمية على أخرى قد لا تكون جزءاً منها؛ والحصة (proportion) قسمة جزء على الكل وتقع بين 0 و1.
+example_ai_ar: نسبة الإناث إلى الذكور في القوة العاملة 0.25 (ratio)؛ حصة الإناث من القوة العاملة 20% (proportion).
+in_labour_stats_ai_ar: نسبة العمالة إلى السكان حصة (proportion) رغم اسمها.
+related:
+- con-rate
+- ind-employment-to-population-ratio
+status: draft
+last_updated: '2026-11-05'

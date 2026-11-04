@@ -141,6 +141,7 @@
           {% if t.variants %}<small>يُقال أيضاً: {{ t.variants }}</small>{% endif %}
         </a>
         {% endfor %}
+        {% if g.more %}<a class="menu-item" href="concepts/index.html"><b>و{{ g.more }} مفاهيم أخرى في هذا الباب</b><span lang="en">see all</span></a>{% endif %}
       </div>
       {% endfor %}
       <p class="menu-hours">{{ glossary_count }} مفاهيم في هذه النسخة · المسرد يكبر مع كل مؤشر جديد</p>

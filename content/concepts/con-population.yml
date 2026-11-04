@@ -1,0 +1,25 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-population
+name_ar: المجتمع الإحصائي
+names:
+  en: Population (statistical)
+  fr: Population statistique
+term_variants:
+- term: المجتمع المستهدف
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: مجتمع الدراسة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: sampling
+source: src-isi-glossary
+definition_quote: q-isi-population
+explanation_ai_ar: المجتمع الإحصائي هو مجموع الوحدات التي يُراد وصفها أو التقدير عنها (أفراد، أسر، منشآت)، محدداً بالمكان والزمان.
+example_ai_ar: 'في مسح القوى العاملة: جميع الأفراد المقيمين عادة في البلد في الأسر الخاصة، خلال ربع السنة.'
+in_labour_stats_ai_ar: تحديد المجتمع (هل يشمل غير المواطنين؟ المساكن الجماعية؟) يغيّر الأرقام المنشورة ويؤثر على المقارنة بين الدول.
+related:
+- con-sample
+- con-sampling-frame
+status: draft
+last_updated: '2026-11-05'

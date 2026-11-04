@@ -19,7 +19,7 @@ Miʿyar id: `con-outside-labour-force` · category: labour
 
 ## Arabic term variants
 
-- غير النشيطين اقتصادياً — used in: to confirm (older term (13th ICLS 'economically inactive') — to confirm usage)
+- غير النشيطين اقتصادياً — used in: to confirm (مصطلح قديم (معايير 1982) — يُتحقق من استعماله)
 
 ## Plain explanation — AI-ASSISTED
 

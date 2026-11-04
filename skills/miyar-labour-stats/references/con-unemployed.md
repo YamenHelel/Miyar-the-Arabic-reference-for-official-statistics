@@ -44,8 +44,8 @@ Miʿyar id: `con-unemployed` · category: labour
 
 ## Arabic term variants
 
-- العاطلون عن العمل — used in: فلسطين (PCBS indicators guide)
-- المتعطلون — used in: الإمارات, الأردن (FCSC data file; DoS usage — to confirm)
+- العاطلون عن العمل — used in: فلسطين (دليل المؤشرات للجهاز المركزي للإحصاء الفلسطيني)
+- المتعطلون — used in: الإمارات, الأردن (ملف بيانات المركز الاتحادي؛ استعمال دائرة الإحصاءات العامة — للتحقق)
 
 ## Plain explanation — AI-ASSISTED
 

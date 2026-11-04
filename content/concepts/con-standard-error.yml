@@ -1,4 +1,4 @@
-# Miʿyar glossary entry. Official wording: content/quotes.yml (definition_quote). AI-assisted text is labelled.
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
 id: con-standard-error
 name_ar: الخطأ المعياري
 names:
@@ -12,6 +12,13 @@ explanation_ai_ar: الخطأ المعياري يقيس مقدار تذبذب ا
 example_ai_ar: إذا كان معدل البطالة 16.1% وخطؤه المعياري 0.4 نقطة، فإن مجال الثقة التقريبي عند 95% هو 16.1 ± 0.8، أي من 15.3% إلى 16.9% (مثال توضيحي، ليس رقماً منشوراً).
 related:
 - ind-unemployment-rate
+- con-confidence-interval
+- con-design-effect
+- con-coefficient-of-variation
+- con-standard-deviation
 term_variants: []
 status: draft
-last_updated: '2026-11-04'
+last_updated: '2026-11-05'
+group: estimation
+formula_basis: standard notation
+in_labour_stats_ai_ar: يُنشر مع معدلات مسح القوى العاملة (أو يُستعمل لحساب معامل الاختلاف) لتحديد ما يمكن نشره بثقة، خاصة للفئات الصغيرة والمناطق.

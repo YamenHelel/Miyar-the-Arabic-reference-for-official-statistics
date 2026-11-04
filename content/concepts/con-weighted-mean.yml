@@ -1,0 +1,27 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-weighted-mean
+name_ar: المتوسط المرجّح
+names:
+  en: Weighted mean
+  fr: Moyenne pondérée
+term_variants:
+- term: الوسط المرجّح
+  used_in: []
+  basis: المشرق — للتحقق
+- term: المتوسط الموزون
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-weighted-mean
+formula: x̄w = Σ wᵢxᵢ / Σ wᵢ
+formula_basis: standard notation
+explanation_ai_ar: متوسط يُعطى فيه لكل قيمة وزن يعكس أهميتها أو عدد ما تمثله. في المسوح بالعينة لا تُحسب المتوسطات إلا مرجّحة بأوزان المعاينة، وإلا كانت النتائج متحيزة.
+example_ai_ar: ثلاث أسر في العينة، أجور معيليها 400 و600 و900، وتمثل على التوالي 1000 و3000 و1000 أسرة. المتوسط المرجّح = (400×1000 + 600×3000 + 900×1000) ÷ 5000 = 620، بينما المتوسط البسيط 633.
+in_labour_stats_ai_ar: كل التقديرات المنشورة من مسح القوى العاملة (الأعداد والمعدلات والمتوسطات) تُحسب بأوزان المعاينة.
+related:
+- con-mean
+- con-sampling-weight
+status: draft
+last_updated: '2026-11-05'

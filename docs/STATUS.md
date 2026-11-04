@@ -1,17 +1,17 @@
 # STATUS (read this first)
 
 **Project:** مِعيار · Miʿyar, the Arabic reference for official statistics · **Licence:** CC BY 4.0 (content), MIT (code) · **Contact:** yamen.hlel@gmail.com
-**Updated:** 2026-11-04 · **Phase:** 0b, Pilot content (site and skill foundations of Phase 1 already built)
+**Updated:** 2026-11-05 · **Phase:** 0b, Pilot content (site and skill foundations of Phase 1 already built)
 
 **Lead's tools:**
-- Verification Desk https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE (sources + ✍️ 24 texts to paste)
+- Verification Desk https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE (sources + ✍️ 56 texts to paste: 24 labour + 32 ISI statistical definitions)
 - Website preview (private) https://claude.ai/artifact/HN6DnYMFTDKFiSaHke6jqg
 - Old single-indicator preview https://claude.ai/artifact/LXjvP5D5bhewcrVLFGCx6y (superseded by the site)
 
 ## Done
 - **Content:**
   - 4 pilot indicators: unemployment rate (13 verified + 1 pasted official texts), participation rate, employment-to-population ratio, youth unemployment.
-  - 8 concepts (7 labour, 1 statistical).
+  - 40 concepts: 7 labour + 33 statistical (descriptive, sampling, estimation, rates), with a calculator on descriptive pages.
   - One shared quotes store, 38 slots: 13 verified, 1 pasted, 24 to paste.
 - **Registry:** 123 sources: 56 verified, 34 link-ok, 17 collected, 5 broken, 3 superseded, 8 to-locate.
 - **Website:** generator + design system (ADR-0008), 28 Arabic pages, search, live ruler; passes the design gate on the home page. Deploy workflow is ready but manual.
@@ -24,7 +24,7 @@
 
 ## Next 3 tasks
 1. **Lead:**
-   - On the desk's ✍️ tab, paste the 24 texts (ILO §73(a)(b), working age, potential LF, underemployment, SDG 8.5.2 youth, ISI standard error, and the 6 Arab countries × 3 indicators). Then say "apply my quotes".
+   - On the desk's ✍️ tab, paste the 56 texts (the 32 statistical ones come from the ISI glossary, about 1 minute each), including the 24 texts (ILO §73(a)(b), working age, potential LF, underemployment, SDG 8.5.2 youth, ISI standard error, and the 6 Arab countries × 3 indicators). Then say "apply my quotes".
    - Confirm the Palestine transcription on the unemployment page.
 2. **Lead:**
    - Review the website preview and give feedback on the design and wording.

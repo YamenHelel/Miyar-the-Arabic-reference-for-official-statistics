@@ -1,0 +1,31 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-sampling-weight
+name_ar: الوزن الترجيحي
+names:
+  en: Sampling weight
+  fr: Poids de sondage
+term_variants:
+- term: وزن المعاينة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: معامل الرفع
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: معامل التضخيم
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: sampling
+source: src-isi-glossary
+definition_quote: q-isi-sampling-weight
+formula: wᵢ = 1 / πᵢ (قبل التعديل)
+formula_basis: standard notation
+explanation_ai_ar: الوزن الترجيحي هو عدد وحدات المجتمع التي تمثلها وحدة العينة. يبدأ بمقلوب احتمال الاختيار، ثم يُعدّل لعدم الاستجابة ويُعاير على إسقاطات السكان.
+example_ai_ar: 'أسرة احتمال اختيارها 1 من 400: وزنها الأولي 400، أي تمثل 400 أسرة.'
+in_labour_stats_ai_ar: تعديل الأوزان على إسقاطات سكانية جديدة (بعد تعداد) يغيّر المستويات المنشورة حتى دون تغيّر في سوق العمل.
+related:
+- con-weighted-mean
+- con-non-response
+- con-stratified-sampling
+status: draft
+last_updated: '2026-11-05'

@@ -1,0 +1,22 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-rate
+name_ar: المعدل
+names:
+  en: Rate
+  fr: Taux
+term_variants: []
+category: statistical
+group: rates
+source: src-isi-glossary
+definition_quote: q-isi-rate
+formula: المعدل = (عدد الحالات ÷ المجتمع المعرّض) × 100
+formula_basis: standard notation
+explanation_ai_ar: المعدل نسبة يكون فيها البسط جزءاً من المقام، وغالباً مرتبطاً بفترة زمنية أو مجتمع معرّض. تسمية «معدل» في العربية تُطلق أحياناً على نسب ليست معدلات بالمعنى الدقيق.
+example_ai_ar: 'معدل البطالة: المتعطلون (جزء من القوة العاملة) ÷ القوة العاملة × 100.'
+in_labour_stats_ai_ar: 'يجب دائماً تحديد المقام: معدل البطالة مقامه القوة العاملة، لا مجموع السكان.'
+related:
+- con-ratio
+- con-percentage-point
+- ind-unemployment-rate
+status: draft
+last_updated: '2026-11-05'

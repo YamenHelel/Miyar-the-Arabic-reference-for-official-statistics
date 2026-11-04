@@ -1,0 +1,21 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-percentage-point
+name_ar: النقطة المئوية
+names:
+  en: Percentage point
+  fr: Point de pourcentage
+term_variants: []
+category: statistical
+group: rates
+source: src-isi-glossary
+definition_quote: q-isi-percentage-point
+formula: الفرق بالنقاط = p₂ − p₁ ؛ التغير النسبي = (p₂ − p₁) / p₁ × 100
+formula_basis: standard notation
+explanation_ai_ar: النقطة المئوية وحدة الفرق بين نسبتين مئويتين. الخلط بينها وبين النسبة المئوية من أكثر الأخطاء شيوعاً في عرض الإحصاءات.
+example_ai_ar: انخفاض البطالة من 16.5% إلى 16.1% هو انخفاض بـ 0.4 نقطة مئوية، أي بنحو 2.4% من قيمتها.
+in_labour_stats_ai_ar: تعبّر بيانات الأجهزة الإحصائية عن تغيّر المعدلات بالنقاط المئوية؛ يجب الحفاظ على ذلك في التقارير والبيانات الصحفية.
+related:
+- con-rate
+- con-margin-of-error
+status: draft
+last_updated: '2026-11-05'

@@ -20,7 +20,7 @@ Miʿyar id: `con-employed` · category: labour
 
 ## Arabic term variants
 
-- العاملون — used in: to confirm (common variant — confirm per country)
+- العاملون — used in: to confirm (صيغة شائعة — يُتحقق منها حسب البلد)
 
 ## Plain explanation — AI-ASSISTED
 

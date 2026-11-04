@@ -1,0 +1,22 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-range
+name_ar: المدى
+names:
+  en: Range
+  fr: Étendue
+term_variants: []
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-range
+formula: R = max(x) − min(x)
+formula_basis: standard notation
+explanation_ai_ar: المدى هو الفرق بين أكبر قيمة وأصغر قيمة. مقياس بسيط للتشتت، لكنه يعتمد على قيمتين فقط فيتأثر كثيراً بالقيم الشاذة.
+example_ai_ar: 'أعمار الباحثين عن عمل في عينة صغيرة: 19، 23، 25، 31، 58. المدى = 58 − 19 = 39 سنة.'
+in_labour_stats_ai_ar: يُستعمل للتدقيق السريع في البيانات (مثلاً اكتشاف أعمار أو ساعات عمل غير منطقية قبل المعالجة).
+related:
+- con-interquartile-range
+- con-variance
+- con-outlier
+status: draft
+last_updated: '2026-11-05'

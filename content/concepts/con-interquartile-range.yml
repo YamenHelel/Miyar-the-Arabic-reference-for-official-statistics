@@ -1,0 +1,25 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-interquartile-range
+name_ar: المدى الربيعي
+names:
+  en: Interquartile range
+  fr: Écart interquartile
+term_variants:
+- term: المدى بين الربيعين
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-interquartile-range
+formula: IQR = Q3 − Q1
+formula_basis: standard notation
+explanation_ai_ar: المدى الربيعي هو الفرق بين الربيع الثالث والربيع الأول، أي مدى النصف الأوسط من البيانات. لا يتأثر بالقيم المتطرفة.
+example_ai_ar: إذا كان Q1 = 380 وQ3 = 720، فإن IQR = 340.
+in_labour_stats_ai_ar: 'يُستعمل في قاعدة اكتشاف القيم الشاذة: ما يقع خارج [Q1 − 1.5×IQR ، Q3 + 1.5×IQR].'
+related:
+- con-percentile
+- con-outlier
+- con-range
+status: draft
+last_updated: '2026-11-05'

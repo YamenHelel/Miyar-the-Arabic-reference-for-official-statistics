@@ -1,0 +1,25 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-design-effect
+name_ar: أثر التصميم
+names:
+  en: Design effect
+  fr: Effet de plan
+term_variants:
+- term: أثر تصميم العينة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: estimation
+source: src-isi-glossary
+definition_quote: q-isi-design-effect
+formula: Deff = Var_تصميم(θ̂) / Var_عشوائي بسيط(θ̂)
+formula_basis: standard notation
+explanation_ai_ar: أثر التصميم هو نسبة تباين التقدير في التصميم الفعلي إلى تباينه لو كانت العينة عشوائية بسيطة بالحجم نفسه. أكبر من 1 في العينات العنقودية، وأقل من 1 أحياناً مع التقسيم الطبقي الجيد.
+example_ai_ar: إذا كان Deff = 2، فإن عينة من 20000 فرد تعطي دقة عينة عشوائية بسيطة من 10000 فقط (الحجم الفعال).
+in_labour_stats_ai_ar: يُستعمل لتخطيط حجم عينة مسح القوى العاملة ولتقريب الأخطاء المعيارية عند غياب حسابها الدقيق.
+related:
+- con-cluster-sampling
+- con-standard-error
+- con-simple-random-sampling
+status: draft
+last_updated: '2026-11-05'

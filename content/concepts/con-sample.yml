@@ -1,0 +1,20 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-sample
+name_ar: العينة
+names:
+  en: Sample
+  fr: Échantillon
+term_variants: []
+category: statistical
+group: sampling
+source: src-isi-glossary
+definition_quote: q-isi-sample
+explanation_ai_ar: العينة جزء من المجتمع يُختار لجمع البيانات منه، بحيث يمكن تعميم النتائج على المجتمع. في الإحصاء الرسمي تُختار العينات احتمالياً لتمكين قياس الدقة.
+example_ai_ar: عينة من 16500 أسرة في كل جولة لتمثيل جميع الأسر في البلد (مثال توضيحي).
+in_labour_stats_ai_ar: حجم العينة وتوزيعها يحددان المستوى الجغرافي والفئات التي يمكن نشر تقديرات موثوقة عنها.
+related:
+- con-population
+- con-simple-random-sampling
+- con-sampling-error
+status: draft
+last_updated: '2026-11-05'

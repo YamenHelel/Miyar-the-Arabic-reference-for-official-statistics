@@ -1,0 +1,21 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-response-rate
+name_ar: معدل الاستجابة
+names:
+  en: Response rate
+  fr: Taux de réponse
+term_variants: []
+category: statistical
+group: sampling
+source: src-isi-glossary
+definition_quote: q-isi-response-rate
+formula: معدل الاستجابة = عدد الوحدات المستجيبة ÷ عدد الوحدات المؤهلة × 100
+formula_basis: standard notation
+explanation_ai_ar: نسبة الوحدات المؤهلة في العينة التي قدّمت بيانات صالحة. يُحسب بطرق موحدة (مثل معايير AAPOR) حتى يمكن مقارنته.
+example_ai_ar: 'من 1000 أسرة مؤهلة، استجابت 870: معدل الاستجابة = 87%.'
+in_labour_stats_ai_ar: يُنشر عادة في تقارير جودة مسح القوى العاملة؛ انخفاضه مؤشر إنذار مبكر على التحيز المحتمل.
+related:
+- con-non-response
+- con-bias
+status: draft
+last_updated: '2026-11-05'

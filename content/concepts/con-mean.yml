@@ -1,0 +1,28 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-mean
+name_ar: المتوسط الحسابي
+names:
+  en: Arithmetic mean
+  fr: Moyenne arithmétique
+term_variants:
+- term: الوسط الحسابي
+  used_in: []
+  basis: المشرق — للتحقق
+- term: المعدّل
+  used_in: []
+  basis: المغرب العربي، الاستعمال اليومي — للتحقق
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-mean
+formula: x̄ = (1/n) Σ xᵢ
+formula_basis: standard notation
+explanation_ai_ar: 'المتوسط الحسابي هو مجموع القيم مقسوماً على عددها. سهل الحساب ويستعمل كل القيم، لكنه يتأثر كثيراً بالقيم المتطرفة: أجر واحد مرتفع جداً يرفع متوسط الأجور.'
+example_ai_ar: 'أجور خمسة عمال: 300، 320، 350، 400، 2000. المتوسط = 3370 ÷ 5 = 674، وهو أعلى من أجر أربعة منهم بسبب قيمة واحدة مرتفعة.'
+in_labour_stats_ai_ar: يُستعمل في متوسط ساعات العمل الأسبوعية ومتوسط الأجر؛ ويُقرأ مع الوسيط عند وجود تفاوت كبير.
+related:
+- con-median
+- con-weighted-mean
+- con-outlier
+status: draft
+last_updated: '2026-11-05'

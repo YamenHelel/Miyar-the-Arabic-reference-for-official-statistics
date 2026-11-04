@@ -1,0 +1,22 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-standard-deviation
+name_ar: الانحراف المعياري
+names:
+  en: Standard deviation
+  fr: Écart type
+term_variants: []
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-standard-deviation
+formula: σ = √σ² ؛ s = √s²
+formula_basis: standard notation
+explanation_ai_ar: الانحراف المعياري هو الجذر التربيعي للتباين، وبالوحدة نفسها التي قيست بها البيانات. يعبّر عن البعد المعتاد للقيم عن متوسطها.
+example_ai_ar: 'للقيم 2، 4، 4، 4، 5، 5، 7، 9: الانحراف المعياري المجتمعي = √4 = 2، وانحراف العينة ≈ 2.138.'
+in_labour_stats_ai_ar: 'لا يُخلط بينه وبين الخطأ المعياري: الأول يصف تشتت الأفراد، والثاني يصف دقة التقدير.'
+related:
+- con-variance
+- con-coefficient-of-variation
+- con-standard-error
+status: draft
+last_updated: '2026-11-05'

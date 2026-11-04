@@ -1,0 +1,26 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-seasonal-adjustment
+name_ar: التعديل الموسمي
+names:
+  en: Seasonal adjustment
+  fr: Désaisonnalisation
+term_variants:
+- term: إزالة الأثر الموسمي
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: التصحيح من التغيرات الموسمية
+  used_in: []
+  basis: المغرب العربي — للتحقق
+category: statistical
+group: rates
+source: src-isi-glossary
+definition_quote: q-isi-seasonal-adjustment
+formula: Xₜ = Tₜ × Sₜ × Iₜ (نموذج ضربي) ← السلسلة المعدلة = Xₜ / Sₜ
+formula_basis: standard notation
+explanation_ai_ar: التعديل الموسمي هو إزالة الأثر المتكرر كل سنة (المواسم الزراعية، رمضان، الصيف، الدراسة) من سلسلة زمنية، لتظهر الاتجاهات الحقيقية. يُنجز ببرامج مثل X-13ARIMA-SEATS وJDemetra+.
+example_ai_ar: ترتفع البطالة كل صيف مع تخرج الطلاب؛ السلسلة المعدلة موسمياً تُظهر هل الارتفاع أكبر من المعتاد.
+in_labour_stats_ai_ar: عند المقارنة بين ربعين متتاليين تُستعمل السلسلة المعدلة موسمياً؛ وعند غيابها يُقارن بالربع نفسه من السنة السابقة.
+related:
+- con-index-number
+status: draft
+last_updated: '2026-11-05'

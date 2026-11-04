@@ -1,0 +1,22 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-bias
+name_ar: التحيّز
+names:
+  en: Bias
+  fr: Biais
+term_variants: []
+category: statistical
+group: estimation
+source: src-isi-glossary
+definition_quote: q-isi-bias
+formula: Bias(θ̂) = E(θ̂) − θ
+formula_basis: standard notation
+explanation_ai_ar: التحيّز هو الفرق المنهجي بين متوسط التقديرات (لو كُررت العينة) والقيمة الحقيقية. على عكس خطأ المعاينة، لا يزول بزيادة حجم العينة.
+example_ai_ar: إذا كان العاطلون أقل استجابة للمسح من غيرهم ولم تُصحح الأوزان، فسيُقدَّر معدل البطالة أقل من حقيقته باستمرار.
+in_labour_stats_ai_ar: 'مصادره الشائعة: نقص التغطية، وعدم الاستجابة الانتقائي، وصياغة الأسئلة، ونماذج الإسناد.'
+related:
+- con-non-response
+- con-non-sampling-error
+- con-estimate
+status: draft
+last_updated: '2026-11-05'

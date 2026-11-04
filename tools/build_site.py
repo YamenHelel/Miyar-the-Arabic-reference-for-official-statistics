@@ -205,7 +205,21 @@ def main():
                      "meta": "النصوص الرسمية {} من {}".format(*qref_count(i)), "sub": i["names"]["en"]} for i in inds]}])
 
     # ---------------- concepts ----------------
-    cat_ar = {"labour": "مفاهيم العمل", "statistical": "مفاهيم إحصائية", "survey": "المسوح", "classification": "التصنيفات"}
+    cat_ar = {"labour": "مفاهيم العمل", "statistical": "مفاهيم إحصائية", "survey": "المسوح", "classification": "التصنيفات",
+              "descriptive": "الإحصاء الوصفي", "sampling": "المعاينة والمسوح", "estimation": "التقدير والجودة",
+              "rates": "المعدلات والنسب والأرقام القياسية"}
+    SECTIONS = ["labour", "descriptive", "sampling", "estimation", "rates"]
+    STAT_ORDER = ["con-mean", "con-weighted-mean", "con-median", "con-mode", "con-range", "con-variance", "con-standard-deviation",
+                  "con-coefficient-of-variation", "con-percentile", "con-interquartile-range", "con-outlier",
+                  "con-population", "con-sample", "con-sampling-frame", "con-simple-random-sampling", "con-stratified-sampling",
+                  "con-cluster-sampling", "con-sampling-weight", "con-non-response", "con-response-rate",
+                  "con-estimate", "con-sampling-error", "con-non-sampling-error", "con-standard-error", "con-confidence-interval",
+                  "con-margin-of-error", "con-design-effect", "con-bias",
+                  "con-rate", "con-ratio", "con-percentage-point", "con-index-number", "con-seasonal-adjustment"]
+
+    def section_of(c):
+        return "labour" if c["category"] == "labour" else c.get("group", "estimation")
+    cons.sort(key=lambda c: (SECTIONS.index(section_of(c)), STAT_ORDER.index(c["id"]) if c["id"] in STAT_ORDER else 0, c["id"]))
     for c in cons:
         related = []
         for r in c.get("related", []):
@@ -223,13 +237,13 @@ def main():
                quick=cq, description=cq, jsonld=seo.graph(cterm, seo.breadcrumbs(cfg, [("مِعيار", ""), ("المفاهيم", "concepts/"), (c["name_ar"], None)])),
                crumbs=[("المفاهيم", "concepts/index.html"), (c["name_ar"], None)], md_alt=f"{c['id']}.md", lastmod=str(c.get("last_updated", built)),
                card={"file": f"{c['id']}.png", "kind": "مفهوم · مسرد مِعيار", "title": c["name_ar"], "sub": c["names"]["en"]},
-               cat=cat_ar.get(c["category"], c["category"]), related=related, variants_list=vl,
+               cat=cat_ar.get(section_of(c), c["category"]), related=related, variants_list=vl,
                variants="، ".join(v["term"] for v in c.get("term_variants", [])))
         (out / "concepts" / f"{c['id']}.md").write_text(concept_md(c, quotes, reg, url=base + cpath), encoding="utf-8")
     groups = []
-    for cat in ["labour", "statistical"]:
+    for cat in SECTIONS:
         rows = [{"href": f"concepts/{c['id']}.html", "name": c["name_ar"], "meta": c["names"]["en"],
-                 "sub": status_state(quotes.get(c["definition_quote"]))} for c in cons if c["category"] == cat]
+                 "sub": status_state(quotes.get(c["definition_quote"]))} for c in cons if section_of(c) == cat]
         if rows:
             groups.append({"title": cat_ar[cat], "rows": rows})
     cset = {"@type": "DefinedTermSet", "@id": base + "concepts/", "name": "مسرد مِعيار لمفاهيم إحصاءات العمل والإحصاء", "inLanguage": "ar",
@@ -365,17 +379,17 @@ def main():
                                "src_title": qsrc.get("title_ar") or qsrc.get("title_en", ""), "src_url": q.get("quoted_from_url") or qsrc.get("url", "")})
 
     glossary = []
-    for cat in ["labour", "statistical"]:
+    for cat in SECTIONS:
         items = []
         for c in cons:
-            if c["category"] != cat:
+            if section_of(c) != cat:
                 continue
             q = quotes.get(c["definition_quote"], {})
             prev = " ".join((q.get("text") or c["explanation_ai_ar"]).split())[:240] + "…"
             items.append({"id": c["id"], "name_ar": c["name_ar"], "en": c["names"]["en"], "preview": prev,
                           "variants": "، ".join(v["term"] for v in c.get("term_variants", []))})
         if items:
-            glossary.append({"title": cat_ar[cat], "terms": items})
+            glossary.append({"title": cat_ar[cat], "terms": items[:6], "more": max(0, len(items) - 6)})
     ind_rows = []
     for i in inds:
         d, t = qref_count(i)

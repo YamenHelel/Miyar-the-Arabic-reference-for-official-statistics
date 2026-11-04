@@ -3,11 +3,11 @@
 {% block main %}
 <div class="wrap">
   <header class="page-head" data-in>
-    <p class="kind">مفهوم · {{ cat }}</p>
     <h1>{{ con.name_ar }}</h1>
-    <p class="alt"><span lang="en">{{ con.names.en }}</span><span lang="fr">{{ con.names.fr }}</span></p>
+    <p class="alt"><span lang="en">{{ con.names.en }}</span><span lang="fr">{{ con.names.fr }}</span><span class="kind-inline">مفهوم · {{ cat }}</span></p>
     {% if variants %}<p class="facts-line">يُقال أيضاً: {{ variants }}</p>{% endif %}
     <p class="quick">{{ quick }}</p>
+    {% if con.group == 'descriptive' %}<p class="go"><a class="btn" href="#calc">احسب بنفسك</a></p>{% else %}<p class="go"><a class="btn" href="#c1">اقرأ التعريف الرسمي</a></p>{% endif %}
   </header>
   <div class="layout">
     <article>
@@ -15,12 +15,36 @@
         <h2 id="c1">التعريف الرسمي</h2>
         {{ sheet(q(con.definition_quote), srcq(con.definition_quote), root) }}
       </section>
-      {% if con.formula %}<section data-in class="block" aria-labelledby="c2"><h2 id="c2">الصيغة</h2><div class="formula"><p class="lt" style="font-size:var(--step-lead);color:var(--ink)">{{ con.formula }}</p></div></section>{% endif %}
+      {% if con.formula %}<section data-in class="block" aria-labelledby="c2"><h2 id="c2">الصيغة</h2><div class="formula"><p class="lt" style="font-size:var(--step-lead);color:var(--ink)">{{ con.formula }}</p>{% if con.formula_basis %}<p class="who" style="margin-top:8px;font-size:var(--step-small);color:var(--muted)">صيغة رياضية قياسية، وليست نصاً رسمياً منقولاً</p>{% endif %}</div></section>{% endif %}
+      {% if con.group == 'descriptive' %}
+      <section class="block" id="calc" aria-labelledby="c5">
+        <h2 id="c5">احسب بنفسك</h2>
+        <form id="calc-form" class="calc" data-focus="{{ con.id }}" novalidate>
+          <label for="calc-x">القيم (مفصولة بمسافة أو فاصلة)</label>
+          <textarea id="calc-x" rows="2" dir="auto">2 4 4 4 5 5 7 9</textarea>
+          <label for="calc-w">الأوزان (اختياري، بالعدد نفسه)</label>
+          <input id="calc-w" type="text" dir="auto" inputmode="decimal" placeholder="مثلاً: 1 1 2 1 1 1 1 1">
+          <p><button type="submit" class="btn">احسب</button></p>
+          <p id="calc-msg" class="legend" role="status"></p>
+        </form>
+        <div class="table-wrap" id="calc-out" hidden>
+          <table class="cmp calc-table" style="min-width:0"><thead><tr><th scope="col">المقياس</th><th scope="col">القيمة</th><th scope="col">الصيغة</th></tr></thead><tbody></tbody></table>
+        </div>
+        <p class="legend">الحساب يجري في متصفحك فقط. الربيعات بطريقة الاستيفاء الخطي (مثل QUARTILE.INC في Excel)؛ قد تختلف قليلاً عن برامج أخرى.</p>
+        <noscript><p class="legend">الآلة الحاسبة تحتاج JavaScript؛ الصيغ أعلاه تكفي للحساب اليدوي.</p></noscript>
+      </section>
+      {% endif %}
       <section data-in class="block" aria-labelledby="c3">
         <h2 id="c3">بعبارة بسيطة</h2>
         {{ ai(con.explanation_ai_ar) }}
         {% if con.example_ai_ar %}<div style="margin-top:16px">{{ ai(con.example_ai_ar, 'مثال توضيحي مُعدّ بمساعدة الذكاء الاصطناعي، أرقامه ليست منشورة') }}</div>{% endif %}
       </section>
+      {% if con.in_labour_stats_ai_ar %}
+      <section data-in class="block" aria-labelledby="c6">
+        <h2 id="c6">في إحصاءات العمل</h2>
+        {{ ai(con.in_labour_stats_ai_ar) }}
+      </section>
+      {% endif %}
       {% if variants_list %}
       <section data-in class="block" aria-labelledby="c4">
         <h2 id="c4">المصطلح في الدول العربية</h2>

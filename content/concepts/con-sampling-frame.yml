@@ -1,0 +1,26 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-sampling-frame
+name_ar: إطار المعاينة
+names:
+  en: Sampling frame
+  fr: Base de sondage
+term_variants:
+- term: إطار العينة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: قاعدة السبر
+  used_in: []
+  basis: المغرب العربي (ترجمة حرفية لـ base de sondage) — للتحقق
+category: statistical
+group: sampling
+source: src-isi-glossary
+definition_quote: q-isi-sampling-frame
+explanation_ai_ar: 'إطار المعاينة هو القائمة أو الخريطة التي تُسحب منها العينة (مثل قائمة المناطق التعدادية والمساكن). جودته تحدد جودة العينة: النقص في الإطار يؤدي إلى تغطية ناقصة.'
+example_ai_ar: إطار مسح القوى العاملة مأخوذ عادة من آخر تعداد للسكان، مع تحديث للمناطق السريعة النمو.
+in_labour_stats_ai_ar: إعادة بناء الإطار بعد تعداد جديد (كما في المغرب بعد تعداد 2024) قد تُحدث انقطاعاً في السلسلة.
+related:
+- con-sample
+- con-population
+- con-non-sampling-error
+status: draft
+last_updated: '2026-11-05'

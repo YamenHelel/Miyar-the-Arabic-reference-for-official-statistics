@@ -1,0 +1,25 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-median
+name_ar: الوسيط
+names:
+  en: Median
+  fr: Médiane
+term_variants:
+- term: القيمة الوسطى
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-median
+formula: Me = x₍₍ₙ₊₁₎/₂₎ (n فردي) ؛ متوسط القيمتين الوسطيين (n زوجي)
+formula_basis: standard notation
+explanation_ai_ar: 'الوسيط هو القيمة التي تقسم البيانات المرتبة إلى نصفين متساويين: نصف القيم أقل منه ونصفها أكبر. لا يتأثر بالقيم المتطرفة، لذلك يُفضَّل لوصف الأجور والدخول.'
+example_ai_ar: 'الأجور المرتبة: 300، 320، 350، 400، 2000. الوسيط = 350 (القيمة الثالثة)، وهو أقرب إلى الأجر النموذجي من المتوسط (674).'
+in_labour_stats_ai_ar: الأجر الوسيط أساس مؤشرات كثيرة، مثل نسبة العاملين بأجر منخفض (أقل من ثلثي الأجر الوسيط).
+related:
+- con-mean
+- con-percentile
+- con-interquartile-range
+status: draft
+last_updated: '2026-11-05'

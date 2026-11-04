@@ -428,3 +428,227 @@ quotes:
   text: ''
   locator: PCBS indicators guide 2025 (book2740) — indicators table — definition of the youth unemployment rate (and the youth age band used)
   what_ar: انسخ تعريف «معدل البطالة بين الشباب» كما ورد في الوثيقة (أو اكتبه من صورة إن تشوّه النسخ)
+- slot: q-isi-mean
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Arithmetic mean'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Arithmetic mean» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-weighted-mean
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Weighted mean'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Weighted mean» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-median
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Median'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Median» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-mode
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Mode'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Mode» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-range
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Range'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Range» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-variance
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Variance'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Variance» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-standard-deviation
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Standard deviation'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Standard deviation» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-coefficient-of-variation
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Coefficient of variation'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Coefficient of variation» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-percentile
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Percentile and quartiles'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Percentile and quartiles» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-interquartile-range
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Interquartile range'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Interquartile range» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-outlier
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Outlier'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Outlier» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-population
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Population (statistical)'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Population (statistical)» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-sample
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Sample'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Sample» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-sampling-frame
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Sampling frame'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Sampling frame» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-simple-random-sampling
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Simple random sampling'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Simple random sampling» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-stratified-sampling
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Stratified sampling'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Stratified sampling» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-cluster-sampling
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Cluster sampling'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Cluster sampling» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-sampling-weight
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Sampling weight'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Sampling weight» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-non-response
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Non-response'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Non-response» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-response-rate
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Response rate'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Response rate» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-estimate
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Estimate'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Estimate» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-sampling-error
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Sampling error'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Sampling error» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-non-sampling-error
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Non-sampling error'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Non-sampling error» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-confidence-interval
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Confidence interval'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Confidence interval» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-margin-of-error
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Margin of error'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Margin of error» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-design-effect
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Design effect'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Design effect» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-bias
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Bias'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Bias» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-rate
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Rate'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Rate» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-ratio
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Ratio and proportion'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Ratio and proportion» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-percentage-point
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Percentage point'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Percentage point» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-index-number
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Index number'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Index number» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.
+- slot: q-isi-seasonal-adjustment
+  source: src-isi-glossary
+  lang: en
+  status: to-paste
+  text: ''
+  locator: 'ISI Multilingual Glossary — entry ''Seasonal adjustment'' (if missing: OECD Glossary of Statistical Terms)'
+  what_ar: من مسرد المعهد الدولي للإحصاء انسخ تعريف «Seasonal adjustment» بالإنجليزية كما هو، وأضف المقابل العربي إن ظهر في المسرد. إن لم يوجد المصطلح فانسخه من مسرد OECD واذكر ذلك.

@@ -61,6 +61,8 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 | I-051 | Custom domain for Miʿyar (CNAME + redirect from Pages) | P2 | 1 | idea |
 | I-052 | Wikidata item + Zenodo DOI for Miʿyar (entity and citability) | P1 | 1 | planned |
 | I-053 | LinkedIn series that links each post to one indicator page (traffic + AI citation signals) | P1 | 1 | idea |
+| I-054 | Statistical concepts batch 2: index numbers (Laspeyres, Paasche, chain-linking), time series (trend, revision), regression basics, small-area estimation, imputation, calibration | P2 | 1 | idea |
+| I-055 | Extend the «احسب بنفسك» calculator: confidence interval for a proportion (with design effect), percentage point vs percent change, simple index numbers | P2 | 1 | idea |
 | I-038 | Link rot protection: auto-archive every new URL on the Wayback Machine | P1 | 0a | planned |
 
 ## D. Business

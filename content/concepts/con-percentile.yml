@@ -1,0 +1,27 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-percentile
+name_ar: المئين والربيعات
+names:
+  en: Percentile and quartiles
+  fr: Centile et quartiles
+term_variants:
+- term: المئيني
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: الشريحة المئوية
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-percentile
+formula: 'Pₖ: القيمة التي يقل عنها k% من البيانات ؛ Q1 = P25 ، Q2 = P50 ، Q3 = P75'
+formula_basis: standard notation
+explanation_ai_ar: 'المئين k هو القيمة التي تقع تحتها k% من البيانات المرتبة. الربيعات تقسمها إلى أربعة أجزاء: الأول 25%، والثاني هو الوسيط، والثالث 75%. تختلف طرق الحساب قليلاً بين البرامج الإحصائية.'
+example_ai_ar: في توزيع أجور، إذا كان P90 = 1800 وP10 = 350، فإن نسبة P90/P10 = 5.1 تعبّر عن اتساع الفوارق.
+in_labour_stats_ai_ar: نسب المئينات (P90/P10، P50/P10) من المؤشرات المعتادة لقياس تفاوت الأجور.
+related:
+- con-median
+- con-interquartile-range
+status: draft
+last_updated: '2026-11-05'

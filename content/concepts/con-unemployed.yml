@@ -8,12 +8,12 @@ term_variants:
 - term: العاطلون عن العمل
   used_in:
   - pse
-  basis: PCBS indicators guide
+  basis: دليل المؤشرات للجهاز المركزي للإحصاء الفلسطيني
 - term: المتعطلون
   used_in:
   - are
   - jor
-  basis: FCSC data file; DoS usage — to confirm
+  basis: ملف بيانات المركز الاتحادي؛ استعمال دائرة الإحصاءات العامة — للتحقق
 category: labour
 source: src-ilo-icls19-res1-pdf
 definition_quote: q-ilo-unemployed

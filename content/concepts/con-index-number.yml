@@ -1,0 +1,23 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-index-number
+name_ar: الرقم القياسي
+names:
+  en: Index number
+  fr: Indice
+term_variants:
+- term: المؤشر القياسي
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: rates
+source: src-isi-glossary
+definition_quote: q-isi-index-number
+formula: 'Iₜ = (xₜ / x₀) × 100 ؛ لاسبير: Σ pₜq₀ / Σ p₀q₀ × 100'
+formula_basis: standard notation
+explanation_ai_ar: الرقم القياسي قياس للتغير النسبي لمتغير (أو مجموعة متغيرات) مقارنة بفترة أساس قيمتها 100. أشهره الرقم القياسي لأسعار المستهلك.
+example_ai_ar: إذا كان متوسط الأجر 500 في سنة الأساس و560 اليوم، فالرقم القياسي للأجور = 112.
+in_labour_stats_ai_ar: تُستعمل الأرقام القياسية للأسعار لتحويل الأجور الاسمية إلى حقيقية (المؤشر 8.5.1 وأرقام الأجور الحقيقية).
+related:
+- con-percentage-point
+status: draft
+last_updated: '2026-11-05'

@@ -1,0 +1,25 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-estimate
+name_ar: التقدير
+names:
+  en: Estimate
+  fr: Estimation
+term_variants:
+- term: القيمة المقدّرة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: estimation
+source: src-isi-glossary
+definition_quote: q-isi-estimate
+formula: θ̂ = f(بيانات العينة، الأوزان)
+formula_basis: standard notation
+explanation_ai_ar: التقدير هو القيمة المحسوبة من العينة لتقريب قيمة مجهولة في المجتمع (المَعلَمة). كل رقم ينشره مسح بالعينة تقدير له خطأ معاينة.
+example_ai_ar: معدل البطالة المنشور 16.1% تقدير لمعدل البطالة الحقيقي في المجتمع، وليس قيمة مؤكدة.
+in_labour_stats_ai_ar: يُستحسن نشر كل تقدير مع خطئه المعياري أو مجال ثقته.
+related:
+- con-standard-error
+- con-confidence-interval
+- con-bias
+status: draft
+last_updated: '2026-11-05'

@@ -19,8 +19,8 @@ Miʿyar id: `con-labour-force` · category: labour
 
 ## Arabic term variants
 
-- قوة العمل — used in: to confirm (common variant — confirm per country)
-- السكان النشيطون — used in: المغرب, تونس (Maghreb usage (calque of «population active») — to confirm from national texts)
+- قوة العمل — used in: to confirm (صيغة شائعة — يُتحقق منها حسب البلد)
+- السكان النشيطون — used in: المغرب, تونس (استعمال مغاربي (ترجمة لـ population active) — يُتحقق منه من النصوص الوطنية)
 
 ## Plain explanation — AI-ASSISTED
 

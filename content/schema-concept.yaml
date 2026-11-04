@@ -6,6 +6,9 @@ fields:
   names:         {type: map, keys: [en, fr]}
   term_variants: {type: list, item: {term: str, used_in: list, basis: str}}
   category:      {type: str, enum: [labour, statistical, survey, classification]}
+  group:         {type: str, enum: [descriptive, sampling, estimation, rates], note: "required when category is statistical"}
+  formula_basis: {type: str, optional: true, note: "'standard notation' — a mathematical formula, not an official quotation"}
+  in_labour_stats_ai_ar: {type: str, optional: true, note: "how the concept is used in labour statistics; AI-assisted, labelled"}
   source:        {type: str, note: "src-* id of the defining standard"}
   definition_quote: {type: str, note: "slot id in content/quotes.yml"}
   formula:       {type: str, optional: true}

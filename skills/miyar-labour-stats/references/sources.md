@@ -81,7 +81,7 @@
 | src-un-sdg-metadata-repo | UN SDG Indicators Metadata Repository | UN Statistics Division (UNSD) / IAEG-SDGs | int | verified | YH 2026-11-04 |
 | src-un-sdg-metadata-goal8 | UN SDG metadata — Goal 8 indicators list | UNSD | int | verified | YH 2026-11-04 |
 | src-oecd-unemployment-indicator | OECD — Unemployment rate indicator (definition) | OECD | int | collected |   |
-| src-oecd-glossary | OECD Glossary of Statistical Terms | OECD | int | to-locate |   |
+| src-oecd-glossary | OECD Glossary of Statistical Terms | OECD | int | collected |   |
 | src-eurostat-eulfs-main | EU labour force survey — Statistics Explained (overview) | Eurostat | int | verified | YH 2026-11-04 |
 | src-eurostat-eulfs-methodology | EU labour force survey — methodology (2021 onwards) | Eurostat | int | verified | YH 2026-11-04 |
 | src-eurostat-glossary-unemployed | Eurostat glossary — Unemployed | Eurostat | int | link-ok |   |

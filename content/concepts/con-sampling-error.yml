@@ -1,0 +1,23 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-sampling-error
+name_ar: خطأ المعاينة
+names:
+  en: Sampling error
+  fr: Erreur d'échantillonnage
+term_variants:
+- term: خطأ العينة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: estimation
+source: src-isi-glossary
+definition_quote: q-isi-sampling-error
+explanation_ai_ar: خطأ المعاينة هو الفرق بين التقدير والقيمة الحقيقية الناتج عن دراسة عينة بدلاً من المجتمع كله. يصغر بكبر العينة، ويمكن قياسه في العينات الاحتمالية.
+example_ai_ar: 'تقديران للبطالة من عينتين مختلفتين من المجتمع نفسه يعطيان 15.8% و16.3%: الفرق ناتج عن خطأ المعاينة.'
+in_labour_stats_ai_ar: تفسّر تقلبات صغيرة بين ربعين متتاليين غالباً بخطأ المعاينة لا بتغير حقيقي في سوق العمل.
+related:
+- con-standard-error
+- con-non-sampling-error
+- con-margin-of-error
+status: draft
+last_updated: '2026-11-05'

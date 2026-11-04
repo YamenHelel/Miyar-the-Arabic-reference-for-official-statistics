@@ -1,0 +1,21 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-variance
+name_ar: التباين
+names:
+  en: Variance
+  fr: Variance
+term_variants: []
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-variance
+formula: σ² = (1/N) Σ (xᵢ − μ)² ؛ s² = (1/(n−1)) Σ (xᵢ − x̄)²
+formula_basis: standard notation
+explanation_ai_ar: 'التباين متوسط مربعات انحرافات القيم عن متوسطها. يقيس مدى تشتت البيانات حول المتوسط، ووحدته مربع وحدة المتغير، لذلك يُستعمل غالباً جذره: الانحراف المعياري.'
+example_ai_ar: 'القيم 2، 4، 4، 4، 5، 5، 7، 9 متوسطها 5 ومجموع مربعات الانحرافات 32: التباين المجتمعي = 32 ÷ 8 = 4، وتباين العينة = 32 ÷ 7 ≈ 4.57.'
+in_labour_stats_ai_ar: تباين التقدير (لا تباين المتغير) هو أساس الخطأ المعياري ومجالات الثقة للمعدلات المنشورة.
+related:
+- con-standard-deviation
+- con-standard-error
+status: draft
+last_updated: '2026-11-05'

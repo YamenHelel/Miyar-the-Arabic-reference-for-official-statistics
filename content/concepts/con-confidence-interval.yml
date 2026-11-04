@@ -1,0 +1,28 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-confidence-interval
+name_ar: مجال الثقة
+names:
+  en: Confidence interval
+  fr: Intervalle de confiance
+term_variants:
+- term: فترة الثقة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+- term: مدى الثقة
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: estimation
+source: src-isi-glossary
+definition_quote: q-isi-confidence-interval
+formula: 'θ̂ ± z₁₋α/₂ × SE(θ̂) ؛ عند 95%: θ̂ ± 1.96 × SE'
+formula_basis: standard notation
+explanation_ai_ar: مجال الثقة مدى من القيم يُتوقع أن يحتوي القيمة الحقيقية بدرجة ثقة محددة (عادة 95%)، بمعنى أن 95% من المجالات المبنية بالطريقة نفسها على عينات متكررة تحتويها.
+example_ai_ar: 'معدل بطالة 16.1% بخطأ معياري 0.4: مجال الثقة 95% = 16.1 ± 0.78، أي من 15.3% إلى 16.9%.'
+in_labour_stats_ai_ar: قبل القول بأن البطالة «ارتفعت» بين ربعين، يُتحقق من أن الفرق أكبر مما يفسره خطأ المعاينة.
+related:
+- con-standard-error
+- con-margin-of-error
+- con-estimate
+status: draft
+last_updated: '2026-11-05'

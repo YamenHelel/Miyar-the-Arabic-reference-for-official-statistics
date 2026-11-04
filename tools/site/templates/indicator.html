@@ -3,9 +3,8 @@
 {% block main %}
 <div class="wrap">
   <header class="page-head" data-in>
-    <p class="kind">مؤشر · إحصاءات العمل{% if ind.sdg %} · هدف التنمية المستدامة {{ ind.sdg | join('، ') }}{% endif %}</p>
     <h1>{{ ind.name_ar }}</h1>
-    <p class="alt"><span lang="en">{{ ind.names.en }}</span><span lang="fr">{{ ind.names.fr }}</span></p>
+    <p class="alt"><span lang="en">{{ ind.names.en }}</span><span lang="fr">{{ ind.names.fr }}</span><span class="kind-inline">مؤشر · إحصاءات العمل{% if ind.sdg %} · هدف التنمية المستدامة {{ ind.sdg | join('، ') }}{% endif %}</span></p>
     <p class="facts-line">{{ 'مسودة' if ind.status == 'draft' else 'مُراجَع' }} · النصوص الرسمية {{ done }} من {{ total }} · آخر تحديث {{ ind.last_updated }}{% if variants %} · يُقال أيضاً: {{ variants }}{% endif %}</p>
     <p class="quick" id="quick">{{ quick }}</p>
     <p class="go"><a class="btn" href="#countries">قارن بين الدول العشر</a></p>

@@ -63,12 +63,12 @@ def concept_quick(c, quotes, reg):
     src = reg.get(q.get("source") or c.get("source"), {})
     p = para_of(q.get("locator"))
     std = src.get("title_ar") or src.get("title_en", "")
-    s = f"{c['name_ar']} ({c['names']['en']}، {c['names']['fr']}) مفهوم يعرّفه {std}" + (f" في الفقرة {p}" if p else "") + "."
+    s = f"{c['name_ar']} مفهوم يعرّفه {std}" + (f" في الفقرة {p}" if p else "") + "."
     if q.get("status") in ("verified", "pasted"):
         s += " النص الرسمي منسوخ أدناه حرفياً بلغته الأصلية مع مصدره."
     else:
         s += " النص الرسمي بانتظار النسخ من مصدره."
-    return s
+    return s + f" بالإنجليزية: {c['names']['en']}، وبالفرنسية: {c['names']['fr']}."
 
 
 # ---------------- FAQ (only quote-backed facts) ----------------

@@ -144,6 +144,8 @@ def main():
         if path.stem != con.get("id") or not path.stem.startswith("con-"):
             errors.append(f"{where}: id must start with con- and match the file name")
         check_ref(where, con.get("definition_quote"))
+        if con.get("category") == "statistical" and con.get("group") not in ("descriptive", "sampling", "estimation", "rates"):
+            errors.append(f"{where}: statistical concept needs group: descriptive | sampling | estimation | rates")
         check_src(where, con.get("source"))
         for r in con.get("related", []) or []:
             if r not in con_ids | ind_ids:

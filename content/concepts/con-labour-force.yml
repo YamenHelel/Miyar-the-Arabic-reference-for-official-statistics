@@ -7,12 +7,12 @@ names:
 term_variants:
 - term: قوة العمل
   used_in: []
-  basis: common variant — confirm per country
+  basis: صيغة شائعة — يُتحقق منها حسب البلد
 - term: السكان النشيطون
   used_in:
   - mar
   - tun
-  basis: Maghreb usage (calque of «population active») — to confirm from national texts
+  basis: استعمال مغاربي (ترجمة لـ population active) — يُتحقق منه من النصوص الوطنية
 category: labour
 source: src-ilo-icls19-res1-pdf
 definition_quote: q-ilo-labour-force

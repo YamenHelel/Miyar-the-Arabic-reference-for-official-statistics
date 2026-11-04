@@ -1,0 +1,24 @@
+# Miʿyar glossary entry (statistical). Official wording: content/quotes.yml. Formula = standard notation. AI-assisted text is labelled.
+id: con-mode
+name_ar: المنوال
+names:
+  en: Mode
+  fr: Mode
+term_variants:
+- term: القيمة الأكثر تكراراً
+  used_in: []
+  basis: استعمال شائع — يُتحقق منه حسب البلد
+category: statistical
+group: descriptive
+source: src-isi-glossary
+definition_quote: q-isi-mode
+formula: Mo = القيمة ذات التكرار الأكبر
+formula_basis: standard notation
+explanation_ai_ar: المنوال هو القيمة الأكثر تكراراً. وهو المقياس الوحيد للنزعة المركزية الذي يصلح للمتغيرات الوصفية (مثل المهنة أو النشاط الاقتصادي).
+example_ai_ar: 'في عينة من 10 عاملين، 4 في التجارة و3 في البناء و3 في الصناعة: المنوال هو «التجارة».'
+in_labour_stats_ai_ar: يفيد في وصف أكثر المهن أو الأنشطة شيوعاً، وأكثر عدد ساعات عمل تكراراً (مثل 40 ساعة).
+related:
+- con-mean
+- con-median
+status: draft
+last_updated: '2026-11-05'
