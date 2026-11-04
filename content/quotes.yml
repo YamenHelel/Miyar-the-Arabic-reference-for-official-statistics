@@ -43,6 +43,24 @@ quotes:
   verified_by: YH
   quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
   document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).
+  translation_ar: |-
+    البطالة
+    47. يُعرَّف المتعطلون بأنهم جميع الأشخاص في سن العمل الذين لم يكونوا مشتغلين، وقاموا بأنشطة للبحث عن عمل خلال فترة حديثة محددة، وكانوا متاحين حالياً لتولي عمل إذا أُتيحت لهم فرصة عمل، حيث:
+    (أ) يُقدَّر «عدم الاشتغال» بالنسبة إلى فترة الإسناد القصيرة المستخدمة لقياس العمالة؛
+    (ب) يشير «البحث عن عمل» إلى أي نشاط يُمارَس، خلال فترة حديثة محددة تشمل الأسابيع الأربعة الأخيرة أو الشهر الأخير، بغرض إيجاد وظيفة أو إنشاء مشروع تجاري أو زراعي. ويشمل ذلك أيضاً العمل بدوام جزئي أو غير المنظم أو المؤقت أو الموسمي أو العرضي، داخل التراب الوطني أو خارجه. ومن أمثلة هذه الأنشطة:
+    (1) تدبير الموارد المالية، والتقدم بطلبات الحصول على التصاريح والرخص؛
+    (2) البحث عن أرض أو مبانٍ أو آلات أو مستلزمات أو مدخلات زراعية؛
+    (3) طلب مساعدة الأصدقاء أو الأقارب أو غيرهم من الوسطاء؛
+    (4) التسجيل لدى خدمات التشغيل العامة أو الخاصة أو الاتصال بها؛
+    (5) التقدم مباشرة إلى أصحاب العمل، والسؤال في مواقع العمل والمزارع وأبواب المصانع والأسواق أو أماكن التجمع الأخرى؛
+    (6) نشر إعلانات الوظائف في الصحف أو على الإنترنت أو الرد عليها؛
+    (7) نشر السيرة الذاتية أو تحديثها على مواقع التواصل المهني أو الاجتماعي على الإنترنت؛
+    (ج) يُستخدم الوقت الذي تبدأ فيه المنشأة وجودها للتمييز بين أنشطة البحث الرامية إلى إنشاء مشروع تجاري وبين نشاط العمل نفسه، ويُستدَل على ذلك بتسجيل المنشأة للعمل، أو بتوفر الموارد المالية، أو بجاهزية البنية الأساسية أو المواد اللازمة، أو بتلقي أول عميل أو طلبية، حسب السياق؛
+    (د) تُعدّ «الإتاحة حالياً» اختباراً للاستعداد لبدء عمل في الوقت الحاضر، وتُقدَّر بالنسبة إلى فترة إسناد قصيرة تشمل الفترة المستخدمة لقياس العمالة:
+    (1) يجوز، حسب الظروف الوطنية، تمديد فترة الإسناد لتشمل فترة قصيرة لاحقة لا تتجاوز أسبوعين في المجموع، لضمان التغطية الكافية لحالات البطالة بين مختلف الفئات السكانية.
+  translation_status: unofficial
+  translation_by: AI-assisted (Claude), 2026-11-05, not yet reviewed
+  translation_note_ar: قد توجد نسخة عربية رسمية من قرار المؤتمر التاسع عشر لدى منظمة العمل الدولية؛ حين تُنسخ تحلّ محل هذه الترجمة.
 - slot: q-ilo-employed
   source: src-ilo-icls19-res1-pdf
   lang: en
@@ -60,6 +78,14 @@ quotes:
   verified_by: YH
   quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
   document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).
+  translation_ar: |-
+    العمالة
+    27. يُعرَّف المشتغلون بأنهم جميع الأشخاص في سن العمل الذين قاموا، خلال فترة إسناد قصيرة، بأي نشاط لإنتاج سلع أو تقديم خدمات مقابل أجر أو ربح. ويشملون:
+    (أ) المشتغلين «في العمل»، أي الذين عملوا في وظيفة ساعة واحدة على الأقل؛
+    (ب) المشتغلين «غير الموجودين في العمل» بسبب الغياب المؤقت عن الوظيفة، أو بسبب ترتيبات وقت العمل (مثل العمل بنظام المناوبات، وساعات العمل المرنة، والإجازة التعويضية عن العمل الإضافي).
+  translation_status: unofficial
+  translation_by: AI-assisted (Claude), 2026-11-05, not yet reviewed
+  translation_note_ar: قد توجد نسخة عربية رسمية من قرار المؤتمر التاسع عشر لدى منظمة العمل الدولية؛ حين تُنسخ تحلّ محل هذه الترجمة.
 - slot: q-ilo-labour-force
   source: src-ilo-icls19-res1-pdf
   lang: en
@@ -76,6 +102,10 @@ quotes:
   verified_by: YH
   quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
   document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).
+  translation_ar: 16. تُعطى الأولوية للعمالة على الفئتين الأخريين، وللبطالة على الخروج من القوة العاملة. وبذلك تكون فئات الحالة في القوة العاملة الثلاث متنافية وشاملة. ومجموع المشتغلين والمتعطلين يساوي القوة العاملة. أما الأشخاص خارج القوة العاملة فهم الأشخاص في سن العمل الذين لم يكونوا مشتغلين ولا متعطلين خلال فترة الإسناد القصيرة.
+  translation_status: unofficial
+  translation_by: AI-assisted (Claude), 2026-11-05, not yet reviewed
+  translation_note_ar: قد توجد نسخة عربية رسمية من قرار المؤتمر التاسع عشر لدى منظمة العمل الدولية؛ حين تُنسخ تحلّ محل هذه الترجمة.
 - slot: q-ilo-lu1
   source: src-ilo-icls19-res1-pdf
   lang: en
@@ -104,6 +134,22 @@ quotes:
   verified_by: YH
   quoted_from_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf
   document_note: Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023). Footnote 2 (on LU3) is printed inside the quoted paragraph.
+  translation_ar: |-
+    73.
+    (ج) مقاييس نقص استخدام العمالة، ويلزم أكثر من مؤشر واحد من المؤشرات الرئيسية التالية لإظهار طبيعة نقص الاستخدام في مختلف الأوضاع ومراحل الدورة الاقتصادية:
+    LU1: معدل البطالة:
+    [المتعطلون / القوة العاملة] × 100
+    LU2: المعدل المركب لنقص التشغيل المرتبط بالوقت والبطالة:
+    [(الأشخاص في نقص تشغيل مرتبط بالوقت + المتعطلون) / القوة العاملة] × 100
+    LU3: المعدل المركب للبطالة والقوة العاملة المحتملة:
+    2
+    [(المتعطلون + القوة العاملة المحتملة) / (القوة العاملة الموسَّعة)] × 100
+    2 يحل محل التخفيف الاختياري لمعيار «البحث عن عمل» في المعايير السابقة.
+    LU4: المقياس المركب لنقص استخدام العمالة:
+    [(الأشخاص في نقص تشغيل مرتبط بالوقت + المتعطلون + القوة العاملة المحتملة) / (القوة العاملة الموسَّعة)] × 100
+  translation_status: unofficial
+  translation_by: AI-assisted (Claude), 2026-11-05, not yet reviewed
+  translation_note_ar: قد توجد نسخة عربية رسمية من قرار المؤتمر التاسع عشر لدى منظمة العمل الدولية؛ حين تُنسخ تحلّ محل هذه الترجمة.
 - slot: q-usa-unemployed
   source: src-usa-bls-cps-definitions
   lang: en

@@ -27,3 +27,9 @@ wanted to read every card in one language.
 - The card's values are Miʿyar's own notes (not official text), so their renderings live in the country profile. They use `lfs_ar`, `lfs_en` (for French values only), `notes_ar`, `nso_ar` and `nso_en`, with `translation_by`. Each view carries a label saying so.
 - The validator checks that the rendering keys match `lfs` and that `translation_by` is present. Queue 7b lists the 10 cards to review.
 - When a profile value is corrected, its rendering must be corrected in the same edit.
+
+## Extended to official text sheets (2026-11-05, lead's request)
+- The `sheet()` macro (gold "official text" sheet) shows the switch whenever its quote has a translation in the other language. This covers ILO texts on indicator, concept and data-source pages, and any future slot (ISI and others) once translated.
+- The hallmark now reads «النص الأصلي: نص رسمي مُتحقَّق منه…», so the verification stamp certifies the original, not the translation.
+- The 4 ILO texts present now have unofficial Arabic translations: §47, §27, §16, §73(c). Each has a note that an official ILO Arabic text, once pasted, replaces the translation.
+- Arabic list markers ((أ), (1), [ ) now keep their line breaks on display.

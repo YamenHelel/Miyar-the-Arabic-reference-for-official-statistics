@@ -17,6 +17,10 @@ Miʿyar id: `con-labour-force` · category: labour
 > labour force. Persons outside the labour force are those of working age who were neither in
 > employment nor in unemployment in the short reference period.
 
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> 16. تُعطى الأولوية للعمالة على الفئتين الأخريين، وللبطالة على الخروج من القوة العاملة. وبذلك تكون فئات الحالة في القوة العاملة الثلاث متنافية وشاملة. ومجموع المشتغلين والمتعطلين يساوي القوة العاملة. أما الأشخاص خارج القوة العاملة فهم الأشخاص في سن العمل الذين لم يكونوا مشتغلين ولا متعطلين خلال فترة الإسناد القصيرة.
+
 ## Arabic term variants
 
 - قوة العمل — used in: to confirm (صيغة شائعة — يُتحقق منها حسب البلد)

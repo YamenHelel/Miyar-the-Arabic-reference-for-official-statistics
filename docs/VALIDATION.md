@@ -15,7 +15,7 @@ Where to act: the **Verification Desk** (link in `docs/STATUS.md`): ✍️ tab f
 | 5. Country facts from search snippets | 15 | Confirmed automatically once the country's text is pasted |
 | 6. Country-profile fields to confirm | 20 | Reply in chat or edit the YAML |
 | 7. AI-drafted pages awaiting review | 54 | Read the page; say "reviewed <id>" or send corrections |
-| 7b. Unofficial translations to review | 10 definitions + 10 country cards | Read each against its original (عربي / English switcher on indicator and country pages) |
+| 7b. Unofficial translations to review | 14 definitions + 10 country cards | Read each against its original (عربي / English switcher on indicator and country pages) |
 | 8. Code not yet executed | 1 | Stata script (needs someone with Stata) |
 | 9. Lead decisions and settings | 7 | See the list at the end |
 
@@ -305,6 +305,10 @@ AI text is always labelled on the site; review means a statistician has read it 
 
 Shown on indicator pages through the عربي / English switcher, always labelled unofficial, with the original one click away.
 
+- `q-ilo-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-ilo-employed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-ilo-labour-force` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
+- `q-ilo-lu1` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
 - `q-usa-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
 - `q-gbr-unemployed` (en → ar): AI-assisted (Claude), 2026-11-05, not yet reviewed
 - `q-fra-unemployed` (fr → ar, en): AI-assisted (Claude), 2026-11-05, not yet reviewed

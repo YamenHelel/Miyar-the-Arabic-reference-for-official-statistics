@@ -22,7 +22,7 @@ Legend: ✅ done · 🟡 built, awaiting validation · 🔨 in progress · ⬜ p
 | M11 | Claude skill (F-09) | ✅ v0, 56 references | ⬜ external test | `skills/miyar-labour-stats/` |
 | M12 | Code library (ADR-0010) | ✅ Python, R | 🟡 Stata not run | R = Python on 32 results in CI |
 | M13 | Verification Desk | ✅ | ✅ in use | Artifact with `verdicts` and `quotes` collections |
-| M18 | عربي / English switcher on national definitions and country cards (ADR-0012) | ✅ | 🟡 10 translations + 10 country cards to review | ILO sheets still original-only (I-063) |
+| M18 | عربي / English switcher on national definitions, country cards and official text sheets (ADR-0012) | ✅ | 🟡 14 quote translations + 10 country cards to review | Official Arabic texts replace translations when pasted |
 | M14 | Validation queue | ✅ | n/a | `tools/build_validation_queue.py` → `VALIDATION.md`, checked in CI |
 | M15 | Practitioner directory (ADR-0003) | ✅ design | ⬜ form not opened | Phase 1 |
 | M16 | SDG hub (F-07) | ⬜ | ⬜ | SDG metadata sources collected |

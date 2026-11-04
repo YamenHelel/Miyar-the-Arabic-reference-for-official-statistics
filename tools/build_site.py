@@ -48,7 +48,7 @@ LFS_LABELS = {"name_en": "الاسم", "name_fr": "الاسم", "name_ar": "ال
               "unemployed_fr": "تعريف المتعطل", "scope": "النطاق", "coverage_note": "ملاحظة التغطية"}
 
 
-LIST_START = re.compile(r"^\s*([a-d]\.\s|\(?[a-z]\)|\(?[ivx]+\)|\([a-z]\)|LU\d|\d+(\.\d+)*\.?\s|\d+\.\S|[•\-–]|[أ-ي]\.|\d+\s*\.|[a-zA-Z][a-zA-Z ]{0,24}$)")
+LIST_START = re.compile(r"^\s*(\([أ-ي]\)|\(\d+\)|\[|[a-d]\.\s|\(?[a-z]\)|\(?[ivx]+\)|\([a-z]\)|LU\d|\d+(\.\d+)*\.?\s|\d+\.\S|[•\-–]|[أ-ي]\.|\d+\s*\.|[a-zA-Z][a-zA-Z ]{0,24}$)")
 
 
 def reflow(text):

@@ -391,6 +391,10 @@ pre { margin: 0; background: #0d2617; color: var(--ink); padding: 18px 20px; ove
 .lang-switch button { font: inherit; font-size: .95rem; padding: 4px 14px; border: 0; background: transparent; color: var(--paper-ink); cursor: pointer; }
 .lang-switch button[aria-pressed="true"] { background: var(--paper-ink); color: var(--paper); font-weight: 700; }
 [data-view="ar"] > .v-en, [data-view="en"] > .v-ar, .nat[data-view="ar"] .v-en, .nat[data-view="en"] .v-ar { display: none; }
+.sheet-view .lang-switch { margin-bottom: 18px; }
+.sheet details.orig { margin-top: 14px; }
+.sheet details.orig summary { cursor: pointer; font-size: var(--step-small); font-weight: 700; text-decoration: underline; padding: 6px 0; }
+.sheet .v-label { font-size: var(--step-small); margin-bottom: 10px; opacity: .85; }
 .card-view .v-nso { font-weight: 700; margin-bottom: 12px; }
 .card-view .v-notes { margin-top: 18px; font-size: 1rem; }
 html:not(.js) .lang-switch { display: none; }

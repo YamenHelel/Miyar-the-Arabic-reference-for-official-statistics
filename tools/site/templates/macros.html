@@ -1,11 +1,20 @@
 {% macro sheet(q, src, root) -%}
 {% if q and q.status in ['verified', 'pasted'] and q.text %}
-<figure class="sheet on-paper" style="margin:0">
+{% set switch = (q.lang != 'ar' and q.translation_ar) or (q.lang != 'en' and q.translation_en) %}
+<figure class="sheet on-paper{% if switch %} sheet-view{% endif %}" style="margin:0"{% if switch %} data-view="ar"{% endif %}>
   <div class="hallmark">
     <svg viewBox="0 0 100 130" aria-hidden="true">{% include "hallmark.svg" %}</svg>
-    <span>{% if q.status == 'verified' %}نص رسمي مُتحقَّق منه · {{ q.verified_by }} · {{ q.pasted_on }}{% else %}نص رسمي منسوخ، بانتظار تأكيد المراجع{% endif %}</span>
+    <span>{% if switch %}النص الأصلي: {% endif %}{% if q.status == 'verified' %}نص رسمي مُتحقَّق منه · {{ q.verified_by }} · {{ q.pasted_on }}{% else %}نص رسمي منسوخ، بانتظار تأكيد المراجع{% endif %}</span>
   </div>
+  {% if switch %}
+  {% set n = {'lang': q.lang, 'text': q.text | reflow, 'tr_ar': (q.translation_ar | reflow) if q.translation_ar else '',
+              'tr_en': (q.translation_en | reflow) if q.translation_en else '', 'tr_official': q.translation_status == 'official',
+              'tr_note': q.translation_note_ar or ''} %}
+  <div class="lang-switch" role="group" aria-label="لغة العرض"><button type="button" data-view="ar" aria-pressed="true">عربي</button><button type="button" data-view="en" aria-pressed="false" lang="en">English</button></div>
+  {{ view(n, 'ar') }}{{ view(n, 'en') }}
+  {% else %}
   <blockquote class="text" dir="{{ 'rtl' if q.lang == 'ar' else 'ltr' }}" lang="{{ q.lang }}" style="margin:0">{{ q.text | reflow }}</blockquote>
+  {% endif %}
   <figcaption class="src">
     <a href="{{ q.quoted_from_url or src.url }}" dir="auto">{{ src.title_ar or src.title_en }}</a>
     <span>{{ src.publisher }}</span>

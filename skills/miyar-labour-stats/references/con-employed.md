@@ -18,6 +18,13 @@ Miʿyar id: `con-employed` · category: labour
 > (a) employed persons “at work”, i.e. who worked in a job for at least one hour;
 > (b) employed persons “not at work” due to temporary absence from a job, or to workingtime arrangements (such as shift work, flexitime and compensatory leave for overtime).
 
+**Arabic translation — UNOFFICIAL (Miʿyar, AI-assisted, not yet reviewed) — label it «ترجمة غير رسمية»:**
+
+> العمالة
+> 27. يُعرَّف المشتغلون بأنهم جميع الأشخاص في سن العمل الذين قاموا، خلال فترة إسناد قصيرة، بأي نشاط لإنتاج سلع أو تقديم خدمات مقابل أجر أو ربح. ويشملون:
+> (أ) المشتغلين «في العمل»، أي الذين عملوا في وظيفة ساعة واحدة على الأقل؛
+> (ب) المشتغلين «غير الموجودين في العمل» بسبب الغياب المؤقت عن الوظيفة، أو بسبب ترتيبات وقت العمل (مثل العمل بنظام المناوبات، وساعات العمل المرنة، والإجازة التعويضية عن العمل الإضافي).
+
 ## Arabic term variants
 
 - العاملون — used in: to confirm (صيغة شائعة — يُتحقق منها حسب البلد)

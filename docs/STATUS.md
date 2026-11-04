@@ -18,7 +18,7 @@
 - **Code library:** Python tested, R = Python in CI, Stata not executed.
 - **Skill:** 56 references.
 - **SEO/GEO:** checks pass on all pages.
-- **Language switcher (ADR-0012):** عربي / English on national definitions and on country cards. Translations and renderings are labelled unofficial (20 items to review, queue 7b).
+- **Language switcher (ADR-0012):** عربي / English on national definitions, country cards and the ILO text sheets. Translations are labelled unofficial and the original stays the reference (24 items to review, queue 7b).
 - **Validation queue:** `tools/build_validation_queue.py` writes `docs/VALIDATION.md` from the data, and CI fails if it is stale. Manual decisions live in `docs/lead-actions.yml`.
 
 ## Next 3 tasks

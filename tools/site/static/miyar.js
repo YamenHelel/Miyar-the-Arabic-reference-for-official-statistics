@@ -178,8 +178,8 @@
     });
   });
 
-  /* ---- Arabic / English view on national definitions and country cards (one choice, remembered across pages) ---- */
-  var views = document.querySelectorAll(".nat[data-view], .card-view[data-view]");
+  /* ---- Arabic / English view on national definitions, country cards and official text sheets (one choice, remembered across pages) ---- */
+  var views = document.querySelectorAll(".nat[data-view], .card-view[data-view], .sheet-view[data-view]");
   if (views.length) {
     var setView = function (v) {
       views.forEach(function (c) {

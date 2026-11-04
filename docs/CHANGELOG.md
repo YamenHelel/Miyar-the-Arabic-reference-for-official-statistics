@@ -2,6 +2,19 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-05: Language switcher on ILO text sheets (session 10d)
+**Done**
+- The lead approved extending the switch to the ILO texts.
+  - The `sheet()` macro now shows عربي / English whenever a quote has a translation, so one change covers indicator, concept and data-source pages.
+  - The hallmark says it certifies the original.
+- Unofficial Arabic translations of ILO §47 (unemployed), §27 (employed), §16 (labour force) and §73(c) (LU1–LU4), AI-assisted and unreviewed, with a note that an official ILO Arabic text would replace them.
+- Display fix: Arabic list markers ((أ), (1), [) keep their line breaks.
+- Checked with Playwright:
+  - the choice persists from a country page to an indicator page to a concept page
+  - no horizontal scroll at 390 px
+  - sheets without a translation are unchanged
+- I-063 done. Queue 7b now holds 14 quote translations and 10 country cards.
+
 ## 2026-11-05: Language switcher on country cards (session 10c)
 **Done**
 - The lead approved extending the switch to the country page. The «مسح القوى العاملة» card now has عربي / English at its top.
