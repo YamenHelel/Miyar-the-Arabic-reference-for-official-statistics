@@ -89,6 +89,12 @@ textarea { width: 100%; min-height: 2.4em; resize: vertical; border: 1px solid v
 .verdicts button[data-k="broken"][aria-pressed="true"] { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); font-weight: 600; }
 .verdicts button[data-k="skip"][aria-pressed="true"] { background: var(--skip-soft); border-color: var(--skip); font-weight: 600; }
 .verdicts button:disabled { opacity: .5; cursor: not-allowed; }
+.qwhat { margin: 0; font-weight: 600; font-size: .95rem; }
+.qloc { margin: 0; font-size: .82rem; color: var(--muted); }
+textarea.qtext { min-height: 7em; font-size: .9rem; line-height: 1.55; }
+.qsave { justify-self: start; border: 1px solid var(--accent); background: var(--accent); color: var(--sheet); border-radius: 6px; padding: 7px 16px; font: inherit; font-weight: 600; cursor: pointer; }
+.qsave:disabled { opacity: .5; cursor: not-allowed; }
+.card[data-q="saved"] { border-inline-start: 4px solid var(--ok); }
 .saved { font-size: .78rem; color: var(--muted); min-height: 1.2em; margin: 0; }
 .empty { text-align: center; color: var(--muted); padding: 32px 0; }
 footer { color: var(--muted); font-size: .78rem; padding-block: 0 32px; }
@@ -119,6 +125,7 @@ footer { color: var(--muted); font-size: .78rem; padding-block: 0 32px; }
         <li>هل هي أحدث إصدار؟ إن وُجد إصدار أحدث فاختر «يحتاج تعديل» واكتب رابطه.</li>
         <li>اختر: ✅ صحيح · ⚠️ يحتاج تعديل (اكتب ملاحظة) · ❌ معطّل · ⏭ لاحقاً.</li>
         <li>في الجلسة التالية قل لـClaude: «طبّق التحققات» وسيحدّث المستودع.</li>
+        <li><b>نصوص للنسخ:</b> افتح الوثيقة، انسخ الفقرة المطلوبة <b>حرفياً</b> بلغتها الأصلية، الصقها، ثم اضغط «حفظ النص».</li>
       </ol>
     </details>
     <div class="notice" id="notice" hidden></div>
@@ -132,10 +139,12 @@ footer { color: var(--muted); font-size: .78rem; padding-block: 0 32px; }
 const QUEUE = /*__QUEUE__*/[];
 const BUILT = "/*__BUILT__*/";
 const GROUPS = /*__GROUPS__*/{};
+const QUOTES = /*__QUOTES__*/[];
+let quotes = {};
 const V = { ok: "✅ صحيح", fix: "⚠️ يحتاج تعديل", broken: "❌ معطّل", skip: "⏭ لاحقاً" };
 const today = new Date().toISOString().slice(0, 10);
 let verdicts = {};      // id -> {verdict, note, date}
-let db = null, canWrite = true, filter = "todo-p1";
+let db = null, canWrite = true, filter = QUEUE.some(q => q.priority === "P1") ? "todo-p1" : "quotes";
 
 document.getElementById("built").textContent = BUILT;
 
@@ -148,11 +157,12 @@ function el(tag, attrs = {}, ...kids) {
   return e;
 }
 
-const FILTERS = [["todo-p1", "المتبقي P1"], ["todo", "كل المتبقي"], ["done", "المنجز"], ["fix", "يحتاج تعديل"], ...Object.entries(GROUPS)];
+const FILTERS = [["quotes", "✍️ نصوص للنسخ"], ["todo-p1", "المتبقي P1"], ["todo", "كل المتبقي"], ["done", "المنجز"], ["fix", "يحتاج تعديل"], ...Object.entries(GROUPS)];
 function renderFilters() {
   const box = document.getElementById("filters"); box.replaceChildren();
   for (const [k, label] of FILTERS) {
-    box.append(el("button", { class: "chip", type: "button", "aria-pressed": String(filter === k), text: label, on: { click: () => { filter = k; renderFilters(); renderList(); } } }));
+    const lab = k === "quotes" ? `${label} (${QUOTES.filter(q => quotes[q.slot]).length}/${QUOTES.length})` : label;
+    box.append(el("button", { class: "chip", type: "button", "aria-pressed": String(filter === k), text: lab, on: { click: () => { filter = k; renderFilters(); renderList(); } } }));
   }
 }
 
@@ -215,8 +225,36 @@ function card(item) {
     note, btns, status);
 }
 
+function quoteCard(q) {
+  const saved = quotes[q.slot];
+  const ta = el("textarea", { class: "qtext", id: "quote-" + q.slot, dir: q.lang === "ar" ? "rtl" : "ltr", lang: q.lang, placeholder: "الصق النص هنا حرفياً…", "aria-label": "النص المنسوخ" });
+  if (saved && saved.text) ta.value = saved.text;
+  const status = el("p", { class: "saved", "aria-live": "polite", text: saved ? "محفوظ ✓ " + saved.date : "" });
+  const btn = el("button", { class: "qsave", type: "button", text: "💾 حفظ النص", on: { click: async () => {
+    const text = ta.value.trim();
+    if (!text) { status.textContent = "الصق النص أولاً."; ta.focus(); return; }
+    if (!db) return;
+    const body = { slot: q.slot, indicator: q.indicator, source: q.source, text, date: today, at: new Date().toISOString() };
+    status.textContent = "جارٍ الحفظ…";
+    try { await db.doc("quotes/" + q.slot).set(body); quotes[q.slot] = body; status.textContent = "حُفظ ✓"; renderFilters(); }
+    catch (e) { status.textContent = "لم يُحفظ: " + (e && e.message ? e.message : "خطأ"); }
+  } } });
+  if (!db || !canWrite) btn.disabled = true;
+  return el("article", { class: "card", "data-q": saved ? "saved" : "" },
+    el("div", { class: "meta" }, el("span", { class: "pill p1 state", text: q.indicator_name_ar }), el("span", { class: "pill", text: q.lang.toUpperCase() }), el("span", { text: q.slot })),
+    el("p", { class: "qwhat", text: q.what_ar }),
+    el("p", { class: "qloc", dir: "auto", text: q.locator }),
+    el("p", { class: "pub", dir: "auto", text: q.source_title }),
+    el("div", { class: "url" }, el("a", { class: "open", href: q.url, target: "_blank", rel: "noopener", text: "افتح الوثيقة ↗" }), el("code", { text: q.url })),
+    ta, btn, status);
+}
+
 function renderList() {
   const list = document.getElementById("list");
+  if (filter === "quotes") {
+    list.replaceChildren(...(QUOTES.length ? QUOTES.map(quoteCard) : [el("p", { class: "empty", text: "لا توجد نصوص مطلوبة حالياً." })]));
+    renderMeters(); return;
+  }
   const items = QUEUE.filter(visible);
   list.replaceChildren(...(items.length ? items.map(card) : [el("p", { class: "empty", text: filter.startsWith("todo") ? "لا شيء متبقٍ هنا. أحسنت!" : "لا عناصر في هذا العرض." })]));
   renderMeters();
@@ -241,5 +279,10 @@ renderFilters();
     if (first || !document.activeElement || document.activeElement.tagName !== "TEXTAREA") renderList();
     first = false;
   }, e => { clearTimeout(timer); showNotice("تعذّر تحميل النتائج: " + e.message); renderList(); });
+  db.collection("quotes").onSnapshot(snap => {
+    const next = {}; for (const d of snap.docs) next[d.id] = d.data();
+    quotes = next; renderFilters();
+    if (filter === "quotes" && (!document.activeElement || document.activeElement.tagName !== "TEXTAREA")) renderList();
+  }, () => {});
 })();
 </script>

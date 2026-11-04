@@ -35,5 +35,6 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 - [ADR-0006](decisions/ADR-0006-name-miyar.md): project name Miʿyar (مِعيار)
 
 ## Data
+- [../content/schema-indicator.yaml](../content/schema-indicator.yaml): indicator schema; indicators in [../content/indicators/](../content/indicators/)
 - [../sources/README.md](../sources/README.md): source registry guide and counts
 - [../directory/README.md](../directory/README.md): practitioner directory design

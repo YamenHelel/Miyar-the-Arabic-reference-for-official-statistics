@@ -1,0 +1,37 @@
+# Indicator schema — used by tools/validate.py for content/indicators/*.yml
+# Design rules (see docs/prd/07-data-model.md and CLAUDE.md hard rules):
+#  - Official wording lives ONLY in `quotes[]`, copied verbatim by a human from a verified source.
+#  - A quote slot starts as `status: to-paste` with empty `text`, and says exactly what to copy (`locator`, `what_ar`).
+#  - Facts (age, reference period…) carry `basis`: quote | source-doc | search-snippet. Only `quote` and `source-doc` are publishable as-is;
+#    `search-snippet` facts are shown with a "to confirm" flag until a quote backs them.
+#  - AI-written prose lives only in fields named explanation_ai_* and is always displayed with the AI label.
+
+required: [id, name_ar, names, domain, international, countries, quotes, status, last_updated]
+
+fields:
+  id:            {type: str, pattern: "^ind-[a-z0-9-]+$"}
+  name_ar:       {type: str}
+  names:         {type: map, keys: [en, fr]}
+  term_variants: {type: list, item: {term: str, used_in: list, basis: str}}
+  domain:        {type: str, enum: [labour]}
+  sdg:           {type: list}
+  international: {type: map, keys: [standard_source, custodian, definition_quote, formula, formula_ar, formula_quote, components, notes_ar]}
+  countries:     {type: map, note: "iso3 -> {source, definition_quote, standard, age, job_search_period, reference_period, frequency, survey, population_note, facts_basis}"}
+  comparability_notes_ar: {type: list, item: {text: str, sources: list}}
+  explanation_ai_ar: {type: str, note: "AI-assisted plain-Arabic explanation; displayed with label"}
+  related:       {type: list}
+  quotes:
+    type: list
+    item:
+      slot:     {type: str, pattern: "^q-[a-z0-9-]+$"}
+      source:   {type: str, note: "src-* id; must exist in the registry and be verified before text is accepted"}
+      locator:  {type: str, note: "paragraph / page / section to copy"}
+      what_ar:  {type: str, note: "instruction for the person pasting"}
+      lang:     {type: str, enum: [ar, en, fr]}
+      text:     {type: str, note: "verbatim; empty while to-paste"}
+      translation_ar: {type: str, optional: true}
+      translation_status: {type: str, enum: [official, unofficial], optional: true}
+      status:   {type: str, enum: [to-paste, pasted, verified, source-missing]}
+      pasted_on: {type: date, optional: true}
+  status:        {type: str, enum: [draft, reviewed, verified]}
+  last_updated:  {type: date}

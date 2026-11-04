@@ -1,0 +1,170 @@
+# Pilot indicator #1 — Unemployment rate (معدل البطالة)
+# Status: draft. Official wording is pending in quotes[] (status to-paste) because the sandbox cannot open the sources;
+# the lead pastes them from the Verification Desk. Nothing below the quotes is official text.
+
+id: ind-unemployment-rate
+name_ar: معدل البطالة
+names:
+  en: Unemployment rate
+  fr: Taux de chômage
+term_variants:
+  - {term: معدل البطالة, used_in: [sau, jor, pse, are, tun, mar], basis: common usage — to confirm per country from quotes}
+  - {term: نسبة البطالة, used_in: [], basis: to confirm — collect countries that use it}
+domain: labour
+sdg: ["8.5.2"]
+
+international:
+  standard_source: src-ilo-icls19-res1
+  custodian: ILO
+  definition_quote: q-ilo-unemployed
+  formula_ar: "معدل البطالة = (عدد المتعطلين ÷ القوة العاملة) × 100"
+  formula: "UR = U / (E + U) × 100"
+  formula_quote: q-ilo-lu1
+  components:
+    - {id: con-unemployed, name_ar: المتعطلون (الأشخاص في البطالة), quote: q-ilo-unemployed}
+    - {id: con-labour-force, name_ar: القوة العاملة, quote: q-ilo-labour-force}
+    - {id: con-employed, name_ar: المشتغلون (الأشخاص في العمالة), quote: q-ilo-employed}
+  notes_ar: >
+    في إطار المؤتمر الدولي التاسع عشر لخبراء إحصاءات العمل (2013) يُعدّ معدل البطالة المقياسَ الأول (LU1) من بين أربعة مقاييس رئيسية لنقص استخدام العمالة.
+    يُنشر المؤشر أيضاً بوصفه مؤشر أهداف التنمية المستدامة 8.5.2، مصنفاً حسب الجنس والعمر والإعاقة، ومنظمة العمل الدولية هي الجهة الراعية.
+
+countries:
+  usa:
+    source: src-usa-bls-cps-definitions
+    survey: Current Population Survey (CPS)
+    definition_quote: q-usa-unemployed
+    standard: national (ILO-consistent)
+    age: "16+"
+    job_search_period: "4 weeks ending with the reference week"
+    reference_period: reference week
+    frequency: monthly
+    population_note: civilian noninstitutional population
+    facts_basis: search-snippet
+  gbr:
+    source: src-gbr-ons-lfs-qmi
+    survey: Labour Force Survey (LFS)
+    definition_quote: q-gbr-unemployed
+    standard: ILO-based
+    age: "16+ (to confirm)"
+    frequency: quarterly (rolling)
+    facts_basis: search-snippet
+  fra:
+    source: src-fra-insee-eec-methodo
+    survey: Enquête Emploi en continu (EEC)
+    definition_quote: q-fra-unemployed
+    standard: ILO-based (EU-LFS)
+    age: "15+"
+    job_search_period: "4 dernières semaines (ou emploi trouvé commençant dans les 3 mois)"
+    availability: "dans les 2 semaines"
+    frequency: continuous, quarterly results
+    facts_basis: search-snippet
+  aus:
+    source: src-aus-abs-lscsm-2018
+    survey: Labour Force Survey
+    definition_quote: q-aus-unemployed
+    standard: ILO-based
+    age: "15+"
+    frequency: monthly
+    facts_basis: search-snippet
+  sau:
+    source: src-sau-gastat-lms-methodology-2025q1
+    survey: Labour Force Survey (household telephone survey)
+    definition_quote: q-sau-unemployed
+    age: "15+"
+    frequency: quarterly
+    population_note: Saudis and non-Saudis habitually resident; rates also published for Saudis only
+    facts_basis: search-snippet
+  tun:
+    source: src-tun-ins-enpe-methodo
+    survey: Enquête Nationale sur la Population et l'Emploi (ENPE)
+    definition_quote: q-tun-unemployed
+    age: "15+"
+    frequency: quarterly
+    facts_basis: search-snippet
+  mar:
+    source: src-mar-hcp-ene-methodo
+    survey: "ENE (to 2025) → Enquête sur la Main-d'Œuvre EMO2026 (from Jan 2026)"
+    definition_quote: q-mar-unemployed
+    age: "15+"
+    frequency: quarterly
+    population_note: series break in 2026 — state ENE or EMO2026 for every figure
+    facts_basis: search-snippet
+  jor:
+    source: src-jor-dos-home
+    survey: Employment and Unemployment Survey (EUS)
+    definition_quote: q-jor-unemployed
+    age: "15+"
+    frequency: quarterly
+    population_note: DoS publishes overall, Jordanians and non-Jordanians rates (Q1 2026 per press — 16.1% / 21.1% / 8.7%)
+    facts_basis: search-snippet
+  are:
+    source: src-are-fcsc-home
+    survey: Labour Force Survey (FCSC)
+    definition_quote: q-are-unemployed
+    age: "15+"
+    frequency: annual
+    population_note: no split by nationality since 2020 (per GLMM)
+    facts_basis: search-snippet
+  pse:
+    source: src-pse-pcbs-microdata-portal
+    survey: Labour Force Survey (PCBS)
+    definition_quote: q-pse-unemployed
+    age: "15+"
+    frequency: quarterly + annual
+    population_note: coverage of Gaza varies by round (Q3 2025 release covers the West Bank)
+    facts_basis: search-snippet
+
+comparability_notes_ar:
+  - text: "الحد الأدنى للسن يختلف: 16 سنة في الولايات المتحدة مقابل 15 سنة في معظم الدول الأخرى، ما يؤثر على المقارنة المباشرة."
+    sources: [src-usa-bls-cps-definitions]
+  - text: "في الدول ذات النسبة المرتفعة من العمالة الوافدة (السعودية، الإمارات، الأردن) يتغير المعدل كثيراً بحسب السكان المرجعيين: المواطنون فقط أو إجمالي السكان. يجب دائماً ذكر السكان الذين يشملهم الرقم."
+    sources: [src-sau-gastat-lfs-page, src-jor-dos-home, src-are-glmm-lfs-notes]
+  - text: "المغرب: انتقال من البحث الوطني حول التشغيل إلى بحث القوى العاملة EMO2026 في 2026 (عينة 135 ألف أسرة)، ما قد يُحدث انقطاعاً في السلسلة الزمنية."
+    sources: [src-mar-hcp-ene-to-emo-2026-note]
+  - text: "قاعدة بيانات ILOSTAT للقوى العاملة (LFS) مبنية على معايير المؤتمر الثالث عشر، بينما قاعدة WORK مبنية على المؤتمر التاسع عشر؛ قد تختلف الأرقام عن الأرقام الوطنية لهذا السبب."
+    sources: [src-ilo-lfs-db-description, src-ilo-work-db-description]
+
+explanation_ai_ar: >
+  معدل البطالة يقيس نسبة الأشخاص الذين لا يعملون، ويبحثون فعلياً عن عمل، ومستعدون للبدء فيه، من بين مجموع القوة العاملة
+  (أي المشتغلين والمتعطلين معاً). الشخص الذي لا يعمل ولا يبحث عن عمل لا يُحسب متعطلاً، بل يُصنَّف «خارج القوة العاملة»؛
+  لذلك قد ينخفض معدل البطالة أحياناً لأن بعض الباحثين توقفوا عن البحث، لا لأنهم وجدوا عملاً. ولهذا يُستحسن قراءته
+  مع مؤشرات أخرى مثل معدل المشاركة في القوة العاملة ونسبة التشغيل إلى السكان والمقاييس المركبة لنقص استخدام العمالة (LU2–LU4).
+
+related: [ind-labour-force-participation-rate, ind-employment-to-population-ratio, ind-youth-unemployment-rate, ind-lu3, ind-lu4]
+
+quotes:
+  - {slot: q-ilo-unemployed, source: src-ilo-icls19-res1, lang: en, status: to-paste, text: "",
+     locator: "19th ICLS resolution (the link opens an ILOSTAT list — click the resolution to open its PDF), paragraph 47 (with items a, b, c)",
+     what_ar: "انسخ نص الفقرة 47 كاملاً (تعريف الأشخاص في البطالة) بالإنجليزية كما هو"}
+  - {slot: q-ilo-employed, source: src-ilo-icls19-res1, lang: en, status: to-paste, text: "",
+     locator: "19th ICLS resolution (the link opens an ILOSTAT list — click the resolution to open its PDF), paragraph 27",
+     what_ar: "انسخ الفقرة 27 (تعريف الأشخاص في العمالة)"}
+  - {slot: q-ilo-labour-force, source: src-ilo-icls19-res1, lang: en, status: to-paste, text: "",
+     locator: "19th ICLS resolution (the link opens an ILOSTAT list — click the resolution to open its PDF), paragraph defining the labour force (§16 approx.)",
+     what_ar: "انسخ الفقرة التي تعرّف القوة العاملة"}
+  - {slot: q-ilo-lu1, source: src-ilo-icls19-res1, lang: en, status: to-paste, text: "",
+     locator: "19th ICLS resolution (the link opens an ILOSTAT list — click the resolution to open its PDF), paragraph listing LU1–LU4 (§71 approx.)",
+     what_ar: "انسخ الفقرة التي تعرّف المقاييس LU1 إلى LU4 (ومنها LU1 = معدل البطالة)"}
+  - {slot: q-usa-unemployed, source: src-usa-bls-cps-definitions, lang: en, status: to-paste, text: "",
+     locator: "CPS definitions page — 'Unemployed persons'", what_ar: "انسخ تعريف Unemployed persons"}
+  - {slot: q-gbr-unemployed, source: src-gbr-ons-lfs-qmi, lang: en, status: to-paste, text: "",
+     locator: "LFS QMI — definition of unemployment (ILO definition)", what_ar: "انسخ تعريف البطالة المستخدم في المسح"}
+  - {slot: q-fra-unemployed, source: src-fra-insee-eec-methodo, lang: fr, status: to-paste, text: "",
+     locator: "Méthodologie EEC — définition du chômeur au sens du BIT", what_ar: "انسخ تعريف «chômeur au sens du BIT» بالفرنسية"}
+  - {slot: q-aus-unemployed, source: src-aus-abs-lscsm-2018, lang: en, status: to-paste, text: "",
+     locator: "Labour Statistics: Concepts, Sources and Methods — 'Unemployed'", what_ar: "انسخ تعريف Unemployed"}
+  - {slot: q-sau-unemployed, source: src-sau-gastat-lms-methodology-2025q1, lang: en, status: to-paste, text: "",
+     locator: "Methodology of Labor Market Statistics Q1 2025 — definition of unemployed", what_ar: "انسخ تعريف المتعطل (ويُفضَّل النص العربي إن وُجد في النسخة العربية)"}
+  - {slot: q-tun-unemployed, source: src-tun-ins-enpe-methodo, lang: fr, status: to-paste, text: "",
+     locator: "Note méthodologique — définition du chômeur", what_ar: "انسخ تعريف «chômeur» بالفرنسية"}
+  - {slot: q-mar-unemployed, source: src-mar-hcp-ene-methodo, lang: fr, status: to-paste, text: "",
+     locator: "Note méthodologique ENE — définition de la population active en chômage", what_ar: "انسخ تعريف «chômeur / population active en chômage»"}
+  - {slot: q-jor-unemployed, source: src-jor-dos-home, lang: ar, status: to-paste, text: "",
+     locator: "DoS — EUS concepts and definitions (quarterly report annex)", what_ar: "انسخ تعريف «المتعطل» من التقرير الربعي أو منهجية المسح"}
+  - {slot: q-are-unemployed, source: src-are-fcsc-home, lang: ar, status: to-paste, text: "",
+     locator: "FCSC — LFS definitions", what_ar: "انسخ تعريف «المتعطل» من منشورات مسح القوى العاملة"}
+  - {slot: q-pse-unemployed, source: src-pse-pcbs-microdata-portal, lang: ar, status: to-paste, text: "",
+     locator: "LFS annual report 2024 (catalogue 740 related materials) — chapter 'Terms and classifications'", what_ar: "انسخ تعريف «العاطلون عن العمل» من فصل المصطلحات"}
+
+status: draft
+last_updated: 2026-11-04

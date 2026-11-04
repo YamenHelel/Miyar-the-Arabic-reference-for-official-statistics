@@ -10,7 +10,7 @@ import re
 import sys
 from collections import Counter
 
-from common import SOURCES_DIR, iter_sources, load_yaml, source_files
+from common import CONTENT_DIR, SOURCES_DIR, indicator_files, iter_sources, load_yaml, source_files
 
 
 def check_type(value, spec):
@@ -68,6 +68,50 @@ def main():
         if sup and sup not in [r.get("id") for _, r in iter_sources()]:
             errors.append(f"{where}: superseded_by '{sup}' not found")
 
+    # ---- indicators ----
+    reg = {r.get("id"): r for _, r in iter_sources()}
+    ischema = load_yaml(CONTENT_DIR / "schema-indicator.yaml") if (CONTENT_DIR / "schema-indicator.yaml").exists() else {}
+    for path in indicator_files():
+        ind = load_yaml(path)
+        where = f"content/indicators/{path.name}"
+        for key in ischema.get("required", []):
+            if key not in ind:
+                errors.append(f"{where}: missing '{key}'")
+        if not str(ind.get("id", "")).startswith("ind-") or path.stem != ind.get("id"):
+            errors.append(f"{where}: id must start with ind- and match the file name")
+        slots = {}
+        for qd in ind.get("quotes", []) or []:
+            s = qd.get("slot")
+            if s in slots:
+                errors.append(f"{where}: duplicate quote slot {s}")
+            slots[s] = qd
+            src = reg.get(qd.get("source"))
+            if not src:
+                errors.append(f"{where}: quote {s} cites unknown source {qd.get('source')}")
+            st = qd.get("status")
+            if st not in ("to-paste", "pasted", "verified", "source-missing"):
+                errors.append(f"{where}: quote {s} has invalid status {st}")
+            if (qd.get("text") or "").strip():
+                if st == "to-paste":
+                    errors.append(f"{where}: quote {s} has text but status to-paste")
+                if src and src.get("status") != "verified":
+                    errors.append(f"{where}: quote {s} text comes from a source that is not verified ({src.get('id')})")
+            elif st in ("pasted", "verified"):
+                errors.append(f"{where}: quote {s} is {st} but has no text")
+        refs = [ind.get("international", {}).get("definition_quote"), ind.get("international", {}).get("formula_quote")]
+        refs += [c.get("quote") for c in ind.get("international", {}).get("components", []) or []]
+        refs += [c.get("definition_quote") for c in (ind.get("countries") or {}).values()]
+        for r in filter(None, refs):
+            if r not in slots:
+                errors.append(f"{where}: reference to undefined quote slot {r}")
+        for iso, c in (ind.get("countries") or {}).items():
+            if c.get("source") not in reg:
+                errors.append(f"{where}: country {iso} cites unknown source {c.get('source')}")
+        for n in ind.get("comparability_notes_ar", []) or []:
+            for sid in n.get("sources", []):
+                if sid not in reg:
+                    errors.append(f"{where}: comparability note cites unknown source {sid}")
+
     if "--stats" in sys.argv:
         recs = [r for _, r in iter_sources()]
         by_file = Counter(p.relative_to(SOURCES_DIR).as_posix() for p, _ in iter_sources())
@@ -75,6 +119,8 @@ def main():
         print("By status:  ", dict(Counter(r.get("status") for r in recs)))
         print("By priority:", dict(Counter(r.get("priority") for r in recs)))
         print("By type:    ", dict(Counter(r.get("type") for r in recs)))
+        qs = [q for p in indicator_files() for q in (load_yaml(p).get("quotes") or [])]
+        print(f"Indicators: {len(indicator_files())} · quote slots: {len(qs)} ·", dict(Counter(q.get("status") for q in qs)))
         print("By file:")
         for f, n in sorted(by_file.items()):
             print(f"  {f}: {n}")

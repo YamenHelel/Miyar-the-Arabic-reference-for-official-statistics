@@ -6,8 +6,8 @@ Capacity: **about 1 hour per day, 7 days a week** for the lead (~30 h/month). AI
 - [x] Repo structure, PRD, progress system, ADRs
 - [x] Source registry v0: international bodies, 10 countries, SDGs, microdata (status `collected`)
 - [x] Practitioner directory design
-- [ ] Repo pushed to GitHub; link checker runs in CI
-- [ ] Lead verifies the top-priority sources (~10/day)
+- [x] Repo pushed to GitHub; link checker runs in CI
+- [x] Lead verifies the top-priority sources (all 55 P1 done 2026-11-04)
 
 **Exit:** all P1 sources are `link-ok` and at least 50% of them `verified`.
 

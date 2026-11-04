@@ -2,6 +2,25 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-04: Verification applied, repairs, first pilot indicator (session 4)
+**Done**
+- Applied the lead's 55 P1 verdicts: **51 verified, 4 broken**. Cleared the desk's verdicts. Phase 0a exit criterion met.
+- Repairs (search, 2026-11-04):
+  - ILO "aligning LFS" page → English URL; ILO Survey Catalog retired (410), so national metadata now comes from the ILOSTAT national sources catalogue.
+  - Tunisia: Q1 2026 INS release page found. The INS NADA legacy URL also returned 404, so it is still broken.
+  - Morocco: the new survey is the **Enquête sur la Main-d'Œuvre (EMO2026)**, from January 2026; the profile was updated.
+  - PCBS: Q3 2025 release and 2025 microdata metadata added; the 2024 annual report is available via catalogue 740.
+  - HCP and GCC-Stat pages return 404 to the robot but are indexed by search, so they are queued for a hand check (`--keep`).
+  - Also added: ABS Detailed release, RAK LFS 2025, UN Statistical Commission 2013 Arabic employment statistics document.
+- Second CI link check applied (`apply_link_report.py --keep`).
+- **Phase 0b started:**
+  - `content/schema-indicator.yaml`; validator extended to indicators.
+  - `content/indicators/ind-unemployment-rate.yml`: 10 countries, 4 comparability notes, AI explanation, 14 quote slots `to-paste`.
+- WebFetch could not reach any statistical host (DNS blocked), so no quotation was written by the agent.
+- Desk v2 has a ✍️ quotes tab (collection `quotes`). New `tools/apply_quotes.py`, `tools/build_indicator_page.py` + `tools/indicator/template.html`. Indicator preview published: https://claude.ai/artifact/LXjvP5D5bhewcrVLFGCx6y
+
+**Open questions:** network hosts for agents (I-044); domain/LinkedIn; feedback on the indicator page format before more indicators are built.
+
 ## 2026-11-04: Verification Desk (session 3)
 **Done**
 - Published the **Verification Desk**, a private artifact page: https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE. It holds a queue of 93 sources to check (55 P1). Each card has an "open source" button and ✅/⚠️/❌/⏭ verdicts plus a note. Verdicts are saved in the artifact's database (collection `verdicts`, only the owner/editors can write).

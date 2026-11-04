@@ -31,3 +31,18 @@ def iter_catalog_urls():
         for entry in data.get("catalog", []) or []:
             for route in entry.get("routes", []) or []:
                 yield path, f"{entry.get('country')}:{route.get('provider')}", route.get("url")
+
+
+CONTENT_DIR = ROOT / "content"
+
+
+def indicator_files():
+    return sorted((CONTENT_DIR / "indicators").glob("*.yml"))
+
+
+def iter_quote_slots():
+    """Yield (indicator_path, indicator_id, quote_dict) for every quote slot."""
+    for path in indicator_files():
+        ind = load_yaml(path)
+        for qd in ind.get("quotes", []) or []:
+            yield path, ind.get("id"), qd

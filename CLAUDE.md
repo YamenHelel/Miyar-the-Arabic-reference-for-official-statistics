@@ -29,7 +29,15 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
    `python tools/apply_verification.py <out_dir>/verdicts`, then delete the applied `ok`/`broken` verdict docs and act on `fix` notes
    (delete each `fix` verdict once handled so the item returns to the queue). Rebuild the page with
    `python tools/build_verification_page.py <scratchpad>/verification-desk.html` and republish it to the same URL.
-8. After a CI link check, apply it with `python tools/apply_link_report.py` (read the report from the run log with `gh run view <id> --log`).
+8. When the lead says "apply my quotes": export the desk's `quotes` collection (ArtifactData list, out_dir), run
+   `python tools/apply_quotes.py <out_dir>/quotes`, delete the applied quote docs, validate, rebuild both the desk and the
+   indicator preview (`python tools/build_indicator_page.py <ind-id> <scratchpad>/<ind-id>.html`, republish to its URL in STATUS.md).
+9. After a CI link check, apply it with `python tools/apply_link_report.py` (read the report from the run log with `gh run view <id> --log`); pass `--keep <ids>` for sources
+   queued for a hand check so a robot 404 does not mark them broken again.
+
+## Indicators (content/indicators/*.yml)
+- Schema: `content/schema-indicator.yaml`. Official wording ONLY in `quotes[]`, pasted verbatim by a human from a verified source.
+- The sandbox cannot reach statistical sites (WebFetch too), so never fill a quote yourself: create a `to-paste` slot with a precise `locator` and `what_ar`.
 
 ## Conventions
 - Country codes: ISO 3166-1 alpha-3 lowercase (`tun`, `sau`, `mar`, `jor`, `are`, `pse`, `usa`, `gbr`, `aus`, `fra`).

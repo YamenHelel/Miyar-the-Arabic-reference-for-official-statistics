@@ -4,6 +4,7 @@
 Usage:
   python tools/build_verification_page.py OUT.html
 
+Also lists every indicator quote slot still `to-paste` (the "quotes" tab).
 The queue = every source whose status is `collected` or `link-ok` (it still
 needs a human check), ordered by priority then by group. Records that are
 verified, superseded, broken or to-locate are left out: broken and to-locate
@@ -16,7 +17,7 @@ import json
 import sys
 from pathlib import Path
 
-from common import SOURCES_DIR, iter_sources
+from common import SOURCES_DIR, indicator_files, iter_sources, load_yaml
 
 TEMPLATE = Path(__file__).resolve().parent / "verification" / "template.html"
 
@@ -66,14 +67,27 @@ def main():
     groups = {k: v[1] for k, v in sorted(GROUPS.items(), key=lambda kv: kv[1][0])
               if any(q["group"] == k for q in queue)}
 
+    reg = {r["id"]: r for _, r in iter_sources()}
+    quotes = []
+    for ipath in indicator_files():
+        ind = load_yaml(ipath)
+        for qd in ind.get("quotes", []) or []:
+            if qd.get("status") != "to-paste":
+                continue
+            src = reg.get(qd.get("source"), {})
+            quotes.append({"slot": qd["slot"], "indicator": ind["id"], "indicator_name_ar": ind.get("name_ar", ""),
+                           "source": qd.get("source"), "source_title": src.get("title_en", ""), "url": src.get("url", ""),
+                           "locator": qd.get("locator", ""), "what_ar": qd.get("what_ar", ""), "lang": qd.get("lang", "en")})
+
     html = TEMPLATE.read_text(encoding="utf-8")
+    html = html.replace("/*__QUOTES__*/[]", json.dumps(quotes, ensure_ascii=False).replace("</", "<\\/"))
     data = json.dumps(queue, ensure_ascii=False).replace("</", "<\\/")
     html = html.replace("/*__QUEUE__*/[]", data)
     html = html.replace("/*__GROUPS__*/{}", json.dumps(groups, ensure_ascii=False))
     html = html.replace("/*__BUILT__*/", str(dt.date.today()))
     Path(sys.argv[1]).write_text(html, encoding="utf-8")
     p1 = sum(q["priority"] == "P1" for q in queue)
-    print(f"Queue: {len(queue)} sources ({p1} P1). Wrote {sys.argv[1]}")
+    print(f"Queue: {len(queue)} sources ({p1} P1), {len(quotes)} quote slots. Wrote {sys.argv[1]}")
 
 
 if __name__ == "__main__":

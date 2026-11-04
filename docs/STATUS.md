@@ -1,23 +1,22 @@
 # STATUS (read this first)
 
 **Project:** مِعيار · Miʿyar, the Arabic reference for official statistics · **Licence:** CC BY 4.0 (content), MIT (code) · **Contact:** yamen.hlel@gmail.com
-**Updated:** 2026-11-04 · **Phase:** 0a, Foundation · **Next phase:** 0b, Pilot content (10 indicators)
+**Updated:** 2026-11-04 · **Phase:** 0b, Pilot content (Phase 0a exit criterion met: all P1 sources checked)
+
+**Lead's tools:** Verification Desk https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE (sources + ✍️ quotes tab) · Indicator preview https://claude.ai/artifact/LXjvP5D5bhewcrVLFGCx6y
 
 ## Done
-- Repo published on GitHub; structure, agent rules, PRD (15 files), ADRs 0001–0006
-- Name (Miʿyar), licences (CC BY 4.0 content, MIT code) and contact email decided
-- Source registry v0: **112 records**: 61 link-ok, 32 collected (bot-blocked: check by hand), 8 broken, 11 to-locate, 0 verified
-- Microdata access catalogue for the 10 countries; practitioner directory design
-- Tools: `validate.py` (passing), `check_links.py`, `archive.py`; CI workflow
-
-**Verification Desk (lead's daily tool):** https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE
+- Registry: **120 sources**: 51 verified, 34 link-ok, 17 collected, 5 broken, 3 superseded, 10 to-locate.
+- All 55 P1 sources checked by the lead (51 ok, 4 broken → replacements found or documented).
+- Indicator schema (`content/schema-indicator.yaml`) and the first pilot indicator **ind-unemployment-rate**: structure, 10-country table, comparability notes and AI explanation are done. **14 official quotes still to paste.**
+- Tools: `apply_quotes.py`, `build_indicator_page.py`; the validator checks indicators (sources exist, quotes only from verified sources).
 
 ## Next 3 tasks
-1. **Agent:** find replacement URLs for the 8 `broken` sources (P1 first: HCP 2026 note, nada.ins.tn, GCC-Stat labour publications) and the 11 `to-locate` items.
-2. **Lead:** about 10 sources a day on the Verification Desk (55 P1 → ~6 days), then say "apply my verifications".
-3. **Agent:** apply the link-report results (`collected` → `link-ok`/`broken`), locate the 11 `to-locate` items, and draft the indicator schema + the first pilot indicator (unemployment rate).
+1. **Lead:** on the desk's ✍️ tab, paste the 14 official texts (open the document, copy the paragraph verbatim, Save). Then say "apply my quotes".
+2. **Lead (lighter):** the remaining 51 sources on the desk (6 P1 first).
+3. **Agent:** after the quotes, mark country facts confirmed or corrected from the pasted text; build pilot indicators 2–4 (participation rate, employment-to-population ratio, youth unemployment) the same way.
 
 ## Blockers / open questions
-- The cloud sandbox network blocks statistical sites, so collection relies on web search and links are checked in CI.
-- Record the chosen domain name and LinkedIn page for Miʿyar.
-- Morocco is moving from the ENE to a redesigned survey in 2026. Confirm the new survey's official name and series start.
+- **The sandbox and WebFetch cannot reach statistical sites**, so every quotation needs the lead. Allowing hosts in the environment's network settings (ilo.org, ilostat.ilo.org, bls.gov, insee.fr, ons.gov.uk, abs.gov.au, stats.gov.sa, ins.tn, hcp.ma, pcbs.gov.ps, dos.gov.jo, fcsc.gov.ae) would let the agent draft quotes for the lead to check instead (I-044).
+- Still to locate: Jordan DoS methodology and quarterly report page, UAE LFS methodology, ABS LFS methodology page, the ILO Arabic ICLS texts, the AITRS glossary.
+- Domain name and LinkedIn page for Miʿyar (to record).

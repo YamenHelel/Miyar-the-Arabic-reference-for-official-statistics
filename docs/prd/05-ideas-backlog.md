@@ -51,6 +51,8 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 | I-035 | Contributor badges and certificates | P3 | 2 | idea |
 | I-036 | Demand survey of Arab statisticians (needs, domains, tools) | P1 | 1 | idea |
 | I-037 | Automated monitoring of NSO sites for new methodology documents | P2 | 2 | idea |
+| I-044 | Allow statistical hosts in the cloud environment network policy so agents can fetch sources and draft verbatim quotes for the lead to check | P1 | 0b | idea |
+| I-045 | Indicator page template doubles as the website template (one generator for preview, site and skill) | P1 | 1 | in-progress |
 | I-038 | Link rot protection: auto-archive every new URL on the Wayback Machine | P1 | 0a | planned |
 
 ## D. Business
