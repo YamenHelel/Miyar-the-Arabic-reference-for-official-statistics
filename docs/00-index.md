@@ -33,8 +33,12 @@ Read [STATUS.md](STATUS.md) first. Each document below has a one-line descriptio
 - [ADR-0004](decisions/ADR-0004-source-status-lifecycle.md): source status lifecycle and no binaries in git
 - [ADR-0005](decisions/ADR-0005-licensing.md): licences: CC BY 4.0 for content, MIT for code (accepted)
 - [ADR-0006](decisions/ADR-0006-name-miyar.md): project name Miʿyar (مِعيار)
+- [ADR-0007](decisions/ADR-0007-shared-quotes-store.md): one shared quotes store (`content/quotes.yml`)
+- [ADR-0008](decisions/ADR-0008-site-generator-and-design.md): website generator (jinja2) and the Miʿyar design system
 
 ## Data
-- [../content/schema-indicator.yaml](../content/schema-indicator.yaml): indicator schema; indicators in [../content/indicators/](../content/indicators/)
+- [../content/quotes.yml](../content/quotes.yml): all official wording (shared store); schemas `content/schema-*.yaml`
+- [../content/indicators/](../content/indicators/) and [../content/concepts/](../content/concepts/): indicators and glossary
+- [../tools/site/](../tools/site/): website templates and design system · [../skills/miyar-labour-stats/](../skills/miyar-labour-stats/): generated Claude skill
 - [../sources/README.md](../sources/README.md): source registry guide and counts
 - [../directory/README.md](../directory/README.md): practitioner directory design

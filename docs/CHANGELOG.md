@@ -2,6 +2,31 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-04: Programming day: quotes store, concepts, indicators 2–4, website, Claude skill (session 6)
+**Done**
+- **Lead's inputs:**
+  - Palestine definition transcribed from the lead's screenshot (`pasted`, to confirm).
+  - PCBS book2740 title («دليل المؤشرات الإحصائية…، 2025», PDF letter-order artefacts corrected) and HCP EMO Q3 2026 note title recorded.
+  - «chômage strict» confirmed as the EMO2026 definition.
+- **ADR-0007:** shared `content/quotes.yml`. All tools rewired; the unemployment page is byte-identical before and after.
+- **Concepts (8):** working-age population, labour force, employed, unemployed, outside LF, potential LF, time-related underemployment, standard error.
+- **Indicators 2–4:**
+  - participation rate, employment-to-population ratio, youth unemployment rate
+  - 24 new to-paste slots with precise locators
+  - comparability notes: age floor, nationals vs total, 13th vs 19th ICLS, youth age bands
+- **ADR-0008 website:**
+  - `tools/build_site.py` + `tools/site/` (templates, `miyar.css`, `miyar.js`), 28 pages, Arabic-normalised search
+  - live ruler (availability, search period, age) using quote-backed `measures` only
+  - display-only reflow of PDF line breaks; comparison facts in Arabic
+  - design by the tasteskill process: direction "page is the object", gold sheet + hallmark for official text, Amiri
+  - Gate: home 0 FAIL / 3 defended WARN; indicator page 1 FAIL (picture floor, defended for reading pages)
+- **Pictures:** the lead's PCBS screenshot plus photographs of the project's own tools (desk card, official sheet, comparison table). Open collections were unreachable.
+- **Deploy and preview:** `.github/workflows/pages.yml` (manual only); `tools/prepare_site_preview.py`; private preview published.
+- **Claude skill v0:** `tools/build_skill.py` → `skills/miyar-labour-stats/` (SKILL.md + 13 references). A check confirms no pending text is presented as official.
+- Desk and old preview refreshed. Backlog I-046…I-049.
+
+**Open questions:** Arabic spelling of the lead's name (letter signed "مؤسس مِعيار" for now); domain/LinkedIn.
+
 ## 2026-11-04: Lead's quotes applied, unemployment rate 13/14 official texts (session 5)
 **Done**
 - Applied 13 of the lead's 14 pasted texts to `ind-unemployment-rate` as `verified` (the lead's own verbatim paste is the human check).

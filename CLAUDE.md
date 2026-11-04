@@ -35,9 +35,15 @@ Project: **Miʿyar (مِعيار) — the Arabic reference for official statisti
 9. After a CI link check, apply it with `python tools/apply_link_report.py` (read the report from the run log with `gh run view <id> --log`); pass `--keep <ids>` for sources
    queued for a hand check so a robot 404 does not mark them broken again.
 
-## Indicators (content/indicators/*.yml)
-- Schema: `content/schema-indicator.yaml`. Official wording ONLY in `quotes[]`, pasted verbatim by a human from a verified source.
+## Content (content/)
+- Official wording ONLY in `content/quotes.yml` (ADR-0007), pasted verbatim by a human from a verified source; indicators
+  (`content/indicators/`) and concepts (`content/concepts/`) reference slots by id. Schemas: `content/schema-*.yaml`.
+- Numbers used by the site's ruler (`measures:`) must be read from verified/pasted quotes only.
+- After any content change: `python tools/build_site.py` (website), `python tools/build_skill.py` (Claude skill, commit the output),
+  and refresh the private previews (`tools/prepare_site_preview.py`, URLs in STATUS.md).
+- Design changes: follow ADR-0008 and re-run the tasteskill gate (`lint.mjs`, `inspect.mjs`) on `_site/`.
 - The sandbox cannot reach statistical sites (WebFetch too), so never fill a quote yourself: create a `to-paste` slot with a precise `locator` and `what_ar`.
+- A screenshot from the lead is a valid source: transcribe exactly, set `status: pasted` and a `document_note`, and let the lead confirm.
 
 ## Conventions
 - Country codes: ISO 3166-1 alpha-3 lowercase (`tun`, `sau`, `mar`, `jor`, `are`, `pse`, `usa`, `gbr`, `aus`, `fra`).

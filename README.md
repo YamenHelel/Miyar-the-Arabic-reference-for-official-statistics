@@ -22,7 +22,10 @@
 | 5 | Decisions | [docs/decisions/](docs/decisions/) | Architecture Decision Records (ADR) |
 | 6 | **Source registry** | [sources/README.md](sources/README.md) | Archived official sources: international bodies, 10 countries, SDGs, microdata |
 | 7 | Practitioner directory | [directory/README.md](directory/README.md) | Opt-in directory of Arab labour statisticians (design and consent) |
-| 8 | Tools | [tools/](tools/) | Validation, link checking, web archiving scripts |
+| 8 | Content | [content/](content/) | Indicators, concepts and the shared store of official texts (`quotes.yml`) |
+| 9 | Website | [tools/site/](tools/site/) | Generator, templates and design system (`python tools/build_site.py`) |
+| 10 | Claude skill | [skills/miyar-labour-stats/](skills/miyar-labour-stats/) | Generated from the base; answers only from verified references |
+| 11 | Tools | [tools/](tools/) | Validation, link checks, archiving, verification desk, quotes, site and skill builders |
 
 ## Licence and how to cite
 

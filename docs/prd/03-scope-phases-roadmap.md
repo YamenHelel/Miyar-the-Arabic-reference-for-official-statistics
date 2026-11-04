@@ -11,11 +11,12 @@ Capacity: **about 1 hour per day, 7 days a week** for the lead (~30 h/month). AI
 
 **Exit:** all P1 sources are `link-ok` and at least 50% of them `verified`.
 
-## Phase 0b: Pilot content (Dec 2026)
+## Phase 0b: Pilot content (started early, 2026-11-04)
 - Indicator schema finalised. **10 pilot indicators** fully documented: labour force participation rate, employment-to-population ratio, unemployment rate, youth unemployment rate, NEET rate, LU2/LU3/LU4, informal employment rate, time-related underemployment.
 - **50 concepts** in the glossary (statistical and labour).
-- A Quarto RTL site running locally.
-- Claude skill v0 that answers only from the base.
+- [x] Site generator running (Python/jinja2, ADR-0008, not Quarto); private preview published.
+- [x] Claude skill v0 that answers only from the base (`skills/miyar-labour-stats/`).
+- [x] 4 pilot indicators and 8 concepts drafted (official texts: 14 for the unemployment rate, 24 to paste).
 
 **Exit:** 5 external statisticians test it and give feedback.
 

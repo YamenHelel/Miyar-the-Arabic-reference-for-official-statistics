@@ -53,6 +53,10 @@ Rules: new ideas get the next free ID. Never delete an idea; change its status i
 | I-037 | Automated monitoring of NSO sites for new methodology documents | P2 | 2 | idea |
 | I-044 | Allow statistical hosts in the cloud environment network policy so agents can fetch sources and draft verbatim quotes for the lead to check | P1 | 0b | idea |
 | I-045 | Indicator page template doubles as the website template (one generator for preview, site and skill) | P1 | 1 | in-progress |
+| I-046 | Desk: confirm `pasted` quotes in one click (e.g. the Palestine transcription) instead of telling Claude | P2 | 1 | idea |
+| I-047 | English/French site variants generated from the same data (UI strings only; official texts already in original language) | P3 | 2 | idea |
+| I-048 | Real photographs for the site (NSO buildings, ICLS conference archives, survey fieldwork) from open collections or partners, with credits | P2 | 1 | idea |
+| I-049 | Short muted video loop for the home page (e.g. a survey interviewer at work, credited), if an honest clip exists | P3 | 2 | idea |
 | I-038 | Link rot protection: auto-archive every new URL on the Wayback Machine | P1 | 0a | planned |
 
 ## D. Business
