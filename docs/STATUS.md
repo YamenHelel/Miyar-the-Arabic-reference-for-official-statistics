@@ -10,9 +10,11 @@
 - Microdata access catalogue for the 10 countries; practitioner directory design
 - Tools: `validate.py` (passing), `check_links.py`, `archive.py`; CI workflow
 
+**Verification Desk (lead's daily tool):** https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE
+
 ## Next 3 tasks
 1. **Agent:** find replacement URLs for the 8 `broken` sources (P1 first: HCP 2026 note, nada.ins.tn, GCC-Stat labour publications) and the 11 `to-locate` items.
-2. **Lead:** verify P1 sources, about 10 per day, starting with `sources/international/ilo.yaml`. ILOSTAT blocks automated checks, so opening each page in a browser is the only test.
+2. **Lead:** about 10 sources a day on the Verification Desk (55 P1 → ~6 days), then say "apply my verifications".
 3. **Agent:** apply the link-report results (`collected` → `link-ok`/`broken`), locate the 11 `to-locate` items, and draft the indicator schema + the first pilot indicator (unemployment rate).
 
 ## Blockers / open questions

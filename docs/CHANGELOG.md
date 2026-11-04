@@ -2,6 +2,14 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-04: Verification Desk (session 3)
+**Done**
+- Published the **Verification Desk**, a private artifact page: https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE. It holds a queue of 93 sources to check (55 P1). Each card has an "open source" button and ✅/⚠️/❌/⏭ verdicts plus a note. Verdicts are saved in the artifact's database (collection `verdicts`, only the owner/editors can write).
+- New tools: `tools/build_verification_page.py` (page from YAML, template in `tools/verification/`) and `tools/apply_verification.py` (verdicts → YAML: verified/broken/review_note). Tested end to end with one test row (written, exported, applied, then reverted and deleted).
+- Schema: added `review_note`.
+
+**Open questions:** the Miʿyar domain name and LinkedIn page (to record).
+
 ## 2026-11-04: Name, licence, first push (session 2)
 **Done**
 - Lead's decisions applied: project name **مِعيار · Miʿyar, the Arabic reference for official statistics** (ADR-0006) and content licence **CC BY 4.0** (ADR-0005 accepted for content; the code licence is still open).

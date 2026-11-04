@@ -26,6 +26,8 @@ GitHub Actions → **checks** → *Run workflow* (it also runs every Monday). Th
 `python tools/apply_link_report.py <report.md> --date YYYY-MM-DD`. A 403 usually means the site blocks bots, not that the page is gone.
 
 ## How to verify a source (lead's daily task)
+Use the **Verification Desk** page: https://claude.ai/artifact/Vz1iDkkfzc7RZTa6fZdBiE (private, owner-only saves). It lists every source still to check (P1 first). For each one, open it, check it, and click ✅ / ⚠️ / ❌ / ⏭. Then tell Claude "apply my verifications". The manual method below is the fallback.
+
 Open the URL, then check the title, publisher, date and edition, and that it is the latest one. Then set:
 ```yaml
 status: verified

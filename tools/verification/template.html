@@ -1,0 +1,245 @@
+<title>Miʿyar Verification Desk</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow work column, a sticky progress header, one card per source, verdict buttons along the card foot */
+:root {
+  --paper: #f5f6f3;
+  --sheet: #ffffff;
+  --ink: #18241f;
+  --muted: #5b6862;
+  --rule: #dde2dd;
+  --accent: #1d5c4a;
+  --accent-soft: #e3eee9;
+  --ok: #1f7a4a;
+  --ok-soft: #e2f2e8;
+  --fix: #9a6200;
+  --fix-soft: #fbf0d9;
+  --bad: #b3261e;
+  --bad-soft: #fbe5e2;
+  --skip: #5b6862;
+  --skip-soft: #eceeeb;
+  --font-display: "Noto Kufi Arabic", "IBM Plex Sans Arabic", Tahoma, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111815; --sheet: #18211d; --ink: #e6ece8; --muted: #9aa8a1; --rule: #2a3631;
+    --accent: #6fc2a3; --accent-soft: #1d3029;
+    --ok: #6fcf97; --ok-soft: #173426; --fix: #f0b45a; --fix-soft: #3a2c12; --bad: #f2867c; --bad-soft: #3d1c19;
+    --skip: #9aa8a1; --skip-soft: #232d29; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111815; --sheet: #18211d; --ink: #e6ece8; --muted: #9aa8a1; --rule: #2a3631;
+  --accent: #6fc2a3; --accent-soft: #1d3029;
+  --ok: #6fcf97; --ok-soft: #173426; --fix: #f0b45a; --fix-soft: #3a2c12; --bad: #f2867c; --bad-soft: #3d1c19;
+  --skip: #9aa8a1; --skip-soft: #232d29; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--sheet); }
+.wrap { max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--sheet); border-bottom: 1px solid var(--rule); }
+header.top .wrap { padding-block: 14px 12px; display: grid; gap: 10px; }
+.brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.brand h1 { font-family: var(--font-display); font-size: 1.35rem; margin: 0; text-wrap: balance; }
+.brand .en { color: var(--muted); font-size: .85rem; letter-spacing: .02em; }
+.meters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.meter { display: grid; gap: 4px; min-width: 0; }
+.meter .lbl { font-size: .75rem; color: var(--muted); }
+.meter .val { direction: ltr; text-align: end; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1rem; }
+.bar { height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 999px; padding: 3px 11px; font: inherit; font-size: .82rem; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--sheet); }
+.chip:focus-visible, button:focus-visible, a:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main .wrap { padding-block: 16px 48px; display: grid; gap: 14px; }
+details.how { background: var(--accent-soft); border-radius: 8px; padding: 10px 14px; }
+details.how summary { cursor: pointer; font-weight: 600; }
+details.how ol { margin: 8px 0 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+.notice { border-radius: 8px; padding: 10px 14px; background: var(--fix-soft); color: var(--ink); }
+.list { display: grid; gap: 12px; }
+.card { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 14px; display: grid; gap: 10px; min-width: 0; }
+.card[data-v="ok"] { border-inline-start: 4px solid var(--ok); }
+.card[data-v="fix"] { border-inline-start: 4px solid var(--fix); }
+.card[data-v="broken"] { border-inline-start: 4px solid var(--bad); }
+.card[data-v="skip"] { border-inline-start: 4px solid var(--skip); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: .78rem; color: var(--muted); }
+.pill { border-radius: 4px; padding: 1px 7px; font-family: var(--font-mono); font-size: .74rem; background: var(--skip-soft); color: var(--ink); }
+.pill.p1 { background: var(--accent); color: var(--sheet); }
+.pill.blocked { background: var(--fix-soft); color: var(--fix); }
+.pill.state { font-family: var(--font-body); }
+.title { font-weight: 600; font-size: 1rem; margin: 0; overflow-wrap: anywhere; }
+.titlear { margin: 0; font-size: .92rem; color: var(--muted); }
+.pub { margin: 0; font-size: .85rem; color: var(--muted); }
+.url { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; min-width: 0; }
+.url a.open { background: var(--accent); color: var(--sheet); text-decoration: none; border-radius: 6px; padding: 6px 12px; font-weight: 600; font-size: .88rem; white-space: nowrap; }
+.url code { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); overflow-wrap: anywhere; direction: ltr; text-align: left; min-width: 0; flex: 1 1 200px; }
+.hint { font-size: .82rem; color: var(--muted); margin: 0; }
+textarea { width: 100%; min-height: 2.4em; resize: vertical; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); color: var(--ink); font: inherit; font-size: .88rem; padding: 6px 8px; }
+.verdicts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.verdicts button { border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 6px; padding: 7px 4px; font: inherit; font-size: .85rem; cursor: pointer; }
+.verdicts button[data-k="ok"][aria-pressed="true"] { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); font-weight: 600; }
+.verdicts button[data-k="fix"][aria-pressed="true"] { background: var(--fix-soft); border-color: var(--fix); color: var(--fix); font-weight: 600; }
+.verdicts button[data-k="broken"][aria-pressed="true"] { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); font-weight: 600; }
+.verdicts button[data-k="skip"][aria-pressed="true"] { background: var(--skip-soft); border-color: var(--skip); font-weight: 600; }
+.verdicts button:disabled { opacity: .5; cursor: not-allowed; }
+.saved { font-size: .78rem; color: var(--muted); min-height: 1.2em; margin: 0; }
+.empty { text-align: center; color: var(--muted); padding: 32px 0; }
+footer { color: var(--muted); font-size: .78rem; padding-block: 0 32px; }
+@media (max-width: 480px) { header.top .wrap { padding-block: 10px 8px; gap: 6px; } .brand h1 { font-size: 1.1rem; } .verdicts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .meters { grid-template-columns: 1fr 1fr; } .meters .meter:last-child { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+</style>
+
+<div dir="rtl" lang="ar">
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><h1>مِعيار · مكتب التحقق من المصادر</h1><span class="en">Miʿyar Verification Desk</span></div>
+    <div class="meters">
+      <div class="meter"><span class="lbl">اليوم / Today (هدف 10)</span><span class="val" id="m-today">0 / 10</span><div class="bar"><i id="b-today"></i></div></div>
+      <div class="meter"><span class="lbl">أولوية P1</span><span class="val" id="m-p1">0 / 0</span><div class="bar"><i id="b-p1"></i></div></div>
+      <div class="meter"><span class="lbl">الكل / All</span><span class="val" id="m-all">0 / 0</span><div class="bar"><i id="b-all"></i></div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="filters" id="filters" role="group" aria-label="Filter"></div>
+    <details class="how" id="how">
+      <summary>كيف أتحقق؟ (دقيقة واحدة لكل مصدر)</summary>
+      <ol>
+        <li>اضغط «افتح المصدر» وتأكد أن الصفحة تُفتح في المتصفح.</li>
+        <li>هل هي الوثيقة الصحيحة؟ (العنوان والجهة الناشرة يطابقان البطاقة)</li>
+        <li>هل هي أحدث إصدار؟ إن وُجد إصدار أحدث فاختر «يحتاج تعديل» واكتب رابطه.</li>
+        <li>اختر: ✅ صحيح · ⚠️ يحتاج تعديل (اكتب ملاحظة) · ❌ معطّل · ⏭ لاحقاً.</li>
+        <li>في الجلسة التالية قل لـClaude: «طبّق التحققات» وسيحدّث المستودع.</li>
+      </ol>
+    </details>
+    <div class="notice" id="notice" hidden></div>
+    <div class="list" id="list"><p class="empty" id="loading">جارٍ تحميل نتائجك المحفوظة…</p></div>
+    <footer>Queue built <span id="built"></span> from the Miʿyar source registry · نتائجك تُحفظ تلقائياً ويقرأها Claude</footer>
+  </div>
+</main>
+</div>
+
+<script>
+const QUEUE = /*__QUEUE__*/[];
+const BUILT = "/*__BUILT__*/";
+const GROUPS = /*__GROUPS__*/{};
+const V = { ok: "✅ صحيح", fix: "⚠️ يحتاج تعديل", broken: "❌ معطّل", skip: "⏭ لاحقاً" };
+const today = new Date().toISOString().slice(0, 10);
+let verdicts = {};      // id -> {verdict, note, date}
+let db = null, canWrite = true, filter = "todo-p1";
+
+document.getElementById("built").textContent = BUILT;
+
+function el(tag, attrs = {}, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "text") e.textContent = v; else if (k === "on") for (const [ev, fn] of Object.entries(v)) e.addEventListener(ev, fn); else e.setAttribute(k, v);
+  }
+  for (const k of kids) if (k) e.append(k);
+  return e;
+}
+
+const FILTERS = [["todo-p1", "المتبقي P1"], ["todo", "كل المتبقي"], ["done", "المنجز"], ["fix", "يحتاج تعديل"], ...Object.entries(GROUPS)];
+function renderFilters() {
+  const box = document.getElementById("filters"); box.replaceChildren();
+  for (const [k, label] of FILTERS) {
+    box.append(el("button", { class: "chip", type: "button", "aria-pressed": String(filter === k), text: label, on: { click: () => { filter = k; renderFilters(); renderList(); } } }));
+  }
+}
+
+function visible(item) {
+  const v = verdicts[item.id];
+  const done = v && v.verdict !== "skip";
+  if (filter === "todo-p1") return !done && item.priority === "P1";
+  if (filter === "todo") return !done;
+  if (filter === "done") return !!done;
+  if (filter === "fix") return v && v.verdict === "fix";
+  return item.group === filter;
+}
+
+function renderMeters() {
+  const done = QUEUE.filter(q => verdicts[q.id] && verdicts[q.id].verdict !== "skip");
+  const p1 = QUEUE.filter(q => q.priority === "P1");
+  const p1done = p1.filter(q => verdicts[q.id] && verdicts[q.id].verdict !== "skip");
+  const t = Object.values(verdicts).filter(v => v.date === today && v.verdict !== "skip").length;
+  const set = (id, a, b) => { document.getElementById("m-" + id).textContent = `${a} / ${b}`; document.getElementById("b-" + id).style.width = (b ? Math.min(100, 100 * a / b) : 0) + "%"; };
+  set("today", t, 10); set("p1", p1done.length, p1.length); set("all", done.length, QUEUE.length);
+}
+
+async function save(item, verdict, note, statusEl) {
+  if (!db) return;
+  const body = { id: item.id, verdict, note: note.trim(), date: today, file: item.file, at: new Date().toISOString() };
+  verdicts[item.id] = body; renderMeters();
+  statusEl.textContent = "جارٍ الحفظ…";
+  try { await db.doc("verdicts/" + item.id).set(body); statusEl.textContent = "حُفظ ✓ " + V[verdict]; }
+  catch (e) {
+    if (e && e.code === "invalid_argument") { canWrite = false; showNotice("لا تملك صلاحية الحفظ في هذه الصفحة."); }
+    statusEl.textContent = "لم يُحفظ: " + (e && e.message ? e.message : "خطأ");
+  }
+}
+
+function card(item) {
+  const v = verdicts[item.id];
+  const note = el("textarea", { id: "note-" + item.id, placeholder: "ملاحظة (اختياري): رابط جديد، إصدار أحدث، عنوان مختلف…", "aria-label": "ملاحظة" });
+  if (v && v.note) note.value = v.note;
+  const status = el("p", { class: "saved", "aria-live": "polite", text: v ? "محفوظ: " + V[v.verdict] + " · " + v.date : "" });
+  const btns = el("div", { class: "verdicts" });
+  for (const k of Object.keys(V)) {
+    btns.append(el("button", { type: "button", "data-k": k, "aria-pressed": String(!!v && v.verdict === k), text: V[k],
+      on: { click: async () => { if (k === "fix" && !note.value.trim()) { note.focus(); status.textContent = "اكتب ما يجب تعديله ثم اضغط مجدداً."; return; } await save(item, k, note.value, status); renderList(); } } }));
+  }
+  if (!db || !canWrite) btns.querySelectorAll("button").forEach(b => b.disabled = true);
+  note.addEventListener("change", () => { const cur = verdicts[item.id]; if (cur && note.value.trim() !== (cur.note || "")) save(item, cur.verdict, note.value, status); });
+  const meta = el("div", { class: "meta" },
+    el("span", { class: "pill" + (item.priority === "P1" ? " p1" : ""), text: item.priority }),
+    el("span", { text: GROUPS[item.group] || item.group }),
+    el("span", { text: "·" }),
+    el("span", { class: "pill state" + (item.status === "collected" ? " blocked" : ""), text: item.status === "collected" ? "الموقع يحجب الفحص الآلي" : "الرابط يعمل آلياً" }),
+    item.type ? el("span", { text: item.type }) : null);
+  return el("article", { class: "card", "data-v": v ? v.verdict : "" },
+    meta,
+    el("p", { class: "title", dir: "auto", text: item.title_en }),
+    item.title_ar ? el("p", { class: "titlear", text: item.title_ar }) : null,
+    el("p", { class: "pub", dir: "auto", text: item.publisher + (item.date_published ? " · " + item.date_published : "") }),
+    el("div", { class: "url" }, el("a", { class: "open", href: item.url, target: "_blank", rel: "noopener", text: "افتح المصدر ↗" }), el("code", { text: item.url })),
+    item.hint ? el("p", { class: "hint" }, el("span", { text: "ملاحظة السجل: " }), el("bdi", { dir: "auto", text: item.hint })) : null,
+    note, btns, status);
+}
+
+function renderList() {
+  const list = document.getElementById("list");
+  const items = QUEUE.filter(visible);
+  list.replaceChildren(...(items.length ? items.map(card) : [el("p", { class: "empty", text: filter.startsWith("todo") ? "لا شيء متبقٍ هنا. أحسنت!" : "لا عناصر في هذا العرض." })]));
+  renderMeters();
+}
+
+function showNotice(t) { const n = document.getElementById("notice"); n.textContent = t; n.hidden = false; }
+
+renderFilters();
+(async () => {
+  db = window.claude ? await window.claude.use("db") : null;
+  if (!db) { showNotice("تعذّر الوصول إلى التخزين: افتح الصفحة على claude.ai وأنت مسجّل الدخول ليتم حفظ النتائج."); renderList(); return; }
+  const user = await window.claude.use("user");
+  const w = user && user.can ? await user.can("data.write") : null;
+  if (w === false) { canWrite = false; showNotice("هذه الصفحة للقراءة فقط بالنسبة لك."); }
+  let first = true;
+  const timer = setTimeout(() => { if (first) { showNotice("لم تصل النتائج المحفوظة بعد؛ يمكنك المتابعة وسيتم الحفظ عند عودة الاتصال."); renderList(); } }, 10000);
+  db.collection("verdicts").onSnapshot(snap => {
+    const next = {};
+    for (const d of snap.docs) next[d.id] = d.data();
+    verdicts = next;
+    if (!snap.metadata.fromCache) { clearTimeout(timer); if (first) document.getElementById("notice").hidden = true; }
+    if (first || !document.activeElement || document.activeElement.tagName !== "TEXTAREA") renderList();
+    first = false;
+  }, e => { clearTimeout(timer); showNotice("تعذّر تحميل النتائج: " + e.message); renderList(); });
+})();
+</script>
