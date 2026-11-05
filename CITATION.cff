@@ -7,7 +7,9 @@ abstract: >-
   verbatim, with source, paragraph and verification date, and compares them across countries.
 type: dataset
 authors:
-  - alias: YamenHelel
+  - family-names: Helel
+    given-names: Yamen
+    alias: YamenHelel
     email: yamen.hlel@gmail.com
     affiliation: "Independent consultant"
 repository-code: "https://github.com/YamenHelel/Miyar-the-Arabic-reference-for-official-statistics"

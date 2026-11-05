@@ -17,7 +17,7 @@ Where to act: the **Verification Desk** (link in `docs/STATUS.md`): ✍️ tab f
 | 7. AI-drafted pages awaiting review | 54 | Read the page; say "reviewed <id>" or send corrections |
 | 7b. Unofficial translations to review | 14 definitions + 10 country cards | Read each against its original (عربي / English switcher on indicator and country pages) |
 | 8. Code not yet executed | 1 | Stata script (needs someone with Stata) |
-| 9. Lead decisions and settings | 7 | See the list at the end |
+| 9. Lead decisions and settings | 6 | See the list at the end |
 
 ## 1. Official texts to paste
 
@@ -343,9 +343,10 @@ Country cards (Arabic/English renderings of Miʿyar's profile notes in `sources/
 From `docs/lead-actions.yml` (edit that file; mark `status: done`).
 
 - [ ] **Review the website preview**: Feedback on design and wording (private preview link in docs/STATUS.md), including the new «مصادر البيانات» section.
-- [ ] **Confirm the Arabic spelling of your name**: Used in the founder's letter on the methodology page (draft in your voice; edit freely).
 - [ ] **Paste the repository About box, topics and social preview**: Values ready in docs/github-settings.md (about 10 minutes).
 - [ ] **Turn on GitHub Pages and publish**: Settings → Pages → Source "GitHub Actions", then Actions → website → Run workflow.
 - [ ] **After go-live, register the site**: Google Search Console and Bing Webmaster Tools, then Zenodo DOI and Wikidata item (docs/github-settings.md).
 - [ ] **Decide the domain name and LinkedIn page**: Custom domain (I-051) and a LinkedIn page for Miʿyar; record them in docs/prd/15-naming.md.
 - [ ] **Optional — allow statistical sites in the cloud environment's network policy**: Lets the agent open ILO/NSO documents and draft quotes for you to confirm (I-044). Without it, quotes stay paste-only.
+
+Done: Confirm the Arabic spelling of your name

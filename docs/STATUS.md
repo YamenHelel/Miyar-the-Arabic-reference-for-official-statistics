@@ -27,7 +27,7 @@
    - The new data-source texts mostly come from one ILO document (quick guide on sources and uses, 4 texts) and the ICLS-19 PDF (3 texts).
 2. **Lead:**
    - Review the preview, including the new data sources pages.
-   - Confirm the Palestine transcription and the Arabic spelling of your name.
+   - Confirm the Palestine transcription.
    - Go-live steps (Pages, GitHub About, then Search Console, Zenodo, Wikidata) are listed in section 9 of VALIDATION.md.
 3. **Agent:**
    - Apply quotes and verifications as they arrive.

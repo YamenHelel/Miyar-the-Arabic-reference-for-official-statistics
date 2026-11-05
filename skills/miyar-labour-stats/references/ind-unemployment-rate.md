@@ -7,7 +7,7 @@ Miʿyar id: `ind-unemployment-rate` · status: draft · last updated 2026-11-04 
 **Source:** Resolution concerning statistics of work, employment and labour underutilization (19th ICLS, 2013) — PDF, as amended by the 21st ICLS (2023) — ILO  
 **URL:** https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf  
 **Locator:** 19th ICLS resolution, paragraph 47 (with items a, b, c)  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Note:** Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).  
 **Language:** en
 
@@ -69,7 +69,7 @@ Miʿyar id: `ind-unemployment-rate` · status: draft · last updated 2026-11-04 
 **Source:** Resolution concerning statistics of work, employment and labour underutilization (19th ICLS, 2013) — PDF, as amended by the 21st ICLS (2023) — ILO  
 **URL:** https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf  
 **Locator:** 19th ICLS resolution, paragraph listing LU1–LU4 (§71 approx.)  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Note:** Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023). Footnote 2 (on LU3) is printed inside the quoted paragraph.  
 **Language:** en
 
@@ -132,7 +132,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** CPS — Concepts and definitions — U.S. Bureau of Labor Statistics  
 **URL:** https://www.bls.gov/cps/definitions.htm  
 **Locator:** CPS definitions page — 'Unemployed persons'  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Language:** en
 
 > Unemployed
@@ -158,7 +158,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** Labour Force Survey — user guidance (volumes 1–11) — Office for National Statistics  
 **URL:** https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/methodologies/labourforcesurveyuserguidance#volume-5-lfs-classifications  
 **Locator:** LFS QMI — definition of unemployment (ILO definition)  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Note:** LFS User Guide – Volume 5: LFS Classifications (July 2024), p.10. ONS reproduces paragraph 10 of the 13th ICLS (1982) resolution.  
 **Language:** en
 
@@ -189,7 +189,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** Enquête Emploi en continu — methodology — Insee  
 **URL:** https://insee.fr/fr/metadonnees/source/fichier/methodologie_emploi_continu.pdf  
 **Locator:** Méthodologie EEC — définition du chômeur au sens du BIT  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Note:** Insee methodology reproduces paragraph 10.1 of the 13th ICLS (1982) resolution in French; Insee's operational criteria (15+, availability within 2 weeks, 4-week search) are stated elsewhere.  
 **Language:** fr
 
@@ -227,7 +227,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** Labour Statistics — Concepts, Sources and Methods (6102.0.55.001), Feb 2018 — Australian Bureau of Statistics  
 **URL:** https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/6102.0.55.001~Feb%202018~Main%20Features~Unemployment~6  
 **Locator:** Labour Statistics: Concepts, Sources and Methods — 'Unemployed'  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Language:** en
 
 > Unemployed persons are defined as all persons aged 15 years and over who were not employed during the reference week, and:
@@ -245,7 +245,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** Methodology of Labor Market Statistics — Q1 2025 (EN) — General Authority for Statistics  
 **URL:** https://www.stats.gov.sa/documents/d/guest/methodology-of-labor-market-statistics-q1-2025-en  
 **Locator:** Methodology of Labor Market Statistics Q1 2025 — definition of unemployed  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Language:** en
 
 > 2.3.1.19	Unemployed persons
@@ -269,7 +269,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** Methodological note — Employment survey Tunisia — Institut National de la Statistique  
 **URL:** https://ins.tn/sites/default/files-ftp3/files/publication/pdf/Note%20M%C3%A9thodologique%20Enquete%20emploi%20Tunisie.pdf  
 **Locator:** Note méthodologique — définition du chômeur  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Language:** fr
 
 > 3. Population au chômage
@@ -301,7 +301,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** HCP — Note d'information sur la situation du marché du travail au Maroc au troisième trimestre 2026 selon l'Enquête sur la Main-d'Œuvre (EMO) — Haut-Commissariat au Plan  
 **URL:** https://www.hcp.ma/attachment/2927551/  
 **Locator:** Note méthodologique ENE — définition de la population active en chômage  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Note:** HCP information note on the labour market, Q3 2026, Enquête sur la Main-d'Œuvre (EMO). The lead confirmed this is the EMO2026 definition.  
 **Language:** fr
 
@@ -336,7 +336,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** DoS — Employment and unemployment: labour force concepts page — Department of Statistics  
 **URL:** https://dosweb.dos.gov.jo/labourforce/employment-and-unemployment/  
 **Locator:** DoS — EUS concepts and definitions (quarterly report annex)  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Language:** en
 
 > Unemployed: An individual aged 15 years or older, who is capable of working, not currently working, available for work, and actively seeking employment. The following conditions must be met for someone to be considered unemployed:
@@ -356,7 +356,7 @@ Facts whose basis is `search-snippet` are preliminary: present them as unconfirm
 **Source:** FCSC — labour force data file with Arabic definitions (xlsx, 2025) — Federal Competitiveness and Statistics Centre  
 **URL:** https://fcsc.gov.ae/wp-content/uploads/2025/06/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9-%D8%A8%D9%82%D9%88%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84-ar.xlsx  
 **Locator:** FCSC — LFS definitions  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Note:** Definition taken from the FCSC labour force data file (xlsx, Arabic).  
 **Language:** ar
 

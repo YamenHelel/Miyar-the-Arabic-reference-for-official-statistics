@@ -18,7 +18,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import seo
-from markdown_render import concept_md, datasource_md, indicator_md
+from markdown_render import concept_md, datasource_md, indicator_md, verifier_name
 from common import (CONTENT_DIR, ROOT, SOURCES_DIR, concept_files, datasource_files, indicator_files, iter_sources,
                     load_yaml, quotes_by_slot, source_files)
 
@@ -109,6 +109,7 @@ def main():
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["tojson_ar"] = lambda v: json.dumps(v, ensure_ascii=False)
     env.filters["reflow"] = reflow
+    env.filters["verifier_ar"] = lambda code: verifier_name(code, "ar")
 
     def url_of(path):
         return base if path == "index.html" else base + (path[: -len("index.html")] if path.endswith("/index.html") else path)

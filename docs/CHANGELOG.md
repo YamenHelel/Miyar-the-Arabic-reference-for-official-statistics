@@ -2,6 +2,17 @@
 
 Format: `## YYYY-MM-DD: title` → Done / Files / Decisions / Open questions. Older months are in `progress/`.
 
+## 2026-11-05: Founder's letter and verifier's full name (session 11)
+**Done**
+- The lead rewrote the home page letter: it now mentions the original-language text and is signed «يامن هلال». The role line «إحصائي مستقل» was removed.
+- Verified texts now name the verifier in full: «يامن هلال» on Arabic pages, "Yamen Helel" in Markdown twins, `llms-full.txt` and the skill. Records keep `YH` as the id.
+- Corrected the lead action on the name, which placed the letter on the methodology page; it is on the home page. Marked done.
+- `CITATION.cff` now gives the author's name, so GitHub's citation shows "Yamen Helel".
+
+**Files:** `CITATION.cff`, `tools/site/templates/home.html`, `tools/site/templates/macros.html`, `tools/markdown_render.py`, `tools/build_site.py`, `tools/build_skill.py`, `skills/miyar-labour-stats/`, `docs/lead-actions.yml`, `docs/STATUS.md`, `docs/VALIDATION.md`
+
+**Decisions:** the lead's public name is spelled Helel; the email address keeps "hlel".
+
 ## 2026-11-05: Language switcher on ILO text sheets (session 10d)
 **Done**
 - The lead approved extending the switch to the ILO texts.

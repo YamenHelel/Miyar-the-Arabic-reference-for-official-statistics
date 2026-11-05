@@ -7,7 +7,7 @@ Miʿyar id: `con-employed` · category: labour
 **Source:** Resolution concerning statistics of work, employment and labour underutilization (19th ICLS, 2013) — PDF, as amended by the 21st ICLS (2023) — ILO  
 **URL:** https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@dgreports/@stat/documents/normativeinstrument/wcms_230304.pdf  
 **Locator:** 19th ICLS resolution, paragraph 27  
-**Status:** VERIFIED official text (by YH, 2026-11-04)  
+**Status:** VERIFIED official text (by Yamen Helel, 2026-11-04)  
 **Note:** Text as published in the 19th ICLS resolution amended by Resolution II of the 21st ICLS (Geneva, 11–20 October 2023).  
 **Language:** en
 

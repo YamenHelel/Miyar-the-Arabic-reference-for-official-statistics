@@ -14,7 +14,7 @@ import datetime as dt
 import shutil
 
 from common import ROOT, concept_files, datasource_files, indicator_files, iter_sources, load_yaml, quotes_by_slot
-from markdown_render import concept_md, datasource_md, indicator_md
+from markdown_render import concept_md, datasource_md, indicator_md, verifier_name
 
 OUT = ROOT / "skills" / "miyar-labour-stats"
 def main():
@@ -52,7 +52,7 @@ def main():
     src = ["# Miʿyar source registry (snapshot)", "", "| id | title | publisher | country | status | verified |", "|---|---|---|---|---|---|"]
     for _, r in iter_sources():
         src.append(f"| {r['id']} | {r.get('title_en', '')} | {r.get('publisher', '')} | {r.get('country', '')} | {r['status']} | "
-                   f"{r.get('verified_by', '')} {r.get('verified_date', '') or ''} |")
+                   f"{verifier_name(r.get('verified_by', ''))} {r.get('verified_date', '') or ''} |")
     (OUT / "references" / "sources.md").write_text("\n".join(src) + "\n", encoding="utf-8")
     index.append("- `references/sources.md` — every source with its verification status")
 

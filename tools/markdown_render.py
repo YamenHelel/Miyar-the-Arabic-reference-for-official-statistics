@@ -3,6 +3,12 @@
 COUNTRIES = {"tun": "تونس", "sau": "السعودية", "mar": "المغرب", "jor": "الأردن", "are": "الإمارات", "pse": "فلسطين",
              "usa": "الولايات المتحدة", "gbr": "المملكة المتحدة", "aus": "أستراليا", "fra": "فرنسا"}
 STATE = {"verified": "VERIFIED official text", "pasted": "official text, PASTED — awaiting reviewer confirmation"}
+# Records store the verifier's initials as an id; readers always see the full name.
+VERIFIERS = {"YH": {"ar": "يامن هلال", "en": "Yamen Helel"}}
+
+
+def verifier_name(code, lang="en"):
+    return VERIFIERS.get(code, {}).get(lang, code)
 
 
 def quote_md(q, reg):
@@ -12,7 +18,7 @@ def quote_md(q, reg):
     head = f"**Source:** {src.get('title_en', q.get('source'))} — {src.get('publisher', '')}  \n"
     head += f"**URL:** {q.get('quoted_from_url') or src.get('url', '')}  \n**Locator:** {q.get('locator', '')}  \n"
     if q.get("status") in STATE and q.get("text"):
-        head += f"**Status:** {STATE[q['status']]}" + (f" (by {q.get('verified_by')}, {q.get('pasted_on')})" if q.get("verified_by") else "") + "  \n"
+        head += f"**Status:** {STATE[q['status']]}" + (f" (by {verifier_name(q.get('verified_by'))}, {q.get('pasted_on')})" if q.get("verified_by") else "") + "  \n"
         if q.get("document_note"):
             head += f"**Note:** {q['document_note']}  \n"
         body = "\n".join("> " + l if l.strip() else ">" for l in q["text"].split("\n"))

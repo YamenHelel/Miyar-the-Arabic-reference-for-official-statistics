@@ -4,7 +4,7 @@
 <figure class="sheet on-paper{% if switch %} sheet-view{% endif %}" style="margin:0"{% if switch %} data-view="ar"{% endif %}>
   <div class="hallmark">
     <svg viewBox="0 0 100 130" aria-hidden="true">{% include "hallmark.svg" %}</svg>
-    <span>{% if switch %}النص الأصلي: {% endif %}{% if q.status == 'verified' %}نص رسمي مُتحقَّق منه · {{ q.verified_by }} · {{ q.pasted_on }}{% else %}نص رسمي منسوخ، بانتظار تأكيد المراجع{% endif %}</span>
+    <span>{% if switch %}النص الأصلي: {% endif %}{% if q.status == 'verified' %}نص رسمي مُتحقَّق منه · {{ q.verified_by | verifier_ar }} · {{ q.pasted_on }}{% else %}نص رسمي منسوخ، بانتظار تأكيد المراجع{% endif %}</span>
   </div>
   {% if switch %}
   {% set n = {'lang': q.lang, 'text': q.text | reflow, 'tr_ar': (q.translation_ar | reflow) if q.translation_ar else '',

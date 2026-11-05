@@ -5,8 +5,8 @@ actions:
     detail: Feedback on design and wording (private preview link in docs/STATUS.md), including the new «مصادر البيانات» section.
     status: open
   - title: Confirm the Arabic spelling of your name
-    detail: Used in the founder's letter on the methodology page (draft in your voice; edit freely).
-    status: open
+    detail: Confirmed 2026-11-05 as يامن هلال / Yamen Helel. Signs the founder's letter on the home page and names the verifier on official texts.
+    status: done
   - title: Paste the repository About box, topics and social preview
     detail: Values ready in docs/github-settings.md (about 10 minutes).
     status: open
